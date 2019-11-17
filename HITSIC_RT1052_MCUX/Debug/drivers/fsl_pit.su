@@ -1,7 +1,0 @@
-fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
-fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
-fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
-fsl_pit.c:42:17:uint32_t PIT_GetInstance(PIT_Type*)	24	static
-fsl_pit.c:68:6:void PIT_Init(PIT_Type*, const pit_config_t*)	24	static
-fsl_pit.c:106:6:void PIT_Deinit(PIT_Type*)	16	static
-fsl_pit.c:134:10:uint64_t PIT_GetLifetimeTimerCount(PIT_Type*)	32	static

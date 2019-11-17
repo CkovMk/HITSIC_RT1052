@@ -1,7 +1,0 @@
-fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
-fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
-fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
-fsl_xbarb.c:48:17:uint32_t XBARB_GetInstance(XBARB_Type*)	24	static
-fsl_xbarb.c:73:6:void XBARB_Init(XBARB_Type*)	16	static
-fsl_xbarb.c:88:6:void XBARB_Deinit(XBARB_Type*)	16	static
-fsl_xbarb.c:107:6:void XBARB_SetSignalsConnection(XBARB_Type*, xbar_input_signal_t, xbar_output_signal_t)	16	static

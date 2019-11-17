@@ -1,5 +1,0 @@
-fsl_tempmon.c:53:6:void TEMPMON_Init(TEMPMON_Type*, const tempmon_config_t*)	32	static
-fsl_tempmon.c:86:6:void TEMPMON_Deinit(TEMPMON_Type*)	16	static
-fsl_tempmon.c:103:6:void TEMPMON_GetDefaultConfig(tempmon_config_t*)	16	static
-fsl_tempmon.c:126:7:float TEMPMON_GetCurrentTemperature(TEMPMON_Type*)	24	static
-fsl_tempmon.c:154:6:void TEMPMON_SetTempAlarm(TEMPMON_Type*, uint32_t, tempmon_alarm_mode)	32	static

@@ -1,2 +1,0 @@
-fsl_aipstz.c:30:6:void AIPSTZ_SetMasterPriviledgeLevel(AIPSTZ_Type*, aipstz_master_t, uint32_t)	32	static
-fsl_aipstz.c:44:6:void AIPSTZ_SetPeripheralAccessControl(AIPSTZ_Type*, aipstz_peripheral_t, uint32_t)	40	static

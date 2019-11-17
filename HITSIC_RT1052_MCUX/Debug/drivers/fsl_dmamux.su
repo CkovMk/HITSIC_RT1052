@@ -1,6 +1,0 @@
-fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
-fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
-fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
-fsl_dmamux.c:46:17:uint32_t DMAMUX_GetInstance(DMAMUX_Type*)	24	static
-fsl_dmamux.c:72:6:void DMAMUX_Init(DMAMUX_Type*)	16	static
-fsl_dmamux.c:86:6:void DMAMUX_Deinit(DMAMUX_Type*)	16	static

@@ -1,8 +1,0 @@
-fsl_flexio.h:652:20:void FLEXIO_EnableShifterStatusDMA(FLEXIO_Type*, uint32_t, bool)	24	static
-fsl_flexio_camera.h:206:20:void FLEXIO_CAMERA_EnableRxDMA(FLEXIO_CAMERA_Type*, bool)	16	static
-fsl_flexio_camera.h:217:24:uint32_t FLEXIO_CAMERA_GetRxBufferAddress(FLEXIO_CAMERA_Type*)	16	static
-fsl_flexio_camera_edma.c:66:13:void FLEXIO_CAMERA_TransferReceiveEDMACallback(edma_handle_t*, void*, bool, uint32_t)	40	static
-fsl_flexio_camera_edma.c:99:10:status_t FLEXIO_CAMERA_TransferCreateHandleEDMA(FLEXIO_CAMERA_Type*, flexio_camera_edma_handle_t*, flexio_camera_edma_transfer_callback_t, void*, edma_handle_t*)	32	static
-fsl_flexio_camera_edma.c:157:10:status_t FLEXIO_CAMERA_TransferReceiveEDMA(FLEXIO_CAMERA_Type*, flexio_camera_edma_handle_t*, flexio_camera_transfer_t*)	80	static
-fsl_flexio_camera_edma.c:201:6:void FLEXIO_CAMERA_TransferAbortReceiveEDMA(FLEXIO_CAMERA_Type*, flexio_camera_edma_handle_t*)	16	static
-fsl_flexio_camera_edma.c:225:10:status_t FLEXIO_CAMERA_TransferGetReceiveCountEDMA(FLEXIO_CAMERA_Type*, flexio_camera_edma_handle_t*, size_t*)	32	static

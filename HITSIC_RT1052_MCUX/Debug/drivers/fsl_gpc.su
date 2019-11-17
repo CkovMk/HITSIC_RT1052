@@ -1,3 +1,0 @@
-fsl_gpc.c:23:6:void GPC_EnableIRQ(GPC_Type*, uint32_t)	24	static
-fsl_gpc.c:51:6:void GPC_DisableIRQ(GPC_Type*, uint32_t)	24	static
-fsl_gpc.c:80:6:bool GPC_GetIRQStatusFlag(GPC_Type*, uint32_t)	32	static

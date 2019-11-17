@@ -1,3 +1,0 @@
-fsl_video_i2c.c:19:10:status_t VIDEO_I2C_WriteReg(uint8_t, video_reg_addr_t, uint32_t, video_reg_width_t, uint32_t, video_i2c_send_func_t)	48	static
-fsl_video_i2c.c:58:10:status_t VIDEO_I2C_ReadReg(uint8_t, video_reg_addr_t, uint32_t, video_reg_width_t, void*, video_i2c_receive_func_t)	56	static
-fsl_video_i2c.c:91:10:status_t VIDEO_I2C_ModifyReg(uint8_t, video_reg_addr_t, uint32_t, video_reg_width_t, uint32_t, uint32_t, video_i2c_receive_func_t, video_i2c_send_func_t)	40	static

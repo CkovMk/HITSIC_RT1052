@@ -1,5 +1,0 @@
-lpuart_adapter.c:123:26:hal_uart_status_t HAL_UartGetStatus(status_t)	16	static
-lpuart_adapter.c:223:19:hal_uart_status_t HAL_UartInit(hal_uart_handle_t, hal_uart_config_t*)	48	static
-lpuart_adapter.c:295:19:hal_uart_status_t HAL_UartDeinit(hal_uart_handle_t)	24	static
-lpuart_adapter.c:316:19:hal_uart_status_t HAL_UartReceiveBlocking(hal_uart_handle_t, uint8_t*, size_t)	32	static
-lpuart_adapter.c:338:19:hal_uart_status_t HAL_UartSendBlocking(hal_uart_handle_t, const uint8_t*, size_t)	32	static

@@ -1,8 +1,0 @@
-fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
-fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
-fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
-fsl_aoi.c:40:17:uint32_t AOI_GetInstance(AOI_Type*)	24	static
-fsl_aoi.c:65:6:void AOI_Init(AOI_Type*)	16	static
-fsl_aoi.c:80:6:void AOI_Deinit(AOI_Type*)	16	static
-fsl_aoi.c:104:6:void AOI_GetEventLogicConfig(AOI_Type*, aoi_event_t, aoi_event_config_t*)	32	static
-fsl_aoi.c:177:6:void AOI_SetEventLogicConfig(AOI_Type*, aoi_event_t, const aoi_event_config_t*)	32	static

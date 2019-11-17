@@ -1,8 +1,0 @@
-fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
-fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
-fsl_iomuxc.h:1090:20:void IOMUXC_SetPinMux(uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t)	24	static
-fsl_iomuxc.h:1122:20:void IOMUXC_SetPinConfig(uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t)	24	static
-pin_mux.c:108:6:void BOARD_InitBootPins()	8	static
-pin_mux.c:225:6:void RTE()	112	static
-pin_mux.c:1086:6:void SDRAM()	16	static
-pin_mux.c:1632:6:void FLASH()	16	static

@@ -1,5 +1,0 @@
-usb_phy.c:14:7:void* USB_EhciPhyGetBase(uint8_t)	56	static
-usb_phy.c:73:10:uint32_t USB_EhciPhyInit(uint8_t, uint32_t, usb_phy_config_struct_t*)	32	static
-usb_phy.c:136:10:uint32_t USB_EhciLowPowerPhyInit(uint8_t, uint32_t, usb_phy_config_struct_t*)	32	static
-usb_phy.c:195:6:void USB_EhciPhyDeinit(uint8_t)	24	static
-usb_phy.c:223:6:void USB_EhcihostPhyDisconnectDetectCmd(uint8_t, uint8_t)	24	static
