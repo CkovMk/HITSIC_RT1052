@@ -34,5 +34,7 @@
 
 
 
-./HITSIC_RT1052_MCUX/Debug/
-./HITSIC_RT1052_MCUX/Release/
+HITSIC_RT1052_MCUX/Debug/
+HITSIC_RT1052_MCUX/Release/
+*.su
+*.mk
