@@ -1,0 +1,54 @@
+core_cm7.h:1902:22:void __NVIC_EnableIRQ(IRQn_Type)	16	static
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
+fsl_common.h:419:28:status_t EnableIRQ(IRQn_Type)	16	static
+fsl_lpspi.h:489:20:void LPSPI_Enable(LPSPI_Type*, bool)	16	static
+fsl_lpspi.h:515:24:uint32_t LPSPI_GetStatusFlags(LPSPI_Type*)	16	static
+fsl_lpspi.h:535:24:uint32_t LPSPI_GetRxFifoSize(LPSPI_Type*)	16	static
+fsl_lpspi.h:545:24:uint32_t LPSPI_GetTxFifoCount(LPSPI_Type*)	16	static
+fsl_lpspi.h:555:24:uint32_t LPSPI_GetRxFifoCount(LPSPI_Type*)	16	static
+fsl_lpspi.h:573:20:void LPSPI_ClearStatusFlags(LPSPI_Type*, uint32_t)	16	static
+fsl_lpspi.h:600:20:void LPSPI_EnableInterrupts(LPSPI_Type*, uint32_t)	16	static
+fsl_lpspi.h:615:20:void LPSPI_DisableInterrupts(LPSPI_Type*, uint32_t)	16	static
+fsl_lpspi.h:718:20:void LPSPI_SetMasterSlaveMode(LPSPI_Type*, lpspi_master_slave_mode_t)	16	static
+fsl_lpspi.h:729:20:bool LPSPI_IsMaster(LPSPI_Type*)	16	static
+fsl_lpspi.h:741:20:void LPSPI_FlushFifo(LPSPI_Type*, bool, bool)	16	static
+fsl_lpspi.h:757:20:void LPSPI_SetFifoWatermarks(LPSPI_Type*, uint32_t, uint32_t)	24	static
+fsl_lpspi.h:902:20:void LPSPI_WriteData(LPSPI_Type*, uint32_t)	16	static
+fsl_lpspi.h:916:24:uint32_t LPSPI_ReadData(LPSPI_Type*)	16	static
+fsl_lpspi.c:145:10:uint32_t LPSPI_GetInstance(LPSPI_Type*)	24	static
+fsl_lpspi.c:173:6:void LPSPI_SetDummyData(LPSPI_Type*, uint8_t)	24	static
+fsl_lpspi.c:186:6:void LPSPI_MasterInit(LPSPI_Type*, const lpspi_master_config_t*, uint32_t)	32	static
+fsl_lpspi.c:248:6:void LPSPI_MasterGetDefaultConfig(lpspi_master_config_t*)	16	static
+fsl_lpspi.c:278:6:void LPSPI_SlaveInit(LPSPI_Type*, const lpspi_slave_config_t*)	24	static
+fsl_lpspi.c:325:6:void LPSPI_SlaveGetDefaultConfig(lpspi_slave_config_t*)	16	static
+fsl_lpspi.c:350:6:void LPSPI_Reset(LPSPI_Type*)	16	static
+fsl_lpspi.c:366:6:void LPSPI_Deinit(LPSPI_Type*)	24	static
+fsl_lpspi.c:384:13:void LPSPI_SetOnePcsPolarity(LPSPI_Type*, lpspi_which_pcs_t, lpspi_pcs_polarity_config_t)	24	static
+fsl_lpspi.c:419:10:uint32_t LPSPI_MasterSetBaudRate(LPSPI_Type*, uint32_t, uint32_t, uint32_t*)	64	static
+fsl_lpspi.c:515:6:void LPSPI_MasterSetDelayScaler(LPSPI_Type*, uint32_t, lpspi_delay_type_t)	24	static
+fsl_lpspi.c:566:10:uint32_t LPSPI_MasterSetDelayTimes(LPSPI_Type*, uint32_t, lpspi_delay_type_t, uint32_t)	104	static
+fsl_lpspi.c:685:6:void LPSPI_MasterTransferCreateHandle(LPSPI_Type*, lpspi_master_handle_t*, lpspi_master_transfer_callback_t, void*)	32	static
+fsl_lpspi.c:712:6:bool LPSPI_CheckTransferArgument(lpspi_transfer_t*, uint32_t, uint32_t)	24	static
+fsl_lpspi.c:778:10:status_t LPSPI_MasterTransferBlocking(LPSPI_Type*, lpspi_transfer_t*)	80	static
+fsl_lpspi.c:960:10:status_t LPSPI_MasterTransferNonBlocking(LPSPI_Type*, lpspi_master_handle_t*, lpspi_transfer_t*)	48	static
+fsl_lpspi.c:1109:13:void LPSPI_MasterTransferFillUpTxFifo(LPSPI_Type*, lpspi_master_handle_t*)	24	static
+fsl_lpspi.c:1169:13:void LPSPI_MasterTransferComplete(LPSPI_Type*, lpspi_master_handle_t*)	24	static
+fsl_lpspi.c:1194:10:status_t LPSPI_MasterTransferGetCount(LPSPI_Type*, lpspi_master_handle_t*, size_t*)	32	static
+fsl_lpspi.c:1234:6:void LPSPI_MasterTransferAbort(LPSPI_Type*, lpspi_master_handle_t*)	16	static
+fsl_lpspi.c:1256:6:void LPSPI_MasterTransferHandleIRQ(LPSPI_Type*, lpspi_master_handle_t*)	24	static
+fsl_lpspi.c:1365:6:void LPSPI_SlaveTransferCreateHandle(LPSPI_Type*, lpspi_slave_handle_t*, lpspi_slave_transfer_callback_t, void*)	32	static
+fsl_lpspi.c:1402:10:status_t LPSPI_SlaveTransferNonBlocking(LPSPI_Type*, lpspi_slave_handle_t*, lpspi_transfer_t*)	48	static
+fsl_lpspi.c:1562:13:void LPSPI_SlaveTransferFillUpTxFifo(LPSPI_Type*, lpspi_slave_handle_t*)	24	static
+fsl_lpspi.c:1591:13:void LPSPI_SlaveTransferComplete(LPSPI_Type*, lpspi_slave_handle_t*)	32	static
+fsl_lpspi.c:1627:10:status_t LPSPI_SlaveTransferGetCount(LPSPI_Type*, lpspi_slave_handle_t*, size_t*)	32	static
+fsl_lpspi.c:1667:6:void LPSPI_SlaveTransferAbort(LPSPI_Type*, lpspi_slave_handle_t*)	16	static
+fsl_lpspi.c:1689:6:void LPSPI_SlaveTransferHandleIRQ(LPSPI_Type*, lpspi_slave_handle_t*)	24	static
+fsl_lpspi.c:1810:17:uint32_t LPSPI_CombineWriteData(uint8_t*, uint32_t, bool)	32	static
+fsl_lpspi.c:1894:13:void LPSPI_SeparateReadData(uint8_t*, uint32_t, uint32_t, bool)	24	static
+fsl_lpspi.c:1974:13:void LPSPI_CommonIRQHandler(LPSPI_Type*, void*)	16	static
+fsl_lpspi.c:2000:6:void LPSPI1_DriverIRQHandler()	8	static
+fsl_lpspi.c:2008:6:void LPSPI2_DriverIRQHandler()	8	static
+fsl_lpspi.c:2016:6:void LPSPI3_DriverIRQHandler()	8	static
+fsl_lpspi.c:2024:6:void LPSPI4_DriverIRQHandler()	8	static

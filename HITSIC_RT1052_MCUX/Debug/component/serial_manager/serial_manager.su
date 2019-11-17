@@ -1,0 +1,14 @@
+serial_manager.c:267:32:serial_manager_status_t SerialManager_StartWriting(serial_manager_handle_t*, serial_manager_write_handle_t*, uint8_t*, uint32_t)	32	static
+serial_manager.c:306:32:serial_manager_status_t SerialManager_StartReading(serial_manager_handle_t*, serial_manager_read_handle_t*, uint8_t*, uint32_t)	32	static
+serial_manager.c:769:32:serial_manager_status_t SerialManager_Write(serial_write_handle_t, uint8_t*, uint32_t)	32	static
+serial_manager.c:786:32:serial_manager_status_t SerialManager_Read(serial_read_handle_t, uint8_t*, uint32_t)	32	static
+serial_manager.c:804:25:serial_manager_status_t SerialManager_Init(serial_handle_t, serial_manager_config_t*)	24	static
+serial_manager.c:925:25:serial_manager_status_t SerialManager_Deinit(serial_handle_t)	24	static
+serial_manager.c:982:25:serial_manager_status_t SerialManager_OpenWriteHandle(serial_handle_t, serial_write_handle_t)	24	static
+serial_manager.c:1006:25:serial_manager_status_t SerialManager_CloseWriteHandle(serial_write_handle_t)	24	static
+serial_manager.c:1031:25:serial_manager_status_t SerialManager_OpenReadHandle(serial_handle_t, serial_read_handle_t)	24	static
+serial_manager.c:1059:25:serial_manager_status_t SerialManager_CloseReadHandle(serial_read_handle_t)	24	static
+serial_manager.c:1084:25:serial_manager_status_t SerialManager_WriteBlocking(serial_write_handle_t, uint8_t*, uint32_t)	24	static
+serial_manager.c:1093:25:serial_manager_status_t SerialManager_ReadBlocking(serial_read_handle_t, uint8_t*, uint32_t)	24	static
+serial_manager.c:1287:25:serial_manager_status_t SerialManager_EnterLowpower(serial_handle_t)	16	static
+serial_manager.c:1294:25:serial_manager_status_t SerialManager_ExitLowpower(serial_handle_t)	16	static

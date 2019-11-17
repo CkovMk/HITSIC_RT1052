@@ -1,0 +1,16 @@
+fsl_flexio.h:569:24:uint32_t FLEXIO_GetShifterStatusFlags(FLEXIO_Type*)	16	static
+fsl_flexio.h:652:20:void FLEXIO_EnableShifterStatusDMA(FLEXIO_Type*, uint32_t, bool)	24	static
+fsl_flexio_mculcd.h:303:20:void FLEXIO_MCULCD_EnableTxDMA(FLEXIO_MCULCD_Type*, bool)	16	static
+fsl_flexio_mculcd.h:315:20:void FLEXIO_MCULCD_EnableRxDMA(FLEXIO_MCULCD_Type*, bool)	16	static
+fsl_flexio_mculcd.h:329:24:uint32_t FLEXIO_MCULCD_GetTxDataRegisterAddress(FLEXIO_MCULCD_Type*)	16	static
+fsl_flexio_mculcd.h:343:24:uint32_t FLEXIO_MCULCD_GetRxDataRegisterAddress(FLEXIO_MCULCD_Type*)	16	static
+fsl_flexio_mculcd.h:525:20:void FLEXIO_MCULCD_StartTransfer(FLEXIO_MCULCD_Type*)	16	static
+fsl_flexio_mculcd.h:535:20:void FLEXIO_MCULCD_StopTransfer(FLEXIO_MCULCD_Type*)	16	static
+fsl_flexio_mculcd_edma.c:76:13:void FLEXIO_MCULCD_TxEDMACallback(edma_handle_t*, void*, bool, uint32_t)	40	static
+fsl_flexio_mculcd_edma.c:133:13:void FLEXIO_MCULCD_RxEDMACallback(edma_handle_t*, void*, bool, uint32_t)	56	static
+fsl_flexio_mculcd_edma.c:204:13:void FLEXIO_MCULCD_EDMAConfig(FLEXIO_MCULCD_Type*, flexio_mculcd_edma_handle_t*)	56	static
+fsl_flexio_mculcd_edma.c:277:13:bool FLEXIO_MCULCD_GetEDMAModulo(uint8_t, edma_modulo_t*)	24	static
+fsl_flexio_mculcd_edma.c:321:10:status_t FLEXIO_MCULCD_TransferCreateHandleEDMA(FLEXIO_MCULCD_Type*, flexio_mculcd_edma_handle_t*, flexio_mculcd_edma_transfer_callback_t, void*, edma_handle_t*, edma_handle_t*)	24	static
+fsl_flexio_mculcd_edma.c:386:10:status_t FLEXIO_MCULCD_TransferEDMA(FLEXIO_MCULCD_Type*, flexio_mculcd_edma_handle_t*, flexio_mculcd_transfer_t*)	32	static
+fsl_flexio_mculcd_edma.c:503:6:void FLEXIO_MCULCD_TransferAbortEDMA(FLEXIO_MCULCD_Type*, flexio_mculcd_edma_handle_t*)	16	static
+fsl_flexio_mculcd_edma.c:535:10:status_t FLEXIO_MCULCD_TransferGetCountEDMA(FLEXIO_MCULCD_Type*, flexio_mculcd_edma_handle_t*, size_t*)	40	static

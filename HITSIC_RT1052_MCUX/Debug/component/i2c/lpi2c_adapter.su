@@ -1,0 +1,20 @@
+lpi2c_adapter.c:52:18:hal_i2c_status_t HAL_I2cGetStatus(status_t)	24	static
+lpi2c_adapter.c:96:13:void HAL_I2cMasterCallback(LPI2C_Type*, lpi2c_master_handle_t*, status_t, void*)	40	static
+lpi2c_adapter.c:109:13:void HAL_I2cSlaveCallback(LPI2C_Type*, lpi2c_slave_transfer_t*, void*)	32	static
+lpi2c_adapter.c:129:18:hal_i2c_status_t HAL_I2cMasterInit(hal_i2c_master_handle_t, const hal_i2c_master_config_t*)	48	static
+lpi2c_adapter.c:154:18:hal_i2c_status_t HAL_I2cSlaveInit(hal_i2c_slave_handle_t, const hal_i2c_slave_config_t*)	56	static
+lpi2c_adapter.c:179:18:hal_i2c_status_t HAL_I2cMasterDeinit(hal_i2c_master_handle_t)	24	static
+lpi2c_adapter.c:192:18:hal_i2c_status_t HAL_I2cSlaveDeinit(hal_i2c_slave_handle_t)	24	static
+lpi2c_adapter.c:205:18:hal_i2c_status_t HAL_I2cMasterWriteBlocking(hal_i2c_master_handle_t, const uint8_t*, size_t, uint32_t)	24	static
+lpi2c_adapter.c:213:18:hal_i2c_status_t HAL_I2cMasterReadBlocking(hal_i2c_master_handle_t, uint8_t*, size_t, uint32_t)	24	static
+lpi2c_adapter.c:221:18:hal_i2c_status_t HAL_I2cSlaveWriteBlocking(hal_i2c_slave_handle_t, const uint8_t*, size_t)	24	static
+lpi2c_adapter.c:226:18:hal_i2c_status_t HAL_I2cSlaveReadBlocking(hal_i2c_slave_handle_t, uint8_t*, size_t)	24	static
+lpi2c_adapter.c:231:18:hal_i2c_status_t HAL_I2cMasterTransferBlocking(hal_i2c_master_handle_t, hal_i2c_master_transfer_t*)	48	static
+lpi2c_adapter.c:252:18:hal_i2c_status_t HAL_I2cMasterTransferInstallCallback(hal_i2c_master_handle_t, hal_i2c_master_transfer_callback_t, void*)	32	static
+lpi2c_adapter.c:270:18:hal_i2c_status_t HAL_I2cMasterTransferNonBlocking(hal_i2c_master_handle_t, hal_i2c_master_transfer_t*)	48	static
+lpi2c_adapter.c:291:18:hal_i2c_status_t HAL_I2cMasterTransferGetCount(hal_i2c_master_handle_t, size_t*)	24	static
+lpi2c_adapter.c:303:18:hal_i2c_status_t HAL_I2cMasterTransferAbort(hal_i2c_master_handle_t)	24	static
+lpi2c_adapter.c:315:18:hal_i2c_status_t HAL_I2cSlaveTransferInstallCallback(hal_i2c_slave_handle_t, hal_i2c_slave_transfer_callback_t, void*)	32	static
+lpi2c_adapter.c:333:18:hal_i2c_status_t HAL_I2cSlaveTransferNonBlocking(hal_i2c_slave_handle_t, uint32_t)	24	static
+lpi2c_adapter.c:345:18:hal_i2c_status_t HAL_I2cSlaveTransferAbort(hal_i2c_slave_handle_t)	24	static
+lpi2c_adapter.c:358:18:hal_i2c_status_t HAL_I2cSlaveTransferGetCount(hal_i2c_slave_handle_t, size_t*)	24	static

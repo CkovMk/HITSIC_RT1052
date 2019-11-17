@@ -1,0 +1,4 @@
+fsl_str.c:113:17:uint32_t ScanIgnoreWhiteSpace(const char**)	24	static
+fsl_str.c:128:16:int32_t ConvertRadixNumToString(char*, void*, int32_t, int32_t, bool)	56	static
+fsl_str.c:347:5:int StrFormatPrintf(const char*, va_list, char*, printfCb)	128	static
+fsl_str.c:873:5:int StrFormatScanf(const char*, char*, va_list)	64	static

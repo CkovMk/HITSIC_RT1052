@@ -1,0 +1,13 @@
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
+fsl_ocotp.h:82:20:bool OCOTP_CheckBusyStatus(OCOTP_Type*)	16	static
+fsl_ocotp.h:93:20:bool OCOTP_CheckErrorStatus(OCOTP_Type*)	16	static
+fsl_ocotp.h:103:20:void OCOTP_ClearErrorStatus(OCOTP_Type*)	16	static
+fsl_ocotp.c:59:6:void OCOTP_ReloadShadowRegister(OCOTP_Type*)	24	static
+fsl_ocotp.c:92:13:void OCOTP_SetReadTiming(OCOTP_Type*, ocotp_timing_t)	24	static
+fsl_ocotp.c:102:13:void OCOTP_SetWriteTiming(OCOTP_Type*, ocotp_timing_t)	24	static
+fsl_ocotp.c:114:6:void OCOTP_Init(OCOTP_Type*, uint32_t)	88	static
+fsl_ocotp.c:140:6:void OCOTP_Deinit(OCOTP_Type*)	16	static
+fsl_ocotp.c:156:10:uint32_t OCOTP_ReadFuseShadowRegister(OCOTP_Type*, uint32_t)	24	static
+fsl_ocotp.c:209:10:status_t OCOTP_WriteFuseShadowRegister(OCOTP_Type*, uint32_t, uint32_t)	32	static

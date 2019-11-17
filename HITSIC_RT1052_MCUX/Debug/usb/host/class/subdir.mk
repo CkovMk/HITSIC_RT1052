@@ -1,0 +1,48 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../usb/host/class/usb_host_audio.c \
+../usb/host/class/usb_host_cdc.c \
+../usb/host/class/usb_host_hid.c \
+../usb/host/class/usb_host_hub.c \
+../usb/host/class/usb_host_hub_app.c \
+../usb/host/class/usb_host_msd.c \
+../usb/host/class/usb_host_msd_ufi.c \
+../usb/host/class/usb_host_phdc.c \
+../usb/host/class/usb_host_printer.c 
+
+OBJS += \
+./usb/host/class/usb_host_audio.o \
+./usb/host/class/usb_host_cdc.o \
+./usb/host/class/usb_host_hid.o \
+./usb/host/class/usb_host_hub.o \
+./usb/host/class/usb_host_hub_app.o \
+./usb/host/class/usb_host_msd.o \
+./usb/host/class/usb_host_msd_ufi.o \
+./usb/host/class/usb_host_phdc.o \
+./usb/host/class/usb_host_printer.o 
+
+C_DEPS += \
+./usb/host/class/usb_host_audio.d \
+./usb/host/class/usb_host_cdc.d \
+./usb/host/class/usb_host_hid.d \
+./usb/host/class/usb_host_hub.d \
+./usb/host/class/usb_host_hub_app.d \
+./usb/host/class/usb_host_msd.d \
+./usb/host/class/usb_host_msd_ufi.d \
+./usb/host/class/usb_host_phdc.d \
+./usb/host/class/usb_host_printer.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+usb/host/class/%.o: ../usb/host/class/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: MCU C Compiler'
+	arm-none-eabi-c++ -std=c++17 -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B_cm7 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -DXIP_EXTERNAL_FLASH=1 -DXIP_BOOT_HEADER_ENABLE=1 -DXIP_BOOT_HEADER_DCD_ENABLE -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__NEWLIB__ -DBOARD_FLASH_SIZE=0x20000000 -I../board -I../source -I../ -I../amazon-freertos/freertos/portable -I../amazon-freertos/include -I../drivers -I../device -I../CMSIS -I../drivers/freertos -I../xip -I../component/lists -I../component/serial_manager -I../utilities -I../component/uart -I../utilities/utilities -I../cjson/inc -I../libjpeg/inc -I../sdmmc/inc -I../sdmmc/port -I../CMSIS/NN/Include -I../tensorflow-lite/tensorflow/contrib/lite -I../tensorflow-lite/tensorflow/contrib/lite/kernels -I../tensorflow-lite/tensorflow/contrib/lite/profiling -I../tensorflow-lite/tensorflow/contrib/lite/schema -I../tensorflow-lite/third_party/flatbuffers/include/flatbuffers -I../usb/include -I../osa -I../usb/phy -I../usb/device/class -I../usb/device/include -I../usb/device/source -I../usb/device/source/ehci -I../usb/device/source/khci -I../usb/device/source/lpcip3511 -I../source/generated -I../usb/host/class -I../usb/host -I../rtcesl/amclib -I../rtcesl/gdflib -I../rtcesl/gflib -I../rtcesl/gmclib -I../rtcesl/mlib -I../video -I../component/i2c -I../tensorflow-lite -I../tensorflow-lite/third_party/flatbuffers/include -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__NEWLIB__ -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

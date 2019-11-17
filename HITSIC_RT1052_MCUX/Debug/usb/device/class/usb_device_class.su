@@ -1,0 +1,10 @@
+usb_device_class.c:136:21:usb_status_t USB_DeviceClassAllocateHandle(uint8_t, usb_device_common_class_struct_t**)	24	static
+usb_device_class.c:179:21:usb_status_t USB_DeviceClassFreeHandle(uint8_t)	24	static
+usb_device_class.c:214:21:usb_status_t USB_DeviceClassGetHandleByControllerId(uint8_t, usb_device_common_class_struct_t**)	24	static
+usb_device_class.c:247:21:usb_status_t USB_DeviceClassGetHandleByDeviceHandle(usb_device_handle, usb_device_common_class_struct_t**)	24	static
+usb_device_class.c:278:14:usb_status_t USB_DeviceClassGetDeviceHandle(uint8_t, void**)	24	static
+usb_device_class.c:312:14:usb_status_t USB_DeviceClassEvent(usb_device_handle, usb_device_class_event_t, void*)	40	static
+usb_device_class.c:373:14:usb_status_t USB_DeviceClassCallback(usb_device_handle, uint32_t, void*)	32	static
+usb_device_class.c:417:14:usb_status_t USB_DeviceClassInit(uint8_t, usb_device_class_config_list_struct_t*, void**)	40	static
+usb_device_class.c:481:14:usb_status_t USB_DeviceClassDeinit(uint8_t)	24	static
+usb_device_class.c:532:14:usb_status_t USB_DeviceClassGetSpeed(uint8_t, uint8_t*)	24	static

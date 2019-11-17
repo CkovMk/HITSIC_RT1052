@@ -1,0 +1,8 @@
+fsl_csi_camera_adapter.c:60:17:status_t CSI_ADAPTER_Init(camera_receiver_handle_t*, const camera_config_t*, camera_receiver_callback_t, void*)	48	static
+fsl_csi_camera_adapter.c:120:17:status_t CSI_ADAPTER_Deinit(camera_receiver_handle_t*)	16	static
+fsl_csi_camera_adapter.c:127:17:status_t CSI_ADAPTER_Start(camera_receiver_handle_t*)	16	static
+fsl_csi_camera_adapter.c:133:17:status_t CSI_ADAPTER_Stop(camera_receiver_handle_t*)	16	static
+fsl_csi_camera_adapter.c:139:17:status_t CSI_ADAPTER_SubmitEmptyBuffer(camera_receiver_handle_t*, uint32_t)	16	static
+fsl_csi_camera_adapter.c:145:17:status_t CSI_ADAPTER_GetFullBuffer(camera_receiver_handle_t*, uint32_t*)	16	static
+fsl_csi_camera_adapter.c:151:13:void CSI_ADAPTER_Callback(CSI_Type*, csi_handle_t*, status_t, void*)	32	static
+fsl_csi_camera_adapter.c:170:17:status_t CSI_ADAPTER_InitExt(camera_receiver_handle_t*, const camera_config_t*, const void*, camera_receiver_callback_t, void*)	24	static

@@ -1,0 +1,6 @@
+fsl_sdmmc_event.c:44:27:QueueDefinition** SDMMCEVENT_GetInstance(sdmmc_event_t)	24	static
+fsl_sdmmc_event.c:64:6:bool SDMMCEVENT_Create(sdmmc_event_t)	24	static
+fsl_sdmmc_event.c:84:6:bool SDMMCEVENT_Wait(sdmmc_event_t, uint32_t)	24	static
+fsl_sdmmc_event.c:114:6:bool SDMMCEVENT_Notify(sdmmc_event_t)	32	static
+fsl_sdmmc_event.c:139:6:void SDMMCEVENT_Delete(sdmmc_event_t)	24	static
+fsl_sdmmc_event.c:149:6:void SDMMCEVENT_Delay(uint32_t)	16	static

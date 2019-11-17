@@ -1,0 +1,27 @@
+core_cm7.h:1902:22:void __NVIC_EnableIRQ(IRQn_Type)	16	static
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_common.h:419:28:status_t EnableIRQ(IRQn_Type)	16	static
+fsl_flexspi.h:379:20:void FLEXSPI_SoftwareReset(FLEXSPI_Type*)	16	static
+fsl_flexspi.h:417:20:void FLEXSPI_EnableInterrupts(FLEXSPI_Type*, uint32_t)	16	static
+fsl_flexspi.h:428:20:void FLEXSPI_DisableInterrupts(FLEXSPI_Type*, uint32_t)	16	static
+fsl_flexspi.h:563:20:void FLEXSPI_ClearInterruptStatusFlags(FLEXSPI_Type*, uint32_t)	16	static
+fsl_flexspi.h:630:20:bool FLEXSPI_GetBusIdleStatus(FLEXSPI_Type*)	16	static
+fsl_flexspi.c:118:10:uint32_t FLEXSPI_GetInstance(FLEXSPI_Type*)	24	static
+fsl_flexspi.c:136:17:uint32_t FLEXSPI_ConfigureDll(FLEXSPI_Type*, flexspi_device_config_t*)	40	static
+fsl_flexspi.c:190:10:status_t FLEXSPI_CheckAndClearError(FLEXSPI_Type*, uint32_t)	24	static
+fsl_flexspi.c:236:6:void FLEXSPI_Init(FLEXSPI_Type*, const flexspi_config_t*)	24	static
+fsl_flexspi.c:324:6:void FLEXSPI_GetDefaultConfig(flexspi_config_t*)	24	static
+fsl_flexspi.c:364:6:void FLEXSPI_Deinit(FLEXSPI_Type*)	16	static
+fsl_flexspi.c:381:6:void FLEXSPI_SetFlashConfig(FLEXSPI_Type*, flexspi_device_config_t*, flexspi_port_t)	40	static
+fsl_flexspi.c:481:6:void FLEXSPI_UpdateLUT(FLEXSPI_Type*, uint32_t, const uint32_t*, uint32_t)	32	static
+fsl_flexspi.c:513:6:void FLEXSPI_UpdateRxSampleClock(FLEXSPI_Type*, flexspi_read_sample_clock_t)	24	static
+fsl_flexspi.c:542:10:status_t FLEXSPI_WriteBlocking(FLEXSPI_Type*, uint32_t*, size_t)	40	static
+fsl_flexspi.c:601:10:status_t FLEXSPI_ReadBlocking(FLEXSPI_Type*, uint32_t*, size_t)	40	static
+fsl_flexspi.c:680:10:status_t FLEXSPI_TransferBlocking(FLEXSPI_Type*, flexspi_transfer_t*)	24	static
+fsl_flexspi.c:745:6:void FLEXSPI_TransferCreateHandle(FLEXSPI_Type*, flexspi_handle_t*, flexspi_transfer_callback_t, void*)	32	static
+fsl_flexspi.c:785:10:status_t FLEXSPI_TransferNonBlocking(FLEXSPI_Type*, flexspi_handle_t*, flexspi_transfer_t*)	32	static
+fsl_flexspi.c:860:10:status_t FLEXSPI_TransferGetCount(FLEXSPI_Type*, flexspi_handle_t*, size_t*)	32	static
+fsl_flexspi.c:887:6:void FLEXSPI_TransferAbort(FLEXSPI_Type*, flexspi_handle_t*)	16	static
+fsl_flexspi.c:901:6:void FLEXSPI_TransferHandleIRQ(FLEXSPI_Type*, flexspi_handle_t*)	48	static
+fsl_flexspi.c:1006:6:void FLEXSPI_DriverIRQHandler()	8	static

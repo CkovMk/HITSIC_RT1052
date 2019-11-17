@@ -1,0 +1,17 @@
+fsl_ov7725.c:281:13:void OV7725_DelayMs(uint32_t)	24	static
+fsl_ov7725.c:295:17:status_t OV7725_WriteRegs(camera_device_handle_t*, const ov7725_reg_t*, uint32_t)	40	static
+fsl_ov7725.c:312:17:status_t OV7725_SoftwareReset(camera_device_handle_t*)	24	static
+fsl_ov7725.c:317:17:status_t OV7725_SetClockConfig(camera_device_handle_t*, uint32_t, uint32_t)	48	static
+fsl_ov7725.c:337:17:status_t OV7725_SetPixelFormat(camera_device_handle_t*, video_pixel_format_t)	40	static
+fsl_ov7725.c:350:10:status_t OV7725_Init(camera_device_handle_t*, const camera_config_t*)	64	static
+fsl_ov7725.c:499:10:status_t OV7725_SetSpecialEffect(camera_device_handle_t*, int32_t)	40	static
+fsl_ov7725.c:519:10:status_t OV7725_SetContrast(camera_device_handle_t*, int32_t)	24	static
+fsl_ov7725.c:529:10:status_t OV7725_SetBrightness(camera_device_handle_t*, int32_t)	24	static
+fsl_ov7725.c:549:10:status_t OV7725_SetSaturation(camera_device_handle_t*, int32_t)	32	static
+fsl_ov7725.c:562:10:status_t OV7725_SetLightMode(camera_device_handle_t*, int32_t)	32	static
+fsl_ov7725.c:583:10:status_t OV7725_SetNightMode(camera_device_handle_t*, int32_t)	40	static
+fsl_ov7725.c:599:10:status_t OV7725_Deinit(camera_device_handle_t*)	16	static
+fsl_ov7725.c:606:10:status_t OV7725_Control(camera_device_handle_t*, camera_device_cmd_t, int32_t)	32	static
+fsl_ov7725.c:619:10:status_t OV7725_Start(camera_device_handle_t*)	16	static
+fsl_ov7725.c:624:10:status_t OV7725_Stop(camera_device_handle_t*)	16	static
+fsl_ov7725.c:629:10:status_t OV7725_InitExt(camera_device_handle_t*, const camera_config_t*, const void*)	24	static

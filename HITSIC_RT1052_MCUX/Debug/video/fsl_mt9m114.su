@@ -1,0 +1,9 @@
+fsl_mt9m114.c:133:17:status_t MT9M114_MultiWrite(camera_device_handle_t*, const mt9m114_reg_t*, uint32_t)	40	static
+fsl_mt9m114.c:150:17:status_t MT9M114_SoftwareReset(camera_device_handle_t*)	32	static
+fsl_mt9m114.c:169:17:status_t MT9M114_SetState(camera_device_handle_t*, uint16_t)	32	static
+fsl_mt9m114.c:209:10:status_t MT9M114_Init(camera_device_handle_t*, const camera_config_t*)	40	static
+fsl_mt9m114.c:310:10:status_t MT9M114_Deinit(camera_device_handle_t*)	16	static
+fsl_mt9m114.c:317:10:status_t MT9M114_Start(camera_device_handle_t*)	16	static
+fsl_mt9m114.c:322:10:status_t MT9M114_Stop(camera_device_handle_t*)	16	static
+fsl_mt9m114.c:327:10:status_t MT9M114_Control(camera_device_handle_t*, camera_device_cmd_t, int32_t)	24	static
+fsl_mt9m114.c:332:10:status_t MT9M114_InitExt(camera_device_handle_t*, const camera_config_t*, const void*)	24	static

@@ -1,0 +1,44 @@
+fsl_clock.h:1086:24:uint32_t CLOCK_GetOscFreq()	4	static
+fsl_clock.h:1185:24:uint32_t CLOCK_GetRtcFreq()	4	static
+fsl_clock.h:1289:20:bool CLOCK_IsPllBypassed(CCM_ANALOG_Type*, clock_pll_t)	16	static
+fsl_clock.h:1303:20:bool CLOCK_IsPllEnabled(CCM_ANALOG_Type*, clock_pll_t)	16	static
+fsl_clock.h:1329:24:uint32_t CLOCK_GetPllBypassRefClk(CCM_ANALOG_Type*, clock_pll_t)	16	static
+fsl_clock.c:70:17:uint32_t CLOCK_GetPeriphClkFreq()	16	static
+fsl_clock.c:150:6:void CLOCK_InitExternalClk(bool)	16	static
+fsl_clock.c:174:6:void CLOCK_DeinitExternalClk()	4	static
+fsl_clock.c:186:6:void CLOCK_SwitchOsc(clock_osc_t)	16	static
+fsl_clock.c:197:6:void CLOCK_InitRcOsc24M()	4	static
+fsl_clock.c:205:6:void CLOCK_DeinitRcOsc24M()	4	static
+fsl_clock.c:215:10:uint32_t CLOCK_GetAhbFreq()	8	static
+fsl_clock.c:225:10:uint32_t CLOCK_GetSemcFreq()	16	static
+fsl_clock.c:259:10:uint32_t CLOCK_GetIpgFreq()	8	static
+fsl_clock.c:269:10:uint32_t CLOCK_GetPerClkFreq()	16	static
+fsl_clock.c:298:10:uint32_t CLOCK_GetFreq(clock_name_t)	24	static
+fsl_clock.c:394:6:bool CLOCK_EnableUsbhs0Clock(clock_usb_src_t, uint32_t)	24	static
+fsl_clock.c:419:6:bool CLOCK_EnableUsbhs1Clock(clock_usb_src_t, uint32_t)	24	static
+fsl_clock.c:442:6:bool CLOCK_EnableUsbhs0PhyPllClock(clock_usb_phy_src_t, uint32_t)	24	static
+fsl_clock.c:466:6:void CLOCK_DisableUsbhs0PhyPllClock()	4	static
+fsl_clock.c:479:6:void CLOCK_InitArmPll(const clock_arm_pll_config_t*)	16	static
+fsl_clock.c:500:6:void CLOCK_DeinitArmPll()	4	static
+fsl_clock.c:512:6:void CLOCK_InitSysPll(const clock_sys_pll_config_t*)	16	static
+fsl_clock.c:542:6:void CLOCK_DeinitSysPll()	4	static
+fsl_clock.c:554:6:void CLOCK_InitUsb1Pll(const clock_usb_pll_config_t*)	16	static
+fsl_clock.c:575:6:void CLOCK_DeinitUsb1Pll()	4	static
+fsl_clock.c:587:6:void CLOCK_InitUsb2Pll(const clock_usb_pll_config_t*)	16	static
+fsl_clock.c:608:6:void CLOCK_DeinitUsb2Pll()	4	static
+fsl_clock.c:620:6:void CLOCK_InitAudioPll(const clock_audio_pll_config_t*)	24	static
+fsl_clock.c:695:6:void CLOCK_DeinitAudioPll()	4	static
+fsl_clock.c:707:6:void CLOCK_InitVideoPll(const clock_video_pll_config_t*)	24	static
+fsl_clock.c:781:6:void CLOCK_DeinitVideoPll()	4	static
+fsl_clock.c:793:6:void CLOCK_InitEnetPll(const clock_enet_pll_config_t*)	24	static
+fsl_clock.c:828:6:void CLOCK_DeinitEnetPll()	4	static
+fsl_clock.c:841:10:uint32_t CLOCK_GetPllFreq(clock_pll_t)	64	static
+fsl_clock.c:1038:6:void CLOCK_InitSysPfd(clock_pfd_t, uint8_t)	24	static
+fsl_clock.c:1060:6:void CLOCK_DeinitSysPfd(clock_pfd_t)	16	static
+fsl_clock.c:1075:6:void CLOCK_InitUsb1Pfd(clock_pfd_t, uint8_t)	24	static
+fsl_clock.c:1097:6:void CLOCK_DeinitUsb1Pfd(clock_pfd_t)	16	static
+fsl_clock.c:1110:10:uint32_t CLOCK_GetSysPfdFreq(clock_pfd_t)	24	static
+fsl_clock.c:1149:10:uint32_t CLOCK_GetUsb1PfdFreq(clock_pfd_t)	24	static
+fsl_clock.c:1189:6:bool CLOCK_EnableUsbhs1PhyPllClock(clock_usb_phy_src_t, uint32_t)	24	static
+fsl_clock.c:1207:6:void CLOCK_DisableUsbhs1PhyPllClock()	4	static
+fsl_clock.c:1221:28:void SDK_DelayAtLeastUs(uint32_t)	56	static

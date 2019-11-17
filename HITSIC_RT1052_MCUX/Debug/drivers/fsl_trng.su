@@ -1,0 +1,12 @@
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
+fsl_trng.c:1202:17:uint32_t trng_GetInstance(TRNG_Type*)	24	static
+fsl_trng.c:1264:10:status_t TRNG_GetDefaultConfig(trng_config_t*)	24	static
+fsl_trng.c:1318:17:status_t trng_SetRetryCount(TRNG_Type*, uint8_t)	24	static
+fsl_trng.c:1341:17:status_t trng_SetStatisticalCheckLimit(TRNG_Type*, trng_statistical_check_t, const trng_statistical_check_limit_t*)	32	static
+fsl_trng.c:1486:17:status_t trng_ApplyUserConfig(TRNG_Type*, const trng_config_t*)	24	static
+fsl_trng.c:1569:17:uint32_t trng_ReadEntropy(TRNG_Type*, uint32_t)	24	static
+fsl_trng.c:1599:10:status_t TRNG_Init(TRNG_Type*, const trng_config_t*)	24	static
+fsl_trng.c:1654:6:void TRNG_Deinit(TRNG_Type*)	16	static
+fsl_trng.c:1689:10:status_t TRNG_GetRandomData(TRNG_Type*, void*, size_t)	64	static

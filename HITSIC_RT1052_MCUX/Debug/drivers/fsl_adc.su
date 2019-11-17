@@ -1,0 +1,17 @@
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
+fsl_adc.h:276:24:uint32_t ADC_GetChannelConversionValue(ADC_Type*, uint32_t)	16	static
+fsl_adc.h:300:24:uint32_t ADC_GetChannelStatusFlags(ADC_Type*, uint32_t)	16	static
+fsl_adc.h:356:20:void ADC_EnableHardwareTrigger(ADC_Type*, bool)	16	static
+fsl_adc.h:403:24:uint32_t ADC_GetStatusFlags(ADC_Type*)	16	static
+fsl_adc.c:40:17:uint32_t ADC_GetInstance(ADC_Type*)	24	static
+fsl_adc.c:64:6:void ADC_Init(ADC_Type*, const adc_config_t*)	24	static
+fsl_adc.c:114:6:void ADC_Deinit(ADC_Type*)	16	static
+fsl_adc.c:142:6:void ADC_GetDefaultConfig(adc_config_t*)	16	static
+fsl_adc.c:189:6:void ADC_SetChannelConfig(ADC_Type*, uint32_t, const adc_channel_config_t*)	32	static
+fsl_adc.c:224:10:status_t ADC_DoAutoCalibration(ADC_Type*)	24	static
+fsl_adc.c:284:6:void ADC_SetOffsetConfig(ADC_Type*, const adc_offest_config_t*)	24	static
+fsl_adc.c:311:6:void ADC_SetHardwareCompareConfig(ADC_Type*, const adc_hardware_compare_config_t*)	24	static
+fsl_adc.c:358:6:void ADC_SetHardwareAverageConfig(ADC_Type*, adc_hardware_average_mode_t)	24	static
+fsl_adc.c:381:6:void ADC_ClearStatusFlags(ADC_Type*, uint32_t)	24	static

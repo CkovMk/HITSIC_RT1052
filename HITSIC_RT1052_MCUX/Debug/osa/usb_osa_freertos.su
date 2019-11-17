@@ -1,0 +1,23 @@
+usb_osa_freertos.c:95:7:void* USB_OsaMemoryAllocate(uint32_t)	32	static
+usb_osa_freertos.c:109:6:void USB_OsaMemoryFree(void*)	16	static
+usb_osa_freertos.c:113:6:void USB_OsaEnterCritical(uint8_t*)	32	static
+usb_osa_freertos.c:129:6:void USB_OsaExitCritical(uint8_t)	24	static
+usb_osa_freertos.c:145:18:usb_osa_status_t USB_OsaEventCreate(void**, uint32_t)	24	static
+usb_osa_freertos.c:199:18:usb_osa_status_t USB_OsaEventDestroy(usb_osa_event_handle)	24	static
+usb_osa_freertos.c:224:18:usb_osa_status_t USB_OsaEventSet(usb_osa_event_handle, uint32_t)	32	static
+usb_osa_freertos.c:252:18:usb_osa_status_t USB_OsaEventWait(usb_osa_event_handle, uint32_t, uint32_t, uint32_t, uint32_t*)	48	static
+usb_osa_freertos.c:294:18:usb_osa_status_t USB_OsaEventCheck(usb_osa_event_handle, uint32_t, uint32_t*)	40	static
+usb_osa_freertos.c:326:18:usb_osa_status_t USB_OsaEventClear(usb_osa_event_handle, uint32_t)	32	static
+usb_osa_freertos.c:354:18:usb_osa_status_t USB_OsaSemCreate(void**, uint32_t)	16	static
+usb_osa_freertos.c:401:18:usb_osa_status_t USB_OsaSemDestroy(usb_osa_sem_handle)	16	static
+usb_osa_freertos.c:422:18:usb_osa_status_t USB_OsaSemPost(usb_osa_sem_handle)	32	static
+usb_osa_freertos.c:464:18:usb_osa_status_t USB_OsaSemWait(usb_osa_sem_handle, uint32_t)	24	static
+usb_osa_freertos.c:496:18:usb_osa_status_t USB_OsaMutexCreate(void**)	16	static
+usb_osa_freertos.c:541:18:usb_osa_status_t USB_OsaMutexDestroy(usb_osa_mutex_handle)	16	static
+usb_osa_freertos.c:562:18:usb_osa_status_t USB_OsaMutexLock(usb_osa_mutex_handle)	24	static
+usb_osa_freertos.c:586:18:usb_osa_status_t USB_OsaMutexUnlock(usb_osa_mutex_handle)	24	static
+usb_osa_freertos.c:609:18:usb_osa_status_t USB_OsaMsgqCreate(void**, uint32_t, uint32_t)	24	static
+usb_osa_freertos.c:656:18:usb_osa_status_t USB_OsaMsgqDestroy(usb_osa_msgq_handle)	16	static
+usb_osa_freertos.c:678:18:usb_osa_status_t USB_OsaMsgqSend(usb_osa_msgq_handle, void*)	32	static
+usb_osa_freertos.c:721:18:usb_osa_status_t USB_OsaMsgqRecv(usb_osa_msgq_handle, void*, uint32_t)	32	static
+usb_osa_freertos.c:754:18:usb_osa_status_t USB_OsaMsgqCheck(usb_osa_msgq_handle, void*)	24	static

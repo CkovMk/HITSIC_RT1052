@@ -1,0 +1,50 @@
+core_cm7.h:1902:22:void __NVIC_EnableIRQ(IRQn_Type)	16	static
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
+fsl_common.h:419:28:status_t EnableIRQ(IRQn_Type)	16	static
+fsl_flexcan.h:817:20:void FLEXCAN_ClearStatusFlags(CAN_Type*, uint32_t)	16	static
+fsl_flexcan.h:856:24:uint64_t FLEXCAN_GetMbStatusFlags(CAN_Type*, uint64_t)	48	static
+fsl_flexcan.h:877:20:void FLEXCAN_ClearMbStatusFlags(CAN_Type*, uint64_t)	24	static
+fsl_flexcan.h:906:20:void FLEXCAN_EnableInterrupts(CAN_Type*, uint32_t)	16	static
+fsl_flexcan.h:927:20:void FLEXCAN_DisableInterrupts(CAN_Type*, uint32_t)	16	static
+fsl_flexcan.h:948:20:void FLEXCAN_EnableMbInterrupts(CAN_Type*, uint64_t)	24	static
+fsl_flexcan.h:970:20:void FLEXCAN_DisableMbInterrupts(CAN_Type*, uint64_t)	24	static
+fsl_flexcan.h:1030:20:void FLEXCAN_Enable(CAN_Type*, bool)	16	static
+fsl_flexcan.c:288:10:uint32_t FLEXCAN_GetInstance(CAN_Type*)	24	static
+fsl_flexcan.c:307:13:void FLEXCAN_EnterFreezeMode(CAN_Type*)	32	static
+fsl_flexcan.c:394:13:void FLEXCAN_ExitFreezeMode(CAN_Type*)	16	static
+fsl_flexcan.c:407:13:bool FLEXCAN_IsMbOccupied(CAN_Type*, uint8_t)	24	static
+fsl_flexcan.c:454:17:uint32_t FLEXCAN_GetFirstValidMb(CAN_Type*)	24	static
+fsl_flexcan.c:472:13:bool FLEXCAN_IsMbIntEnabled(CAN_Type*, uint8_t)	16	static
+fsl_flexcan.c:505:13:void FLEXCAN_Reset(CAN_Type*)	24	static
+fsl_flexcan.c:580:13:void FLEXCAN_SetBaudRate(CAN_Type*, uint32_t, uint32_t, flexcan_timing_config_t)	32	static
+fsl_flexcan.c:677:6:void FLEXCAN_Init(CAN_Type*, const flexcan_config_t*, uint32_t)	40	static
+fsl_flexcan.c:858:6:void FLEXCAN_Deinit(CAN_Type*)	24	static
+fsl_flexcan.c:897:6:void FLEXCAN_GetDefaultConfig(flexcan_config_t*)	16	static
+fsl_flexcan.c:947:6:void FLEXCAN_SetTimingConfig(CAN_Type*, const flexcan_timing_config_t*)	16	static
+fsl_flexcan.c:1040:6:void FLEXCAN_SetRxMbGlobalMask(CAN_Type*, uint32_t)	16	static
+fsl_flexcan.c:1062:6:void FLEXCAN_SetRxFifoGlobalMask(CAN_Type*, uint32_t)	16	static
+fsl_flexcan.c:1088:6:void FLEXCAN_SetRxIndividualMask(CAN_Type*, uint8_t, uint32_t)	24	static
+fsl_flexcan.c:1114:6:void FLEXCAN_SetTxMbConfig(CAN_Type*, uint8_t, bool)	16	static
+fsl_flexcan.c:1144:13:void FLEXCAN_GetSegments(uint32_t, uint32_t, flexcan_timing_config_t*)	32	static
+fsl_flexcan.c:1192:6:bool FLEXCAN_CalculateImprovedTimingValues(uint32_t, uint32_t, flexcan_timing_config_t*)	40	static
+fsl_flexcan.c:1509:6:void FLEXCAN_SetRxMbConfig(CAN_Type*, uint8_t, const flexcan_rx_mb_config_t*, bool)	32	static
+fsl_flexcan.c:1620:6:void FLEXCAN_SetRxFifoConfig(CAN_Type*, const flexcan_rx_fifo_config_t*, bool)	40	static
+fsl_flexcan.c:1775:13:void FLEXCAN_ERRATA_6032(CAN_Type*, volatile uint32_t*)	40	static
+fsl_flexcan.c:1847:10:status_t FLEXCAN_WriteTxMb(CAN_Type*, uint8_t, const flexcan_frame_t*)	32	static
+fsl_flexcan.c:2010:10:status_t FLEXCAN_ReadRxMb(CAN_Type*, uint8_t, flexcan_frame_t*)	32	static
+fsl_flexcan.c:2175:10:status_t FLEXCAN_ReadRxFifo(CAN_Type*, flexcan_frame_t*)	24	static
+fsl_flexcan.c:2235:10:status_t FLEXCAN_TransferSendBlocking(CAN_Type*, uint8_t, flexcan_frame_t*)	56	static
+fsl_flexcan.c:2280:10:status_t FLEXCAN_TransferReceiveBlocking(CAN_Type*, uint8_t, flexcan_frame_t*)	56	static
+fsl_flexcan.c:2398:10:status_t FLEXCAN_TransferReceiveFifoBlocking(CAN_Type*, flexcan_frame_t*)	32	static
+fsl_flexcan.c:2428:6:void FLEXCAN_TransferCreateHandle(CAN_Type*, flexcan_handle_t*, flexcan_transfer_callback_t, void*)	32	static
+fsl_flexcan.c:2493:10:status_t FLEXCAN_TransferSendNonBlocking(CAN_Type*, flexcan_handle_t*, flexcan_mb_transfer_t*)	48	static
+fsl_flexcan.c:2554:10:status_t FLEXCAN_TransferReceiveNonBlocking(CAN_Type*, flexcan_handle_t*, flexcan_mb_transfer_t*)	48	static
+fsl_flexcan.c:2709:10:status_t FLEXCAN_TransferReceiveFifoNonBlocking(CAN_Type*, flexcan_handle_t*, flexcan_fifo_transfer_t*)	24	static
+fsl_flexcan.c:2744:6:void FLEXCAN_TransferAbortSend(CAN_Type*, flexcan_handle_t*, uint8_t)	48	static
+fsl_flexcan.c:2856:6:void FLEXCAN_TransferAbortReceive(CAN_Type*, flexcan_handle_t*, uint8_t)	48	static
+fsl_flexcan.c:2885:6:void FLEXCAN_TransferAbortReceiveFifo(CAN_Type*, flexcan_handle_t*)	16	static
+fsl_flexcan.c:2912:6:void FLEXCAN_TransferHandleIRQ(CAN_Type*, flexcan_handle_t*)	88	static
+fsl_flexcan.c:3114:6:void CAN1_DriverIRQHandler()	8	static
+fsl_flexcan.c:3128:6:void CAN2_DriverIRQHandler()	8	static

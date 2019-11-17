@@ -1,0 +1,40 @@
+core_cm7.h:1902:22:void __NVIC_EnableIRQ(IRQn_Type)	16	static
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_common.h:419:28:status_t EnableIRQ(IRQn_Type)	16	static
+fsl_flexio.h:486:20:void FLEXIO_EnableShifterStatusInterrupts(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio.h:499:20:void FLEXIO_DisableShifterStatusInterrupts(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio.h:569:24:uint32_t FLEXIO_GetShifterStatusFlags(FLEXIO_Type*)	16	static
+fsl_flexio.h:582:20:void FLEXIO_ClearShifterStatusFlags(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio.h:593:24:uint32_t FLEXIO_GetShifterErrorFlags(FLEXIO_Type*)	16	static
+fsl_flexio.h:606:20:void FLEXIO_ClearShifterErrorFlags(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio.h:617:24:uint32_t FLEXIO_GetTimerStatusFlags(FLEXIO_Type*)	16	static
+fsl_flexio.h:630:20:void FLEXIO_ClearTimerStatusFlags(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio_i2c_master.h:328:20:void FLEXIO_I2C_MasterWriteByte(FLEXIO_I2C_Type*, uint32_t)	16	static
+fsl_flexio_i2c_master.h:342:23:uint8_t FLEXIO_I2C_MasterReadByte(FLEXIO_I2C_Type*)	16	static
+fsl_flexio_i2c_master.c:75:17:uint32_t FLEXIO_I2C_GetInstance(FLEXIO_I2C_Type*)	16	static
+fsl_flexio_i2c_master.c:80:17:status_t FLEXIO_I2C_MasterTransferInitStateMachine(FLEXIO_I2C_Type*, flexio_i2c_master_handle_t*, flexio_i2c_master_transfer_t*)	32	static
+fsl_flexio_i2c_master.c:144:17:status_t FLEXIO_I2C_MasterTransferRunStateMachine(FLEXIO_I2C_Type*, flexio_i2c_master_handle_t*, uint32_t)	32	static
+fsl_flexio_i2c_master.c:344:13:void FLEXIO_I2C_MasterTransferComplete(FLEXIO_I2C_Type*, flexio_i2c_master_handle_t*, status_t)	32	static
+fsl_flexio_i2c_master.c:384:10:status_t FLEXIO_I2C_MasterInit(FLEXIO_I2C_Type*, flexio_i2c_master_config_t*, uint32_t)	88	static
+fsl_flexio_i2c_master.c:500:6:void FLEXIO_I2C_MasterDeinit(FLEXIO_I2C_Type*)	16	static
+fsl_flexio_i2c_master.c:531:6:void FLEXIO_I2C_MasterGetDefaultConfig(flexio_i2c_master_config_t*)	16	static
+fsl_flexio_i2c_master.c:554:10:uint32_t FLEXIO_I2C_MasterGetStatusFlags(FLEXIO_I2C_Type*)	24	static
+fsl_flexio_i2c_master.c:580:6:void FLEXIO_I2C_MasterClearStatusFlags(FLEXIO_I2C_Type*, uint32_t)	16	static
+fsl_flexio_i2c_master.c:606:6:void FLEXIO_I2C_MasterEnableInterrupts(FLEXIO_I2C_Type*, uint32_t)	16	static
+fsl_flexio_i2c_master.c:624:6:void FLEXIO_I2C_MasterDisableInterrupts(FLEXIO_I2C_Type*, uint32_t)	16	static
+fsl_flexio_i2c_master.c:643:6:void FLEXIO_I2C_MasterSetBaudRate(FLEXIO_I2C_Type*, uint32_t, uint32_t)	32	static
+fsl_flexio_i2c_master.c:671:10:status_t FLEXIO_I2C_MasterSetTransferCount(FLEXIO_I2C_Type*, uint8_t)	32	static
+fsl_flexio_i2c_master.c:709:6:void FLEXIO_I2C_MasterStart(FLEXIO_I2C_Type*, uint8_t, flexio_i2c_direction_t)	24	static
+fsl_flexio_i2c_master.c:723:6:void FLEXIO_I2C_MasterRepeatedStart(FLEXIO_I2C_Type*)	16	static
+fsl_flexio_i2c_master.c:734:6:void FLEXIO_I2C_MasterStop(FLEXIO_I2C_Type*)	16	static
+fsl_flexio_i2c_master.c:746:6:void FLEXIO_I2C_MasterAbortStop(FLEXIO_I2C_Type*)	24	static
+fsl_flexio_i2c_master.c:763:6:void FLEXIO_I2C_MasterEnableAck(FLEXIO_I2C_Type*, bool)	24	static
+fsl_flexio_i2c_master.c:791:10:status_t FLEXIO_I2C_MasterWriteBlocking(FLEXIO_I2C_Type*, const uint8_t*, uint8_t)	32	static
+fsl_flexio_i2c_master.c:825:6:void FLEXIO_I2C_MasterReadBlocking(FLEXIO_I2C_Type*, uint8_t*, uint8_t)	24	static
+fsl_flexio_i2c_master.c:851:10:status_t FLEXIO_I2C_MasterTransferBlocking(FLEXIO_I2C_Type*, flexio_i2c_master_transfer_t*)	64	static
+fsl_flexio_i2c_master.c:895:10:status_t FLEXIO_I2C_MasterTransferCreateHandle(FLEXIO_I2C_Type*, flexio_i2c_master_handle_t*, flexio_i2c_master_transfer_callback_t, void*)	32	static
+fsl_flexio_i2c_master.c:932:10:status_t FLEXIO_I2C_MasterTransferNonBlocking(FLEXIO_I2C_Type*, flexio_i2c_master_handle_t*, flexio_i2c_master_transfer_t*)	24	static
+fsl_flexio_i2c_master.c:964:6:void FLEXIO_I2C_MasterTransferAbort(FLEXIO_I2C_Type*, flexio_i2c_master_handle_t*)	16	static
+fsl_flexio_i2c_master.c:984:10:status_t FLEXIO_I2C_MasterTransferGetCount(FLEXIO_I2C_Type*, flexio_i2c_master_handle_t*, size_t*)	24	static
+fsl_flexio_i2c_master.c:1002:6:void FLEXIO_I2C_MasterTransferHandleIRQ(void*, void*)	32	static

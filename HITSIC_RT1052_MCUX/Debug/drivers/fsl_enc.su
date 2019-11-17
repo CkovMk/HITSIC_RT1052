@@ -1,0 +1,18 @@
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
+fsl_enc.c:47:17:uint32_t ENC_GetInstance(ENC_Type*)	24	static
+fsl_enc.c:76:6:void ENC_Init(ENC_Type*, const enc_config_t*)	24	static
+fsl_enc.c:174:6:void ENC_Deinit(ENC_Type*)	16	static
+fsl_enc.c:206:6:void ENC_GetDefaultConfig(enc_config_t*)	16	static
+fsl_enc.c:239:6:void ENC_DoSoftwareLoadInitialPositionValue(ENC_Type*)	24	static
+fsl_enc.c:257:6:void ENC_SetSelfTestConfig(ENC_Type*, const enc_self_test_config_t*)	24	static
+fsl_enc.c:281:6:void ENC_EnableWatchdog(ENC_Type*, bool)	24	static
+fsl_enc.c:299:10:uint32_t ENC_GetStatusFlags(ENC_Type*)	24	static
+fsl_enc.c:348:6:void ENC_ClearStatusFlags(ENC_Type*, uint32_t)	24	static
+fsl_enc.c:400:6:void ENC_EnableInterrupts(ENC_Type*, uint32_t)	24	static
+fsl_enc.c:451:6:void ENC_DisableInterrupts(ENC_Type*, uint32_t)	24	static
+fsl_enc.c:503:10:uint32_t ENC_GetEnabledInterrupts(ENC_Type*)	24	static
+fsl_enc.c:546:6:void ENC_SetInitialPositionValue(ENC_Type*, uint32_t)	16	static
+fsl_enc.c:559:10:uint32_t ENC_GetPositionValue(ENC_Type*)	24	static
+fsl_enc.c:581:10:uint32_t ENC_GetHoldPositionValue(ENC_Type*)	24	static

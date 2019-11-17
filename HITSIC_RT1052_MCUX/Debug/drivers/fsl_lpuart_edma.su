@@ -1,0 +1,12 @@
+fsl_lpuart.h:476:24:uint32_t LPUART_GetDataRegisterAddress(LPUART_Type*)	16	static
+fsl_lpuart.h:489:20:void LPUART_EnableTxDMA(LPUART_Type*, bool)	16	static
+fsl_lpuart.h:509:20:void LPUART_EnableRxDMA(LPUART_Type*, bool)	16	static
+fsl_lpuart_edma.c:112:13:void LPUART_SendEDMACallback(edma_handle_t*, void*, bool, uint32_t)	40	static
+fsl_lpuart_edma.c:134:13:void LPUART_ReceiveEDMACallback(edma_handle_t*, void*, bool, uint32_t)	40	static
+fsl_lpuart_edma.c:166:6:void LPUART_TransferCreateHandleEDMA(LPUART_Type*, lpuart_edma_handle_t*, lpuart_edma_transfer_callback_t, void*, edma_handle_t*, edma_handle_t*)	32	static
+fsl_lpuart_edma.c:232:10:status_t LPUART_SendEDMA(LPUART_Type*, lpuart_edma_handle_t*, lpuart_transfer_t*)	80	static
+fsl_lpuart_edma.c:291:10:status_t LPUART_ReceiveEDMA(LPUART_Type*, lpuart_edma_handle_t*, lpuart_transfer_t*)	80	static
+fsl_lpuart_edma.c:344:6:void LPUART_TransferAbortSendEDMA(LPUART_Type*, lpuart_edma_handle_t*)	16	static
+fsl_lpuart_edma.c:366:6:void LPUART_TransferAbortReceiveEDMA(LPUART_Type*, lpuart_edma_handle_t*)	16	static
+fsl_lpuart_edma.c:392:10:status_t LPUART_TransferGetReceiveCountEDMA(LPUART_Type*, lpuart_edma_handle_t*, uint32_t*)	32	static
+fsl_lpuart_edma.c:423:10:status_t LPUART_TransferGetSendCountEDMA(LPUART_Type*, lpuart_edma_handle_t*, uint32_t*)	32	static

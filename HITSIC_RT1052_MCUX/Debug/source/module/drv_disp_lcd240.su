@@ -1,0 +1,61 @@
+char_traits.h:284:7:static constexpr void std::char_traits<char>::assign(std::char_traits<char>::char_type&, const char_type&)	16	static
+char_traits.h:314:7:static constexpr std::size_t std::char_traits<char>::length(const char_type*)	24	static
+char_traits.h:346:7:static std::char_traits<char>::char_type* std::char_traits<char>::copy(std::char_traits<char>::char_type*, const char_type*, std::size_t)	24	static
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+drv_pitmgr.hpp:17:18:static uint64_t pitMgr_t::getLTC()	16	static
+drv_pitmgr.hpp:40:14:static void pitMgr_t::delay_ms(uint64_t)	48	static
+drv_disp_lcd240.hpp:24:19:static lcd240_t& lcd240_t::getInst()	16	static
+drv_disp_lcd240.cpp:3:6:static void lcd240_t::edmaCallBack(LPSPI_Type*, lpspi_master_edma_handle_t*, status_t, void*)	64	static
+drv_disp_lcd240.cpp:21:6:void lcd240_t::setup()	40	static
+drv_disp_lcd240.cpp:159:6:void lcd240_t::setRange(uint8_t, uint8_t, uint8_t, uint8_t)	40	static
+drv_disp_lcd240.cpp:183:6:void lcd240_t::fill(uint16_t)	32	static
+drv_disp_lcd240.cpp:196:1:lcd240_t::lcd240_t()	16	static
+drv_disp_lcd240.cpp:203:10:status_t lcd240_t::spiTxPoll(uint8_t*, uint32_t)	24	static
+drv_disp_lcd240.cpp:220:10:status_t lcd240_t::spiTxEdma(uint8_t*, uint32_t)	32	static
+drv_disp_lcd240.cpp:240:7:void lcd240_t::setConfigPoll(uint8_t*, uint8_t*, uint32_t)	24	static
+drv_disp_lcd240.cpp:249:6:void lcd240_t::setRST(uint8_t)	16	static
+drv_disp_lcd240.cpp:254:6:void lcd240_t::setD_C(uint8_t)	16	static
+drv_disp_lcd240.cpp:259:6:void lcd240_t::setBKL(uint8_t)	16	static
+char_traits.h:161:5:static constexpr std::size_t __gnu_cxx::char_traits<_CharT>::length(const char_type*) [with _CharT = char]	24	static
+char_traits.h:100:7:static constexpr bool __gnu_cxx::char_traits<_CharT>::eq(const char_type&, const char_type&) [with _CharT = char]	16	static
+basic_string.h:139:14:std::__cxx11::basic_string<char>::_Alloc_hider::~_Alloc_hider()	16	static
+basic_string.h:656:7:std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::~basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	16	static
+basic_string.h:514:7:std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with <template-parameter-2-1> = std::allocator<char>; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	32	static
+basic_string.h:175:7:std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::pointer std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_data() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	16	static
+basic_string.h:218:7:void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_dispose() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	16	static
+basic_string.h:179:7:std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::pointer std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_local_data() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	16	static
+basic_string.h:145:2:std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_Alloc_hider::_Alloc_hider(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::pointer, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	24	static
+basic_string.h:252:9:void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_construct(_InIterator, _InIterator) [with _InIterator = const char*; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	24	static
+basic_string.h:210:7:bool std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_is_local() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	24	static
+basic_string.h:225:7:void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_destroy(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	24	static
+ptr_traits.h:141:7:static _Tp* std::pointer_traits<_Tp*>::pointer_to(std::__make_not_void<_Tp>&) [with _Tp = char]	16	static
+basic_string.h:232:9:void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_construct_aux(_InIterator, _InIterator, std::__false_type) [with _InIterator = const char*; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	40	static
+basic_string.h:279:7:const allocator_type& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_get_allocator() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	16	static
+basic_string.h:275:7:std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::allocator_type& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_get_allocator() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	16	static
+basic_string.h:167:7:void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_data(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::pointer) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	16	static
+basic_string.h:199:7:void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_capacity(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	16	static
+basic_string.h:171:7:void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_length(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	16	static
+basic_string.h:203:7:void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_set_length(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	24	static
+basic_string.h:189:7:std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::const_pointer std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_local_data() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	16	static
+alloc_traits.h:461:7:static void std::allocator_traits<std::allocator<_CharT> >::deallocate(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, std::allocator_traits<std::allocator<_CharT> >::pointer, std::allocator_traits<std::allocator<_CharT> >::size_type) [with _Tp = char]	24	static
+move.h:138:5:constexpr _Tp* std::addressof(_Tp&) [with _Tp = char]	16	static
+stl_iterator_base_types.h:205:5:constexpr typename std::iterator_traits<_Iterator>::iterator_category std::__iterator_category(const _Iter&) [with _Iter = const char*]	16	static
+stl_iterator_base_funcs.h:138:5:constexpr typename std::iterator_traits<_Iterator>::difference_type std::distance(_InputIterator, _InputIterator) [with _InputIterator = const char*]	24	static
+basic_string.tcc:206:7:void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_construct(_InIterator, _InIterator, std::forward_iterator_tag) [with _FwdIterator = const char*; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	32	static
+basic_string.h:941:7:std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::max_size() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	16	static
+basic_string.h:335:7:static void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_S_copy(_CharT*, const _CharT*, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	24	static
+ptr_traits.h:141:7:static _Tp* std::pointer_traits<_Tp*>::pointer_to(std::__make_not_void<_Tp>&) [with _Tp = const char]	16	static
+new_allocator.h:116:7:void __gnu_cxx::new_allocator<_Tp>::deallocate(__gnu_cxx::new_allocator<_Tp>::pointer, __gnu_cxx::new_allocator<_Tp>::size_type) [with _Tp = char]	24	static
+move.h:47:5:constexpr _Tp* std::__addressof(_Tp&) [with _Tp = char]	16	static
+type_traits.h:152:5:bool __gnu_cxx::__is_null_pointer(_Type*) [with _Type = const char]	16	static
+stl_iterator_base_funcs.h:98:5:constexpr typename std::iterator_traits<_Iterator>::difference_type std::__distance(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = const char*]	24	static
+basic_string.tcc:132:5:std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::pointer std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_create(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	32	static
+basic_string.h:385:7:static void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_S_copy_chars(_CharT*, const _CharT*, const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	24	static
+alloc_traits.h:495:7:static std::allocator_traits<std::allocator<_CharT> >::size_type std::allocator_traits<std::allocator<_CharT> >::max_size(const allocator_type&) [with _Tp = char]	16	static
+move.h:138:5:constexpr _Tp* std::addressof(_Tp&) [with _Tp = const char]	16	static
+alloc_traits.h:435:7:static _Tp* std::allocator_traits<std::allocator<_CharT> >::allocate(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, std::allocator_traits<std::allocator<_CharT> >::size_type) [with _Tp = char]	16	static
+new_allocator.h:129:7:__gnu_cxx::new_allocator<_Tp>::size_type __gnu_cxx::new_allocator<_Tp>::max_size() const [with _Tp = char]	16	static
+move.h:47:5:constexpr _Tp* std::__addressof(_Tp&) [with _Tp = const char]	16	static
+new_allocator.h:99:7:_Tp* __gnu_cxx::new_allocator<_Tp>::allocate(__gnu_cxx::new_allocator<_Tp>::size_type, const void*) [with _Tp = char]	24	static
+drv_disp_lcd240.cpp:262:1:void __static_initialization_and_destruction_0(int, int)	16	static
+drv_disp_lcd240.cpp:262:1:cpp)	8	static

@@ -1,0 +1,9 @@
+usb_host_framework.c:136:14:usb_status_t USB_HostCh9RequestCommon(usb_host_device_instance_t*, usb_host_transfer_t*, uint8_t*, uint32_t)	24	static
+usb_host_framework.c:158:14:usb_status_t USB_HostStandardGetStatus(usb_host_device_instance_t*, usb_host_transfer_t*, void*)	32	static
+usb_host_framework.c:190:14:usb_status_t USB_HostStandardSetClearFeature(usb_host_device_instance_t*, usb_host_transfer_t*, void*)	32	static
+usb_host_framework.c:216:14:usb_status_t USB_HostStandardSetAddress(usb_host_device_instance_t*, usb_host_transfer_t*, void*)	32	static
+usb_host_framework.c:229:14:usb_status_t USB_HostStandardSetGetDescriptor(usb_host_device_instance_t*, usb_host_transfer_t*, void*)	32	static
+usb_host_framework.c:244:14:usb_status_t USB_HostStandardGetInterface(usb_host_device_instance_t*, usb_host_transfer_t*, void*)	32	static
+usb_host_framework.c:259:14:usb_status_t USB_HostStandardSetInterface(usb_host_device_instance_t*, usb_host_transfer_t*, void*)	32	static
+usb_host_framework.c:274:14:usb_status_t USB_HostStandardSyncFrame(usb_host_device_instance_t*, usb_host_transfer_t*, void*)	32	static
+usb_host_framework.c:289:14:usb_status_t USB_HostRequestControl(usb_device_handle, uint8_t, usb_host_transfer_t*, void*)	32	static

@@ -1,0 +1,11 @@
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
+fsl_tsc.c:40:17:uint32_t TSC_GetInstance(TSC_Type*)	24	static
+fsl_tsc.c:64:6:void TSC_Init(TSC_Type*, const tsc_config_t*)	24	static
+fsl_tsc.c:92:6:void TSC_Deinit(TSC_Type*)	16	static
+fsl_tsc.c:114:6:void TSC_GetDefaultConfig(tsc_config_t*)	16	static
+fsl_tsc.c:134:10:uint32_t TSC_GetMeasureValue(TSC_Type*, tsc_corrdinate_value_selection_t)	24	static
+fsl_tsc.c:161:6:void TSC_DebugTriggerSignalToADC(TSC_Type*, tsc_trigger_signal_t, bool)	16	static
+fsl_tsc.c:184:6:void TSC_DebugEnableDetection(TSC_Type*, tsc_detection_mode_t, bool)	16	static
+fsl_tsc.c:220:6:void TSC_DebugSetPortMode(TSC_Type*, tsc_port_source_t, tsc_port_mode_t)	24	static

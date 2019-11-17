@@ -1,0 +1,34 @@
+core_cm7.h:1902:22:void __NVIC_EnableIRQ(IRQn_Type)	16	static
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_common.h:419:28:status_t EnableIRQ(IRQn_Type)	16	static
+fsl_flexio.h:486:20:void FLEXIO_EnableShifterStatusInterrupts(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio.h:499:20:void FLEXIO_DisableShifterStatusInterrupts(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio.h:569:24:uint32_t FLEXIO_GetShifterStatusFlags(FLEXIO_Type*)	16	static
+fsl_flexio.h:582:20:void FLEXIO_ClearShifterStatusFlags(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio.h:593:24:uint32_t FLEXIO_GetShifterErrorFlags(FLEXIO_Type*)	16	static
+fsl_flexio.h:606:20:void FLEXIO_ClearShifterErrorFlags(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio_uart.h:340:20:void FLEXIO_UART_WriteByte(FLEXIO_UART_Type*, const uint8_t*)	16	static
+fsl_flexio_uart.h:354:20:void FLEXIO_UART_ReadByte(FLEXIO_UART_Type*, uint8_t*)	16	static
+fsl_flexio_uart.c:54:17:uint32_t FLEXIO_UART_GetInstance(FLEXIO_UART_Type*)	16	static
+fsl_flexio_uart.c:59:15:size_t FLEXIO_UART_TransferGetRxRingBufferLength(flexio_uart_handle_t*)	24	static
+fsl_flexio_uart.c:75:13:bool FLEXIO_UART_TransferIsRxRingBufferFull(flexio_uart_handle_t*)	24	static
+fsl_flexio_uart.c:122:10:status_t FLEXIO_UART_Init(FLEXIO_UART_Type*, const flexio_uart_config_t*, uint32_t)	88	static
+fsl_flexio_uart.c:242:6:void FLEXIO_UART_Deinit(FLEXIO_UART_Type*)	16	static
+fsl_flexio_uart.c:272:6:void FLEXIO_UART_GetDefaultConfig(flexio_uart_config_t*)	16	static
+fsl_flexio_uart.c:297:6:void FLEXIO_UART_EnableInterrupts(FLEXIO_UART_Type*, uint32_t)	16	static
+fsl_flexio_uart.c:317:6:void FLEXIO_UART_DisableInterrupts(FLEXIO_UART_Type*, uint32_t)	16	static
+fsl_flexio_uart.c:336:10:uint32_t FLEXIO_UART_GetStatusFlags(FLEXIO_UART_Type*)	24	static
+fsl_flexio_uart.c:361:6:void FLEXIO_UART_ClearStatusFlags(FLEXIO_UART_Type*, uint32_t)	16	static
+fsl_flexio_uart.c:386:6:void FLEXIO_UART_WriteBlocking(FLEXIO_UART_Type*, const uint8_t*, size_t)	24	static
+fsl_flexio_uart.c:411:6:void FLEXIO_UART_ReadBlocking(FLEXIO_UART_Type*, uint8_t*, size_t)	24	static
+fsl_flexio_uart.c:447:10:status_t FLEXIO_UART_TransferCreateHandle(FLEXIO_UART_Type*, flexio_uart_handle_t*, flexio_uart_transfer_callback_t, void*)	32	static
+fsl_flexio_uart.c:491:6:void FLEXIO_UART_TransferStartRingBuffer(FLEXIO_UART_Type*, flexio_uart_handle_t*, uint8_t*, size_t)	24	static
+fsl_flexio_uart.c:519:6:void FLEXIO_UART_TransferStopRingBuffer(FLEXIO_UART_Type*, flexio_uart_handle_t*)	16	static
+fsl_flexio_uart.c:551:10:status_t FLEXIO_UART_TransferSendNonBlocking(FLEXIO_UART_Type*, flexio_uart_handle_t*, flexio_uart_transfer_t*)	32	static
+fsl_flexio_uart.c:593:6:void FLEXIO_UART_TransferAbortSend(FLEXIO_UART_Type*, flexio_uart_handle_t*)	16	static
+fsl_flexio_uart.c:613:10:status_t FLEXIO_UART_TransferGetSendCount(FLEXIO_UART_Type*, flexio_uart_handle_t*, size_t*)	24	static
+fsl_flexio_uart.c:653:10:status_t FLEXIO_UART_TransferReceiveNonBlocking(FLEXIO_UART_Type*, flexio_uart_handle_t*, flexio_uart_transfer_t*, size_t*)	56	static
+fsl_flexio_uart.c:778:6:void FLEXIO_UART_TransferAbortReceive(FLEXIO_UART_Type*, flexio_uart_handle_t*)	16	static
+fsl_flexio_uart.c:802:10:status_t FLEXIO_UART_TransferGetReceiveCount(FLEXIO_UART_Type*, flexio_uart_handle_t*, size_t*)	24	static
+fsl_flexio_uart.c:825:6:void FLEXIO_UART_TransferHandleIRQ(void*, void*)	40	static

@@ -1,0 +1,10 @@
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
+fsl_xbara.c:51:17:uint32_t XBARA_GetInstance(XBARA_Type*)	24	static
+fsl_xbara.c:76:6:void XBARA_Init(XBARA_Type*)	16	static
+fsl_xbara.c:91:6:void XBARA_Deinit(XBARA_Type*)	16	static
+fsl_xbara.c:115:6:void XBARA_SetSignalsConnection(XBARA_Type*, xbar_input_signal_t, xbar_output_signal_t)	16	static
+fsl_xbara.c:132:10:uint32_t XBARA_GetStatusFlags(XBARA_Type*)	24	static
+fsl_xbara.c:148:6:void XBARA_ClearStatusFlags(XBARA_Type*, uint32_t)	24	static
+fsl_xbara.c:189:6:void XBARA_SetOutputSignalConfig(XBARA_Type*, xbar_output_signal_t, const xbara_control_config_t*)	32	static

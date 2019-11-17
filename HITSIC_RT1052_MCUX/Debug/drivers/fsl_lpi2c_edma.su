@@ -1,0 +1,13 @@
+fsl_lpi2c.h:525:24:uint32_t LPI2C_MasterGetStatusFlags(LPI2C_Type*)	16	static
+fsl_lpi2c.h:550:20:void LPI2C_MasterClearStatusFlags(LPI2C_Type*, uint32_t)	16	static
+fsl_lpi2c.h:585:20:void LPI2C_MasterDisableInterrupts(LPI2C_Type*, uint32_t)	16	static
+fsl_lpi2c.h:614:20:void LPI2C_MasterEnableDMA(LPI2C_Type*, bool, bool)	16	static
+fsl_lpi2c.h:625:24:uint32_t LPI2C_MasterGetTxFifoAddress(LPI2C_Type*)	16	static
+fsl_lpi2c.h:636:24:uint32_t LPI2C_MasterGetRxFifoAddress(LPI2C_Type*)	16	static
+fsl_edma.h:878:24:uint32_t EDMA_GetNextTCDAddress(edma_handle_t*)	16	static
+fsl_lpi2c_edma.c:107:6:void LPI2C_MasterCreateEDMAHandle(LPI2C_Type*, lpi2c_master_edma_handle_t*, edma_handle_t*, edma_handle_t*, lpi2c_master_edma_transfer_callback_t, void*)	24	static
+fsl_lpi2c_edma.c:142:17:uint32_t LPI2C_GenerateCommands(lpi2c_master_edma_handle_t*)	40	static
+fsl_lpi2c_edma.c:211:10:status_t LPI2C_MasterTransferEDMA(LPI2C_Type*, lpi2c_master_edma_handle_t*, lpi2c_master_transfer_t*)	80	static
+fsl_lpi2c_edma.c:388:10:status_t LPI2C_MasterTransferGetCountEDMA(LPI2C_Type*, lpi2c_master_edma_handle_t*, size_t*)	40	static
+fsl_lpi2c_edma.c:438:10:status_t LPI2C_MasterTransferAbortEDMA(LPI2C_Type*, lpi2c_master_edma_handle_t*)	16	static
+fsl_lpi2c_edma.c:473:13:void LPI2C_MasterEDMACallback(edma_handle_t*, void*, bool, uint32_t)	48	static

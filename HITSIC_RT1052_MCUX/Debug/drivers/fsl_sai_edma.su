@@ -1,0 +1,21 @@
+fsl_sai.h:1148:20:void SAI_TxEnableDMA(I2S_Type*, uint32_t, bool)	24	static
+fsl_sai.h:1169:20:void SAI_RxEnableDMA(I2S_Type*, uint32_t, bool)	24	static
+fsl_sai.h:1190:24:uint32_t SAI_TxGetDataRegisterAddress(I2S_Type*, uint32_t)	16	static
+fsl_sai.h:1204:24:uint32_t SAI_RxGetDataRegisterAddress(I2S_Type*, uint32_t)	16	static
+fsl_sai_edma.c:73:17:uint32_t SAI_GetInstance(I2S_Type*)	24	static
+fsl_sai_edma.c:91:13:void SAI_TxEDMACallback(edma_handle_t*, void*, bool, uint32_t)	40	static
+fsl_sai_edma.c:113:13:void SAI_RxEDMACallback(edma_handle_t*, void*, bool, uint32_t)	40	static
+fsl_sai_edma.c:148:6:void SAI_TransferTxCreateHandleEDMA(I2S_Type*, sai_edma_handle_t*, sai_edma_callback_t, void*, edma_handle_t*)	32	static
+fsl_sai_edma.c:189:6:void SAI_TransferRxCreateHandleEDMA(I2S_Type*, sai_edma_handle_t*, sai_edma_callback_t, void*, edma_handle_t*)	32	static
+fsl_sai_edma.c:232:6:void SAI_TransferTxSetFormatEDMA(I2S_Type*, sai_edma_handle_t*, sai_transfer_format_t*, uint32_t, uint32_t)	24	static
+fsl_sai_edma.c:273:6:void SAI_TransferTxSetConfigEDMA(I2S_Type*, sai_edma_handle_t*, sai_transceiver_t*)	24	static
+fsl_sai_edma.c:316:6:void SAI_TransferRxSetFormatEDMA(I2S_Type*, sai_edma_handle_t*, sai_transfer_format_t*, uint32_t, uint32_t)	24	static
+fsl_sai_edma.c:357:6:void SAI_TransferRxSetConfigEDMA(I2S_Type*, sai_edma_handle_t*, sai_transceiver_t*)	24	static
+fsl_sai_edma.c:399:10:status_t SAI_TransferSendEDMA(I2S_Type*, sai_edma_handle_t*, sai_transfer_t*)	88	static
+fsl_sai_edma.c:463:10:status_t SAI_TransferReceiveEDMA(I2S_Type*, sai_edma_handle_t*, sai_transfer_t*)	88	static
+fsl_sai_edma.c:523:6:void SAI_TransferAbortSendEDMA(I2S_Type*, sai_edma_handle_t*)	16	static
+fsl_sai_edma.c:560:6:void SAI_TransferAbortReceiveEDMA(I2S_Type*, sai_edma_handle_t*)	16	static
+fsl_sai_edma.c:597:6:void SAI_TransferTerminateSendEDMA(I2S_Type*, sai_edma_handle_t*)	16	static
+fsl_sai_edma.c:621:6:void SAI_TransferTerminateReceiveEDMA(I2S_Type*, sai_edma_handle_t*)	16	static
+fsl_sai_edma.c:645:10:status_t SAI_TransferGetSendCountEDMA(I2S_Type*, sai_edma_handle_t*, size_t*)	40	static
+fsl_sai_edma.c:674:10:status_t SAI_TransferGetReceiveCountEDMA(I2S_Type*, sai_edma_handle_t*, size_t*)	40	static

@@ -1,0 +1,1 @@
+fsl_pmu.c:20:10:uint32_t PMU_GetStatusFlags(PMU_Type*)	24	static

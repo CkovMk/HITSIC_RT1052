@@ -1,0 +1,22 @@
+usb_device_dci.c:104:21:usb_status_t USB_DeviceAllocateHandle(uint8_t, usb_device_struct_t**)	24	static
+usb_device_dci.c:143:21:usb_status_t USB_DeviceFreeHandle(usb_device_struct_t*)	24	static
+usb_device_dci.c:195:21:usb_status_t USB_DeviceGetControllerInterface(uint8_t, const usb_device_controller_interface_struct_t**)	24	static
+usb_device_dci.c:258:21:usb_status_t USB_DeviceTransfer(usb_device_handle, uint8_t, uint8_t*, uint32_t)	48	static
+usb_device_dci.c:339:21:usb_status_t USB_DeviceControl(usb_device_handle, usb_device_control_type_t, void*)	32	static
+usb_device_dci.c:372:21:usb_status_t USB_DeviceResetNotification(usb_device_struct_t*, usb_device_callback_message_struct_t*)	24	static
+usb_device_dci.c:660:21:usb_status_t USB_DeviceNotification(usb_device_struct_t*, usb_device_callback_message_struct_t*)	40	static
+usb_device_dci.c:762:14:usb_status_t USB_DeviceNotificationTrigger(void*, void*)	24	static
+usb_device_dci.c:818:14:usb_status_t USB_DeviceInit(uint8_t, usb_device_callback_t, void**)	40	static
+usb_device_dci.c:917:14:usb_status_t USB_DeviceRun(usb_device_handle)	16	static
+usb_device_dci.c:933:14:usb_status_t USB_DeviceStop(usb_device_handle)	16	static
+usb_device_dci.c:947:14:usb_status_t USB_DeviceDeinit(usb_device_handle)	24	static
+usb_device_dci.c:1001:14:usb_status_t USB_DeviceSendRequest(usb_device_handle, uint8_t, uint8_t*, uint32_t)	24	static
+usb_device_dci.c:1032:14:usb_status_t USB_DeviceRecvRequest(usb_device_handle, uint8_t, uint8_t*, uint32_t)	24	static
+usb_device_dci.c:1051:14:usb_status_t USB_DeviceCancel(usb_device_handle, uint8_t)	24	static
+usb_device_dci.c:1090:14:usb_status_t USB_DeviceInitEndpoint(usb_device_handle, usb_device_endpoint_init_struct_t*, usb_device_endpoint_callback_struct_t*)	32	static
+usb_device_dci.c:1140:14:usb_status_t USB_DeviceDeinitEndpoint(usb_device_handle, uint8_t)	24	static
+usb_device_dci.c:1194:14:usb_status_t USB_DeviceStallEndpoint(usb_device_handle, uint8_t)	16	static
+usb_device_dci.c:1219:14:usb_status_t USB_DeviceUnstallEndpoint(usb_device_handle, uint8_t)	16	static
+usb_device_dci.c:1246:14:usb_status_t USB_DeviceGetStatus(usb_device_handle, usb_device_status_t, void*)	32	static
+usb_device_dci.c:1309:14:usb_status_t USB_DeviceSetStatus(usb_device_handle, usb_device_status_t, void*)	32	static
+usb_device_dci.c:1447:6:void USB_DeviceGetVersion(uint32_t*)	16	static

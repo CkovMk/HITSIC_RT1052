@@ -1,0 +1,1 @@
+semihost_hardfault.c:71:6:void HardFault_Handler()	0	static

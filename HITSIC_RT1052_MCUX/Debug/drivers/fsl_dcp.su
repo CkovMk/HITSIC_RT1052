@@ -1,0 +1,38 @@
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
+fsl_common.h:487:28:uint32_t DisableGlobalIRQ()	16	static
+fsl_common.h:518:24:void EnableGlobalIRQ(uint32_t)	24	static
+fsl_dcp.c:97:13:void dcp_reverse_and_copy(uint8_t*, uint8_t*, size_t)	32	static
+fsl_dcp.c:105:17:status_t dcp_get_channel_status(DCP_Type*, dcp_channel_t)	32	static
+fsl_dcp.c:145:13:void dcp_clear_status(DCP_Type*)	24	static
+fsl_dcp.c:155:13:void dcp_clear_channel_status(DCP_Type*, uint32_t)	24	static
+fsl_dcp.c:181:17:status_t dcp_aes_set_sram_based_key(DCP_Type*, dcp_handle_t*, const uint8_t*)	32	static
+fsl_dcp.c:201:17:status_t dcp_schedule_work(DCP_Type*, dcp_handle_t*, dcp_work_packet_t*)	40	static
+fsl_dcp.c:296:10:status_t DCP_AES_SetKey(DCP_Type*, dcp_handle_t*, const uint8_t*, size_t)	32	static
+fsl_dcp.c:359:10:status_t DCP_AES_EncryptEcb(DCP_Type*, dcp_handle_t*, const uint8_t*, uint8_t*, size_t)	72	static
+fsl_dcp.c:392:10:status_t DCP_AES_EncryptEcbNonBlocking(DCP_Type*, dcp_handle_t*, dcp_work_packet_t*, const uint8_t*, uint8_t*, size_t)	24	static
+fsl_dcp.c:448:10:status_t DCP_AES_DecryptEcb(DCP_Type*, dcp_handle_t*, const uint8_t*, uint8_t*, size_t)	72	static
+fsl_dcp.c:481:10:status_t DCP_AES_DecryptEcbNonBlocking(DCP_Type*, dcp_handle_t*, dcp_work_packet_t*, const uint8_t*, uint8_t*, size_t)	24	static
+fsl_dcp.c:537:10:status_t DCP_AES_EncryptCbc(DCP_Type*, dcp_handle_t*, const uint8_t*, uint8_t*, size_t, const uint8_t*)	80	static
+fsl_dcp.c:575:10:status_t DCP_AES_EncryptCbcNonBlocking(DCP_Type*, dcp_handle_t*, dcp_work_packet_t*, const uint8_t*, uint8_t*, size_t, const uint8_t*)	24	static
+fsl_dcp.c:639:10:status_t DCP_AES_DecryptCbc(DCP_Type*, dcp_handle_t*, const uint8_t*, uint8_t*, size_t, const uint8_t*)	80	static
+fsl_dcp.c:677:10:status_t DCP_AES_DecryptCbcNonBlocking(DCP_Type*, dcp_handle_t*, dcp_work_packet_t*, const uint8_t*, uint8_t*, size_t, const uint8_t*)	24	static
+fsl_dcp.c:739:6:void DCP_GetDefaultConfig(dcp_config_t*)	24	static
+fsl_dcp.c:764:6:void DCP_Init(DCP_Type*, const dcp_config_t*)	16	static
+fsl_dcp.c:795:6:void DCP_Deinit(DCP_Type*)	16	static
+fsl_dcp.c:815:10:status_t DCP_WaitForChannelComplete(DCP_Type*, dcp_handle_t*)	16	static
+fsl_dcp.c:841:17:status_t dcp_hash_check_input_alg(dcp_hash_algo_t)	16	static
+fsl_dcp.c:861:17:status_t dcp_hash_check_input_args(DCP_Type*, dcp_hash_ctx_t*, dcp_hash_algo_t)	24	static
+fsl_dcp.c:886:17:status_t dcp_hash_check_context(dcp_hash_ctx_internal_t*, const uint8_t*)	16	static
+fsl_dcp.c:903:17:status_t dcp_hash_engine_init(DCP_Type*, dcp_hash_ctx_internal_t*)	24	static
+fsl_dcp.c:918:17:status_t dcp_hash_update_non_blocking(DCP_Type*, dcp_hash_ctx_internal_t*, dcp_work_packet_t*, const uint8_t*, size_t)	24	static
+fsl_dcp.c:947:17:status_t dcp_hash_update(DCP_Type*, dcp_hash_ctx_internal_t*, const uint8_t*, size_t)	72	static
+fsl_dcp.c:976:17:status_t dcp_hash_process_message_data(DCP_Type*, dcp_hash_ctx_internal_t*, const uint8_t*, size_t)	40	static
+fsl_dcp.c:1028:17:status_t dcp_hash_finalize(DCP_Type*, dcp_hash_ctx_internal_t*)	24	static
+fsl_dcp.c:1038:13:void dcp_hash_save_running_hash(dcp_hash_ctx_internal_t*)	24	static
+fsl_dcp.c:1069:13:void dcp_hash_restore_running_hash(dcp_hash_ctx_internal_t*)	24	static
+fsl_dcp.c:1111:10:status_t DCP_HASH_Init(DCP_Type*, dcp_handle_t*, dcp_hash_ctx_t*, dcp_hash_algo_t)	40	static
+fsl_dcp.c:1155:10:status_t DCP_HASH_Update(DCP_Type*, dcp_hash_ctx_t*, const uint8_t*, size_t)	40	static
+fsl_dcp.c:1219:10:status_t DCP_HASH_Finish(DCP_Type*, dcp_hash_ctx_t*, uint8_t*, size_t*)	40	static
+fsl_dcp.c:1319:10:status_t DCP_HASH(DCP_Type*, dcp_handle_t*, dcp_hash_algo_t, const uint8_t*, size_t, uint8_t*, size_t*)	264	static

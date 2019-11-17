@@ -1,0 +1,37 @@
+cJSON_Utils.c:56:23:unsigned char* cJSONUtils_strdup(const unsigned char*)	24	static
+cJSON_Utils.c:73:12:int compare_strings(const unsigned char*, const unsigned char*, cJSON_bool)	32	static
+cJSON_Utils.c:102:19:cJSON_bool compare_pointers(const unsigned char*, const unsigned char*, cJSON_bool)	32	static
+cJSON_Utils.c:139:15:size_t pointer_encoded_length(const unsigned char*)	24	static
+cJSON_Utils.c:155:13:void encode_string_as_pointer(unsigned char*, const unsigned char*)	16	static
+cJSON_Utils.c:179:22:char* cJSONUtils_FindPointerFromObjectTo(const cJSON*, const cJSON*)	48	static
+cJSON_Utils.c:242:15:cJSON* get_array_item(const cJSON*, size_t)	24	static
+cJSON_Utils.c:254:19:cJSON_bool decode_array_index_from_pointer(const unsigned char*, size_t*)	24	static
+cJSON_Utils.c:281:15:cJSON* get_item_from_pointer(cJSON*, const char*, cJSON_bool)	32	static
+cJSON_Utils.c:328:23:cJSON* cJSONUtils_GetPointer(cJSON*, const char*)	16	static
+cJSON_Utils.c:333:23:cJSON* cJSONUtils_GetPointerCaseSensitive(cJSON*, const char*)	16	static
+cJSON_Utils.c:339:13:void decode_pointer_inplace(unsigned char*)	24	static
+cJSON_Utils.c:373:15:cJSON* detach_item_from_array(cJSON*, size_t)	24	static
+cJSON_Utils.c:406:15:cJSON* detach_path(cJSON*, const unsigned char*, cJSON_bool)	48	static
+cJSON_Utils.c:460:15:cJSON* sort_list(cJSON*, cJSON_bool)	40	static
+cJSON_Utils.c:570:13:void sort_object(cJSON*, cJSON_bool)	16	static
+cJSON_Utils.c:579:19:cJSON_bool compare_json(cJSON*, cJSON*, cJSON_bool)	40	static
+cJSON_Utils.c:668:19:cJSON_bool insert_item_in_array(cJSON*, size_t, cJSON*)	32	static
+cJSON_Utils.c:705:15:cJSON* get_object_item(const cJSON*, const char*, cJSON_bool)	24	static
+cJSON_Utils.c:717:29:patch_operation decode_patch_operation(const cJSON*, cJSON_bool)	24	static
+cJSON_Utils.c:759:13:void overwrite_item(cJSON*, cJSON)	16	static
+cJSON_Utils.c:782:12:int apply_patch(cJSON*, const cJSON*, cJSON_bool)	112	static
+cJSON_Utils.c:1011:19:int cJSONUtils_ApplyPatches(cJSON*, const cJSON*)	24	static
+cJSON_Utils.c:1040:19:int cJSONUtils_ApplyPatchesCaseSensitive(cJSON*, const cJSON*)	24	static
+cJSON_Utils.c:1069:13:void compose_patch(cJSON*, const unsigned char*, const unsigned char*, const unsigned char*, const cJSON*)	40	static
+cJSON_Utils.c:1109:20:void cJSONUtils_AddPatchToArray(cJSON*, const char*, const char*, const cJSON*)	32	static
+cJSON_Utils.c:1114:13:void create_patches(cJSON*, const unsigned char*, cJSON*, cJSON*, cJSON_bool)	80	static
+cJSON_Utils.c:1254:23:cJSON* cJSONUtils_GeneratePatches(cJSON*, cJSON*)	32	static
+cJSON_Utils.c:1269:23:cJSON* cJSONUtils_GeneratePatchesCaseSensitive(cJSON*, cJSON*)	32	static
+cJSON_Utils.c:1284:20:void cJSONUtils_SortObject(cJSON*)	16	static
+cJSON_Utils.c:1289:20:void cJSONUtils_SortObjectCaseSensitive(cJSON*)	16	static
+cJSON_Utils.c:1294:15:cJSON* merge_patch(cJSON*, const cJSON*, cJSON_bool)	40	static
+cJSON_Utils.c:1353:23:cJSON* cJSONUtils_MergePatch(cJSON*, const cJSON*)	16	static
+cJSON_Utils.c:1358:23:cJSON* cJSONUtils_MergePatchCaseSensitive(cJSON*, const cJSON*)	16	static
+cJSON_Utils.c:1363:15:cJSON* generate_merge_patch(cJSON*, cJSON*, cJSON_bool)	48	static
+cJSON_Utils.c:1441:23:cJSON* cJSONUtils_GenerateMergePatch(cJSON*, cJSON*)	16	static
+cJSON_Utils.c:1446:23:cJSON* cJSONUtils_GenerateMergePatchCaseSensitive(cJSON*, cJSON*)	16	static

@@ -1,0 +1,57 @@
+core_cm7.h:1902:22:void __NVIC_EnableIRQ(IRQn_Type)	16	static
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_clock.h:1061:20:void CLOCK_DisableClock(clock_ip_name_t)	16	static
+fsl_common.h:419:28:status_t EnableIRQ(IRQn_Type)	16	static
+fsl_common.h:487:28:uint32_t DisableGlobalIRQ()	16	static
+fsl_common.h:518:24:void EnableGlobalIRQ(uint32_t)	24	static
+fsl_edma.c:55:17:uint32_t EDMA_GetInstance(DMA_Type*)	24	static
+fsl_edma.c:80:6:void EDMA_InstallTCD(DMA_Type*, uint32_t, edma_tcd_t*)	24	static
+fsl_edma.c:112:6:void EDMA_Init(DMA_Type*, const edma_config_t*)	24	static
+fsl_edma.c:142:6:void EDMA_Deinit(DMA_Type*)	16	static
+fsl_edma.c:164:6:void EDMA_GetDefaultConfig(edma_config_t*)	16	static
+fsl_edma.c:188:6:void EDMA_ResetChannel(DMA_Type*, uint32_t)	16	static
+fsl_edma.c:220:6:void EDMA_SetTransferConfig(DMA_Type*, uint32_t, const edma_transfer_config_t*, edma_tcd_t*)	24	static
+fsl_edma.c:239:6:void EDMA_SetMinorOffsetConfig(DMA_Type*, uint32_t, const edma_minor_offset_config_t*)	32	static
+fsl_edma.c:263:6:void EDMA_SetChannelPreemptionConfig(DMA_Type*, uint32_t, const edma_channel_Preemption_config_t*)	40	static
+fsl_edma.c:294:6:void EDMA_SetChannelLink(DMA_Type*, uint32_t, edma_channel_link_type_t, uint32_t)	24	static
+fsl_edma.c:316:6:void EDMA_SetBandWidth(DMA_Type*, uint32_t, edma_bandwidth_t)	24	static
+fsl_edma.c:335:6:void EDMA_SetModulo(DMA_Type*, uint32_t, edma_modulo_t, edma_modulo_t)	32	static
+fsl_edma.c:353:6:void EDMA_EnableChannelInterrupts(DMA_Type*, uint32_t, uint32_t)	24	static
+fsl_edma.c:384:6:void EDMA_DisableChannelInterrupts(DMA_Type*, uint32_t, uint32_t)	24	static
+fsl_edma.c:415:6:void EDMA_TcdReset(edma_tcd_t*)	16	static
+fsl_edma.c:462:6:void EDMA_TcdSetTransferConfig(edma_tcd_t*, const edma_transfer_config_t*, edma_tcd_t*)	24	static
+fsl_edma.c:511:6:void EDMA_TcdSetMinorOffsetConfig(edma_tcd_t*, const edma_minor_offset_config_t*)	24	static
+fsl_edma.c:541:6:void EDMA_TcdSetChannelLink(edma_tcd_t*, edma_channel_link_type_t, uint32_t)	32	static
+fsl_edma.c:591:6:void EDMA_TcdSetModulo(edma_tcd_t*, edma_modulo_t, edma_modulo_t)	24	static
+fsl_edma.c:609:6:void EDMA_TcdEnableInterrupts(edma_tcd_t*, uint32_t)	16	static
+fsl_edma.c:633:6:void EDMA_TcdDisableInterrupts(edma_tcd_t*, uint32_t)	16	static
+fsl_edma.c:671:10:uint32_t EDMA_GetRemainingMajorLoopCount(DMA_Type*, uint32_t)	24	static
+fsl_edma.c:707:10:uint32_t EDMA_GetChannelStatusFlags(DMA_Type*, uint32_t)	24	static
+fsl_edma.c:731:6:void EDMA_ClearChannelStatusFlags(DMA_Type*, uint32_t, uint32_t)	24	static
+fsl_edma.c:752:16:uint8_t Get_StartInstance()	8	static
+fsl_edma.c:780:6:void EDMA_CreateHandle(edma_handle_t*, DMA_Type*, uint32_t)	40	static
+fsl_edma.c:835:6:void EDMA_InstallTCDMemory(edma_handle_t*, edma_tcd_t*, uint32_t)	24	static
+fsl_edma.c:859:6:void EDMA_SetCallback(edma_handle_t*, edma_callback, void*)	24	static
+fsl_edma.c:884:6:void EDMA_PrepareTransfer(edma_transfer_config_t*, void*, uint32_t, void*, uint32_t, uint32_t, uint32_t, edma_transfer_type_t)	24	static
+fsl_edma.c:1001:10:status_t EDMA_SubmitTransfer(edma_handle_t*, const edma_transfer_config_t*)	40	static
+fsl_edma.c:1154:6:void EDMA_StartTransfer(edma_handle_t*)	32	static
+fsl_edma.c:1201:6:void EDMA_StopTransfer(edma_handle_t*)	16	static
+fsl_edma.c:1217:6:void EDMA_AbortTransfer(edma_handle_t*)	16	static
+fsl_edma.c:1266:6:void EDMA_HandleIRQ(edma_handle_t*)	48	static
+fsl_edma.c:1860:6:void DMA0_DMA16_DriverIRQHandler()	8	static
+fsl_edma.c:1877:6:void DMA1_DMA17_DriverIRQHandler()	8	static
+fsl_edma.c:1894:6:void DMA2_DMA18_DriverIRQHandler()	8	static
+fsl_edma.c:1911:6:void DMA3_DMA19_DriverIRQHandler()	8	static
+fsl_edma.c:1928:6:void DMA4_DMA20_DriverIRQHandler()	8	static
+fsl_edma.c:1945:6:void DMA5_DMA21_DriverIRQHandler()	8	static
+fsl_edma.c:1962:6:void DMA6_DMA22_DriverIRQHandler()	8	static
+fsl_edma.c:1979:6:void DMA7_DMA23_DriverIRQHandler()	8	static
+fsl_edma.c:1996:6:void DMA8_DMA24_DriverIRQHandler()	8	static
+fsl_edma.c:2013:6:void DMA9_DMA25_DriverIRQHandler()	8	static
+fsl_edma.c:2030:6:void DMA10_DMA26_DriverIRQHandler()	8	static
+fsl_edma.c:2047:6:void DMA11_DMA27_DriverIRQHandler()	8	static
+fsl_edma.c:2064:6:void DMA12_DMA28_DriverIRQHandler()	8	static
+fsl_edma.c:2081:6:void DMA13_DMA29_DriverIRQHandler()	8	static
+fsl_edma.c:2098:6:void DMA14_DMA30_DriverIRQHandler()	8	static
+fsl_edma.c:2115:6:void DMA15_DMA31_DriverIRQHandler()	8	static

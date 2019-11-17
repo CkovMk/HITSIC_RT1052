@@ -1,0 +1,4 @@
+serial_port_uart.c:128:25:serial_manager_status_t Serial_UartInit(serial_handle_t, void*)	40	static
+serial_port_uart.c:196:25:serial_manager_status_t Serial_UartDeinit(serial_handle_t)	24	static
+serial_port_uart.c:263:25:serial_manager_status_t Serial_UartWrite(serial_handle_t, uint8_t*, uint32_t)	32	static
+serial_port_uart.c:277:25:serial_manager_status_t Serial_UartRead(serial_handle_t, uint8_t*, uint32_t)	32	static

@@ -1,0 +1,19 @@
+fsl_common.h:487:28:uint32_t DisableGlobalIRQ()	16	static
+fsl_common.h:518:24:void EnableGlobalIRQ(uint32_t)	24	static
+fsl_spdif.h:269:20:void SPDIF_RxEnable(SPDIF_Type*, bool)	16	static
+fsl_spdif.h:372:20:void SPDIF_EnableDMA(SPDIF_Type*, uint32_t, bool)	24	static
+fsl_spdif.h:392:24:uint32_t SPDIF_TxGetLeftDataRegisterAddress(SPDIF_Type*)	16	static
+fsl_spdif.h:405:24:uint32_t SPDIF_TxGetRightDataRegisterAddress(SPDIF_Type*)	16	static
+fsl_spdif.h:418:24:uint32_t SPDIF_RxGetLeftDataRegisterAddress(SPDIF_Type*)	16	static
+fsl_spdif.h:431:24:uint32_t SPDIF_RxGetRightDataRegisterAddress(SPDIF_Type*)	16	static
+fsl_spdif_edma.c:82:13:void SPDIF_TxEDMACallback(edma_handle_t*, void*, bool, uint32_t)	40	static
+fsl_spdif_edma.c:102:13:void SPDIF_RxEDMACallback(edma_handle_t*, void*, bool, uint32_t)	40	static
+fsl_spdif_edma.c:122:17:status_t SPDIF_SubmitTransfer(edma_handle_t*, const edma_transfer_config_t*, uint32_t)	48	static
+fsl_spdif_edma.c:246:6:void SPDIF_TransferTxCreateHandleEDMA(SPDIF_Type*, spdif_edma_handle_t*, spdif_edma_callback_t, void*, edma_handle_t*, edma_handle_t*)	32	static
+fsl_spdif_edma.c:296:6:void SPDIF_TransferRxCreateHandleEDMA(SPDIF_Type*, spdif_edma_handle_t*, spdif_edma_callback_t, void*, edma_handle_t*, edma_handle_t*)	32	static
+fsl_spdif_edma.c:344:10:status_t SPDIF_TransferSendEDMA(SPDIF_Type*, spdif_edma_handle_t*, spdif_edma_transfer_t*)	80	static
+fsl_spdif_edma.c:412:10:status_t SPDIF_TransferReceiveEDMA(SPDIF_Type*, spdif_edma_handle_t*, spdif_edma_transfer_t*)	80	static
+fsl_spdif_edma.c:474:6:void SPDIF_TransferAbortSendEDMA(SPDIF_Type*, spdif_edma_handle_t*)	16	static
+fsl_spdif_edma.c:501:6:void SPDIF_TransferAbortReceiveEDMA(SPDIF_Type*, spdif_edma_handle_t*)	16	static
+fsl_spdif_edma.c:531:10:status_t SPDIF_TransferGetSendCountEDMA(SPDIF_Type*, spdif_edma_handle_t*, size_t*)	40	static
+fsl_spdif_edma.c:560:10:status_t SPDIF_TransferGetReceiveCountEDMA(SPDIF_Type*, spdif_edma_handle_t*, size_t*)	40	static

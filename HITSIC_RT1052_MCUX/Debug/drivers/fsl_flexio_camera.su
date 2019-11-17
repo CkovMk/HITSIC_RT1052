@@ -1,0 +1,16 @@
+fsl_clock.h:1034:20:void CLOCK_ControlGate(clock_ip_name_t, clock_gate_value_t)	32	static
+fsl_clock.h:1051:20:void CLOCK_EnableClock(clock_ip_name_t)	16	static
+fsl_flexio.h:486:20:void FLEXIO_EnableShifterStatusInterrupts(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio.h:499:20:void FLEXIO_DisableShifterStatusInterrupts(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio.h:569:24:uint32_t FLEXIO_GetShifterStatusFlags(FLEXIO_Type*)	16	static
+fsl_flexio.h:582:20:void FLEXIO_ClearShifterStatusFlags(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio.h:606:20:void FLEXIO_ClearShifterErrorFlags(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio.h:630:20:void FLEXIO_ClearTimerStatusFlags(FLEXIO_Type*, uint32_t)	16	static
+fsl_flexio_camera.c:28:17:uint32_t FLEXIO_CAMERA_GetInstance(FLEXIO_CAMERA_Type*)	16	static
+fsl_flexio_camera.c:43:6:void FLEXIO_CAMERA_GetDefaultConfig(flexio_camera_config_t*)	16	static
+fsl_flexio_camera.c:62:6:void FLEXIO_CAMERA_Init(FLEXIO_CAMERA_Type*, const flexio_camera_config_t*)	80	static
+fsl_flexio_camera.c:143:6:void FLEXIO_CAMERA_Deinit(FLEXIO_CAMERA_Type*)	16	static
+fsl_flexio_camera.c:164:10:uint32_t FLEXIO_CAMERA_GetStatusFlags(FLEXIO_CAMERA_Type*)	24	static
+fsl_flexio_camera.c:181:6:void FLEXIO_CAMERA_ClearStatusFlags(FLEXIO_CAMERA_Type*, uint32_t)	16	static
+fsl_flexio_camera.c:199:6:void FLEXIO_CAMERA_EnableInterrupt(FLEXIO_CAMERA_Type*)	16	static
+fsl_flexio_camera.c:210:6:void FLEXIO_CAMERA_DisableInterrupt(FLEXIO_CAMERA_Type*)	16	static

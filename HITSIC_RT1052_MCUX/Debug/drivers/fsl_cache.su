@@ -1,0 +1,8 @@
+fsl_cache.h:222:20:void L1CACHE_InvalidateDCacheByRange(uint32_t, uint32_t)	40	static
+fsl_cache.h:240:20:void L1CACHE_CleanDCacheByRange(uint32_t, uint32_t)	40	static
+fsl_cache.h:258:20:void L1CACHE_CleanInvalidateDCacheByRange(uint32_t, uint32_t)	40	static
+fsl_cache.c:497:6:void L1CACHE_InvalidateICacheByRange(uint32_t, uint32_t)	32	static
+fsl_cache.c:528:6:void ICACHE_InvalidateByRange(uint32_t, uint32_t)	16	static
+fsl_cache.c:551:6:void DCACHE_InvalidateByRange(uint32_t, uint32_t)	16	static
+fsl_cache.c:573:6:void DCACHE_CleanByRange(uint32_t, uint32_t)	16	static
+fsl_cache.c:595:6:void DCACHE_CleanInvalidateByRange(uint32_t, uint32_t)	16	static

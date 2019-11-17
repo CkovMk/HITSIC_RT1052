@@ -1,0 +1,18 @@
+usb_host_devices.c:189:13:void USB_HostEnumerationTransferCallback(void*, usb_host_transfer_t*, usb_status_t)	32	static
+usb_host_devices.c:288:21:usb_status_t USB_HostProcessState(usb_host_device_instance_t*)	40	static
+usb_host_devices.c:384:21:usb_status_t USB_HostProcessCallback(usb_host_device_instance_t*)	32	static
+usb_host_devices.c:492:21:usb_status_t USB_HostNotifyDevice(usb_host_device_instance_t*, uint32_t)	24	static
+usb_host_devices.c:558:16:uint8_t USB_HostAllocateDeviceAddress(usb_host_instance_t*)	24	static
+usb_host_devices.c:585:13:void USB_HostReleaseDeviceAddress(usb_host_instance_t*, uint8_t)	16	static
+usb_host_devices.c:593:21:usb_status_t USB_HostRemoveDeviceInstance(usb_host_handle, usb_device_handle)	32	static
+usb_host_devices.c:629:13:void USB_HostReleaseDeviceResource(usb_host_instance_t*, usb_host_device_instance_t*)	16	static
+usb_host_devices.c:700:21:usb_status_t USB_HostParseDeviceConfigurationDescriptor(usb_device_handle)	40	static
+usb_host_devices.c:922:14:usb_status_t USB_HostAttachDevice(usb_host_handle, uint8_t, uint8_t, uint8_t, uint8_t, void**)	48	static
+usb_host_devices.c:1078:14:usb_status_t USB_HostDetachDevice(usb_host_handle, uint8_t, uint8_t)	24	static
+usb_host_devices.c:1111:14:usb_status_t USB_HostDetachDeviceInternal(usb_host_handle, usb_device_handle)	24	static
+usb_host_devices.c:1145:9:uint8_t USB_HostGetDeviceAttachState(usb_device_handle)	16	static
+usb_host_devices.c:1150:14:usb_status_t USB_HostValidateDevice(usb_host_handle, usb_device_handle)	24	static
+usb_host_devices.c:1172:21:usb_status_t USB_HostControlBus(usb_host_handle, uint8_t)	24	static
+usb_host_devices.c:1188:14:usb_status_t USB_HostOpenDeviceInterface(usb_device_handle, usb_host_interface_handle)	32	static
+usb_host_devices.c:1238:14:usb_status_t USB_HostCloseDeviceInterface(usb_device_handle, usb_host_interface_handle)	32	static
+usb_host_devices.c:1321:14:usb_status_t USB_HostRemoveDevice(usb_host_handle, usb_device_handle)	32	static

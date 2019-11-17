@@ -1,0 +1,18 @@
+fsl_common.h:487:28:uint32_t DisableGlobalIRQ()	16	static
+fsl_common.h:518:24:void EnableGlobalIRQ(uint32_t)	24	static
+fsl_shell.c:217:13:void SHELL_WriteBuffer(char*, int32_t*, char, int)	32	static
+fsl_shell.c:238:12:int SHELL_Sprintf(void*, const char*, va_list)	32	static
+fsl_shell.c:252:6:void SHELL_Task(shell_handle_t)	48	static
+fsl_shell.c:502:23:shell_status_t SHELL_HelpCommand(shell_handle_t, int32_t, char**)	48	static
+fsl_shell.c:522:23:shell_status_t SHELL_ExitCommand(shell_handle_t, int32_t, char**)	32	static
+fsl_shell.c:531:13:void SHELL_ProcessCommand(shell_context_handle_t*, const char*)	304	static
+fsl_shell.c:632:13:void SHELL_GetHistoryCommand(shell_context_handle_t*, uint8_t)	32	static
+fsl_shell.c:669:13:void SHELL_AutoComplete(shell_context_handle_t*)	48	static
+fsl_shell.c:717:16:int32_t SHELL_StringCompare(const char*, const char*, int32_t)	24	static
+fsl_shell.c:729:16:int32_t SHELL_ParseLine(const char*, uint32_t, char**)	40	static
+fsl_shell.c:790:23:shell_status_t SHELL_GetChar(shell_context_handle_t*, uint8_t*)	16	static
+fsl_shell.c:810:16:shell_status_t SHELL_Init(shell_handle_t, serial_handle_t, char*)	40	static
+fsl_shell.c:881:16:shell_status_t SHELL_RegisterCommand(shell_handle_t, shell_command_t*)	24	static
+fsl_shell.c:895:16:shell_status_t SHELL_UnregisterCommand(shell_command_t*)	16	static
+fsl_shell.c:907:16:shell_status_t SHELL_Write(shell_handle_t, char*, uint32_t)	40	static
+fsl_shell.c:940:5:)	36	static
