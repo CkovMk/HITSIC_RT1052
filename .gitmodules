@@ -1,0 +1,3 @@
+[submodule "HITSIC_RT1052_MCUX/HITSIC"]
+	path = HITSIC_RT1052_MCUX/HITSIC
+	url = https://github.com/CkovMk/HITSIC_Module
