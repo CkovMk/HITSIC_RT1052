@@ -1,0 +1,1730 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <Filter Include="CMSIS">
+            <UniqueIdentifier>{766ec68e-b906-8240-3484-790654301611}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="board">
+            <UniqueIdentifier>{ae6604f8-18c6-5674-bd54-30a5dd292cdb}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component">
+            <UniqueIdentifier>{2aa0d77d-6c8a-5166-ceab-c1b38f3aae96}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component\i2c">
+            <UniqueIdentifier>{52b5c696-1eab-fb9c-cf00-a188d30c22ca}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component\lists">
+            <UniqueIdentifier>{de0c3bda-a6af-dc70-58eb-4bcc41f601f0}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component\serial_manager">
+            <UniqueIdentifier>{161dbca1-9c11-6c9a-d0d4-46d85180d3af}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component\uart">
+            <UniqueIdentifier>{8181d293-5876-2260-e154-29338a43204f}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="device">
+            <UniqueIdentifier>{c8aff519-8138-977c-f1d2-4d7656a66059}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="drivers">
+            <UniqueIdentifier>{432fbcba-a0ee-4335-89e7-3a184b410a73}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="drivers\freertos">
+            <UniqueIdentifier>{8a6a81ef-1e00-9e34-10f9-7881d27da8f8}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="libs">
+            <UniqueIdentifier>{05e7ea3f-60f7-10f0-2093-8f4982d1b08d}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="osa">
+            <UniqueIdentifier>{4b3e4012-116a-40e1-3f3a-f6f9e5e5ba8c}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="rtcesl">
+            <UniqueIdentifier>{c5d74b10-b8b2-b79f-c768-26e85111207c}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="rtcesl\amclib">
+            <UniqueIdentifier>{0c3b52b2-ac75-ce73-5ea4-b7ce60fe89e6}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="rtcesl\gdflib">
+            <UniqueIdentifier>{85e1ff6f-761d-1a14-6c66-01f4a8035c50}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="rtcesl\gflib">
+            <UniqueIdentifier>{cb52a8bf-be12-06eb-7b27-bcf172b91234}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="rtcesl\gmclib">
+            <UniqueIdentifier>{5515e61b-dc1a-397e-118d-2f5d7587430a}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="rtcesl\mlib">
+            <UniqueIdentifier>{9aa2411a-477f-1a47-a8d3-f4911b156768}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="source">
+            <UniqueIdentifier>{13712124-a9b8-22ce-c6ce-9124dabb05b8}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="source\extlib">
+            <UniqueIdentifier>{680b1dd2-686e-d979-d4a8-8f9e2b028772}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="source\generated">
+            <UniqueIdentifier>{f1f7aeaa-0d08-c7f2-7928-4558a681733c}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="source\module">
+            <UniqueIdentifier>{369d3c07-ff0e-6391-1fa7-5df8c3b06260}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="startup">
+            <UniqueIdentifier>{ce966f8e-d8e8-370c-2cac-3df90908cca5}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="tensorflow-lite">
+            <UniqueIdentifier>{12499f99-1f4f-b99d-49cf-6ec0e1f00844}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="tensorflow-lite\tensorflow">
+            <UniqueIdentifier>{9a5e64cf-3b7a-72fb-ee58-68e7e410c0e4}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="tensorflow-lite\tensorflow\contrib">
+            <UniqueIdentifier>{ee2e4589-c522-da8f-8300-b3e587e17a0d}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="tensorflow-lite\tensorflow\contrib\lite">
+            <UniqueIdentifier>{7630ab6d-25be-69c0-af2e-e74255da8f18}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="tensorflow-lite\tensorflow\contrib\lite\kernels">
+            <UniqueIdentifier>{c91c2ed5-e2a6-a656-cc6a-5b77b57397ab}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="tensorflow-lite\tensorflow\contrib\lite\profiling">
+            <UniqueIdentifier>{504b3669-8682-2a89-602d-980b3e341a31}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="tensorflow-lite\tensorflow\contrib\lite\schema">
+            <UniqueIdentifier>{b4335b9f-97db-4df2-04ee-366769a68f3f}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="tensorflow-lite\third_party">
+            <UniqueIdentifier>{4a7f04d1-7e08-a728-2035-9d21ae406f2f}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="tensorflow-lite\third_party\flatbuffers">
+            <UniqueIdentifier>{9d74cbb7-c3a1-b094-5b9b-55c3958b32a8}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="tensorflow-lite\third_party\flatbuffers\include">
+            <UniqueIdentifier>{24cc16a7-ee2f-e0bc-ff77-e5b4a6ed8002}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers">
+            <UniqueIdentifier>{86ee7d3b-7618-de0a-9261-b78d48f1b1f6}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="utilities">
+            <UniqueIdentifier>{1c427aeb-e5e7-f316-cdd2-61a5153c5dcb}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="utilities\utilities">
+            <UniqueIdentifier>{7e61742d-b121-c766-e851-6ca48318fb29}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="video">
+            <UniqueIdentifier>{04e2027b-5350-b264-9b56-3ff31b2cf479}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="xip">
+            <UniqueIdentifier>{661dbd6c-63eb-6ba8-4d69-542944d0f032}</UniqueIdentifier>
+        </Filter>
+    </ItemGroup>
+    <ItemGroup>
+        <ClCompile Include="board\board.c">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="board\clock_config.c">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="board\dcd.c">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="board\peripherals.c">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="board\pin_mux.c">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="component\i2c\lpi2c_adapter.c">
+            <Filter>component\i2c</Filter>
+        </ClCompile>
+        <ClCompile Include="component\lists\generic_list.c">
+            <Filter>component\lists</Filter>
+        </ClCompile>
+        <ClCompile Include="component\serial_manager\serial_manager.c">
+            <Filter>component\serial_manager</Filter>
+        </ClCompile>
+        <ClCompile Include="component\serial_manager\serial_port_uart.c">
+            <Filter>component\serial_manager</Filter>
+        </ClCompile>
+        <ClCompile Include="component\uart\lpuart_adapter.c">
+            <Filter>component\uart</Filter>
+        </ClCompile>
+        <ClCompile Include="device\system_MIMXRT1052.c">
+            <Filter>device</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\freertos\fsl_lpi2c_freertos.c">
+            <Filter>drivers\freertos</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\freertos\fsl_lpspi_freertos.c">
+            <Filter>drivers\freertos</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\freertos\fsl_lpuart_freertos.c">
+            <Filter>drivers\freertos</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_adc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_adc_etc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_aipstz.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_aoi.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_bee.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_cache.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_clock.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_cmp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_common.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_csi.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_dcdc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_dcp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_dmamux.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_elcdif.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_enc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_enet.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_ewm.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexcan.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_camera.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_camera_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_i2c_master.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_i2s.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_i2s_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_mculcd.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_mculcd_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_spi.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_spi_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_uart.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_uart_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexram.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexspi.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_gpc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_gpio.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_gpt.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_kpp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_lpi2c.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_lpi2c_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_lpspi.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_lpspi_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_lpuart.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_lpuart_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_ocotp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_pit.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_pmu.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_pwm.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_pxp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_qtmr.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_rtwdog.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_sai.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_sai_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_semc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_snvs_hp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_snvs_lp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_spdif.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_spdif_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_src.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_tempmon.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_trng.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_tsc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_usdhc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_wdog.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_xbara.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_xbarb.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="osa\usb_osa_freertos.c">
+            <Filter>osa</Filter>
+        </ClCompile>
+        <ClCompile Include="source\generated\usb_device_composite.c">
+            <Filter>source\generated</Filter>
+        </ClCompile>
+        <ClCompile Include="source\generated\usb_device_descriptor.c">
+            <Filter>source\generated</Filter>
+        </ClCompile>
+        <ClCompile Include="source\isr.cpp">
+            <Filter>source</Filter>
+        </ClCompile>
+        <ClCompile Include="source\main.cpp">
+            <Filter>source</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\drv_betacat.cpp.txt">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\drv_disp_lcd240.cpp">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\drv_extInt.cpp">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\drv_keybt.cpp.txt">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\drv_motor.cpp">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\drv_pitmgr.cpp">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\drv_uartmgr.cpp">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\lcd.cpp.txt">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\rte_analog.cpp.txt">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\rte_baseio.cpp.txt">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\rte_common.cpp">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\rte_senior.cpp.txt">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\module\rte_timer.cpp.txt">
+            <Filter>source\module</Filter>
+        </ClCompile>
+        <ClCompile Include="source\retarget_itm.c">
+            <Filter>source</Filter>
+        </ClCompile>
+        <ClCompile Include="source\semihost_hardfault.c">
+            <Filter>source</Filter>
+        </ClCompile>
+        <ClCompile Include="startup\startup_mimxrt1052.cpp">
+            <Filter>startup</Filter>
+        </ClCompile>
+        <ClCompile Include="utilities\fsl_assert.c">
+            <Filter>utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="utilities\fsl_debug_console.c">
+            <Filter>utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="utilities\fsl_shell.c">
+            <Filter>utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="utilities\fsl_str.c">
+            <Filter>utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="utilities\utilities\fsl_notifier.c">
+            <Filter>utilities\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="video\fsl_csi_camera_adapter.c">
+            <Filter>video</Filter>
+        </ClCompile>
+        <ClCompile Include="video\fsl_mt9m114.c">
+            <Filter>video</Filter>
+        </ClCompile>
+        <ClCompile Include="video\fsl_ov7725.c">
+            <Filter>video</Filter>
+        </ClCompile>
+        <ClCompile Include="video\fsl_sccb.c">
+            <Filter>video</Filter>
+        </ClCompile>
+        <ClCompile Include="video\fsl_video_common.c">
+            <Filter>video</Filter>
+        </ClCompile>
+        <ClCompile Include="video\fsl_video_i2c.c">
+            <Filter>video</Filter>
+        </ClCompile>
+        <ClCompile Include="xip\fire_imxrt1052_sdram_ini_dcd.c.txt">
+            <Filter>xip</Filter>
+        </ClCompile>
+        <ClCompile Include="xip\fire_imxrt1052_spiflash_config.c">
+            <Filter>xip</Filter>
+        </ClCompile>
+        <ClCompile Include="xip\fsl_flexspi_nor_boot.c">
+            <Filter>xip</Filter>
+        </ClCompile>
+    </ItemGroup>
+    <ItemGroup>
+        <ClInclude Include="CMSIS\arm_common_tables.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\arm_const_structs.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\arm_math.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\arm_nn_tables.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\arm_nnfunctions.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\arm_nnsupportfunctions.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_armcc.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_armclang.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_armclang_ltm.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_compiler.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_gcc.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_iccarm.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_version.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_armv81mml.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_armv8mbl.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_armv8mml.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm0.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm0plus.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm1.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm23.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm3.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm33.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm35p.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm4.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm7.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_sc000.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_sc300.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\mpu_armv7.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\mpu_armv8.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\tz_context.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="board\board.h">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="board\clock_config.h">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="board\dcd.h">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="board\peripherals.h">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="board\pin_mux.h">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="component\i2c\i2c.h">
+            <Filter>component\i2c</Filter>
+        </ClInclude>
+        <ClInclude Include="component\lists\generic_list.h">
+            <Filter>component\lists</Filter>
+        </ClInclude>
+        <ClInclude Include="component\serial_manager\serial_manager.h">
+            <Filter>component\serial_manager</Filter>
+        </ClInclude>
+        <ClInclude Include="component\serial_manager\serial_port_internal.h">
+            <Filter>component\serial_manager</Filter>
+        </ClInclude>
+        <ClInclude Include="component\serial_manager\serial_port_uart.h">
+            <Filter>component\serial_manager</Filter>
+        </ClInclude>
+        <ClInclude Include="component\uart\uart.h">
+            <Filter>component\uart</Filter>
+        </ClInclude>
+        <ClInclude Include="device\MIMXRT1052.h">
+            <Filter>device</Filter>
+        </ClInclude>
+        <ClInclude Include="device\MIMXRT1052_features.h">
+            <Filter>device</Filter>
+        </ClInclude>
+        <ClInclude Include="device\fsl_device_registers.h">
+            <Filter>device</Filter>
+        </ClInclude>
+        <ClInclude Include="device\system_MIMXRT1052.h">
+            <Filter>device</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\freertos\fsl_lpi2c_freertos.h">
+            <Filter>drivers\freertos</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\freertos\fsl_lpspi_freertos.h">
+            <Filter>drivers\freertos</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\freertos\fsl_lpuart_freertos.h">
+            <Filter>drivers\freertos</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_adc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_adc_etc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_aipstz.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_aoi.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_bee.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_cache.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_clock.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_cmp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_common.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_csi.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_dcdc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_dcp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_dmamux.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_elcdif.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_enc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_enet.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_ewm.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexcan.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_camera.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_camera_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_i2c_master.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_i2s.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_i2s_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_mculcd.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_mculcd_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_spi.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_spi_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_uart.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_uart_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexram.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexspi.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_gpc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_gpio.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_gpt.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_iomuxc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_kpp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_lpi2c.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_lpi2c_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_lpspi.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_lpspi_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_lpuart.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_lpuart_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_ocotp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_pit.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_pmu.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_pwm.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_pxp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_qtmr.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_rtwdog.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_sai.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_sai_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_semc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_snvs_hp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_snvs_lp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_spdif.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_spdif_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_src.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_tempmon.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_trng.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_tsc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_usdhc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_wdog.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_xbara.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_xbarb.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="osa\usb_osa.h">
+            <Filter>osa</Filter>
+        </ClInclude>
+        <ClInclude Include="osa\usb_osa_freertos.h">
+            <Filter>osa</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_ACIMCtrlMTPA_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_ACIMRotFluxObsrv_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_ACIMSpeedMRAS_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_AngleTrackObsrv_F32.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_AngleTrackObsrv_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_CtrlFluxWkng_A32.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_CtrlFluxWkng_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_PMSMBemfObsrvAB_A32.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_PMSMBemfObsrvAB_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_PMSMBemfObsrvDQ_A32.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_PMSMBemfObsrvDQ_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_TrackObsrv_F32.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_TrackObsrv_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\amclib.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\amclib_FP.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\amclib_types.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterExp_F32.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterExp_FLT.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR1_F32.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR1_F32_Asmi.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR1_FLT.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR2_F32.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR2_FLT.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR3_F32.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR3_FLT.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR4_F32.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR4_FLT.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterMA_A32.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterMA_FLT.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\gdflib.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\gdflib_FP.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\gdflib_types.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Acos_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Acos_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Asin_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Asin_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_AtanYX_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_AtanYX_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Atan_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Atan_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlBetaIPDp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlBetaIPDp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlBetaIPp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlBetaIPp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlPIDp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlPIDp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlPIp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlPIp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DFlexRamp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DFlexRamp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DRamp_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DRamp_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DRamp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_FlexRamp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_FlexRamp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_FlexSRamp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_FlexSRamp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Hyst_F16_Asmi.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Hyst_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Integrator_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Integrator_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Limit_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Limit_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Limit_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LowerLimit_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LowerLimit_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LowerLimit_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LutPer_F16_Asmi.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LutPer_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LutPer_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Lut_F16_Asmi.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Lut_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Lut_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Ramp_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Ramp_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Ramp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_SinCos_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_SinCos_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Sqrt_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Sqrt_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Sqrt_FLT_Asmi.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Tan_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Tan_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_UpperLimit_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_UpperLimit_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_UpperLimit_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_VectorLimit_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_VectorLimit_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\gflib.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\gflib_FP.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\gflib_types.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Clark_F16_Asmi.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Clark_FLT.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Decoupling_A32.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Decoupling_FLT.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_ElimDcBusRip_A32_Asmi.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_ElimDcBusRip_F16_Asmi.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_ElimDcBusRip_FLT.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Park_F16_Asmi.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Park_FLT.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Svm_F16.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\gmclib.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\gmclib_FP.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\gmclib_types.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_FLT_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add4_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add4_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add4_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_BiShift_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_BiShift_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Clb_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Clb_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_ConvSc_FLT_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Conv_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Conv_FLT_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div1Q_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div1Q_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div1Q_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Log2_U16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4Rnd_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4Rnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4Rnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MacRnd_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MacRnd_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MacRnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MacRnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MnacRnd_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MnacRnd_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MnacRnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MnacRnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4Rnd_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4Rnd_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4Rnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4Rnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MsuRnd_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MsuRnd_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MsuRnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MsuRnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_A32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_A32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Rcp1Q_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Rcp_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Rnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Rnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sat_A32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Shift_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Shift_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Shift_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Shift_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sign_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sign_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sign_FLT_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub4_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub4_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub4_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F64.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\RTCESL_cfg.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\asm_mac.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\mlib.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\mlib_FP.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\mlib_types.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="source\FreeRTOSConfig.h">
+            <Filter>source</Filter>
+        </ClInclude>
+        <ClInclude Include="source\generated\usb_device_composite.h">
+            <Filter>source\generated</Filter>
+        </ClInclude>
+        <ClInclude Include="source\generated\usb_device_config.h">
+            <Filter>source\generated</Filter>
+        </ClInclude>
+        <ClInclude Include="source\generated\usb_device_descriptor.h">
+            <Filter>source\generated</Filter>
+        </ClInclude>
+        <ClInclude Include="source\generated\usb_host_config.h">
+            <Filter>source\generated</Filter>
+        </ClInclude>
+        <ClInclude Include="source\inc_fsl.h">
+            <Filter>source</Filter>
+        </ClInclude>
+        <ClInclude Include="source\inc_gnc.h">
+            <Filter>source</Filter>
+        </ClInclude>
+        <ClInclude Include="source\inc_std.h">
+            <Filter>source</Filter>
+        </ClInclude>
+        <ClInclude Include="source\inc_stl.hpp">
+            <Filter>source</Filter>
+        </ClInclude>
+        <ClInclude Include="source\include.hpp">
+            <Filter>source</Filter>
+        </ClInclude>
+        <ClInclude Include="source\jconfig.h">
+            <Filter>source</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\drv_betacat.hpp.txt">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\drv_disp_lcd240.hpp">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\drv_extInt.hpp">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\drv_keybt.hpp.txt">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\drv_motor.hpp">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\drv_pitmgr.hpp">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\drv_uartmgr.hpp">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\lcd.hpp.txt">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\rte_analog.hpp.txt">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\rte_baseio.hpp.txt">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\rte_common.hpp">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\rte_senior.hpp.txt">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="source\module\rte_timer.hpp.txt">
+            <Filter>source\module</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\_string.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\allocation.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\arena_planner.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\builtin_op_data.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\builtin_ops.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\context.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\context_util.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\error_reporter.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\graph_info.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\interpreter.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\kernels\register.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite\kernels</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\memory_planner.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\model.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\nnapi_delegate.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\op_resolver.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\optional_debug_tools.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\profiling\_time.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite\profiling</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\profiling\profile_buffer.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite\profiling</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\profiling\profile_summarizer.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite\profiling</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\profiling\profiler.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite\profiling</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\schema\schema_generated.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite\schema</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\simple_memory_arena.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\string_util.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\util.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\tensorflow\contrib\lite\version.h">
+            <Filter>tensorflow-lite\tensorflow\contrib\lite</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers\base.h">
+            <Filter>tensorflow-lite\third_party\flatbuffers\include\flatbuffers</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers\code_generators.h">
+            <Filter>tensorflow-lite\third_party\flatbuffers\include\flatbuffers</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers\flatbuffers.h">
+            <Filter>tensorflow-lite\third_party\flatbuffers\include\flatbuffers</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers\flexbuffers.h">
+            <Filter>tensorflow-lite\third_party\flatbuffers\include\flatbuffers</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers\hash.h">
+            <Filter>tensorflow-lite\third_party\flatbuffers\include\flatbuffers</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers\idl.h">
+            <Filter>tensorflow-lite\third_party\flatbuffers\include\flatbuffers</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers\minireflect.h">
+            <Filter>tensorflow-lite\third_party\flatbuffers\include\flatbuffers</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers\reflection.h">
+            <Filter>tensorflow-lite\third_party\flatbuffers\include\flatbuffers</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers\reflection_generated.h">
+            <Filter>tensorflow-lite\third_party\flatbuffers\include\flatbuffers</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers\registry.h">
+            <Filter>tensorflow-lite\third_party\flatbuffers\include\flatbuffers</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers\stl_emulation.h">
+            <Filter>tensorflow-lite\third_party\flatbuffers\include\flatbuffers</Filter>
+        </ClInclude>
+        <ClInclude Include="tensorflow-lite\third_party\flatbuffers\include\flatbuffers\util.h">
+            <Filter>tensorflow-lite\third_party\flatbuffers\include\flatbuffers</Filter>
+        </ClInclude>
+        <ClInclude Include="utilities\fsl_debug_console.h">
+            <Filter>utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="utilities\fsl_debug_console_conf.h">
+            <Filter>utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="utilities\fsl_shell.h">
+            <Filter>utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="utilities\fsl_str.h">
+            <Filter>utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="utilities\utilities\fsl_notifier.h">
+            <Filter>utilities\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="video\fsl_camera.h">
+            <Filter>video</Filter>
+        </ClInclude>
+        <ClInclude Include="video\fsl_camera_device.h">
+            <Filter>video</Filter>
+        </ClInclude>
+        <ClInclude Include="video\fsl_camera_receiver.h">
+            <Filter>video</Filter>
+        </ClInclude>
+        <ClInclude Include="video\fsl_csi_camera_adapter.h">
+            <Filter>video</Filter>
+        </ClInclude>
+        <ClInclude Include="video\fsl_mt9m114.h">
+            <Filter>video</Filter>
+        </ClInclude>
+        <ClInclude Include="video\fsl_ov7725.h">
+            <Filter>video</Filter>
+        </ClInclude>
+        <ClInclude Include="video\fsl_sccb.h">
+            <Filter>video</Filter>
+        </ClInclude>
+        <ClInclude Include="video\fsl_video_common.h">
+            <Filter>video</Filter>
+        </ClInclude>
+        <ClInclude Include="video\fsl_video_i2c.h">
+            <Filter>video</Filter>
+        </ClInclude>
+        <ClInclude Include="xip\fire_imxrt1052_sdram_ini_dcd.h.txt">
+            <Filter>xip</Filter>
+        </ClInclude>
+        <ClInclude Include="xip\fire_imxrt1052_spiflash_config.h">
+            <Filter>xip</Filter>
+        </ClInclude>
+        <ClInclude Include="xip\fsl_flexspi_nor_boot.h">
+            <Filter>xip</Filter>
+        </ClInclude>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="libs\libAMCLIB.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libGDFLIB.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libGFLIB.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libGMCLIB.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libMLIB.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libarm_cortexM7lfdp_math.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libarm_cortexM7lfsp_math.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libtensorflow-lite.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="source\extlib\cm_backtrace.zip">
+            <Filter>source\extlib</Filter>
+        </None>
+    </ItemGroup>
+</Project>
