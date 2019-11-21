@@ -9,10 +9,9 @@
 #define _RTE_COMMON_H_
 
 //#include <include.hpp>
-#include "inc_fsl.h"
+#include "inc_fsl_rt1052.h"
+#include "inc_stdlib.h"
 #include "inc_gnc.h"
-#include "inc_std.h"
-#include "inc_stl.hpp"
 
 //#include "rte_baseio.hpp"
 //#include "rte_timer.hpp"

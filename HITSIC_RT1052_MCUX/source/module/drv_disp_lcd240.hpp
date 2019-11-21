@@ -2,9 +2,8 @@
 #ifndef _DRV_LCD240_HPP_
 #define _DRV_LCD240_HPP_
 
-#include "inc_std.h"
-#include "inc_stl.hpp"
-#include "inc_fsl.h"
+#include "inc_fsl_rt1052.h"
+#include "inc_stdlib.h"
 #include "inc_gnc.h"
 
 #include "drv_pitmgr.hpp"

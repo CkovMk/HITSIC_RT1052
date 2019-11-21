@@ -49,6 +49,8 @@
 									<listOptionValue builtIn="false" value="../board"/>
 									<listOptionValue builtIn="false" value="../source"/>
 									<listOptionValue builtIn="false" value="../source/module"/>
+									<listOptionValue builtIn="false" value="../HITSIC/utilities"/>
+									<listOptionValue builtIn="false" value="../HITSIC/d_rt1052"/>
 									<listOptionValue builtIn="false" value="../"/>
 									<listOptionValue builtIn="false" value="../amazon-freertos/freertos/portable"/>
 									<listOptionValue builtIn="false" value="../amazon-freertos/include"/>
@@ -338,7 +340,7 @@
 								<option id="com.crt.advproject.link.cpp.lto.optmization.level.1497354724" name="Link-time optimization level" superClass="com.crt.advproject.link.cpp.lto.optmization.level" useByScannerDiscovery="false"/>
 								<option id="com.crt.advproject.link.cpp.fpu.426804785" name="Floating point" superClass="com.crt.advproject.link.cpp.fpu" useByScannerDiscovery="false" value="com.crt.advproject.link.cpp.fpu.fpv5sp.hard" valueType="enumerated"/>
 								<option id="com.crt.advproject.link.cpp.manage.966640392" name="Manage linker script" superClass="com.crt.advproject.link.cpp.manage" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-								<option id="com.crt.advproject.link.cpp.script.40950917" name="Linker script" superClass="com.crt.advproject.link.cpp.script" useByScannerDiscovery="false" value="&quot;HITSIC_RT1052_MCUX_dep_Debug.ld&quot;" valueType="string"/>
+								<option id="com.crt.advproject.link.cpp.script.40950917" name="Linker script" superClass="com.crt.advproject.link.cpp.script" useByScannerDiscovery="false" value="&quot;HITSIC_RT1052_MCUX_Debug.ld&quot;" valueType="string"/>
 								<option id="com.crt.advproject.link.cpp.scriptdir.390902128" name="Script path" superClass="com.crt.advproject.link.cpp.scriptdir" useByScannerDiscovery="false" value="" valueType="string"/>
 								<option id="com.crt.advproject.link.cpp.crpenable.928011078" name="Enable automatic placement of Code Read Protection field in image" superClass="com.crt.advproject.link.cpp.crpenable" useByScannerDiscovery="false"/>
 								<option id="com.crt.advproject.link.cpp.flashconfigenable.722613687" name="Enable automatic placement of Flash Configuration field in image" superClass="com.crt.advproject.link.cpp.flashconfigenable" useByScannerDiscovery="false" value="true" valueType="boolean"/>

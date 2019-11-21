@@ -2,9 +2,9 @@
 #ifndef _DRV_PITMGR_HPP_
 #define _DRV_PITMGR_HPP_
 
-#include "inc_std.h"
-#include "inc_stl.hpp"
-#include "inc_fsl.h"
+#include "inc_fsl_rt1052.h"
+#include "inc_stdlib.h"
+#include "inc_gnc.h"
 
 //#include "rte_timer.hpp"
 #define RTE_PIT_CLKFREQ CLOCK_GetFreq(kCLOCK_PerClk)

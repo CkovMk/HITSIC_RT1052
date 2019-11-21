@@ -3,10 +3,9 @@
 #define _DRV_MOTOR_HPP_
 
 
-#include "inc_fsl.h"
+#include "inc_fsl_rt1052.h"
+#include "inc_stdlib.h"
 #include "inc_gnc.h"
-#include "inc_std.h"
-#include "inc_stl.hpp"
 
 #include "rte_common.hpp"
 

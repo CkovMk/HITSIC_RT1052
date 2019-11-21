@@ -37,11 +37,11 @@
 /*
 ----------Bit Operation Definitions----------
 */
-#define  bitRd(value, bit)   (((value) >> (bit)) & 0x01) 
-#define  bitWr(value, bit, bitvalue)   (bitvalue ? bitSet(value, bit) : bitClear(value, bit)) 
-#define  bitSet(value, bit)   ((value) |= (1UL << (bit))) 
-#define  bitClr(value, bit)   ((value) &= ~(1UL << (bit))) 
-#define  bit(b)   (1 << (b)) 
+//#define  bitRd(value, bit)   (((value) >> (bit)) & 0x01)
+//#define  bitWr(value, bit, bitvalue)   (bitvalue ? bitSet(value, bit) : bitClear(value, bit))
+//#define  bitSet(value, bit)   ((value) |= (1UL << (bit)))
+//#define  bitClr(value, bit)   ((value) &= ~(1UL << (bit)))
+//#define  bit(b)   (1 << (b))
 
 
 
