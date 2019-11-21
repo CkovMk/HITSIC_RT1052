@@ -440,7 +440,7 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="CMSIS"/>
-						<entry excluding="extlib_zip|d_mk66f18" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="HITSIC"/>
+						<entry excluding="d_rt1052|d_rt1052/extlib_port|utilities|utilities/extlib|extlib_zip|d_mk66f18" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="HITSIC"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="board"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="component"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="device"/>
@@ -888,7 +888,7 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="CMSIS"/>
-						<entry excluding="extlib_zip|d_mk66f18" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="HITSIC"/>
+						<entry excluding="d_rt1052|d_rt1052/extlib_port|utilities|utilities/extlib|extlib_zip|d_mk66f18" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="HITSIC"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="board"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="component"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="device"/>
