@@ -1,9 +1,31 @@
 /*******************************************************************************
 *
  * Copyright (c) 2013 - 2016, Freescale Semiconductor, Inc.
- * Copyright 2016-2017 NXP
+ * Copyright 2016-2019 NXP
  *
- * SPDX-License-Identifier: BSD-3-Clause
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 * 
 *
 ****************************************************************************//*!
@@ -31,6 +53,10 @@ extern "C" {
         GFLIB_FlexRampCalcIncr_FLT_FC(fltTarget, fltDuration, psParam)
 #define GFLIB_FlexRamp_FLT_C(psParam)                                         \
         GFLIB_FlexRamp_FLT_FC(psParam)
+#define GFLIB_FlexRampCalcIncr_FLT_CRam(fltTarget, fltDuration, psParam)      \
+        GFLIB_FlexRampCalcIncr_FLT_FCRam(fltTarget, fltDuration, psParam)
+#define GFLIB_FlexRamp_FLT_CRam(psParam)                                      \
+        GFLIB_FlexRamp_FLT_FCRam(psParam)
 
 /******************************************************************************
 * Types
@@ -52,8 +78,14 @@ typedef struct
 extern void GFLIB_FlexRampCalcIncr_FLT_FC(float_t fltTarget,
                                           float_t fltDuration,
                                           GFLIB_FLEXRAMP_T_FLT *psParam);
-
+RAM_FUNC_LIB 
+extern void GFLIB_FlexRampCalcIncr_FLT_FCRam(float_t fltTarget,
+                                             float_t fltDuration,
+                                             GFLIB_FLEXRAMP_T_FLT *psParam);
+										  
 extern float_t GFLIB_FlexRamp_FLT_FC(GFLIB_FLEXRAMP_T_FLT *psParam);
+RAM_FUNC_LIB 
+extern float_t GFLIB_FlexRamp_FLT_FCRam(GFLIB_FLEXRAMP_T_FLT *psParam);
 
 /******************************************************************************
 * Inline functions
@@ -80,6 +112,7 @@ extern float_t GFLIB_FlexRamp_FLT_FC(GFLIB_FLEXRAMP_T_FLT *psParam);
 *           bReachFlag flag is cleared.
 *
 ****************************************************************************/
+RAM_FUNC_LIB 
 static inline void GFLIB_FlexRampInit_FLT_FC(register float_t fltInitVal,
                                              register GFLIB_FLEXRAMP_T_FLT *psParam)
 {  

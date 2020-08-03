@@ -5,30 +5,26 @@
 
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-!!GlobalInfo
-product: Peripherals v6.0
-processor: MIMXRT1052xxxxB
-package_id: MIMXRT1052CVL5B
-mcu_data: ksdk2_0
-processor_version: 6.0.1
-functionalGroups:
-- name: RTE_PIP
-  called_from_default_init: true
-  selectedCore: core0
+ !!GlobalInfo
+ product: Peripherals v8.0
+ processor: MIMXRT1052xxxxB
+ package_id: MIMXRT1052DVL6B
+ mcu_data: ksdk2_0
+ processor_version: 8.0.1
+ functionalGroups:
+ - name: RTE_PIP
+ UUID: 2044a05e-031b-4d67-ac4b-e5d523c13eda
+ called_from_default_init: true
+ selectedCore: core0
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-component:
-- type: 'system'
-- type_id: 'system_54b53072540eeeb8f8e9343e71f28176'
-- global_system_definitions: []
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-component:
-- type: 'msg'
-- type_id: 'msg_6e2baaf3b97dbeef01c0043275f9a0e7'
-- global_messages: []
+ component:
+ - type: 'system'
+ - type_id: 'system_54b53072540eeeb8f8e9343e71f28176'
+ - global_system_definitions:
+ - user_definitions: ''
+ - user_includes: ''
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 
@@ -45,535 +41,35 @@ component:
  **********************************************************************************************************************/
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'EDMA'
-- type: 'edma'
-- mode: 'basic'
-- type_id: 'edma_a23fca76a894e1bcdf9d01a687505ff9'
-- functional_group: 'RTE_PIP'
-- peripheral: 'DMA0'
-- config_sets:
-  - fsl_edma:
-    - common_settings:
-      - enableContinuousLinkMode: 'false'
-      - enableHaltOnError: 'true'
-      - enableRoundRobinArbitration: 'false'
-      - enableDebugMode: 'false'
-    - dma_table: []
-    - edma_channels: []
-    - quick_selection: 'default'
+ instance:
+ - name: 'EDMA'
+ - type: 'edma'
+ - mode: 'basic'
+ - custom_name_enabled: 'true'
+ - type_id: 'edma_a23fca76a894e1bcdf9d01a687505ff9'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'DMA0'
+ - config_sets:
+ - fsl_edma:
+ - common_settings:
+ - enableContinuousLinkMode: 'false'
+ - enableHaltOnError: 'true'
+ - enableRoundRobinArbitration: 'false'
+ - enableDebugMode: 'false'
+ - dma_table: []
+ - edma_channels: []
+ - quick_selection: 'default'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
-const edma_config_t EDMA_config = {
-  .enableContinuousLinkMode = false,
-  .enableHaltOnError = true,
-  .enableRoundRobinArbitration = false,
-  .enableDebugMode = false
-};
+const edma_config_t EDMA_config =
+{
+        .enableContinuousLinkMode = false,
+        .enableHaltOnError = true,
+        .enableRoundRobinArbitration = false,
+        .enableDebugMode = false };
 
-void EDMA_init(void) {
-}
-
-/***********************************************************************************************************************
- * PIT initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'PIT'
-- type: 'pit'
-- mode: 'LPTMR_GENERAL'
-- type_id: 'pit_a4782ba5223c8a2527ba91aeb2bc4159'
-- functional_group: 'RTE_PIP'
-- peripheral: 'PIT'
-- config_sets:
-  - fsl_pit:
-    - enableRunInDebug: 'true'
-    - enableSharedInterrupt: 'true'
-    - sharedInterrupt:
-      - IRQn: 'PIT_IRQn'
-      - enable_priority: 'true'
-      - priority: '4'
-      - enable_custom_name: 'true'
-      - handler_custom_name: 'PIT_IRQHandler'
-    - timingConfig:
-      - clockSource: 'BusInterfaceClock'
-      - clockSourceFreq: 'sysclk_run'
-    - channels:
-      - 0:
-        - channelNumber: '0'
-        - enableChain: 'false'
-        - timerPeriod: '1us'
-        - startTimer: 'true'
-        - enableInterrupt: 'false'
-      - 1:
-        - channelNumber: '1'
-        - enableChain: 'true'
-        - timerMultiplier: '0xffffffff'
-        - startTimer: 'true'
-        - enableInterrupt: 'false'
-      - 2:
-        - channelNumber: '2'
-        - enableChain: 'false'
-        - timerPeriod: '1ms'
-        - startTimer: 'true'
-        - enableInterrupt: 'true'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-const pit_config_t PIT_config = {
-  .enableRunInDebug = true
-};
-
-void PIT_init(void) {
-  /* Initialize the PIT. */
-  PIT_Init(PIT_PERIPHERAL, &PIT_config);
-  /* Set channel 0 period to 1 µs (75 ticks). */
-  PIT_SetTimerPeriod(PIT_PERIPHERAL, kPIT_Chnl_0, PIT_0_TICKS);
-  /* Set channel 1 period to 1.895 m (8527897872 ticks). */
-  PIT_SetTimerPeriod(PIT_PERIPHERAL, kPIT_Chnl_1, PIT_1_TICKS);
-  /* Chain the channel 1 to channel 0. */
-  PIT_SetTimerChainMode(PIT_PERIPHERAL, kPIT_Chnl_1, true);
-  /* Set channel 2 period to 1 ms (75000 ticks). */
-  PIT_SetTimerPeriod(PIT_PERIPHERAL, kPIT_Chnl_2, PIT_2_TICKS);
-  /* Enable interrupts from channel 2. */
-  PIT_EnableInterrupts(PIT_PERIPHERAL, kPIT_Chnl_2, kPIT_TimerInterruptEnable);
-  /* Interrupt vector PIT_IRQN priority settings in the NVIC */
-  NVIC_SetPriority(PIT_IRQN, PIT_IRQ_PRIORITY);
-  /* Enable interrupt PIT_IRQN request in the NVIC */
-  EnableIRQ(PIT_IRQN);
-  /* Start channel 0. */
-  PIT_StartTimer(PIT_PERIPHERAL, kPIT_Chnl_0);
-  /* Start channel 1. */
-  PIT_StartTimer(PIT_PERIPHERAL, kPIT_Chnl_1);
-  /* Start channel 2. */
-  PIT_StartTimer(PIT_PERIPHERAL, kPIT_Chnl_2);
-}
-
-/***********************************************************************************************************************
- * CMP_1 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'CMP_1'
-- type: 'cmp'
-- mode: 'polling'
-- type_id: 'cmp_306724f57b92dbe1771f1514089d2b18'
-- functional_group: 'RTE_PIP'
-- peripheral: 'CMP1'
-- config_sets:
-  - fsl_filter:
-    - filter_config:
-      - filteringOptions: 'enableWindow'
-      - clockSource: 'SystemClock'
-      - clockSourceFreq: 'GetFreq'
-      - windowSample: 'SAMPLE'
-  - fsl_cmp:
-    - main_config:
-      - explicitEnableCmp: 'true'
-      - hysteresisMode: 'kCMP_HysteresisLevel0'
-      - enableHighSpeed: 'false'
-      - enableInvertOutput: 'false'
-      - useUnfilteredOutput: 'false'
-      - enablePinOut: 'false'
-    - positiveChannel: 'IN.3'
-    - negativeChannel: 'IN.7'
-  - fsl_dac:
-    - enableDAC: 'true'
-    - dac_config:
-      - referenceVoltageSource: 'DAC_6bit_VIN1'
-      - DACValue: '63'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-/* CMP_1 main configuration */
-const cmp_config_t CMP_1_config = {
-  .enableCmp = false,
-  .hysteresisMode = kCMP_HysteresisLevel0,
-  .enableHighSpeed = false,
-  .enableInvertOutput = false,
-  .useUnfilteredOutput = false,
-  .enablePinOut = false,
-};
-/* Configuration of the DAC sub-module, used in the CMP_SetDACConfig() function */
-const cmp_dac_config_t CMP_1_dac_config = {
-  .referenceVoltageSource = kCMP_VrefSourceVin1,
-  .DACValue = 62U
-};
-
-void CMP_1_init(void) {
-  /* Initialize CMP main sub-module functionality */
-  CMP_Init(CMP_1_PERIPHERAL, &CMP_1_config);
-  /* Set up internal DAC sub-module, that can be used as input 7 of the CMP both inputs. */
-  CMP_SetDACConfig(CMP_1_PERIPHERAL, &CMP_1_dac_config);
-  /* Enables windowing by external signal */
-  CMP_EnableWindowMode(CMP_1_PERIPHERAL, true);
-  /* Initialize CMP main sub-module functionality */
-  CMP_SetInputChannels(CMP_1_PERIPHERAL, CMP_1_POSITIVE_INPUT_NUMBER, CMP_1_NEGATIVE_INPUT_NUMBER);
-  /* Explicitly enables CMP periphery to satisfy glitch limitations. */
-  CMP_Enable(CMP_1_PERIPHERAL, true);
-}
-
-/***********************************************************************************************************************
- * CMP_2 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'CMP_2'
-- type: 'cmp'
-- mode: 'polling'
-- type_id: 'cmp_306724f57b92dbe1771f1514089d2b18'
-- functional_group: 'RTE_PIP'
-- peripheral: 'CMP2'
-- config_sets:
-  - fsl_filter:
-    - filter_config:
-      - filteringOptions: 'enableWindow'
-      - clockSource: 'SystemClock'
-      - clockSourceFreq: 'GetFreq'
-      - windowSample: 'SAMPLE'
-  - fsl_cmp:
-    - main_config:
-      - explicitEnableCmp: 'true'
-      - hysteresisMode: 'kCMP_HysteresisLevel0'
-      - enableHighSpeed: 'false'
-      - enableInvertOutput: 'false'
-      - useUnfilteredOutput: 'false'
-      - enablePinOut: 'false'
-    - positiveChannel: 'IN.2'
-    - negativeChannel: 'IN.7'
-  - fsl_dac:
-    - enableDAC: 'true'
-    - dac_config:
-      - referenceVoltageSource: 'DAC_6bit_VIN1'
-      - DACValue: '63'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-/* CMP_2 main configuration */
-const cmp_config_t CMP_2_config = {
-  .enableCmp = false,
-  .hysteresisMode = kCMP_HysteresisLevel0,
-  .enableHighSpeed = false,
-  .enableInvertOutput = false,
-  .useUnfilteredOutput = false,
-  .enablePinOut = false,
-};
-/* Configuration of the DAC sub-module, used in the CMP_SetDACConfig() function */
-const cmp_dac_config_t CMP_2_dac_config = {
-  .referenceVoltageSource = kCMP_VrefSourceVin1,
-  .DACValue = 62U
-};
-
-void CMP_2_init(void) {
-  /* Initialize CMP main sub-module functionality */
-  CMP_Init(CMP_2_PERIPHERAL, &CMP_2_config);
-  /* Set up internal DAC sub-module, that can be used as input 7 of the CMP both inputs. */
-  CMP_SetDACConfig(CMP_2_PERIPHERAL, &CMP_2_dac_config);
-  /* Enables windowing by external signal */
-  CMP_EnableWindowMode(CMP_2_PERIPHERAL, true);
-  /* Initialize CMP main sub-module functionality */
-  CMP_SetInputChannels(CMP_2_PERIPHERAL, CMP_2_POSITIVE_INPUT_NUMBER, CMP_2_NEGATIVE_INPUT_NUMBER);
-  /* Explicitly enables CMP periphery to satisfy glitch limitations. */
-  CMP_Enable(CMP_2_PERIPHERAL, true);
-}
-
-/***********************************************************************************************************************
- * CMP_3 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'CMP_3'
-- type: 'cmp'
-- mode: 'polling'
-- type_id: 'cmp_306724f57b92dbe1771f1514089d2b18'
-- functional_group: 'RTE_PIP'
-- peripheral: 'CMP3'
-- config_sets:
-  - fsl_filter:
-    - filter_config:
-      - filteringOptions: 'enableWindow'
-      - clockSource: 'SystemClock'
-      - clockSourceFreq: 'GetFreq'
-      - windowSample: 'SAMPLE'
-  - fsl_cmp:
-    - main_config:
-      - explicitEnableCmp: 'true'
-      - hysteresisMode: 'kCMP_HysteresisLevel0'
-      - enableHighSpeed: 'false'
-      - enableInvertOutput: 'false'
-      - useUnfilteredOutput: 'false'
-      - enablePinOut: 'false'
-    - positiveChannel: 'IN.2'
-    - negativeChannel: 'IN.7'
-  - fsl_dac:
-    - enableDAC: 'true'
-    - dac_config:
-      - referenceVoltageSource: 'DAC_6bit_VIN1'
-      - DACValue: '63'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-/* CMP_3 main configuration */
-const cmp_config_t CMP_3_config = {
-  .enableCmp = false,
-  .hysteresisMode = kCMP_HysteresisLevel0,
-  .enableHighSpeed = false,
-  .enableInvertOutput = false,
-  .useUnfilteredOutput = false,
-  .enablePinOut = false,
-};
-/* Configuration of the DAC sub-module, used in the CMP_SetDACConfig() function */
-const cmp_dac_config_t CMP_3_dac_config = {
-  .referenceVoltageSource = kCMP_VrefSourceVin1,
-  .DACValue = 62U
-};
-
-void CMP_3_init(void) {
-  /* Initialize CMP main sub-module functionality */
-  CMP_Init(CMP_3_PERIPHERAL, &CMP_3_config);
-  /* Set up internal DAC sub-module, that can be used as input 7 of the CMP both inputs. */
-  CMP_SetDACConfig(CMP_3_PERIPHERAL, &CMP_3_dac_config);
-  /* Enables windowing by external signal */
-  CMP_EnableWindowMode(CMP_3_PERIPHERAL, true);
-  /* Initialize CMP main sub-module functionality */
-  CMP_SetInputChannels(CMP_3_PERIPHERAL, CMP_3_POSITIVE_INPUT_NUMBER, CMP_3_NEGATIVE_INPUT_NUMBER);
-  /* Explicitly enables CMP periphery to satisfy glitch limitations. */
-  CMP_Enable(CMP_3_PERIPHERAL, true);
-}
-
-/***********************************************************************************************************************
- * CMP_4 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'CMP_4'
-- type: 'cmp'
-- mode: 'polling'
-- type_id: 'cmp_306724f57b92dbe1771f1514089d2b18'
-- functional_group: 'RTE_PIP'
-- peripheral: 'CMP4'
-- config_sets:
-  - fsl_filter:
-    - filter_config:
-      - filteringOptions: 'enableWindow'
-      - clockSource: 'SystemClock'
-      - clockSourceFreq: 'GetFreq'
-      - windowSample: 'SAMPLE'
-  - fsl_cmp:
-    - main_config:
-      - explicitEnableCmp: 'true'
-      - hysteresisMode: 'kCMP_HysteresisLevel0'
-      - enableHighSpeed: 'false'
-      - enableInvertOutput: 'false'
-      - useUnfilteredOutput: 'false'
-      - enablePinOut: 'false'
-    - positiveChannel: 'IN.2'
-    - negativeChannel: 'IN.7'
-  - fsl_dac:
-    - enableDAC: 'true'
-    - dac_config:
-      - referenceVoltageSource: 'DAC_6bit_VIN1'
-      - DACValue: '63'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-/* CMP_4 main configuration */
-const cmp_config_t CMP_4_config = {
-  .enableCmp = false,
-  .hysteresisMode = kCMP_HysteresisLevel0,
-  .enableHighSpeed = false,
-  .enableInvertOutput = false,
-  .useUnfilteredOutput = false,
-  .enablePinOut = false,
-};
-/* Configuration of the DAC sub-module, used in the CMP_SetDACConfig() function */
-const cmp_dac_config_t CMP_4_dac_config = {
-  .referenceVoltageSource = kCMP_VrefSourceVin1,
-  .DACValue = 62U
-};
-
-void CMP_4_init(void) {
-  /* Initialize CMP main sub-module functionality */
-  CMP_Init(CMP_4_PERIPHERAL, &CMP_4_config);
-  /* Set up internal DAC sub-module, that can be used as input 7 of the CMP both inputs. */
-  CMP_SetDACConfig(CMP_4_PERIPHERAL, &CMP_4_dac_config);
-  /* Enables windowing by external signal */
-  CMP_EnableWindowMode(CMP_4_PERIPHERAL, true);
-  /* Initialize CMP main sub-module functionality */
-  CMP_SetInputChannels(CMP_4_PERIPHERAL, CMP_4_POSITIVE_INPUT_NUMBER, CMP_4_NEGATIVE_INPUT_NUMBER);
-  /* Explicitly enables CMP periphery to satisfy glitch limitations. */
-  CMP_Enable(CMP_4_PERIPHERAL, true);
-}
-
-/***********************************************************************************************************************
- * UART_1 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'UART_1'
-- type: 'lpuart'
-- mode: 'polling'
-- type_id: 'lpuart_bebe3e12b6ec22bbd14199038f2bf459'
-- functional_group: 'RTE_PIP'
-- peripheral: 'LPUART1'
-- config_sets:
-  - lpuartConfig_t:
-    - lpuartConfig:
-      - clockSource: 'LpuartClock'
-      - lpuartSrcClkFreq: 'sysclk_run'
-      - baudRate_Bps: '115200'
-      - parityMode: 'kLPUART_ParityDisabled'
-      - dataBitsCount: 'kLPUART_EightDataBits'
-      - isMsb: 'false'
-      - stopBitCount: 'kLPUART_OneStopBit'
-      - txFifoWatermark: '0'
-      - rxFifoWatermark: '1'
-      - enableRxRTS: 'false'
-      - enableTxCTS: 'false'
-      - txCtsSource: 'kLPUART_CtsSourcePin'
-      - txCtsConfig: 'kLPUART_CtsSampleAtStart'
-      - rxIdleType: 'kLPUART_IdleTypeStartBit'
-      - rxIdleConfig: 'kLPUART_IdleCharacter1'
-      - enableTx: 'true'
-      - enableRx: 'true'
-    - quick_selection: 'QuickSelection1'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-const lpuart_config_t UART_1_config = {
-  .baudRate_Bps = 115200,
-  .parityMode = kLPUART_ParityDisabled,
-  .dataBitsCount = kLPUART_EightDataBits,
-  .isMsb = false,
-  .stopBitCount = kLPUART_OneStopBit,
-  .txFifoWatermark = 0,
-  .rxFifoWatermark = 1,
-  .enableRxRTS = false,
-  .enableTxCTS = false,
-  .txCtsSource = kLPUART_CtsSourcePin,
-  .txCtsConfig = kLPUART_CtsSampleAtStart,
-  .rxIdleType = kLPUART_IdleTypeStartBit,
-  .rxIdleConfig = kLPUART_IdleCharacter1,
-  .enableTx = true,
-  .enableRx = true
-};
-
-void UART_1_init(void) {
-  LPUART_Init(UART_1_PERIPHERAL, &UART_1_config, UART_1_CLOCK_SOURCE);
-}
-
-/***********************************************************************************************************************
- * UART_4 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'UART_4'
-- type: 'lpuart'
-- mode: 'polling'
-- type_id: 'lpuart_bebe3e12b6ec22bbd14199038f2bf459'
-- functional_group: 'RTE_PIP'
-- peripheral: 'LPUART4'
-- config_sets:
-  - lpuartConfig_t:
-    - lpuartConfig:
-      - clockSource: 'LpuartClock'
-      - lpuartSrcClkFreq: 'sysclk_run'
-      - baudRate_Bps: '115200'
-      - parityMode: 'kLPUART_ParityDisabled'
-      - dataBitsCount: 'kLPUART_EightDataBits'
-      - isMsb: 'false'
-      - stopBitCount: 'kLPUART_OneStopBit'
-      - txFifoWatermark: '0'
-      - rxFifoWatermark: '1'
-      - enableRxRTS: 'false'
-      - enableTxCTS: 'false'
-      - txCtsSource: 'kLPUART_CtsSourcePin'
-      - txCtsConfig: 'kLPUART_CtsSampleAtStart'
-      - rxIdleType: 'kLPUART_IdleTypeStartBit'
-      - rxIdleConfig: 'kLPUART_IdleCharacter1'
-      - enableTx: 'true'
-      - enableRx: 'true'
-    - quick_selection: 'QuickSelection1'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-const lpuart_config_t UART_4_config = {
-  .baudRate_Bps = 115200,
-  .parityMode = kLPUART_ParityDisabled,
-  .dataBitsCount = kLPUART_EightDataBits,
-  .isMsb = false,
-  .stopBitCount = kLPUART_OneStopBit,
-  .txFifoWatermark = 0,
-  .rxFifoWatermark = 1,
-  .enableRxRTS = false,
-  .enableTxCTS = false,
-  .txCtsSource = kLPUART_CtsSourcePin,
-  .txCtsConfig = kLPUART_CtsSampleAtStart,
-  .rxIdleType = kLPUART_IdleTypeStartBit,
-  .rxIdleConfig = kLPUART_IdleCharacter1,
-  .enableTx = true,
-  .enableRx = true
-};
-
-void UART_4_init(void) {
-  LPUART_Init(UART_4_PERIPHERAL, &UART_4_config, UART_4_CLOCK_SOURCE);
-}
-
-/***********************************************************************************************************************
- * UART_5 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'UART_5'
-- type: 'lpuart'
-- mode: 'polling'
-- type_id: 'lpuart_bebe3e12b6ec22bbd14199038f2bf459'
-- functional_group: 'RTE_PIP'
-- peripheral: 'LPUART5'
-- config_sets:
-  - lpuartConfig_t:
-    - lpuartConfig:
-      - clockSource: 'LpuartClock'
-      - lpuartSrcClkFreq: 'sysclk_run'
-      - baudRate_Bps: '115200'
-      - parityMode: 'kLPUART_ParityDisabled'
-      - dataBitsCount: 'kLPUART_EightDataBits'
-      - isMsb: 'false'
-      - stopBitCount: 'kLPUART_OneStopBit'
-      - txFifoWatermark: '0'
-      - rxFifoWatermark: '1'
-      - enableRxRTS: 'false'
-      - enableTxCTS: 'false'
-      - txCtsSource: 'kLPUART_CtsSourcePin'
-      - txCtsConfig: 'kLPUART_CtsSampleAtStart'
-      - rxIdleType: 'kLPUART_IdleTypeStartBit'
-      - rxIdleConfig: 'kLPUART_IdleCharacter1'
-      - enableTx: 'true'
-      - enableRx: 'true'
-    - quick_selection: 'QuickSelection1'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-const lpuart_config_t UART_5_config = {
-  .baudRate_Bps = 115200,
-  .parityMode = kLPUART_ParityDisabled,
-  .dataBitsCount = kLPUART_EightDataBits,
-  .isMsb = false,
-  .stopBitCount = kLPUART_OneStopBit,
-  .txFifoWatermark = 0,
-  .rxFifoWatermark = 1,
-  .enableRxRTS = false,
-  .enableTxCTS = false,
-  .txCtsSource = kLPUART_CtsSourcePin,
-  .txCtsConfig = kLPUART_CtsSampleAtStart,
-  .rxIdleType = kLPUART_IdleTypeStartBit,
-  .rxIdleConfig = kLPUART_IdleCharacter1,
-  .enableTx = true,
-  .enableRx = true
-};
-
-void UART_5_init(void) {
-  LPUART_Init(UART_5_PERIPHERAL, &UART_5_config, UART_5_CLOCK_SOURCE);
+static void EDMA_init(void)
+{
 }
 
 /***********************************************************************************************************************
@@ -581,66 +77,69 @@ void UART_5_init(void) {
  **********************************************************************************************************************/
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'ADC_1'
-- type: 'adc_12b1msps_sar'
-- mode: 'ADC_GENERAL'
-- type_id: 'adc_12b1msps_sar_6a490e886349a7b2b07bed10ce7b299b'
-- functional_group: 'RTE_PIP'
-- peripheral: 'ADC1'
-- config_sets:
-  - fsl_adc:
-    - clockConfig:
-      - clockSource: 'kADC_ClockSourceAD'
-      - clockSourceFreq: 'custom:10 MHz'
-      - clockDriver: 'kADC_ClockDriver2'
-      - samplePeriodMode: 'kADC_SamplePeriodShort2Clocks'
-      - enableAsynchronousClockOutput: 'true'
-    - conversionConfig:
-      - resolution: 'kADC_Resolution12Bit'
-      - hardwareAverageMode: 'kADC_HardwareAverageDisable'
-      - enableHardwareTrigger: 'software'
-      - enableHighSpeed: 'false'
-      - enableLowPower: 'false'
-      - enableContinuousConversion: 'false'
-      - enableOverWrite: 'false'
-      - enableDma: 'false'
-    - resultingTime: []
-    - resultCorrection:
-      - doAutoCalibration: 'true'
-      - offset: '0'
-    - hardwareCompareConfiguration:
-      - hardwareCompareMode: 'disabled'
-      - value1: '0'
-      - value2: '0'
-    - enableInterrupt: 'false'
-    - adc_interrupt:
-      - IRQn: 'ADC1_IRQn'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
-    - adc_channels_config: []
+ instance:
+ - name: 'ADC_1'
+ - type: 'adc_12b1msps_sar'
+ - mode: 'ADC_GENERAL'
+ - custom_name_enabled: 'true'
+ - type_id: 'adc_12b1msps_sar_6a490e886349a7b2b07bed10ce7b299b'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'ADC1'
+ - config_sets:
+ - fsl_adc:
+ - clockConfig:
+ - clockSource: 'kADC_ClockSourceAD'
+ - clockSourceFreq: 'custom:10 MHz'
+ - clockDriver: 'kADC_ClockDriver2'
+ - samplePeriodMode: 'kADC_SamplePeriodShort2Clocks'
+ - enableAsynchronousClockOutput: 'true'
+ - conversionConfig:
+ - resolution: 'kADC_Resolution12Bit'
+ - hardwareAverageMode: 'kADC_HardwareAverageDisable'
+ - enableHardwareTrigger: 'software'
+ - enableHighSpeed: 'false'
+ - enableLowPower: 'false'
+ - enableContinuousConversion: 'false'
+ - enableOverWrite: 'false'
+ - enableDma: 'false'
+ - resultingTime: []
+ - resultCorrection:
+ - doAutoCalibration: 'true'
+ - offset: '0'
+ - hardwareCompareConfiguration:
+ - hardwareCompareMode: 'disabled'
+ - value1: '0'
+ - value2: '0'
+ - enableInterrupt: 'false'
+ - adc_interrupt:
+ - IRQn: 'ADC1_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ - adc_channels_config: []
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
-const adc_config_t ADC_1_config = {
-  .enableOverWrite = false,
-  .enableContinuousConversion = false,
-  .enableHighSpeed = false,
-  .enableLowPower = false,
-  .enableLongSample = false,
-  .enableAsynchronousClockOutput = true,
-  .referenceVoltageSource = kADC_ReferenceVoltageSourceAlt0,
-  .samplePeriodMode = kADC_SamplePeriodShort2Clocks,
-  .clockSource = kADC_ClockSourceAD,
-  .clockDriver = kADC_ClockDriver2,
-  .resolution = kADC_Resolution12Bit
-};
+const adc_config_t ADC_1_config =
+{
+        .enableOverWrite = false,
+        .enableContinuousConversion = false,
+        .enableHighSpeed = false,
+        .enableLowPower = false,
+        .enableLongSample = false,
+        .enableAsynchronousClockOutput = true,
+        .referenceVoltageSource = kADC_ReferenceVoltageSourceAlt0,
+        .samplePeriodMode = kADC_SamplePeriodShort2Clocks,
+        .clockSource = kADC_ClockSourceAD,
+        .clockDriver = kADC_ClockDriver2,
+        .resolution = kADC_Resolution12Bit };
 
-void ADC_1_init(void) {
-  /* Initialize ADC1 peripheral. */
-  ADC_Init(ADC_1_PERIPHERAL, &ADC_1_config);
-  /* Perform ADC1 auto calibration. */
-  ADC_DoAutoCalibration(ADC_1_PERIPHERAL);
+static void ADC_1_init(void)
+{
+    /* Initialize ADC1 peripheral. */
+    ADC_Init(ADC_1_PERIPHERAL, &ADC_1_config);
+    /* Perform ADC1 auto calibration. */
+    ADC_DoAutoCalibration(ADC_1_PERIPHERAL);
 }
 
 /***********************************************************************************************************************
@@ -648,160 +147,420 @@ void ADC_1_init(void) {
  **********************************************************************************************************************/
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'AOI'
-- type: 'aoi'
-- mode: 'AOI'
-- type_id: 'aoi_5a2efbfd7a8a5208f8f552077e2b4ded'
-- functional_group: 'RTE_PIP'
-- peripheral: 'AOI1'
-- config_sets:
-  - fsl_aoi:
-    - events:
-      - 0:
-        - product_terms:
-          - 0:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicOne'
-            - input2: 'kAOI_LogicOne'
-            - input3: 'kAOI_LogicOne'
-          - 1:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-          - 2:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-          - 3:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-        - define: 'true'
-        - initialize: 'true'
-      - 1:
-        - product_terms:
-          - 0:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicOne'
-            - input2: 'kAOI_LogicOne'
-            - input3: 'kAOI_LogicOne'
-          - 1:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-          - 2:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-          - 3:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-        - define: 'true'
-        - initialize: 'true'
-      - 2:
-        - product_terms:
-          - 0:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-          - 1:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-          - 2:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-          - 3:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-        - define: 'false'
-        - initialize: 'false'
-      - 3:
-        - product_terms:
-          - 0:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-          - 1:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-          - 2:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-          - 3:
-            - input0: 'kAOI_LogicZero'
-            - input1: 'kAOI_LogicZero'
-            - input2: 'kAOI_LogicZero'
-            - input3: 'kAOI_LogicZero'
-        - define: 'false'
-        - initialize: 'false'
+ instance:
+ - name: 'AOI'
+ - type: 'aoi'
+ - mode: 'AOI'
+ - custom_name_enabled: 'true'
+ - type_id: 'aoi_5a2efbfd7a8a5208f8f552077e2b4ded'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'AOI1'
+ - config_sets:
+ - fsl_aoi:
+ - events:
+ - 0:
+ - product_terms:
+ - 0:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicOne'
+ - input2: 'kAOI_LogicOne'
+ - input3: 'kAOI_LogicOne'
+ - 1:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - 2:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - 3:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - define: 'true'
+ - initialize: 'true'
+ - 1:
+ - product_terms:
+ - 0:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicOne'
+ - input2: 'kAOI_LogicOne'
+ - input3: 'kAOI_LogicOne'
+ - 1:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - 2:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - 3:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - define: 'true'
+ - initialize: 'true'
+ - 2:
+ - product_terms:
+ - 0:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - 1:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - 2:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - 3:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - define: 'false'
+ - initialize: 'false'
+ - 3:
+ - product_terms:
+ - 0:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - 1:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - 2:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - 3:
+ - input0: 'kAOI_LogicZero'
+ - input1: 'kAOI_LogicZero'
+ - input2: 'kAOI_LogicZero'
+ - input3: 'kAOI_LogicZero'
+ - define: 'false'
+ - initialize: 'false'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
-const aoi_event_config_t AOI_event_config[2] = {
-  {
-    .PT0AC = kAOI_LogicZero,
-    .PT0BC = kAOI_LogicOne,
-    .PT0CC = kAOI_LogicOne,
-    .PT0DC = kAOI_LogicOne,
-    .PT1AC = kAOI_LogicZero,
-    .PT1BC = kAOI_LogicZero,
-    .PT1CC = kAOI_LogicZero,
-    .PT1DC = kAOI_LogicZero,
-    .PT2AC = kAOI_LogicZero,
-    .PT2BC = kAOI_LogicZero,
-    .PT2CC = kAOI_LogicZero,
-    .PT2DC = kAOI_LogicZero,
-    .PT3AC = kAOI_LogicZero,
-    .PT3BC = kAOI_LogicZero,
-    .PT3CC = kAOI_LogicZero,
-    .PT3DC = kAOI_LogicZero
-  },
-  {
-    .PT0AC = kAOI_LogicZero,
-    .PT0BC = kAOI_LogicOne,
-    .PT0CC = kAOI_LogicOne,
-    .PT0DC = kAOI_LogicOne,
-    .PT1AC = kAOI_LogicZero,
-    .PT1BC = kAOI_LogicZero,
-    .PT1CC = kAOI_LogicZero,
-    .PT1DC = kAOI_LogicZero,
-    .PT2AC = kAOI_LogicZero,
-    .PT2BC = kAOI_LogicZero,
-    .PT2CC = kAOI_LogicZero,
-    .PT2DC = kAOI_LogicZero,
-    .PT3AC = kAOI_LogicZero,
-    .PT3BC = kAOI_LogicZero,
-    .PT3CC = kAOI_LogicZero,
-    .PT3DC = kAOI_LogicZero
-  }
-};
+const aoi_event_config_t AOI_event_config[2] =
+{
+{
+        .PT0AC = kAOI_LogicZero,
+        .PT0BC = kAOI_LogicOne,
+        .PT0CC = kAOI_LogicOne,
+        .PT0DC = kAOI_LogicOne,
+        .PT1AC = kAOI_LogicZero,
+        .PT1BC = kAOI_LogicZero,
+        .PT1CC = kAOI_LogicZero,
+        .PT1DC = kAOI_LogicZero,
+        .PT2AC = kAOI_LogicZero,
+        .PT2BC = kAOI_LogicZero,
+        .PT2CC = kAOI_LogicZero,
+        .PT2DC = kAOI_LogicZero,
+        .PT3AC = kAOI_LogicZero,
+        .PT3BC = kAOI_LogicZero,
+        .PT3CC = kAOI_LogicZero,
+        .PT3DC = kAOI_LogicZero },
+{
+        .PT0AC = kAOI_LogicZero,
+        .PT0BC = kAOI_LogicOne,
+        .PT0CC = kAOI_LogicOne,
+        .PT0DC = kAOI_LogicOne,
+        .PT1AC = kAOI_LogicZero,
+        .PT1BC = kAOI_LogicZero,
+        .PT1CC = kAOI_LogicZero,
+        .PT1DC = kAOI_LogicZero,
+        .PT2AC = kAOI_LogicZero,
+        .PT2BC = kAOI_LogicZero,
+        .PT2CC = kAOI_LogicZero,
+        .PT2DC = kAOI_LogicZero,
+        .PT3AC = kAOI_LogicZero,
+        .PT3BC = kAOI_LogicZero,
+        .PT3CC = kAOI_LogicZero,
+        .PT3DC = kAOI_LogicZero } };
 
-void AOI_init(void) {
-  /* Initialize AOI1 peripheral. */
-  AOI_Init(AOI_PERIPHERAL);
-  /* Initialize AOI1 Event 0. */
-  AOI_SetEventLogicConfig(AOI_PERIPHERAL, kAOI_Event0, &AOI_event_config[0]);
-  /* Initialize AOI1 Event 1. */
-  AOI_SetEventLogicConfig(AOI_PERIPHERAL, kAOI_Event1, &AOI_event_config[1]);
+static void AOI_init(void)
+{
+    /* Initialize AOI1 peripheral. */
+    AOI_Init(AOI_PERIPHERAL);
+    /* Initialize AOI1 Event 0. */
+    AOI_SetEventLogicConfig(AOI_PERIPHERAL, kAOI_Event0, &AOI_event_config[0]);
+    /* Initialize AOI1 Event 1. */
+    AOI_SetEventLogicConfig(AOI_PERIPHERAL, kAOI_Event1, &AOI_event_config[1]);
+}
+
+/***********************************************************************************************************************
+ * CMP_1 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'CMP_1'
+ - type: 'cmp'
+ - mode: 'polling'
+ - custom_name_enabled: 'true'
+ - type_id: 'cmp_306724f57b92dbe1771f1514089d2b18'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'CMP1'
+ - config_sets:
+ - fsl_filter:
+ - filter_config:
+ - filteringOptions: 'enableWindow'
+ - clockSource: 'SystemClock'
+ - clockSourceFreq: 'GetFreq'
+ - windowSample: 'SAMPLE'
+ - fsl_cmp:
+ - main_config:
+ - explicitEnableCmp: 'true'
+ - hysteresisMode: 'kCMP_HysteresisLevel0'
+ - enableHighSpeed: 'false'
+ - enableInvertOutput: 'false'
+ - useUnfilteredOutput: 'false'
+ - enablePinOut: 'false'
+ - positiveChannel: 'IN.3'
+ - negativeChannel: 'IN.7'
+ - fsl_dac:
+ - enableDAC: 'true'
+ - dac_config:
+ - referenceVoltageSource: 'DAC_6bit_VIN1'
+ - DACValue: '63'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+/* CMP_1 main configuration */
+const cmp_config_t CMP_1_config =
+{
+        .enableCmp = false,
+        .hysteresisMode = kCMP_HysteresisLevel0,
+        .enableHighSpeed = false,
+        .enableInvertOutput = false,
+        .useUnfilteredOutput = false,
+        .enablePinOut = false, };
+/* Configuration of the DAC sub-module, used in the CMP_SetDACConfig() function */
+const cmp_dac_config_t CMP_1_dac_config =
+{ .referenceVoltageSource = kCMP_VrefSourceVin1, .DACValue = 62U };
+
+static void CMP_1_init(void)
+{
+    /* Initialize CMP main sub-module functionality */
+    CMP_Init(CMP_1_PERIPHERAL, &CMP_1_config);
+    /* Set up internal DAC sub-module, that can be used as input 7 of the CMP both inputs. */
+    CMP_SetDACConfig(CMP_1_PERIPHERAL, &CMP_1_dac_config);
+    /* Enables windowing by external signal */
+    CMP_EnableWindowMode(CMP_1_PERIPHERAL, true);
+    /* Initialize CMP main sub-module functionality */
+    CMP_SetInputChannels(CMP_1_PERIPHERAL, CMP_1_POSITIVE_INPUT_NUMBER,
+    CMP_1_NEGATIVE_INPUT_NUMBER);
+    /* Explicitly enables CMP periphery to satisfy glitch limitations. */
+    CMP_Enable(CMP_1_PERIPHERAL, true);
+}
+
+/***********************************************************************************************************************
+ * CMP_2 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'CMP_2'
+ - type: 'cmp'
+ - mode: 'polling'
+ - custom_name_enabled: 'true'
+ - type_id: 'cmp_306724f57b92dbe1771f1514089d2b18'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'CMP2'
+ - config_sets:
+ - fsl_filter:
+ - filter_config:
+ - filteringOptions: 'enableWindow'
+ - clockSource: 'SystemClock'
+ - clockSourceFreq: 'GetFreq'
+ - windowSample: 'SAMPLE'
+ - fsl_cmp:
+ - main_config:
+ - explicitEnableCmp: 'true'
+ - hysteresisMode: 'kCMP_HysteresisLevel0'
+ - enableHighSpeed: 'false'
+ - enableInvertOutput: 'false'
+ - useUnfilteredOutput: 'false'
+ - enablePinOut: 'false'
+ - positiveChannel: 'IN.2'
+ - negativeChannel: 'IN.7'
+ - fsl_dac:
+ - enableDAC: 'true'
+ - dac_config:
+ - referenceVoltageSource: 'DAC_6bit_VIN1'
+ - DACValue: '63'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+/* CMP_2 main configuration */
+const cmp_config_t CMP_2_config =
+{
+        .enableCmp = false,
+        .hysteresisMode = kCMP_HysteresisLevel0,
+        .enableHighSpeed = false,
+        .enableInvertOutput = false,
+        .useUnfilteredOutput = false,
+        .enablePinOut = false, };
+/* Configuration of the DAC sub-module, used in the CMP_SetDACConfig() function */
+const cmp_dac_config_t CMP_2_dac_config =
+{ .referenceVoltageSource = kCMP_VrefSourceVin1, .DACValue = 62U };
+
+static void CMP_2_init(void)
+{
+    /* Initialize CMP main sub-module functionality */
+    CMP_Init(CMP_2_PERIPHERAL, &CMP_2_config);
+    /* Set up internal DAC sub-module, that can be used as input 7 of the CMP both inputs. */
+    CMP_SetDACConfig(CMP_2_PERIPHERAL, &CMP_2_dac_config);
+    /* Enables windowing by external signal */
+    CMP_EnableWindowMode(CMP_2_PERIPHERAL, true);
+    /* Initialize CMP main sub-module functionality */
+    CMP_SetInputChannels(CMP_2_PERIPHERAL, CMP_2_POSITIVE_INPUT_NUMBER,
+    CMP_2_NEGATIVE_INPUT_NUMBER);
+    /* Explicitly enables CMP periphery to satisfy glitch limitations. */
+    CMP_Enable(CMP_2_PERIPHERAL, true);
+}
+
+/***********************************************************************************************************************
+ * CMP_3 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'CMP_3'
+ - type: 'cmp'
+ - mode: 'polling'
+ - custom_name_enabled: 'true'
+ - type_id: 'cmp_306724f57b92dbe1771f1514089d2b18'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'CMP3'
+ - config_sets:
+ - fsl_filter:
+ - filter_config:
+ - filteringOptions: 'enableWindow'
+ - clockSource: 'SystemClock'
+ - clockSourceFreq: 'GetFreq'
+ - windowSample: 'SAMPLE'
+ - fsl_cmp:
+ - main_config:
+ - explicitEnableCmp: 'true'
+ - hysteresisMode: 'kCMP_HysteresisLevel0'
+ - enableHighSpeed: 'false'
+ - enableInvertOutput: 'false'
+ - useUnfilteredOutput: 'false'
+ - enablePinOut: 'false'
+ - positiveChannel: 'IN.2'
+ - negativeChannel: 'IN.7'
+ - fsl_dac:
+ - enableDAC: 'true'
+ - dac_config:
+ - referenceVoltageSource: 'DAC_6bit_VIN1'
+ - DACValue: '63'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+/* CMP_3 main configuration */
+const cmp_config_t CMP_3_config =
+{
+        .enableCmp = false,
+        .hysteresisMode = kCMP_HysteresisLevel0,
+        .enableHighSpeed = false,
+        .enableInvertOutput = false,
+        .useUnfilteredOutput = false,
+        .enablePinOut = false, };
+/* Configuration of the DAC sub-module, used in the CMP_SetDACConfig() function */
+const cmp_dac_config_t CMP_3_dac_config =
+{ .referenceVoltageSource = kCMP_VrefSourceVin1, .DACValue = 62U };
+
+static void CMP_3_init(void)
+{
+    /* Initialize CMP main sub-module functionality */
+    CMP_Init(CMP_3_PERIPHERAL, &CMP_3_config);
+    /* Set up internal DAC sub-module, that can be used as input 7 of the CMP both inputs. */
+    CMP_SetDACConfig(CMP_3_PERIPHERAL, &CMP_3_dac_config);
+    /* Enables windowing by external signal */
+    CMP_EnableWindowMode(CMP_3_PERIPHERAL, true);
+    /* Initialize CMP main sub-module functionality */
+    CMP_SetInputChannels(CMP_3_PERIPHERAL, CMP_3_POSITIVE_INPUT_NUMBER,
+    CMP_3_NEGATIVE_INPUT_NUMBER);
+    /* Explicitly enables CMP periphery to satisfy glitch limitations. */
+    CMP_Enable(CMP_3_PERIPHERAL, true);
+}
+
+/***********************************************************************************************************************
+ * CMP_4 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'CMP_4'
+ - type: 'cmp'
+ - mode: 'polling'
+ - custom_name_enabled: 'true'
+ - type_id: 'cmp_306724f57b92dbe1771f1514089d2b18'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'CMP4'
+ - config_sets:
+ - fsl_filter:
+ - filter_config:
+ - filteringOptions: 'enableWindow'
+ - clockSource: 'SystemClock'
+ - clockSourceFreq: 'GetFreq'
+ - windowSample: 'SAMPLE'
+ - fsl_cmp:
+ - main_config:
+ - explicitEnableCmp: 'true'
+ - hysteresisMode: 'kCMP_HysteresisLevel0'
+ - enableHighSpeed: 'false'
+ - enableInvertOutput: 'false'
+ - useUnfilteredOutput: 'false'
+ - enablePinOut: 'false'
+ - positiveChannel: 'IN.2'
+ - negativeChannel: 'IN.7'
+ - fsl_dac:
+ - enableDAC: 'true'
+ - dac_config:
+ - referenceVoltageSource: 'DAC_6bit_VIN1'
+ - DACValue: '63'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+/* CMP_4 main configuration */
+const cmp_config_t CMP_4_config =
+{
+        .enableCmp = false,
+        .hysteresisMode = kCMP_HysteresisLevel0,
+        .enableHighSpeed = false,
+        .enableInvertOutput = false,
+        .useUnfilteredOutput = false,
+        .enablePinOut = false, };
+/* Configuration of the DAC sub-module, used in the CMP_SetDACConfig() function */
+const cmp_dac_config_t CMP_4_dac_config =
+{ .referenceVoltageSource = kCMP_VrefSourceVin1, .DACValue = 62U };
+
+static void CMP_4_init(void)
+{
+    /* Initialize CMP main sub-module functionality */
+    CMP_Init(CMP_4_PERIPHERAL, &CMP_4_config);
+    /* Set up internal DAC sub-module, that can be used as input 7 of the CMP both inputs. */
+    CMP_SetDACConfig(CMP_4_PERIPHERAL, &CMP_4_dac_config);
+    /* Enables windowing by external signal */
+    CMP_EnableWindowMode(CMP_4_PERIPHERAL, true);
+    /* Initialize CMP main sub-module functionality */
+    CMP_SetInputChannels(CMP_4_PERIPHERAL, CMP_4_POSITIVE_INPUT_NUMBER,
+    CMP_4_NEGATIVE_INPUT_NUMBER);
+    /* Explicitly enables CMP periphery to satisfy glitch limitations. */
+    CMP_Enable(CMP_4_PERIPHERAL, true);
 }
 
 /***********************************************************************************************************************
@@ -809,420 +568,71 @@ void AOI_init(void) {
  **********************************************************************************************************************/
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'CSI'
-- type: 'csi'
-- mode: 'interrupt'
-- type_id: 'csi_b2cf1faba8074e676ac4be93ec552c5a'
-- functional_group: 'RTE_PIP'
-- peripheral: 'CSI'
-- config_sets:
-  - fsl_csi:
-    - clockConfig:
-      - clockSource: 'BusInterfaceClock'
-      - clockSourceFreq: 'sysclk_run'
-      - masterClockSource: 'CsiClock'
-      - masterClockSourceFreq: 'sysclk_run'
-    - config:
-      - format: 'RGB888'
-      - i_width: '640'
-      - i_height: '400'
-      - dataBus: 'kCSI_DataBus8Bit'
-      - workMode: 'kCSI_GatedClockMode'
-      - useExtVsync: 'true'
-      - polarityFlags: ''
-      - buffers_config:
-        - bufferName: 'defaultBuffer'
-        - bufCount: '3'
-        - bufferAlign: '64'
-    - interruptsCfg:
-      - isInterruptEnabled: 'true'
-      - interruptSources: 'kCSI_EndOfFrameInterruptEnable'
-      - interrupt:
-        - IRQn: 'CSI_IRQn'
-        - enable_priority: 'true'
-        - priority: '3'
-        - enable_custom_name: 'true'
-        - handler_custom_name: 'CSI_IRQHandler'
+ instance:
+ - name: 'CSI'
+ - type: 'csi'
+ - mode: 'interrupt'
+ - custom_name_enabled: 'true'
+ - type_id: 'csi_b2cf1faba8074e676ac4be93ec552c5a'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'CSI'
+ - config_sets:
+ - fsl_csi:
+ - clockConfig:
+ - clockSource: 'BusInterfaceClock'
+ - clockSourceFreq: 'sysclk_run'
+ - masterClockSource: 'CsiClock'
+ - masterClockSourceFreq: 'sysclk_run'
+ - config:
+ - format: 'RGB888'
+ - i_width: '640'
+ - i_height: '400'
+ - dataBus: 'kCSI_DataBus8Bit'
+ - workMode: 'kCSI_GatedClockMode'
+ - useExtVsync: 'true'
+ - polarityFlags: ''
+ - buffers_config:
+ - bufferName: 'defaultBuffer'
+ - bufCount: '3'
+ - bufferAlign: '64'
+ - interruptsCfg:
+ - isInterruptEnabled: 'true'
+ - interruptSources: 'kCSI_EndOfFrameInterruptEnable'
+ - interrupt:
+ - IRQn: 'CSI_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'true'
+ - priority: '3'
+ - enable_custom_name: 'true'
+ - handler_custom_name: 'CSI_IRQHandler'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 /* CSI configuration */
-csi_config_t CSI_config = {
-  .width = CSI_FRAME_WIDTH,
-  .height = CSI_FRAME_HEIGHT,
-  .polarityFlags = 0,
-  .bytesPerPixel = CSI_BYTES_PER_PIXEL,
-  .linePitch_Bytes = CSI_LINE_PITCH_BYTES,
-  .workMode = kCSI_GatedClockMode,
-  .dataBus = kCSI_DataBus8Bit,
-  .useExtVsync = true,
-};
+csi_config_t CSI_config =
+{
+        .width = CSI_FRAME_WIDTH,
+        .height = CSI_FRAME_HEIGHT,
+        .polarityFlags = 0,
+        .bytesPerPixel = CSI_BYTES_PER_PIXEL,
+        .linePitch_Bytes = CSI_LINE_PITCH_BYTES,
+        .workMode = kCSI_GatedClockMode,
+        .dataBus = kCSI_DataBus8Bit,
+        .useExtVsync = true, };
 /* Frame buffer block allocation */
-AT_NONCACHEABLE_SECTION_ALIGN(uint32_t CSI_Buffer[CSI_FRAME_BUFFER_COUNT][CSI_FRAME_HEIGHT][CSI_FRAME_WIDTH], CSI_BUFFER_ALIGN);
+AT_NONCACHEABLE_SECTION_ALIGN(
+        uint32_t CSI_Buffer[CSI_FRAME_BUFFER_COUNT][CSI_FRAME_HEIGHT][CSI_FRAME_WIDTH],
+        CSI_BUFFER_ALIGN);
 
-void CSI_init(void) {
-  /* CSI initialization */
-  CSI_Init(CSI_PERIPHERAL, &CSI_config);
-  /* CSI enable selected interrupts */
-  CSI_EnableInterrupts(CSI_PERIPHERAL, kCSI_EndOfFrameInterruptEnable);
-  /* Interrupt vector CSI_IRQn priority settings in the NVIC */
-  NVIC_SetPriority(CSI_IRQn, CSI_IRQ_PRIORITY);
-  /* Enable interrupt CSI_IRQn request in the NVIC */
-  EnableIRQ(CSI_IRQn);
-}
-
-/***********************************************************************************************************************
- * GPIO_1 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'GPIO_1'
-- type: 'igpio'
-- mode: 'GPIO'
-- type_id: 'igpio_b1c1fa279aa7069dca167502b8589cb7'
-- functional_group: 'RTE_PIP'
-- peripheral: 'GPIO1'
-- config_sets:
-  - fsl_gpio:
-    - enable_irq_comb_0_15: 'true'
-    - gpio_interrupt_comb_0_15:
-      - IRQn: 'GPIO1_Combined_0_15_IRQn'
-      - enable_priority: 'true'
-      - priority: '4'
-      - enable_custom_name: 'true'
-      - handler_custom_name: 'GPIO1_Combined_0_15_IRQHandler'
-    - enable_irq_comb_16_31: 'true'
-    - gpio_interrupt_comb_16_31:
-      - IRQn: 'GPIO1_Combined_16_31_IRQn'
-      - enable_priority: 'true'
-      - priority: '4'
-      - enable_custom_name: 'true'
-      - handler_custom_name: 'GPIO1_Combined_16_31_IRQHandler'
-    - enable_irq_int0: 'false'
-    - gpio_interrupt_int0:
-      - IRQn: 'GPIO1_INT0_IRQn'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
-    - enable_irq_int1: 'false'
-    - gpio_interrupt_int1:
-      - IRQn: 'GPIO1_INT1_IRQn'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
-    - enable_irq_int2: 'false'
-    - gpio_interrupt_int2:
-      - IRQn: 'GPIO1_INT2_IRQn'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
-    - enable_irq_int3: 'false'
-    - gpio_interrupt_int3:
-      - IRQn: 'GPIO1_INT3_IRQn'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
-    - enable_irq_int4: 'false'
-    - gpio_interrupt_int4:
-      - IRQn: 'GPIO1_INT4_IRQn'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
-    - enable_irq_int5: 'false'
-    - gpio_interrupt_int5:
-      - IRQn: 'GPIO1_INT5_IRQn'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
-    - enable_irq_int6: 'false'
-    - gpio_interrupt_int6:
-      - IRQn: 'GPIO1_INT6_IRQn'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
-    - enable_irq_int7: 'false'
-    - gpio_interrupt_int7:
-      - IRQn: 'GPIO1_INT7_IRQn'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-
-void GPIO_1_init(void) {
-  /* Make sure, the clock gate for GPIO1 is enabled (e. g. in pin_mux.c) */
-  /* Interrupt vector GPIO1_Combined_0_15_IRQn priority settings in the NVIC */
-  NVIC_SetPriority(GPIO1_Combined_0_15_IRQn, GPIO_1_GPIO_COMB_0_15_IRQ_PRIORITY);
-  /* Enable interrupt GPIO1_Combined_0_15_IRQn request in the NVIC */
-  EnableIRQ(GPIO1_Combined_0_15_IRQn);
-  /* Interrupt vector GPIO1_Combined_16_31_IRQn priority settings in the NVIC */
-  NVIC_SetPriority(GPIO1_Combined_16_31_IRQn, GPIO_1_GPIO_COMB_16_31_IRQ_PRIORITY);
-  /* Enable interrupt GPIO1_Combined_16_31_IRQn request in the NVIC */
-  EnableIRQ(GPIO1_Combined_16_31_IRQn);
-}
-
-/***********************************************************************************************************************
- * GPIO_2 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'GPIO_2'
-- type: 'igpio'
-- mode: 'GPIO'
-- type_id: 'igpio_b1c1fa279aa7069dca167502b8589cb7'
-- functional_group: 'RTE_PIP'
-- peripheral: 'GPIO2'
-- config_sets:
-  - fsl_gpio:
-    - enable_irq_comb_0_15: 'true'
-    - gpio_interrupt_comb_0_15:
-      - IRQn: 'GPIO2_Combined_0_15_IRQn'
-      - enable_priority: 'true'
-      - priority: '4'
-      - enable_custom_name: 'true'
-      - handler_custom_name: 'GPIO2_Combined_0_15_IRQHandler'
-    - enable_irq_comb_16_31: 'true'
-    - gpio_interrupt_comb_16_31:
-      - IRQn: 'GPIO2_Combined_16_31_IRQn'
-      - enable_priority: 'true'
-      - priority: '4'
-      - enable_custom_name: 'true'
-      - handler_custom_name: 'GPIO2_Combined_16_31_IRQHandler'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-
-void GPIO_2_init(void) {
-  /* Make sure, the clock gate for GPIO2 is enabled (e. g. in pin_mux.c) */
-  /* Interrupt vector GPIO2_Combined_0_15_IRQn priority settings in the NVIC */
-  NVIC_SetPriority(GPIO2_Combined_0_15_IRQn, GPIO_2_GPIO_COMB_0_15_IRQ_PRIORITY);
-  /* Enable interrupt GPIO2_Combined_0_15_IRQn request in the NVIC */
-  EnableIRQ(GPIO2_Combined_0_15_IRQn);
-  /* Interrupt vector GPIO2_Combined_16_31_IRQn priority settings in the NVIC */
-  NVIC_SetPriority(GPIO2_Combined_16_31_IRQn, GPIO_2_GPIO_COMB_16_31_IRQ_PRIORITY);
-  /* Enable interrupt GPIO2_Combined_16_31_IRQn request in the NVIC */
-  EnableIRQ(GPIO2_Combined_16_31_IRQn);
-}
-
-/***********************************************************************************************************************
- * GPIO_3 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'GPIO_3'
-- type: 'igpio'
-- mode: 'GPIO'
-- type_id: 'igpio_b1c1fa279aa7069dca167502b8589cb7'
-- functional_group: 'RTE_PIP'
-- peripheral: 'GPIO3'
-- config_sets:
-  - fsl_gpio:
-    - enable_irq_comb_0_15: 'true'
-    - gpio_interrupt_comb_0_15:
-      - IRQn: 'GPIO3_Combined_0_15_IRQn'
-      - enable_priority: 'true'
-      - priority: '4'
-      - enable_custom_name: 'true'
-      - handler_custom_name: 'GPIO3_Combined_1_15_IRQHandler'
-    - enable_irq_comb_16_31: 'true'
-    - gpio_interrupt_comb_16_31:
-      - IRQn: 'GPIO3_Combined_16_31_IRQn'
-      - enable_priority: 'true'
-      - priority: '4'
-      - enable_custom_name: 'true'
-      - handler_custom_name: 'GPIO3_Combined_16_31_IRQHandler'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-
-void GPIO_3_init(void) {
-  /* Make sure, the clock gate for GPIO3 is enabled (e. g. in pin_mux.c) */
-  /* Interrupt vector GPIO3_Combined_0_15_IRQn priority settings in the NVIC */
-  NVIC_SetPriority(GPIO3_Combined_0_15_IRQn, GPIO_3_GPIO_COMB_0_15_IRQ_PRIORITY);
-  /* Enable interrupt GPIO3_Combined_0_15_IRQn request in the NVIC */
-  EnableIRQ(GPIO3_Combined_0_15_IRQn);
-  /* Interrupt vector GPIO3_Combined_16_31_IRQn priority settings in the NVIC */
-  NVIC_SetPriority(GPIO3_Combined_16_31_IRQn, GPIO_3_GPIO_COMB_16_31_IRQ_PRIORITY);
-  /* Enable interrupt GPIO3_Combined_16_31_IRQn request in the NVIC */
-  EnableIRQ(GPIO3_Combined_16_31_IRQn);
-}
-
-/***********************************************************************************************************************
- * I2C_1 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'I2C_1'
-- type: 'lpi2c'
-- mode: 'master'
-- type_id: 'lpi2c_db68d4f4f06a22e25ab51fe9bd6db4d2'
-- functional_group: 'RTE_PIP'
-- peripheral: 'LPI2C1'
-- config_sets:
-  - main:
-    - clockSource: 'Lpi2cClock'
-    - clockSourceFreq: 'sysclk_run'
-    - interrupt:
-      - IRQn: 'LPI2C1_IRQn'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
-    - quick_selection: 'qs_interrupt'
-  - master:
-    - mode: 'polling'
-    - config:
-      - enableMaster: 'true'
-      - enableDoze: 'true'
-      - debugEnable: 'false'
-      - ignoreAck: 'false'
-      - pinConfig: 'kLPI2C_2PinPushPull'
-      - baudRate_Hz: '400000'
-      - busIdleTimeout_ns: '0'
-      - pinLowTimeout_ns: '0'
-      - sdaGlitchFilterWidth_ns: '0'
-      - sclGlitchFilterWidth_ns: '0'
-      - hostRequest:
-        - enable: 'false'
-        - source: 'kLPI2C_HostRequestExternalPin'
-        - polarity: 'kLPI2C_HostRequestPinActiveHigh'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-const lpi2c_master_config_t I2C_1_masterConfig = {
-  .enableMaster = true,
-  .enableDoze = true,
-  .debugEnable = false,
-  .ignoreAck = false,
-  .pinConfig = kLPI2C_2PinPushPull,
-  .baudRate_Hz = 400000,
-  .busIdleTimeout_ns = 0,
-  .pinLowTimeout_ns = 0,
-  .sdaGlitchFilterWidth_ns = 0,
-  .sclGlitchFilterWidth_ns = 0,
-  .hostRequest = {
-    .enable = false,
-    .source = kLPI2C_HostRequestExternalPin,
-    .polarity = kLPI2C_HostRequestPinActiveHigh
-  }
-};
-
-void I2C_1_init(void) {
-  LPI2C_MasterInit(I2C_1_PERIPHERAL, &I2C_1_masterConfig, I2C_1_CLOCK_FREQ);
-}
-
-/***********************************************************************************************************************
- * I2C_2 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'I2C_2'
-- type: 'lpi2c'
-- mode: 'master'
-- type_id: 'lpi2c_db68d4f4f06a22e25ab51fe9bd6db4d2'
-- functional_group: 'RTE_PIP'
-- peripheral: 'LPI2C2'
-- config_sets:
-  - main:
-    - clockSource: 'Lpi2cClock'
-    - clockSourceFreq: 'sysclk_run'
-    - interrupt:
-      - IRQn: 'LPI2C2_IRQn'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
-    - quick_selection: 'qs_interrupt'
-  - master:
-    - mode: 'polling'
-    - config:
-      - enableMaster: 'true'
-      - enableDoze: 'true'
-      - debugEnable: 'false'
-      - ignoreAck: 'false'
-      - pinConfig: 'kLPI2C_2PinPushPull'
-      - baudRate_Hz: '400000'
-      - busIdleTimeout_ns: '0'
-      - pinLowTimeout_ns: '0'
-      - sdaGlitchFilterWidth_ns: '0'
-      - sclGlitchFilterWidth_ns: '0'
-      - hostRequest:
-        - enable: 'false'
-        - source: 'kLPI2C_HostRequestExternalPin'
-        - polarity: 'kLPI2C_HostRequestPinActiveHigh'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-const lpi2c_master_config_t I2C_2_masterConfig = {
-  .enableMaster = true,
-  .enableDoze = true,
-  .debugEnable = false,
-  .ignoreAck = false,
-  .pinConfig = kLPI2C_2PinPushPull,
-  .baudRate_Hz = 400000,
-  .busIdleTimeout_ns = 0,
-  .pinLowTimeout_ns = 0,
-  .sdaGlitchFilterWidth_ns = 0,
-  .sclGlitchFilterWidth_ns = 0,
-  .hostRequest = {
-    .enable = false,
-    .source = kLPI2C_HostRequestExternalPin,
-    .polarity = kLPI2C_HostRequestPinActiveHigh
-  }
-};
-
-void I2C_2_init(void) {
-  LPI2C_MasterInit(I2C_2_PERIPHERAL, &I2C_2_masterConfig, I2C_2_CLOCK_FREQ);
-}
-
-/***********************************************************************************************************************
- * SPI_4 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'SPI_4'
-- type: 'lpspi'
-- mode: 'polling'
-- type_id: 'lpspi_6e21a1e0a09f0a012d683c4f91752db8'
-- functional_group: 'RTE_PIP'
-- peripheral: 'LPSPI4'
-- config_sets:
-  - main:
-    - mode: 'kLPSPI_Master'
-    - clockSource: 'LpspiClock'
-    - clockSourceFreq: 'sysclk_run'
-    - master:
-      - baudRate: '10000000'
-      - bitsPerFrame: '8'
-      - cpol: 'kLPSPI_ClockPolarityActiveHigh'
-      - cpha: 'kLPSPI_ClockPhaseFirstEdge'
-      - direction: 'kLPSPI_MsbFirst'
-      - pcsToSckDelayInNanoSec: '1000'
-      - lastSckToPcsDelayInNanoSec: '1000'
-      - betweenTransferDelayInNanoSec: '1000'
-      - whichPcs: 'kLPSPI_Pcs0'
-      - pcsActiveHighOrLow: 'kLPSPI_PcsActiveLow'
-      - pinCfg: 'kLPSPI_SdiInSdoOut'
-      - dataOutConfig: 'kLpspiDataOutTristate'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-const lpspi_master_config_t SPI_4_config = {
-  .baudRate = 10000000,
-  .bitsPerFrame = 8,
-  .cpol = kLPSPI_ClockPolarityActiveHigh,
-  .cpha = kLPSPI_ClockPhaseFirstEdge,
-  .direction = kLPSPI_MsbFirst,
-  .pcsToSckDelayInNanoSec = 1000,
-  .lastSckToPcsDelayInNanoSec = 1000,
-  .betweenTransferDelayInNanoSec = 1000,
-  .whichPcs = kLPSPI_Pcs0,
-  .pcsActiveHighOrLow = kLPSPI_PcsActiveLow,
-  .pinCfg = kLPSPI_SdiInSdoOut,
-  .dataOutConfig = kLpspiDataOutTristate
-};
-
-void SPI_4_init(void) {
-  LPSPI_MasterInit(SPI_4_PERIPHERAL, &SPI_4_config, SPI_4_CLOCK_FREQ);
+static void CSI_init(void)
+{
+    /* CSI initialization */
+    CSI_Init(CSI_PERIPHERAL, &CSI_config);
+    /* CSI enable selected interrupts */
+    CSI_EnableInterrupts(CSI_PERIPHERAL, kCSI_EndOfFrameInterruptEnable);
+    /* Interrupt vector CSI_IRQn priority settings in the NVIC */
+    NVIC_SetPriority(CSI_IRQn, CSI_IRQ_PRIORITY);
+    /* Enable interrupt CSI_IRQn request in the NVIC */
+    EnableIRQ(CSI_IRQn);
 }
 
 /***********************************************************************************************************************
@@ -1230,70 +640,73 @@ void SPI_4_init(void) {
  **********************************************************************************************************************/
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'ENC_1'
-- type: 'enc'
-- mode: 'general'
-- type_id: 'enc_a31ae546b0cbfc3aa2c35851e1fcb3b8'
-- functional_group: 'RTE_PIP'
-- peripheral: 'ENC1'
-- config_sets:
-  - fsl_enc:
-    - config:
-      - clockConfig_t:
-        - clockSource: 'BusInterfaceClock'
-        - clockSourceFreq: 'sysclk_run'
-      - decoderWorkMode: 'kENC_DecoderWorkAsNormalMode'
-      - enableReverseDirection: 'false'
-      - posInitialization:
-        - HOMETriggerMode: 'kENC_HOMETriggerDisabled'
-        - INDEXTriggerMode: 'kENC_INDEXTriggerDisabled'
-        - positionInitialValue: '0'
-      - triggerAction: ''
-      - positionMatchConfig:
-        - positionMatchMode: 'kENC_POSMATCHOnPositionCounterEqualToComapreValue'
-        - positionCompareValue: '0xFFFFFFFF'
-      - modulusConfig:
-        - revolutionCountCondition: 'kENC_RevolutionCountOnINDEXPulse'
-        - enableModuloCountMode: 'false'
-      - wdogConfig:
-        - enableWatchdog: 'false'
-      - filter_config_t:
-        - enableFilter: 'false'
-    - interruptsCfg:
-      - isInterruptEnabled: 'false'
-      - interruptSources: ''
-      - interrupt:
-        - IRQn: 'ENC1_IRQn'
-        - enable_priority: 'false'
-        - priority: '0'
-        - enable_custom_name: 'false'
-    - quick_selection: 'QuickSelection1'
+ instance:
+ - name: 'ENC_1'
+ - type: 'enc'
+ - mode: 'general'
+ - custom_name_enabled: 'true'
+ - type_id: 'enc_a31ae546b0cbfc3aa2c35851e1fcb3b8'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'ENC1'
+ - config_sets:
+ - fsl_enc:
+ - config:
+ - clockConfig_t:
+ - clockSource: 'BusInterfaceClock'
+ - clockSourceFreq: 'sysclk_run'
+ - decoderWorkMode: 'kENC_DecoderWorkAsNormalMode'
+ - enableReverseDirection: 'false'
+ - posInitialization:
+ - HOMETriggerMode: 'kENC_HOMETriggerDisabled'
+ - INDEXTriggerMode: 'kENC_INDEXTriggerDisabled'
+ - positionInitialValue: '0'
+ - triggerAction: ''
+ - positionMatchConfig:
+ - positionMatchMode: 'kENC_POSMATCHOnPositionCounterEqualToComapreValue'
+ - positionCompareValue: '0xFFFFFFFF'
+ - modulusConfig:
+ - revolutionCountCondition: 'kENC_RevolutionCountOnINDEXPulse'
+ - enableModuloCountMode: 'false'
+ - wdogConfig:
+ - enableWatchdog: 'false'
+ - filter_config_t:
+ - enableFilter: 'false'
+ - interruptsCfg:
+ - isInterruptEnabled: 'false'
+ - interruptSources: ''
+ - interrupt:
+ - IRQn: 'ENC1_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ - quick_selection: 'QuickSelection1'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 /* ENC configuration */
-enc_config_t ENC_1_config = {
-		  .enableReverseDirection = false,
-		  .decoderWorkMode = kENC_DecoderWorkAsNormalMode,
-		  .HOMETriggerMode = kENC_HOMETriggerDisabled,
-		  .INDEXTriggerMode = kENC_INDEXTriggerDisabled,
-		  .enableTRIGGERClearPositionCounter = false,
-		  .enableTRIGGERClearHoldPositionCounter = false,
-		  .enableWatchdog = false,
-		  .watchdogTimeoutValue = 0,
-		  .filterCount = 0,
-		  .filterSamplePeriod = 0,
-		  .positionMatchMode = kENC_POSMATCHOnPositionCounterEqualToComapreValue,
-		  .positionCompareValue = 4294967295,
-		  .revolutionCountCondition = kENC_RevolutionCountOnINDEXPulse,
-		  .enableModuloCountMode = false,
-		  .positionModulusValue = 0,
-		  .positionInitialValue = 0,
-		};
+enc_config_t ENC_1_config =
+{
+        .enableReverseDirection = false,
+        .decoderWorkMode = kENC_DecoderWorkAsNormalMode,
+        .HOMETriggerMode = kENC_HOMETriggerDisabled,
+        .INDEXTriggerMode = kENC_INDEXTriggerDisabled,
+        .enableTRIGGERClearPositionCounter = false,
+        .enableTRIGGERClearHoldPositionCounter = false,
+        .enableWatchdog = false,
+        .watchdogTimeoutValue = 0,
+        .filterCount = 0,
+        .filterSamplePeriod = 0,
+        .positionMatchMode = kENC_POSMATCHOnPositionCounterEqualToComapreValue,
+        .positionCompareValue = 4294967295,
+        .revolutionCountCondition = kENC_RevolutionCountOnINDEXPulse,
+        .enableModuloCountMode = false,
+        .positionModulusValue = 0,
+        .positionInitialValue = 0, };
 
-void ENC_1_init(void) {
-  /* ENC initialization */
-  ENC_Init(ENC_1_PERIPHERAL, &ENC_1_config);
+static void ENC_1_init(void)
+{
+    /* ENC initialization */
+    ENC_Init(ENC_1_PERIPHERAL, &ENC_1_config);
 }
 
 /***********************************************************************************************************************
@@ -1301,102 +714,752 @@ void ENC_1_init(void) {
  **********************************************************************************************************************/
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'ENC_2'
-- type: 'enc'
-- mode: 'general'
-- type_id: 'enc_a31ae546b0cbfc3aa2c35851e1fcb3b8'
-- functional_group: 'RTE_PIP'
-- peripheral: 'ENC2'
-- config_sets:
-  - fsl_enc:
-    - config:
-      - clockConfig_t:
-        - clockSource: 'BusInterfaceClock'
-        - clockSourceFreq: 'sysclk_run'
-      - decoderWorkMode: 'kENC_DecoderWorkAsNormalMode'
-      - enableReverseDirection: 'false'
-      - posInitialization:
-        - HOMETriggerMode: 'kENC_HOMETriggerDisabled'
-        - INDEXTriggerMode: 'kENC_INDEXTriggerDisabled'
-        - positionInitialValue: '0'
-      - triggerAction: ''
-      - positionMatchConfig:
-        - positionMatchMode: 'kENC_POSMATCHOnPositionCounterEqualToComapreValue'
-        - positionCompareValue: '0xFFFFFFFF'
-      - modulusConfig:
-        - revolutionCountCondition: 'kENC_RevolutionCountOnINDEXPulse'
-        - enableModuloCountMode: 'false'
-      - wdogConfig:
-        - enableWatchdog: 'false'
-      - filter_config_t:
-        - enableFilter: 'false'
-    - interruptsCfg:
-      - isInterruptEnabled: 'false'
-      - interruptSources: ''
-      - interrupt:
-        - IRQn: 'ENC2_IRQn'
-        - enable_priority: 'false'
-        - priority: '0'
-        - enable_custom_name: 'false'
-    - quick_selection: 'QuickSelection1'
+ instance:
+ - name: 'ENC_2'
+ - type: 'enc'
+ - mode: 'general'
+ - custom_name_enabled: 'true'
+ - type_id: 'enc_a31ae546b0cbfc3aa2c35851e1fcb3b8'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'ENC2'
+ - config_sets:
+ - fsl_enc:
+ - config:
+ - clockConfig_t:
+ - clockSource: 'BusInterfaceClock'
+ - clockSourceFreq: 'sysclk_run'
+ - decoderWorkMode: 'kENC_DecoderWorkAsNormalMode'
+ - enableReverseDirection: 'false'
+ - posInitialization:
+ - HOMETriggerMode: 'kENC_HOMETriggerDisabled'
+ - INDEXTriggerMode: 'kENC_INDEXTriggerDisabled'
+ - positionInitialValue: '0'
+ - triggerAction: ''
+ - positionMatchConfig:
+ - positionMatchMode: 'kENC_POSMATCHOnPositionCounterEqualToComapreValue'
+ - positionCompareValue: '0xFFFFFFFF'
+ - modulusConfig:
+ - revolutionCountCondition: 'kENC_RevolutionCountOnINDEXPulse'
+ - enableModuloCountMode: 'false'
+ - wdogConfig:
+ - enableWatchdog: 'false'
+ - filter_config_t:
+ - enableFilter: 'false'
+ - interruptsCfg:
+ - isInterruptEnabled: 'false'
+ - interruptSources: ''
+ - interrupt:
+ - IRQn: 'ENC2_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ - quick_selection: 'QuickSelection1'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 /* ENC configuration */
-enc_config_t ENC_2_config = {
-		  .enableReverseDirection = false,
-		  .decoderWorkMode = kENC_DecoderWorkAsNormalMode,
-		  .HOMETriggerMode = kENC_HOMETriggerDisabled,
-		  .INDEXTriggerMode = kENC_INDEXTriggerDisabled,
-		  .enableTRIGGERClearPositionCounter = false,
-		  .enableTRIGGERClearHoldPositionCounter = false,
-		  .enableWatchdog = false,
-		  .watchdogTimeoutValue = 0,
-		  .filterCount = 0,
-		  .filterSamplePeriod = 0,
-		  .positionMatchMode = kENC_POSMATCHOnPositionCounterEqualToComapreValue,
-		  .positionCompareValue = 4294967295,
-		  .revolutionCountCondition = kENC_RevolutionCountOnINDEXPulse,
-		  .enableModuloCountMode = false,
-		  .positionModulusValue = 0,
-		  .positionInitialValue = 0,
-		};
+enc_config_t ENC_2_config =
+{
+        .enableReverseDirection = false,
+        .decoderWorkMode = kENC_DecoderWorkAsNormalMode,
+        .HOMETriggerMode = kENC_HOMETriggerDisabled,
+        .INDEXTriggerMode = kENC_INDEXTriggerDisabled,
+        .enableTRIGGERClearPositionCounter = false,
+        .enableTRIGGERClearHoldPositionCounter = false,
+        .enableWatchdog = false,
+        .watchdogTimeoutValue = 0,
+        .filterCount = 0,
+        .filterSamplePeriod = 0,
+        .positionMatchMode = kENC_POSMATCHOnPositionCounterEqualToComapreValue,
+        .positionCompareValue = 4294967295,
+        .revolutionCountCondition = kENC_RevolutionCountOnINDEXPulse,
+        .enableModuloCountMode = false,
+        .positionModulusValue = 0,
+        .positionInitialValue = 0, };
 
-void ENC_2_init(void) {
-  /* ENC initialization */
-  ENC_Init(ENC_2_PERIPHERAL, &ENC_2_config);
+static void ENC_2_init(void)
+{
+    /* ENC initialization */
+    ENC_Init(ENC_2_PERIPHERAL, &ENC_2_config);
+}
+
+/***********************************************************************************************************************
+ * GPIO_1 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'GPIO_1'
+ - type: 'igpio'
+ - mode: 'GPIO'
+ - custom_name_enabled: 'true'
+ - type_id: 'igpio_b1c1fa279aa7069dca167502b8589cb7'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'GPIO1'
+ - config_sets:
+ - fsl_gpio:
+ - enable_irq_comb_0_15: 'true'
+ - gpio_interrupt_comb_0_15:
+ - IRQn: 'GPIO1_Combined_0_15_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'true'
+ - priority: '4'
+ - enable_custom_name: 'true'
+ - handler_custom_name: 'GPIO1_Combined_0_15_IRQHandler'
+ - enable_irq_comb_16_31: 'true'
+ - gpio_interrupt_comb_16_31:
+ - IRQn: 'GPIO1_Combined_16_31_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'true'
+ - priority: '4'
+ - enable_custom_name: 'true'
+ - handler_custom_name: 'GPIO1_Combined_16_31_IRQHandler'
+ - enable_irq_int0: 'false'
+ - gpio_interrupt_int0:
+ - IRQn: 'GPIO1_INT0_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ - enable_irq_int1: 'false'
+ - gpio_interrupt_int1:
+ - IRQn: 'GPIO1_INT1_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ - enable_irq_int2: 'false'
+ - gpio_interrupt_int2:
+ - IRQn: 'GPIO1_INT2_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ - enable_irq_int3: 'false'
+ - gpio_interrupt_int3:
+ - IRQn: 'GPIO1_INT3_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ - enable_irq_int4: 'false'
+ - gpio_interrupt_int4:
+ - IRQn: 'GPIO1_INT4_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ - enable_irq_int5: 'false'
+ - gpio_interrupt_int5:
+ - IRQn: 'GPIO1_INT5_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ - enable_irq_int6: 'false'
+ - gpio_interrupt_int6:
+ - IRQn: 'GPIO1_INT6_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ - enable_irq_int7: 'false'
+ - gpio_interrupt_int7:
+ - IRQn: 'GPIO1_INT7_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+
+static void GPIO_1_init(void)
+{
+    /* Make sure, the clock gate for GPIO1 is enabled (e. g. in pin_mux.c) */
+    /* Interrupt vector GPIO1_Combined_0_15_IRQn priority settings in the NVIC */
+    NVIC_SetPriority(GPIO1_Combined_0_15_IRQn,
+    GPIO_1_GPIO_COMB_0_15_IRQ_PRIORITY);
+    /* Enable interrupt GPIO1_Combined_0_15_IRQn request in the NVIC */
+    EnableIRQ(GPIO1_Combined_0_15_IRQn);
+    /* Interrupt vector GPIO1_Combined_16_31_IRQn priority settings in the NVIC */
+    NVIC_SetPriority(GPIO1_Combined_16_31_IRQn,
+    GPIO_1_GPIO_COMB_16_31_IRQ_PRIORITY);
+    /* Enable interrupt GPIO1_Combined_16_31_IRQn request in the NVIC */
+    EnableIRQ(GPIO1_Combined_16_31_IRQn);
+}
+
+/***********************************************************************************************************************
+ * GPIO_2 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'GPIO_2'
+ - type: 'igpio'
+ - mode: 'GPIO'
+ - custom_name_enabled: 'true'
+ - type_id: 'igpio_b1c1fa279aa7069dca167502b8589cb7'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'GPIO2'
+ - config_sets:
+ - fsl_gpio:
+ - enable_irq_comb_0_15: 'true'
+ - gpio_interrupt_comb_0_15:
+ - IRQn: 'GPIO2_Combined_0_15_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'true'
+ - priority: '4'
+ - enable_custom_name: 'true'
+ - handler_custom_name: 'GPIO2_Combined_0_15_IRQHandler'
+ - enable_irq_comb_16_31: 'true'
+ - gpio_interrupt_comb_16_31:
+ - IRQn: 'GPIO2_Combined_16_31_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'true'
+ - priority: '4'
+ - enable_custom_name: 'true'
+ - handler_custom_name: 'GPIO2_Combined_16_31_IRQHandler'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+
+static void GPIO_2_init(void)
+{
+    /* Make sure, the clock gate for GPIO2 is enabled (e. g. in pin_mux.c) */
+    /* Interrupt vector GPIO2_Combined_0_15_IRQn priority settings in the NVIC */
+    NVIC_SetPriority(GPIO2_Combined_0_15_IRQn,
+    GPIO_2_GPIO_COMB_0_15_IRQ_PRIORITY);
+    /* Enable interrupt GPIO2_Combined_0_15_IRQn request in the NVIC */
+    EnableIRQ(GPIO2_Combined_0_15_IRQn);
+    /* Interrupt vector GPIO2_Combined_16_31_IRQn priority settings in the NVIC */
+    NVIC_SetPriority(GPIO2_Combined_16_31_IRQn,
+    GPIO_2_GPIO_COMB_16_31_IRQ_PRIORITY);
+    /* Enable interrupt GPIO2_Combined_16_31_IRQn request in the NVIC */
+    EnableIRQ(GPIO2_Combined_16_31_IRQn);
+}
+
+/***********************************************************************************************************************
+ * GPIO_3 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'GPIO_3'
+ - type: 'igpio'
+ - mode: 'GPIO'
+ - custom_name_enabled: 'true'
+ - type_id: 'igpio_b1c1fa279aa7069dca167502b8589cb7'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'GPIO3'
+ - config_sets:
+ - fsl_gpio:
+ - enable_irq_comb_0_15: 'true'
+ - gpio_interrupt_comb_0_15:
+ - IRQn: 'GPIO3_Combined_0_15_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'true'
+ - priority: '4'
+ - enable_custom_name: 'true'
+ - handler_custom_name: 'GPIO3_Combined_1_15_IRQHandler'
+ - enable_irq_comb_16_31: 'true'
+ - gpio_interrupt_comb_16_31:
+ - IRQn: 'GPIO3_Combined_16_31_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'true'
+ - priority: '4'
+ - enable_custom_name: 'true'
+ - handler_custom_name: 'GPIO3_Combined_16_31_IRQHandler'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+
+static void GPIO_3_init(void)
+{
+    /* Make sure, the clock gate for GPIO3 is enabled (e. g. in pin_mux.c) */
+    /* Interrupt vector GPIO3_Combined_0_15_IRQn priority settings in the NVIC */
+    NVIC_SetPriority(GPIO3_Combined_0_15_IRQn,
+    GPIO_3_GPIO_COMB_0_15_IRQ_PRIORITY);
+    /* Enable interrupt GPIO3_Combined_0_15_IRQn request in the NVIC */
+    EnableIRQ(GPIO3_Combined_0_15_IRQn);
+    /* Interrupt vector GPIO3_Combined_16_31_IRQn priority settings in the NVIC */
+    NVIC_SetPriority(GPIO3_Combined_16_31_IRQn,
+    GPIO_3_GPIO_COMB_16_31_IRQ_PRIORITY);
+    /* Enable interrupt GPIO3_Combined_16_31_IRQn request in the NVIC */
+    EnableIRQ(GPIO3_Combined_16_31_IRQn);
+}
+
+/***********************************************************************************************************************
+ * I2C_1 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'I2C_1'
+ - type: 'lpi2c'
+ - mode: 'master'
+ - custom_name_enabled: 'true'
+ - type_id: 'lpi2c_db68d4f4f06a22e25ab51fe9bd6db4d2'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'LPI2C1'
+ - config_sets:
+ - main:
+ - clockSource: 'Lpi2cClock'
+ - clockSourceFreq: 'sysclk_run'
+ - interrupt:
+ - IRQn: 'LPI2C1_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ - quick_selection: 'qs_interrupt'
+ - master:
+ - mode: 'polling'
+ - config:
+ - enableMaster: 'true'
+ - enableDoze: 'true'
+ - debugEnable: 'false'
+ - ignoreAck: 'false'
+ - pinConfig: 'kLPI2C_2PinPushPull'
+ - baudRate_Hz: '400000'
+ - busIdleTimeout_ns: '0'
+ - pinLowTimeout_ns: '0'
+ - sdaGlitchFilterWidth_ns: '0'
+ - sclGlitchFilterWidth_ns: '0'
+ - hostRequest:
+ - enable: 'false'
+ - source: 'kLPI2C_HostRequestExternalPin'
+ - polarity: 'kLPI2C_HostRequestPinActiveHigh'
+ - edmaRequestSources: ''
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const lpi2c_master_config_t I2C_1_masterConfig =
+{
+        .enableMaster = true,
+        .enableDoze = true,
+        .debugEnable = false,
+        .ignoreAck = false,
+        .pinConfig = kLPI2C_2PinPushPull,
+        .baudRate_Hz = 400000,
+        .busIdleTimeout_ns = 0,
+        .pinLowTimeout_ns = 0,
+        .sdaGlitchFilterWidth_ns = 0,
+        .sclGlitchFilterWidth_ns = 0,
+        .hostRequest =
+        { .enable = false, .source = kLPI2C_HostRequestExternalPin, .polarity =
+                kLPI2C_HostRequestPinActiveHigh } };
+
+static void I2C_1_init(void)
+{
+    LPI2C_MasterInit(I2C_1_PERIPHERAL, &I2C_1_masterConfig, I2C_1_CLOCK_FREQ);
+}
+
+/***********************************************************************************************************************
+ * I2C_2 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'I2C_2'
+ - type: 'lpi2c'
+ - mode: 'master'
+ - custom_name_enabled: 'true'
+ - type_id: 'lpi2c_db68d4f4f06a22e25ab51fe9bd6db4d2'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'LPI2C2'
+ - config_sets:
+ - main:
+ - clockSource: 'Lpi2cClock'
+ - clockSourceFreq: 'sysclk_run'
+ - interrupt:
+ - IRQn: 'LPI2C2_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'false'
+ - priority: '0'
+ - enable_custom_name: 'false'
+ - quick_selection: 'qs_interrupt'
+ - master:
+ - mode: 'polling'
+ - config:
+ - enableMaster: 'true'
+ - enableDoze: 'true'
+ - debugEnable: 'false'
+ - ignoreAck: 'false'
+ - pinConfig: 'kLPI2C_2PinPushPull'
+ - baudRate_Hz: '400000'
+ - busIdleTimeout_ns: '0'
+ - pinLowTimeout_ns: '0'
+ - sdaGlitchFilterWidth_ns: '0'
+ - sclGlitchFilterWidth_ns: '0'
+ - hostRequest:
+ - enable: 'false'
+ - source: 'kLPI2C_HostRequestExternalPin'
+ - polarity: 'kLPI2C_HostRequestPinActiveHigh'
+ - edmaRequestSources: ''
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const lpi2c_master_config_t I2C_2_masterConfig =
+{
+        .enableMaster = true,
+        .enableDoze = true,
+        .debugEnable = false,
+        .ignoreAck = false,
+        .pinConfig = kLPI2C_2PinPushPull,
+        .baudRate_Hz = 400000,
+        .busIdleTimeout_ns = 0,
+        .pinLowTimeout_ns = 0,
+        .sdaGlitchFilterWidth_ns = 0,
+        .sclGlitchFilterWidth_ns = 0,
+        .hostRequest =
+        { .enable = false, .source = kLPI2C_HostRequestExternalPin, .polarity =
+                kLPI2C_HostRequestPinActiveHigh } };
+
+static void I2C_2_init(void)
+{
+    LPI2C_MasterInit(I2C_2_PERIPHERAL, &I2C_2_masterConfig, I2C_2_CLOCK_FREQ);
+}
+
+/***********************************************************************************************************************
+ * PIT initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'PIT'
+ - type: 'pit'
+ - mode: 'LPTMR_GENERAL'
+ - custom_name_enabled: 'true'
+ - type_id: 'pit_a4782ba5223c8a2527ba91aeb2bc4159'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'PIT'
+ - config_sets:
+ - fsl_pit:
+ - enableRunInDebug: 'true'
+ - enableSharedInterrupt: 'true'
+ - sharedInterrupt:
+ - IRQn: 'PIT_IRQn'
+ - enable_interrrupt: 'enabled'
+ - enable_priority: 'true'
+ - priority: '4'
+ - enable_custom_name: 'true'
+ - handler_custom_name: 'PIT_IRQHandler'
+ - timingConfig:
+ - clockSource: 'BusInterfaceClock'
+ - clockSourceFreq: 'sysclk_run'
+ - channels:
+ - 0:
+ - channel_id: ''
+ - channelNumber: '0'
+ - enableChain: 'false'
+ - timerPeriod: '1us'
+ - startTimer: 'true'
+ - enableInterrupt: 'false'
+ - 1:
+ - channel_id: ''
+ - channelNumber: '1'
+ - enableChain: 'true'
+ - timerMultiplier: '0xffffffff'
+ - startTimer: 'true'
+ - enableInterrupt: 'false'
+ - 2:
+ - channel_id: ''
+ - channelNumber: '2'
+ - enableChain: 'false'
+ - timerPeriod: '1ms'
+ - startTimer: 'true'
+ - enableInterrupt: 'true'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const pit_config_t PIT_config =
+{ .enableRunInDebug = true };
+
+static void PIT_init(void)
+{
+    /* Initialize the PIT. */
+    PIT_Init(PIT_PERIPHERAL, &PIT_config);
+    /* Set channel 0 period to 1 µs (75 ticks). */
+    PIT_SetTimerPeriod(PIT_PERIPHERAL, PIT_0, PIT_0_TICKS);
+    /* Set channel 1 period to 1.895 m (8527897872 ticks). */
+    PIT_SetTimerPeriod(PIT_PERIPHERAL, PIT_1, PIT_1_TICKS);
+    /* Chain the channel 1 to channel 0. */
+    PIT_SetTimerChainMode(PIT_PERIPHERAL, PIT_1, true);
+    /* Set channel 2 period to 1 ms (75000 ticks). */
+    PIT_SetTimerPeriod(PIT_PERIPHERAL, PIT_2, PIT_2_TICKS);
+    /* Enable interrupts from channel 2. */
+    PIT_EnableInterrupts(PIT_PERIPHERAL, PIT_2, kPIT_TimerInterruptEnable);
+    /* Interrupt vector PIT_IRQN priority settings in the NVIC */
+    NVIC_SetPriority(PIT_IRQN, PIT_IRQ_PRIORITY);
+    /* Enable interrupt PIT_IRQN request in the NVIC */
+    EnableIRQ(PIT_IRQN);
+    /* Start channel 0. */
+    PIT_StartTimer(PIT_PERIPHERAL, PIT_0);
+    /* Start channel 1. */
+    PIT_StartTimer(PIT_PERIPHERAL, PIT_1);
+    /* Start channel 2. */
+    PIT_StartTimer(PIT_PERIPHERAL, PIT_2);
+}
+
+/***********************************************************************************************************************
+ * SPI_4 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'SPI_4'
+ - type: 'lpspi'
+ - mode: 'polling'
+ - custom_name_enabled: 'true'
+ - type_id: 'lpspi_6e21a1e0a09f0a012d683c4f91752db8'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'LPSPI4'
+ - config_sets:
+ - main:
+ - mode: 'kLPSPI_Master'
+ - clockSource: 'LpspiClock'
+ - clockSourceFreq: 'sysclk_run'
+ - master:
+ - baudRate: '10000000'
+ - bitsPerFrame: '8'
+ - cpol: 'kLPSPI_ClockPolarityActiveHigh'
+ - cpha: 'kLPSPI_ClockPhaseFirstEdge'
+ - direction: 'kLPSPI_MsbFirst'
+ - pcsToSckDelayInNanoSec: '1000'
+ - lastSckToPcsDelayInNanoSec: '1000'
+ - betweenTransferDelayInNanoSec: '1000'
+ - whichPcs: 'kLPSPI_Pcs0'
+ - pcsActiveHighOrLow: 'kLPSPI_PcsActiveLow'
+ - pinCfg: 'kLPSPI_SdiInSdoOut'
+ - dataOutConfig: 'kLpspiDataOutTristate'
+ - set_FifoWaterMarks: 'false'
+ - fifoWaterMarks:
+ - txWatermark: '0'
+ - rxWatermark: '0'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const lpspi_master_config_t SPI_4_config =
+{
+        .baudRate = 10000000,
+        .bitsPerFrame = 8,
+        .cpol = kLPSPI_ClockPolarityActiveHigh,
+        .cpha = kLPSPI_ClockPhaseFirstEdge,
+        .direction = kLPSPI_MsbFirst,
+        .pcsToSckDelayInNanoSec = 1000,
+        .lastSckToPcsDelayInNanoSec = 1000,
+        .betweenTransferDelayInNanoSec = 1000,
+        .whichPcs = kLPSPI_Pcs0,
+        .pcsActiveHighOrLow = kLPSPI_PcsActiveLow,
+        .pinCfg = kLPSPI_SdiInSdoOut,
+        .dataOutConfig = kLpspiDataOutTristate };
+
+static void SPI_4_init(void)
+{
+    LPSPI_MasterInit(SPI_4_PERIPHERAL, &SPI_4_config, SPI_4_CLOCK_FREQ);
+}
+
+/***********************************************************************************************************************
+ * UART_1 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'UART_1'
+ - type: 'lpuart'
+ - mode: 'polling'
+ - custom_name_enabled: 'true'
+ - type_id: 'lpuart_bebe3e12b6ec22bbd14199038f2bf459'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'LPUART1'
+ - config_sets:
+ - lpuartConfig_t:
+ - lpuartConfig:
+ - clockSource: 'LpuartClock'
+ - lpuartSrcClkFreq: 'sysclk_run'
+ - baudRate_Bps: '115200'
+ - parityMode: 'kLPUART_ParityDisabled'
+ - dataBitsCount: 'kLPUART_EightDataBits'
+ - isMsb: 'false'
+ - stopBitCount: 'kLPUART_OneStopBit'
+ - txFifoWatermark: '0'
+ - rxFifoWatermark: '1'
+ - enableRxRTS: 'false'
+ - enableTxCTS: 'false'
+ - txCtsSource: 'kLPUART_CtsSourcePin'
+ - txCtsConfig: 'kLPUART_CtsSampleAtStart'
+ - rxIdleType: 'kLPUART_IdleTypeStartBit'
+ - rxIdleConfig: 'kLPUART_IdleCharacter1'
+ - enableTx: 'true'
+ - enableRx: 'true'
+ - quick_selection: 'QuickSelection1'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const lpuart_config_t UART_1_config =
+{
+        .baudRate_Bps = 115200,
+        .parityMode = kLPUART_ParityDisabled,
+        .dataBitsCount = kLPUART_EightDataBits,
+        .isMsb = false,
+        .stopBitCount = kLPUART_OneStopBit,
+        .txFifoWatermark = 0,
+        .rxFifoWatermark = 1,
+        .enableRxRTS = false,
+        .enableTxCTS = false,
+        .txCtsSource = kLPUART_CtsSourcePin,
+        .txCtsConfig = kLPUART_CtsSampleAtStart,
+        .rxIdleType = kLPUART_IdleTypeStartBit,
+        .rxIdleConfig = kLPUART_IdleCharacter1,
+        .enableTx = true,
+        .enableRx = true };
+
+static void UART_1_init(void)
+{
+    LPUART_Init(UART_1_PERIPHERAL, &UART_1_config, UART_1_CLOCK_SOURCE);
+}
+
+/***********************************************************************************************************************
+ * UART_4 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'UART_4'
+ - type: 'lpuart'
+ - mode: 'polling'
+ - custom_name_enabled: 'true'
+ - type_id: 'lpuart_bebe3e12b6ec22bbd14199038f2bf459'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'LPUART4'
+ - config_sets:
+ - lpuartConfig_t:
+ - lpuartConfig:
+ - clockSource: 'LpuartClock'
+ - lpuartSrcClkFreq: 'sysclk_run'
+ - baudRate_Bps: '115200'
+ - parityMode: 'kLPUART_ParityDisabled'
+ - dataBitsCount: 'kLPUART_EightDataBits'
+ - isMsb: 'false'
+ - stopBitCount: 'kLPUART_OneStopBit'
+ - txFifoWatermark: '0'
+ - rxFifoWatermark: '1'
+ - enableRxRTS: 'false'
+ - enableTxCTS: 'false'
+ - txCtsSource: 'kLPUART_CtsSourcePin'
+ - txCtsConfig: 'kLPUART_CtsSampleAtStart'
+ - rxIdleType: 'kLPUART_IdleTypeStartBit'
+ - rxIdleConfig: 'kLPUART_IdleCharacter1'
+ - enableTx: 'true'
+ - enableRx: 'true'
+ - quick_selection: 'QuickSelection1'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const lpuart_config_t UART_4_config =
+{
+        .baudRate_Bps = 115200,
+        .parityMode = kLPUART_ParityDisabled,
+        .dataBitsCount = kLPUART_EightDataBits,
+        .isMsb = false,
+        .stopBitCount = kLPUART_OneStopBit,
+        .txFifoWatermark = 0,
+        .rxFifoWatermark = 1,
+        .enableRxRTS = false,
+        .enableTxCTS = false,
+        .txCtsSource = kLPUART_CtsSourcePin,
+        .txCtsConfig = kLPUART_CtsSampleAtStart,
+        .rxIdleType = kLPUART_IdleTypeStartBit,
+        .rxIdleConfig = kLPUART_IdleCharacter1,
+        .enableTx = true,
+        .enableRx = true };
+
+static void UART_4_init(void)
+{
+    LPUART_Init(UART_4_PERIPHERAL, &UART_4_config, UART_4_CLOCK_SOURCE);
+}
+
+/***********************************************************************************************************************
+ * UART_5 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+ instance:
+ - name: 'UART_5'
+ - type: 'lpuart'
+ - mode: 'polling'
+ - custom_name_enabled: 'true'
+ - type_id: 'lpuart_bebe3e12b6ec22bbd14199038f2bf459'
+ - functional_group: 'RTE_PIP'
+ - peripheral: 'LPUART5'
+ - config_sets:
+ - lpuartConfig_t:
+ - lpuartConfig:
+ - clockSource: 'LpuartClock'
+ - lpuartSrcClkFreq: 'sysclk_run'
+ - baudRate_Bps: '115200'
+ - parityMode: 'kLPUART_ParityDisabled'
+ - dataBitsCount: 'kLPUART_EightDataBits'
+ - isMsb: 'false'
+ - stopBitCount: 'kLPUART_OneStopBit'
+ - txFifoWatermark: '0'
+ - rxFifoWatermark: '1'
+ - enableRxRTS: 'false'
+ - enableTxCTS: 'false'
+ - txCtsSource: 'kLPUART_CtsSourcePin'
+ - txCtsConfig: 'kLPUART_CtsSampleAtStart'
+ - rxIdleType: 'kLPUART_IdleTypeStartBit'
+ - rxIdleConfig: 'kLPUART_IdleCharacter1'
+ - enableTx: 'true'
+ - enableRx: 'true'
+ - quick_selection: 'QuickSelection1'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const lpuart_config_t UART_5_config =
+{
+        .baudRate_Bps = 115200,
+        .parityMode = kLPUART_ParityDisabled,
+        .dataBitsCount = kLPUART_EightDataBits,
+        .isMsb = false,
+        .stopBitCount = kLPUART_OneStopBit,
+        .txFifoWatermark = 0,
+        .rxFifoWatermark = 1,
+        .enableRxRTS = false,
+        .enableTxCTS = false,
+        .txCtsSource = kLPUART_CtsSourcePin,
+        .txCtsConfig = kLPUART_CtsSampleAtStart,
+        .rxIdleType = kLPUART_IdleTypeStartBit,
+        .rxIdleConfig = kLPUART_IdleCharacter1,
+        .enableTx = true,
+        .enableRx = true };
+
+static void UART_5_init(void)
+{
+    LPUART_Init(UART_5_PERIPHERAL, &UART_5_config, UART_5_CLOCK_SOURCE);
 }
 
 /***********************************************************************************************************************
  * Initialization functions
  **********************************************************************************************************************/
-void RTE_PIP(void)
+void RTEPIP_AllPip(void)
 {
-  /* Global initialization */
-  DMAMUX_Init(EDMA_DMAMUX_BASEADDR);
-  EDMA_Init(EDMA_DMA_BASEADDR, &EDMA_config);
+    /* Global initialization */
+    DMAMUX_Init(EDMA_DMAMUX_BASEADDR);
+    EDMA_Init(EDMA_DMA_BASEADDR, &EDMA_config);
 
-  /* Initialize components */
-  EDMA_init();
-  PIT_init();
-  CMP_1_init();
-  CMP_2_init();
-  CMP_3_init();
-  CMP_4_init();
-  UART_1_init();
-  UART_4_init();
-  UART_5_init();
-  ADC_1_init();
-  AOI_init();
-  CSI_init();
-  GPIO_1_init();
-  GPIO_2_init();
-  GPIO_3_init();
-  I2C_1_init();
-  I2C_2_init();
-  SPI_4_init();
-  ENC_1_init();
-  ENC_2_init();
+    /* Initialize components */
+    EDMA_init();
+    ADC_1_init();
+    AOI_init();
+    CMP_1_init();
+    CMP_2_init();
+    CMP_3_init();
+    CMP_4_init();
+    CSI_init();
+    ENC_1_init();
+    ENC_2_init();
+    GPIO_1_init();
+    GPIO_2_init();
+    GPIO_3_init();
+    I2C_1_init();
+    I2C_2_init();
+    PIT_init();
+    SPI_4_init();
+    UART_1_init();
+    UART_4_init();
+    UART_5_init();
 }
 
 /***********************************************************************************************************************
@@ -1404,5 +1467,5 @@ void RTE_PIP(void)
  **********************************************************************************************************************/
 void BOARD_InitBootPeripherals(void)
 {
-  RTE_PIP();
+    RTEPIP_AllPip();
 }

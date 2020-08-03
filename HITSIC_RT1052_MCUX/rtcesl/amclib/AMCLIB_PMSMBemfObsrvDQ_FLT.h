@@ -1,9 +1,31 @@
 /*******************************************************************************
 *
  * Copyright (c) 2013 - 2016, Freescale Semiconductor, Inc.
- * Copyright 2016-2017 NXP
+ * Copyright 2016-2019 NXP
  *
- * SPDX-License-Identifier: BSD-3-Clause
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 * 
 *
 ****************************************************************************//*!
@@ -32,8 +54,10 @@ extern "C" {
 *******************************************************************************/    
 #define AMCLIB_PMSMBemfObsrvDQ_A32fff_C(psIDQ, psUDQ, fltSpeed, psCtrl)        \
         AMCLIB_PMSMBemfObsrvDQ_A32fff_FC(psIDQ, psUDQ, fltSpeed, psCtrl)
-#define AMCLIB_PMSMBemfObsrvDQInit_A32fff_C(psCtrl)                            \
-        AMCLIB_PMSMBemfObsrvDQInit_A32fff_FC(psCtrl)
+#define AMCLIB_PMSMBemfObsrvDQ_A32fff_CRam(psIDQ, psUDQ, fltSpeed, psCtrl)     \
+        AMCLIB_PMSMBemfObsrvDQ_A32fff_FCRam(psIDQ, psUDQ, fltSpeed, psCtrl)
+#define AMCLIB_PMSMBemfObsrvDQInit_A32fff_Ci(psCtrl)                           \
+        AMCLIB_PMSMBemfObsrvDQInit_A32fff_FCi(psCtrl)
         
 /*******************************************************************************
 * Types
@@ -71,6 +95,11 @@ extern acc32_t AMCLIB_PMSMBemfObsrvDQ_A32fff_FC(const GMCLIB_2COOR_DQ_T_FLT *psI
                                                 const GMCLIB_2COOR_DQ_T_FLT *psUDQ,
                                                 float_t fltSpeed, 
                                                 AMCLIB_BEMF_OBSRV_DQ_T_FLT *psCtrl);
+RAM_FUNC_LIB 
+extern acc32_t AMCLIB_PMSMBemfObsrvDQ_A32fff_FCRam(const GMCLIB_2COOR_DQ_T_FLT *psIDQ,
+                                                   const GMCLIB_2COOR_DQ_T_FLT *psUDQ,
+                                                   float_t fltSpeed, 
+                                                   AMCLIB_BEMF_OBSRV_DQ_T_FLT *psCtrl);
 /******************************************************************************
 * Inline functions
 ******************************************************************************/
@@ -93,7 +122,8 @@ extern acc32_t AMCLIB_PMSMBemfObsrvDQ_A32fff_FC(const GMCLIB_2COOR_DQ_T_FLT *psI
 *    sCtrl_fltIQ_1 = 0; 
 *
 ****************************************************************************/
-static inline void AMCLIB_PMSMBemfObsrvDQInit_A32fff_FC(AMCLIB_BEMF_OBSRV_DQ_T_FLT *psCtrl)
+RAM_FUNC_LIB 
+static inline void AMCLIB_PMSMBemfObsrvDQInit_A32fff_FCi(AMCLIB_BEMF_OBSRV_DQ_T_FLT *psCtrl)
 {
     psCtrl -> sIObsrv.fltD  = 0.0F;
     psCtrl -> sIObsrv.fltQ  = 0.0F;  

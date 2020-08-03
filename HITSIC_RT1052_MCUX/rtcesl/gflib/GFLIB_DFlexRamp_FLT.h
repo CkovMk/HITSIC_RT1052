@@ -1,9 +1,31 @@
 /*******************************************************************************
 *
  * Copyright (c) 2013 - 2016, Freescale Semiconductor, Inc.
- * Copyright 2016-2017 NXP
+ * Copyright 2016-2019 NXP
  *
- * SPDX-License-Identifier: BSD-3-Clause
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 * 
 *
 ****************************************************************************//*!
@@ -25,12 +47,16 @@ extern "C" {
 /******************************************************************************
 * Macros 
 ******************************************************************************/
-#define GFLIB_DFlexRampInit_FLT_C(fltInitVal, psParam)                                                 \
+#define GFLIB_DFlexRampInit_FLT_C(fltInitVal, psParam)                                                   \
         GFLIB_DFlexRampInit_FLT_FC(fltInitVal, psParam)
-#define GFLIB_DFlexRampCalcIncr_FLT_C(fltTarget, fltDuration, fltIncrSatMot, fltIncrSatGen, psParam)   \
+#define GFLIB_DFlexRampCalcIncr_FLT_C(fltTarget, fltDuration, fltIncrSatMot, fltIncrSatGen, psParam)     \
         GFLIB_DFlexRampCalcIncr_FLT_FC(fltTarget, fltDuration, fltIncrSatMot, fltIncrSatGen, psParam)
-#define GFLIB_DFlexRamp_FLT_C(fltInstant, pbStopFlagMot, pbStopFlagGen, psParam)                       \
+#define GFLIB_DFlexRampCalcIncr_FLT_CRam(fltTarget, fltDuration, fltIncrSatMot, fltIncrSatGen, psParam)  \
+        GFLIB_DFlexRampCalcIncr_FLT_FCRam(fltTarget, fltDuration, fltIncrSatMot, fltIncrSatGen, psParam)
+#define GFLIB_DFlexRamp_FLT_C(fltInstant, pbStopFlagMot, pbStopFlagGen, psParam)                         \
         GFLIB_DFlexRamp_FLT_FC(fltInstant, pbStopFlagMot, pbStopFlagGen, psParam)
+#define GFLIB_DFlexRamp_FLT_CRam(fltInstant, pbStopFlagMot, pbStopFlagGen, psParam)                      \
+        GFLIB_DFlexRamp_FLT_FCRam(fltInstant, pbStopFlagMot, pbStopFlagGen, psParam)
 
 /******************************************************************************
 * Types
@@ -56,11 +82,22 @@ extern void GFLIB_DFlexRampCalcIncr_FLT_FC(float_t fltTarget,
                                            float_t fltIncrSatMot,
                                            float_t fltIncrSatGen,
                                            GFLIB_DFLEXRAMP_T_FLT *psParam);
-
+RAM_FUNC_LIB 
+extern void GFLIB_DFlexRampCalcIncr_FLT_FCRam(float_t fltTarget,
+                                              float_t fltDuration,
+                                              float_t fltIncrSatMot,
+                                              float_t fltIncrSatGen,
+                                              GFLIB_DFLEXRAMP_T_FLT *psParam);
+										   
 extern float_t GFLIB_DFlexRamp_FLT_FC(float_t fltInstant,
-                                       const bool_t *pbStopFlagMot,
-                                       const bool_t *pbStopFlagGen,
-                                       GFLIB_DFLEXRAMP_T_FLT *psParam);
+                                      const bool_t *pbStopFlagMot,
+                                      const bool_t *pbStopFlagGen,
+                                      GFLIB_DFLEXRAMP_T_FLT *psParam);										   
+RAM_FUNC_LIB 
+extern float_t GFLIB_DFlexRamp_FLT_FCRam(float_t fltInstant,
+                                         const bool_t *pbStopFlagMot,
+                                         const bool_t *pbStopFlagGen,
+                                         GFLIB_DFLEXRAMP_T_FLT *psParam);
 
 
 /******************************************************************************
@@ -90,6 +127,7 @@ extern float_t GFLIB_DFlexRamp_FLT_FC(float_t fltInstant,
 * @remarks The initialization value is stored into the fltState variable and the bReachFlag flag is cleared.
 *
 ****************************************************************************/
+RAM_FUNC_LIB 
 static inline void GFLIB_DFlexRampInit_FLT_FC(register float_t fltInitVal,
                                               register GFLIB_DFLEXRAMP_T_FLT *psParam)
 {

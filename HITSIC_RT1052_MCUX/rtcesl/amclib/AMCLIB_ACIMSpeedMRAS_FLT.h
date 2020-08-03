@@ -1,9 +1,31 @@
 /*******************************************************************************
 *
  * Copyright (c) 2013 - 2016, Freescale Semiconductor, Inc.
- * Copyright 2016-2017 NXP
+ * Copyright 2016-2019 NXP
  *
- * SPDX-License-Identifier: BSD-3-Clause
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 * 
 *
 ****************************************************************************//*!
@@ -30,9 +52,11 @@ extern "C" {
 /******************************************************************************
 * Macros 
 ******************************************************************************/      
-#define AMCLIB_ACIMSpeedMRAS_FLT_C( psIsAlBe, psPsiRAlBe, a32RotPos,  psCtrl) \
+#define AMCLIB_ACIMSpeedMRAS_FLT_C( psIsAlBe, psPsiRAlBe, a32RotPos,  psCtrl)    \
         AMCLIB_ACIMSpeedMRAS_FLT_FC(psIsAlBe, psPsiRAlBe, a32RotPos,  psCtrl) 
-#define AMCLIB_ACIMSpeedMRASInit_FLT_Ci( psCtrl)                              \
+#define AMCLIB_ACIMSpeedMRAS_FLT_CRam( psIsAlBe, psPsiRAlBe, a32RotPos,  psCtrl) \
+        AMCLIB_ACIMSpeedMRAS_FLT_FCRam(psIsAlBe, psPsiRAlBe, a32RotPos,  psCtrl) 
+#define AMCLIB_ACIMSpeedMRASInit_FLT_Ci( psCtrl)                                 \
         AMCLIB_ACIMSpeedMRASInit_FLT_FCi(psCtrl)                                              
             
 /******************************************************************************
@@ -60,7 +84,7 @@ typedef struct
     
     /* function parameters */    
     float_t fltPsiRA1Gain;                       /* Constant determined by: Tau_r / (Tau_r+Ts) */   
-    float_t fltPsiRB1Gain;                       /* Constant determined by: Lm*Ts / (Tau_r+Ts) */   
+    float_t fltPsiRB1Gain;                       /* Constant determined by: Lm*Ts / (Tau_r) */   
     float_t fltTs;                               /* Sample time constant */  
     float_t fltSpeedMeGain;                      /* Speed gain constant given by: 60 / (2*PI*PolePairs) */
 } AMCLIB_ACIM_SPEED_MRAS_T_FLT;   
@@ -71,7 +95,12 @@ typedef struct
 extern void AMCLIB_ACIMSpeedMRAS_FLT_FC(const GMCLIB_2COOR_ALBE_T_FLT *psISAlBe,    
                                         const GMCLIB_2COOR_ALBE_T_FLT *psPsiRAlBe,  
                                         acc32_t a32RotPos,
-                                        AMCLIB_ACIM_SPEED_MRAS_T_FLT *psCtrl); 
+                                        AMCLIB_ACIM_SPEED_MRAS_T_FLT *psCtrl);
+RAM_FUNC_LIB
+extern void AMCLIB_ACIMSpeedMRAS_FLT_FCRam(const GMCLIB_2COOR_ALBE_T_FLT *psISAlBe,    
+                                           const GMCLIB_2COOR_ALBE_T_FLT *psPsiRAlBe,  
+                                           acc32_t a32RotPos,
+                                           AMCLIB_ACIM_SPEED_MRAS_T_FLT *psCtrl); 
                                         
 /****************************************************************************
 * Inline functions 
@@ -85,6 +114,7 @@ extern void AMCLIB_ACIMSpeedMRAS_FLT_FC(const GMCLIB_2COOR_ALBE_T_FLT *psISAlBe,
 * @return       N/A
 * 
 *******************************************************************************/
+RAM_FUNC_LIB 
 static inline void AMCLIB_ACIMSpeedMRASInit_FLT_FCi(AMCLIB_ACIM_SPEED_MRAS_T_FLT *psCtrl)
 {
     GDFLIB_FilterIIR1Init_FLT (&psCtrl->fltSpeedElIIR1Param);

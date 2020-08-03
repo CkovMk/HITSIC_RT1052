@@ -103,7 +103,7 @@ extern "C" {
  * @brief This function executes configuration of clocks.
  *
  */
-void sysclk_run(void);
+void RTECLK_Run600M(void);
 
 #if defined(__cplusplus)
 }

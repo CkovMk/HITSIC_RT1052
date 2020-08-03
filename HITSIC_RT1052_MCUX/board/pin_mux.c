@@ -6,11 +6,11 @@
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!GlobalInfo
-product: Pins v6.0
+product: Pins v8.0
 processor: MIMXRT1052xxxxB
-package_id: MIMXRT1052CVL5B
+package_id: MIMXRT1052DVL6B
 mcu_data: ksdk2_0
-processor_version: 6.0.1
+processor_version: 8.0.1
 pin_labels:
 - {pin_num: J1, pin_signal: GPIO_SD_B0_02, label: SDHC_D0, identifier: SDHC_D0}
 - {pin_num: K1, pin_signal: GPIO_SD_B0_03, label: SDHC_D1, identifier: SDHC_D1}
@@ -106,7 +106,7 @@ pin_labels:
  * 
  * END ****************************************************************************************************************/
 void BOARD_InitBootPins(void) {
-    RTE();
+     RTEPIN_AllPin();
 }
 
 /*
@@ -222,7 +222,7 @@ RTE:
  * Description   : Configures pin routing and optionally pin electrical features.
  *
  * END ****************************************************************************************************************/
-void RTE(void) {
+void RTEPIN_AllPin(void) {
   CLOCK_EnableClock(kCLOCK_Iomuxc);           /* iomuxc clock (iomuxc_clk_enable): 0x03U */
   CLOCK_EnableClock(kCLOCK_Xbar1);            /* xbar1 clock (xbar1_clk_enable): 0x03U */
   CLOCK_EnableClock(kCLOCK_Xbar2);            /* xbar2 clock (xbar2_clk_enable): 0x03U */

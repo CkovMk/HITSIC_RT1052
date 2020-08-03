@@ -12,17 +12,17 @@
 #include "fsl_edma.h"
 #include "fsl_dmamux.h"
 #include "fsl_common.h"
-#include "fsl_pit.h"
-#include "fsl_cmp.h"
-#include "fsl_clock.h"
-#include "fsl_lpuart.h"
 #include "fsl_adc.h"
 #include "fsl_aoi.h"
+#include "fsl_cmp.h"
+#include "fsl_clock.h"
 #include "fsl_csi.h"
+#include "fsl_enc.h"
 #include "fsl_gpio.h"
 #include "fsl_lpi2c.h"
+#include "fsl_pit.h"
 #include "fsl_lpspi.h"
-#include "fsl_enc.h"
+#include "fsl_lpuart.h"
 
 #if defined(__cplusplus)
 extern "C" {
@@ -36,23 +36,13 @@ extern "C" {
 #define EDMA_DMA_BASEADDR DMA0
 /* Associated DMAMUX device that is used for muxing of requests. */
 #define EDMA_DMAMUX_BASEADDR DMAMUX
-/* RTE_PIP defines for PIT */
-/* Definition of peripheral ID. */
-#define PIT_PERIPHERAL PIT
-/* Definition of clock source frequency. */
-#define PIT_CLK_FREQ 75000000UL
-/* Definition of ticks count for channel 0. */
-#define PIT_0_TICKS 74U
-/* Definition of ticks count for cahnnel 1. */
-#define PIT_1_TICKS 4294967294U
-/* Definition of ticks count for channel 2. */
-#define PIT_2_TICKS 74999U
-/* PIT interrupt vector ID (number). */
-#define PIT_IRQN PIT_IRQn
-/* PIT interrupt vector priority. */
-#define PIT_IRQ_PRIORITY 4
-/* PIT interrupt handler identifier. */
-#define PIT_IRQHandler PIT_IRQHandler
+/* RTE_PIP defines for ADC1 */
+/* Definition of peripheral ID */
+#define ADC_1_PERIPHERAL ADC1
+/* Definition of special channel interconnected with ADC_ETC which takes real channel to be measured from ADC_ETC. */
+#define ADC_1_CHANNEL_DRIVEN_BY_ADC_ETC 16U
+/* Alias for AOI1 peripheral */
+#define AOI_PERIPHERAL AOI1
 /* Definition of peripheral ID */
 #define CMP_1_PERIPHERAL CMP1
 /* Definition of positive input source used in CMP_SetInputChannels() function */
@@ -78,25 +68,6 @@ extern "C" {
 /* Definition of negative input source used in CMP_SetInputChannels() function */
 #define CMP_4_NEGATIVE_INPUT_NUMBER 7U
 /* Definition of peripheral ID */
-#define UART_1_PERIPHERAL LPUART1
-/* Definition of the clock source frequency */
-#define UART_1_CLOCK_SOURCE 80000000UL
-/* Definition of peripheral ID */
-#define UART_4_PERIPHERAL LPUART4
-/* Definition of the clock source frequency */
-#define UART_4_CLOCK_SOURCE 80000000UL
-/* Definition of peripheral ID */
-#define UART_5_PERIPHERAL LPUART5
-/* Definition of the clock source frequency */
-#define UART_5_CLOCK_SOURCE 80000000UL
-/* RTE_PIP defines for ADC1 */
-/* Definition of peripheral ID */
-#define ADC_1_PERIPHERAL ADC1
-/* Definition of special channel interconnected with ADC_ETC which takes real channel to be measured from ADC_ETC. */
-#define ADC_1_CHANNEL_DRIVEN_BY_ADC_ETC 16U
-/* Alias for AOI1 peripheral */
-#define AOI_PERIPHERAL AOI1
-/* Definition of peripheral ID */
 #define CSI_PERIPHERAL CSI
 /* Definition of the clock source frequency */
 #define CSI_CLK_FREQ 150000000UL
@@ -120,6 +91,10 @@ extern "C" {
 #define CSI_IRQ_PRIORITY 3
 /* CSI interrupt handler identifier. */
 #define CSI_IRQHandler CSI_IRQHandler
+/* Definition of peripheral ID */
+#define ENC_1_PERIPHERAL ENC1
+/* Definition of peripheral ID */
+#define ENC_2_PERIPHERAL ENC2
 /* GPIO_1 interrupt vector ID (number). */
 #define GPIO_1_GPIO_COMB_0_15_IRQN GPIO1_Combined_0_15_IRQn
 /* GPIO_1 interrupt vector priority. */
@@ -166,21 +141,53 @@ extern "C" {
 #define I2C_2_PERIPHERAL LPI2C2
 /* Definition of clock source */
 #define I2C_2_CLOCK_FREQ 60000000UL
+/* RTE_PIP defines for PIT */
+/* Definition of peripheral ID. */
+#define PIT_PERIPHERAL PIT
+/* Definition of clock source frequency. */
+#define PIT_CLK_FREQ 75000000UL
+/* Definition of ticks count for channel 0 - deprecated. */
+#define PIT_0_TICKS 74U
+/* Definition of ticks count for channel 1 - deprecated. */
+#define PIT_1_TICKS 4294967294U
+/* Definition of ticks count for channel 2 - deprecated. */
+#define PIT_2_TICKS 74999U
+/* Definition of channel number for channel 0. */
+#define PIT_0 kPIT_Chnl_0
+/* Definition of channel number for channel 1. */
+#define PIT_1 kPIT_Chnl_1
+/* Definition of channel number for channel 2. */
+#define PIT_2 kPIT_Chnl_2
+/* PIT interrupt vector ID (number). */
+#define PIT_IRQN PIT_IRQn
+/* PIT interrupt vector priority. */
+#define PIT_IRQ_PRIORITY 4
+/* PIT interrupt handler identifier. */
+#define PIT_IRQHandler PIT_IRQHandler
 /* RTE_PIP defines for LPSPI4 */
 /* Definition of peripheral ID */
 #define SPI_4_PERIPHERAL LPSPI4
 /* Definition of clock source */
 #define SPI_4_CLOCK_FREQ 120000000UL
 /* Definition of peripheral ID */
-#define ENC_1_PERIPHERAL ENC1
+#define UART_1_PERIPHERAL LPUART1
+/* Definition of the clock source frequency */
+#define UART_1_CLOCK_SOURCE 80000000UL
 /* Definition of peripheral ID */
-#define ENC_2_PERIPHERAL ENC2
+#define UART_4_PERIPHERAL LPUART4
+/* Definition of the clock source frequency */
+#define UART_4_CLOCK_SOURCE 80000000UL
+/* Definition of peripheral ID */
+#define UART_5_PERIPHERAL LPUART5
+/* Definition of the clock source frequency */
+#define UART_5_CLOCK_SOURCE 80000000UL
 
 /***********************************************************************************************************************
  * Global variables
  **********************************************************************************************************************/
 extern const edma_config_t EDMA_config;
-extern const pit_config_t PIT_config;
+extern const adc_config_t ADC_1_config;
+extern const aoi_event_config_t AOI_event_config[2];
 extern const cmp_config_t CMP_1_config;
 extern const cmp_dac_config_t CMP_1_dac_config;
 extern const cmp_config_t CMP_2_config;
@@ -189,24 +196,23 @@ extern const cmp_config_t CMP_3_config;
 extern const cmp_dac_config_t CMP_3_dac_config;
 extern const cmp_config_t CMP_4_config;
 extern const cmp_dac_config_t CMP_4_dac_config;
-extern const lpuart_config_t UART_1_config;
-extern const lpuart_config_t UART_4_config;
-extern const lpuart_config_t UART_5_config;
-extern const adc_config_t ADC_1_config;
-extern const aoi_event_config_t AOI_event_config[2];
 extern csi_config_t CSI_config;
 /* Frame buffer block */
 extern uint32_t CSI_Buffer[CSI_FRAME_BUFFER_COUNT][CSI_FRAME_HEIGHT][CSI_FRAME_WIDTH];
-extern const lpi2c_master_config_t I2C_1_masterConfig;
-extern const lpi2c_master_config_t I2C_2_masterConfig;
-extern const lpspi_master_config_t SPI_4_config;
 extern enc_config_t ENC_1_config;
 extern enc_config_t ENC_2_config;
+extern const lpi2c_master_config_t I2C_1_masterConfig;
+extern const lpi2c_master_config_t I2C_2_masterConfig;
+extern const pit_config_t PIT_config;
+extern const lpspi_master_config_t SPI_4_config;
+extern const lpuart_config_t UART_1_config;
+extern const lpuart_config_t UART_4_config;
+extern const lpuart_config_t UART_5_config;
 
 /***********************************************************************************************************************
  * Initialization functions
  **********************************************************************************************************************/
-void RTE_PIP(void);
+void RTEPIP_AllPip(void);
 
 /***********************************************************************************************************************
  * BOARD_InitBootPeripherals function

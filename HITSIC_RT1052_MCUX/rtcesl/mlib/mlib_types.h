@@ -1,9 +1,31 @@
 /*******************************************************************************
 *
  * Copyright (c) 2013 - 2016, Freescale Semiconductor, Inc.
- * Copyright 2016-2017 NXP
+ * Copyright 2016-2019 NXP
  *
- * SPDX-License-Identifier: BSD-3-Clause
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 * 
 *
 ****************************************************************************//*!
@@ -94,11 +116,13 @@ typedef unsigned long long      uint64_t;
 #endif /* __MSL_BUILD__ */
 
 /* Fractional data types */
+typedef signed char             frac8_t; 
 typedef signed short            frac16_t;           
 typedef signed long             frac32_t;           
 typedef signed long long        frac64_t;           
 
 /* Accumulator data types */
+typedef signed short            acc16_t;  
 typedef signed long             acc32_t;            
 typedef signed long long        acc64_t;          
 
@@ -184,30 +208,27 @@ typedef float                   float_t;
 #endif
 
 /* Fractional conversion macros */
+#if !defined(FRAC8)
+#define FRAC8(x) ((frac8_t)((x) < 0.9921875 ? ((x) >= -1.0 ? (x)*((double)0x80U) : ((double)0x80U)) : ((double)0x7FU)))
+#endif /*FRAC8*/
+
 #if !defined(FRAC16)
-#define FRAC16(x) ((frac16_t)((x) < 0.999969482421875 ? ((x) >= -1 ? (x)*0x8000 : 0x8000) : 0x7FFF))
+#define FRAC16(x) ((frac16_t)((x) < 0.999969482421875 ? ((x) >= -1.0 ? (x)*((double)0x8000U) : ((double)0x8000U)) : ((double)0x7FFFU)))
 #endif /*FRAC16 */
 
 #if !defined(FRAC32)
-#define FRAC32(x) ((frac32_t)((x) < 1 ? ((x) >= -1 ? (x)*0x80000000 : 0x80000000) : 0x7FFFFFFF))
-#endif /*FRAC32*/
-
-#if !defined(FRAC64)
-#define FRAC64(x) ((frac64_t)((x) < 1 ? ((x) >= -1 ? (x)*0x8000000000000000 : 0x8000000000000000) : 0x7FFFFFFFFFFFFFFF))
+#define FRAC32(x) ((frac32_t)((x) < 1.0 ? ((x) >= -1.0 ? (x)*((double)0x80000000U) : ((double)-2147483648)) : ((double)0x7FFFFFFFU)))
 #endif /*FRAC64*/
 
 /* Accumulator conversion macros */
 #if !defined(ACC16)
-#define ACC16(x) ((acc16_t)((x) < 255.9921875 ? ((x) >= -256 ? (x)*0x80 : 0x8000) : 0x7FFF))
+#define ACC16(x) ((acc16_t)((x) < 255.9921875 ? ((x) >= -256.0 ? (x)*((double)0x80U) : ((double)0x8000U)) : ((double)0x7FFFU)))
 #endif /*ACC16*/
 
 #if !defined(ACC32)
-#define ACC32(x) ((acc32_t)((x) < 65535.999969482421875 ? ((x) >= -65536 ? (x)*0x8000 : 0x80000000) : 0x7FFFFFFF))
+#define ACC32(x) ((acc32_t)((x) < 65535.999969482421875 ? ((x) >= -65536.0 ? (x)*((double)0x8000U) : ((double)-2147483648)) : ((double)0x7FFFFFFFU)))
 #endif /*ACC32*/
 
-#if !defined(ACC64)
-#define ACC64(x) ((acc64_t)((x) < 4294967295.9999999995343387126923 ? ((x) >= -4294967296 ? (x)*0x80000000 : 0x8000000000000000) : 0x7FFFFFFFFFFFFFFF))
-#endif /*ACC64*/
 
 #if defined(__cplusplus)
 }

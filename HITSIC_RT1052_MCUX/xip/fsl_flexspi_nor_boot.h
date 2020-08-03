@@ -10,6 +10,7 @@
 
 #include <stdint.h>
 #include "board.h"
+//#include "dcd.h"
 
 /*! @name Driver version */
 /*@{*/
@@ -85,7 +86,12 @@ typedef struct _ivt_ {
 #define FLASH_BASE ((uint32_t)__FLASH_BASE)   
 #endif
 
-#define DCD_ADDRESS           dcd_data
+#if defined(XIP_BOOT_HEADER_DCD_ENABLE) && (1 == XIP_BOOT_HEADER_DCD_ENABLE)
+#define DCD_ADDRESS dcd_data
+#else
+#define DCD_ADDRESS 0
+#endif
+
 #define BOOT_DATA_ADDRESS     &boot_data
 #define CSF_ADDRESS           0
 #define IVT_RSVD             (uint32_t)(0x00000000)
@@ -93,6 +99,7 @@ typedef struct _ivt_ {
 /************************************* 
  *  Boot Data 
  *************************************/
+
 typedef struct _boot_data_ {
   uint32_t start;           /* boot start location */
   uint32_t size;            /* size */
@@ -109,10 +116,9 @@ typedef struct _boot_data_ {
 
 /* External Variables */
 extern const BOOT_DATA_T boot_data;
-//extern const uint8_t dcd_data[];
-
-
-#include "dcd.c"
+#if defined(XIP_BOOT_HEADER_DCD_ENABLE) && (1 == XIP_BOOT_HEADER_DCD_ENABLE)
+extern const uint8_t dcd_data[];
+#endif
 
 #endif /* __FLEXSPI_NOR_BOOT_H__ */
 

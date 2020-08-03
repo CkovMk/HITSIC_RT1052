@@ -1,9 +1,31 @@
 /*******************************************************************************
 *
  * Copyright (c) 2013 - 2016, Freescale Semiconductor, Inc.
- * Copyright 2016-2017 NXP
+ * Copyright 2016-2019 NXP
  *
- * SPDX-License-Identifier: BSD-3-Clause
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 * 
 *
 ****************************************************************************//*!
@@ -117,6 +139,50 @@ extern "C" {
 /*******************************************************************************
 * Macros
 *******************************************************************************/
+#if (defined(RAM_OPTIM_HIGH) || defined(RAM_OPTIM_MEDIUM) || defined(RAM_OPTIM_LOW)) /* placed to RAM */
+
+#define MLIB_Div1QSat_F16ll(f32Num, f32Denom)                   MLIB_Div1QSat_F16ll_AsmRam(f32Num, f32Denom)
+#define MLIB_Div1QSat_F32(f32Num, f32Denom)                     MLIB_Div1QSat_F32_AsmRam(f32Num, f32Denom)  
+#define MLIB_Div1QSat_F32ls(f32Num, f16Denom)                   MLIB_Div1QSat_F32ls_CRam(f32Num, f16Denom)
+#define MLIB_Div1QSat_A32as(a32Num, f16Denom)                   MLIB_Div1QSat_F32ls_CRam(a32Num, f16Denom)
+#define MLIB_Div1Q_A32ll(f32Num, f32Denom)                      MLIB_Div1Q_A32ll_AsmRam(f32Num, f32Denom)
+#define MLIB_Div1Q_F16ll(f32Num, f32Denom)                      MLIB_Div1Q_F16ll_AsmRam(f32Num, f32Denom)
+#define MLIB_Div1Q_F32(f32Num, f32Denom)                        MLIB_Div1Q_F32_AsmRam(f32Num, f32Denom)  
+#define MLIB_Div1Q_F32ls(f32Num, f16Denom)                      MLIB_Div1Q_F32ls_CRam(f32Num, f16Denom) 
+#define MLIB_Div1Q_A32as(a32Num, f16Denom)                      MLIB_Div1Q_F32ls_CRam(a32Num, f16Denom)
+#define MLIB_DivSat_F16ll(f32Num, f32Denom)                     MLIB_DivSat_F16ll_AsmRam(f32Num, f32Denom)
+#define MLIB_DivSat_F32(f32Num, f32Denom)                       MLIB_DivSat_F32_AsmRam(f32Num, f32Denom)  
+#define MLIB_DivSat_F32ls(f32Num, f16Denom)                     MLIB_DivSat_F32ls_CRam(f32Num, f16Denom)
+#define MLIB_DivSat_A32as(a32Num, f16Denom)                     MLIB_DivSat_F32ls_CRam(a32Num, f16Denom)
+#define MLIB_Div_A32ll(f32Num, f32Denom)                        MLIB_Div_A32ll_AsmRam(f32Num, f32Denom)
+#define MLIB_Div_A32as(a32Num, f16Denom)                        MLIB_Div_F32ls_CRam(a32Num, f16Denom)
+#define MLIB_Div_F16ll(f32Num, f32Denom)                        MLIB_Div_F16ll_AsmRam(f32Num, f32Denom)
+#define MLIB_Div_F32(f32Num, f32Denom)                          MLIB_Div_F32_AsmRam(f32Num, f32Denom)  
+#define MLIB_Div_F32ls(f32Num, f16Denom)                        MLIB_Div_F32ls_CRam(f32Num, f16Denom)
+
+#else
+	
+#define MLIB_Div1QSat_F16ll(f32Num, f32Denom)                   MLIB_Div1QSat_F16ll_Asm(f32Num, f32Denom)
+#define MLIB_Div1QSat_F32(f32Num, f32Denom)                     MLIB_Div1QSat_F32_Asm(f32Num, f32Denom)  
+#define MLIB_Div1QSat_F32ls(f32Num, f16Denom)                   MLIB_Div1QSat_F32ls_C(f32Num, f16Denom)
+#define MLIB_Div1QSat_A32as(a32Num, f16Denom)                   MLIB_Div1QSat_F32ls_C(a32Num, f16Denom)
+#define MLIB_Div1Q_A32ll(f32Num, f32Denom)                      MLIB_Div1Q_A32ll_Asm(f32Num, f32Denom)
+#define MLIB_Div1Q_F16ll(f32Num, f32Denom)                      MLIB_Div1Q_F16ll_Asm(f32Num, f32Denom)
+#define MLIB_Div1Q_F32(f32Num, f32Denom)                        MLIB_Div1Q_F32_Asm(f32Num, f32Denom)  
+#define MLIB_Div1Q_F32ls(f32Num, f16Denom)                      MLIB_Div1Q_F32ls_C(f32Num, f16Denom) 
+#define MLIB_Div1Q_A32as(a32Num, f16Denom)                      MLIB_Div1Q_F32ls_C(a32Num, f16Denom)
+#define MLIB_DivSat_F16ll(f32Num, f32Denom)                     MLIB_DivSat_F16ll_Asm(f32Num, f32Denom)
+#define MLIB_DivSat_F32(f32Num, f32Denom)                       MLIB_DivSat_F32_Asm(f32Num, f32Denom)  
+#define MLIB_DivSat_F32ls(f32Num, f16Denom)                     MLIB_DivSat_F32ls_C(f32Num, f16Denom)
+#define MLIB_DivSat_A32as(a32Num, f16Denom)                     MLIB_DivSat_F32ls_C(a32Num, f16Denom)
+#define MLIB_Div_A32ll(f32Num, f32Denom)                        MLIB_Div_A32ll_Asm(f32Num, f32Denom)
+#define MLIB_Div_A32as(a32Num, f16Denom)                        MLIB_Div_F32ls_C(a32Num, f16Denom)
+#define MLIB_Div_F16ll(f32Num, f32Denom)                        MLIB_Div_F16ll_Asm(f32Num, f32Denom)
+#define MLIB_Div_F32(f32Num, f32Denom)                          MLIB_Div_F32_Asm(f32Num, f32Denom)  
+#define MLIB_Div_F32ls(f32Num, f16Denom)                        MLIB_Div_F32ls_C(f32Num, f16Denom)
+
+#endif /* defined(RAM_OPTIM_HIGH) || defined(RAM_OPTIM_MEDIUM) || defined(RAM_OPTIM_LOW) */
+
 #define MLIB_AbsSat_F16(f16Val)                                 MLIB_AbsSat_F16_Asmi(f16Val)
 #define MLIB_AbsSat_F32(f32Val)                                 MLIB_AbsSat_F32_Asmi(f32Val)
 #define MLIB_Abs_F16(f16Val)                                    MLIB_Abs_F16_Ci(f16Val)  
@@ -136,35 +202,17 @@ extern "C" {
 #define MLIB_Conv_F16l(f32Val)                                  MLIB_Conv_F16l_Ci(f32Val) 
 #define MLIB_Conv_F32s(f16Val)                                  MLIB_Conv_F32s_Ci(f16Val)
 #define MLIB_Div1QSat_F16(f16Num, f16Denom)                     MLIB_Div1QSat_F16_Ci(f16Num, f16Denom)
-#define MLIB_Div1QSat_F16ll(f32Num, f32Denom)                   MLIB_Div1QSat_F16ll_Asm(f32Num, f32Denom)
 #define MLIB_Div1QSat_F16ls(f32Num, f16Denom)                   MLIB_Div1QSat_F16ls_Ci(f32Num, f16Denom) 
-#define MLIB_Div1QSat_F32(f32Num, f32Denom)                     MLIB_Div1QSat_F32_Asm(f32Num, f32Denom)  
-#define MLIB_Div1QSat_F32ls(f32Num, f16Denom)                   MLIB_Div1QSat_F32ls_C(f32Num, f16Denom)
-#define MLIB_Div1QSat_A32as(a32Num, f16Denom)                   MLIB_Div1QSat_F32ls_C(a32Num, f16Denom)
-#define MLIB_Div1Q_A32ll(f32Num, f32Denom)                      MLIB_Div1Q_A32ll_Asm(f32Num, f32Denom)  
 #define MLIB_Div1Q_A32ls(f32Num, f16Denom)                      MLIB_Div1Q_A32ls_Ci(f32Num, f16Denom)  
 #define MLIB_Div1Q_A32ss(f16Num, f16Denom)                      MLIB_Div1Q_A32ss_Ci(f16Num, f16Denom)   
 #define MLIB_Div1Q_F16(f16Num, f16Denom)                        MLIB_Div1Q_F16_Ci(f16Num, f16Denom)
-#define MLIB_Div1Q_F16ll(f32Num, f32Denom)                      MLIB_Div1Q_F16ll_Asm(f32Num, f32Denom)
 #define MLIB_Div1Q_F16ls(f32Num, f16Denom)                      MLIB_Div1Q_F16ls_Ci(f32Num, f16Denom)    
-#define MLIB_Div1Q_F32(f32Num, f32Denom)                        MLIB_Div1Q_F32_Asm(f32Num, f32Denom)  
-#define MLIB_Div1Q_F32ls(f32Num, f16Denom)                      MLIB_Div1Q_F32ls_C(f32Num, f16Denom) 
-#define MLIB_Div1Q_A32as(a32Num, f16Denom)                      MLIB_Div1Q_F32ls_C(a32Num, f16Denom)
 #define MLIB_DivSat_F16(f16Num, f16Denom)                       MLIB_DivSat_F16_Ci(f16Num, f16Denom)  
-#define MLIB_DivSat_F16ll(f32Num, f32Denom)                     MLIB_DivSat_F16ll_Asm(f32Num, f32Denom)  
 #define MLIB_DivSat_F16ls(f32Num, f16Denom)                     MLIB_DivSat_F16ls_Ci(f32Num, f16Denom)    
-#define MLIB_DivSat_F32(f32Num, f32Denom)                       MLIB_DivSat_F32_Asm(f32Num, f32Denom)  
-#define MLIB_DivSat_F32ls(f32Num, f16Denom)                     MLIB_DivSat_F32ls_C(f32Num, f16Denom)
-#define MLIB_DivSat_A32as(a32Num, f16Denom)                     MLIB_DivSat_F32ls_C(a32Num, f16Denom)
-#define MLIB_Div_A32ll(f32Num, f32Denom)                        MLIB_Div_A32ll_Asm(f32Num, f32Denom)
 #define MLIB_Div_A32ls(f32Num, f16Denom)                        MLIB_Div_A32ls_Ci(f32Num, f16Denom)
 #define MLIB_Div_A32ss(f16Num, f16Denom)                        MLIB_Div_A32ss_Ci(f16Num, f16Denom)
-#define MLIB_Div_A32as(a32Num, f16Denom)                        MLIB_Div_F32ls_C(a32Num, f16Denom)
 #define MLIB_Div_F16(f16Num, f16Denom)                          MLIB_Div_F16_Ci(f16Num, f16Denom) 
-#define MLIB_Div_F16ll(f32Num, f32Denom)                        MLIB_Div_F16ll_Asm(f32Num, f32Denom) 
 #define MLIB_Div_F16ls(f32Num, f16Denom)                        MLIB_Div_F16ls_Ci(f32Num, f16Denom)
-#define MLIB_Div_F32(f32Num, f32Denom)                          MLIB_Div_F32_Asm(f32Num, f32Denom)  
-#define MLIB_Div_F32ls(f32Num, f16Denom)                        MLIB_Div_F32ls_C(f32Num, f16Denom)  
 #define MLIB_Log2_U16(u16Val)                                   MLIB_Log2_U16_Ci(u16Val)
 #define MLIB_Mac4RndSat_F16(f16Add1Mul1, f16Add1Mul2, f16Add2Mul1, f16Add2Mul2)     MLIB_Mac4RndSat_F16_Asmi(f16Add1Mul1, f16Add1Mul2, f16Add2Mul1, f16Add2Mul2)   
 #define MLIB_Mac4RndSat_F32(f32Add1Mul1, f32Add1Mul2, f32Add2Mul1, f32Add2Mul2)     MLIB_Mac4RndSat_F32_Asmi(f32Add1Mul1, f32Add1Mul2, f32Add2Mul1, f32Add2Mul2)   

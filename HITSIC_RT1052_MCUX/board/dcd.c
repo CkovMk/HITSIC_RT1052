@@ -22,9 +22,9 @@ __attribute__((section(".boot_hdr.dcd_data")))
 !!GlobalInfo
 product: DCDx V2.0
 processor: MIMXRT1052xxxxB
-package_id: MIMXRT1052CVL5B
+package_id: MIMXRT1052DVL6B
 mcu_data: ksdk2_0
-processor_version: 6.0.1
+processor_version: 8.0.1
 output_format: c_array
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* COMMENTS BELOW ARE USED AS SETTINGS FOR DCD DATA */
@@ -313,3 +313,5 @@ const uint8_t dcd_data[] = {
 const uint8_t dcd_data[] = {0x00};
 #endif /* XIP_BOOT_HEADER_DCD_ENABLE */
 #endif /* XIP_BOOT_HEADER_ENABLE */
+
+

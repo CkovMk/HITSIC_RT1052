@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2019 NXP
+ * Copyright 2016-2020 NXP
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -41,9 +41,9 @@
 /**
  * @brief	The board name 
  */
-#define BOARD_NAME "hitsic_rt1052"
+#define BOARD_NAME "board"
 
-
+#define BOARD_FLASH_SIZE (0x2000000U)
 
 #if defined(__cplusplus)
 extern "C" {

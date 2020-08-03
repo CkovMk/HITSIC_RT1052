@@ -6,6 +6,7 @@
  */
 
 #include "fsl_flexspi_nor_boot.h"
+#include "dcd.c"
 
 /* Component ID definition, used by tools. */
 #ifndef FSL_COMPONENT_ID
@@ -21,6 +22,9 @@
 /************************************* 
  *  IVT Data 
  *************************************/
+
+
+
 const ivt image_vector_table = {
   IVT_HEADER,                         /* IVT Header */
   IMAGE_ENTRY_ADDRESS,                /* Image Entry Function */
@@ -32,6 +36,8 @@ const ivt image_vector_table = {
   IVT_RSVD                            /* Reserved = 0 */
 };
 
+
+
 #if defined(__CC_ARM) || defined(__ARMCC_VERSION) || defined(__GNUC__)
     __attribute__((section(".boot_hdr.boot_data")))
 #elif defined(__ICCARM__)
@@ -40,12 +46,19 @@ const ivt image_vector_table = {
 /************************************* 
  *  Boot Data 
  *************************************/
+
+
 const BOOT_DATA_T boot_data = {
   FLASH_BASE,                 /* boot start location */
   FLASH_SIZE,                 /* size */
   PLUGIN_FLAG,                /* Plugin flag*/
   0xFFFFFFFF  				  /* empty - extra data word */
 };
+
+
+
 #endif
+
+
 
 

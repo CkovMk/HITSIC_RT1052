@@ -38,376 +38,285 @@ extern "C" {
 void BOARD_InitBootPins(void);
 
 /* GPIO_B1_11 (coord C13), KEY_BTUP */
-#define RTE_KEY_BTUP_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_KEY_BTUP_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_KEY_BTUP_PIN                                                     27U   /*!< GPIO2 pin index: 27 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_KEY_BTUP_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_KEY_BTUP_GPIO_PIN                                                27U   /*!< GPIO pin number */
+#define RTE_KEY_BTUP_GPIO_PIN_MASK                                   (1U << 27U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_09 (coord A13), KEY_BTLF */
-#define RTE_KEY_BTLF_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_KEY_BTLF_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_KEY_BTLF_PIN                                                     25U   /*!< GPIO2 pin index: 25 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_KEY_BTLF_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_KEY_BTLF_GPIO_PIN                                                25U   /*!< GPIO pin number */
+#define RTE_KEY_BTLF_GPIO_PIN_MASK                                   (1U << 25U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_10 (coord B13), KEY_BTOK */
-#define RTE_KEY_BTOK_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_KEY_BTOK_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_KEY_BTOK_PIN                                                     26U   /*!< GPIO2 pin index: 26 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_KEY_BTOK_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_KEY_BTOK_GPIO_PIN                                                26U   /*!< GPIO pin number */
+#define RTE_KEY_BTOK_GPIO_PIN_MASK                                   (1U << 26U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_08 (coord A12), KEY_BTRT */
-#define RTE_KEY_BTRT_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_KEY_BTRT_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_KEY_BTRT_PIN                                                     24U   /*!< GPIO2 pin index: 24 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_KEY_BTRT_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_KEY_BTRT_GPIO_PIN                                                24U   /*!< GPIO pin number */
+#define RTE_KEY_BTRT_GPIO_PIN_MASK                                   (1U << 24U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_07 (coord B12), KEY_BTDN */
-#define RTE_KEY_BTDN_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_KEY_BTDN_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_KEY_BTDN_PIN                                                     23U   /*!< GPIO2 pin index: 23 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_KEY_BTDN_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_KEY_BTDN_GPIO_PIN                                                23U   /*!< GPIO pin number */
+#define RTE_KEY_BTDN_GPIO_PIN_MASK                                   (1U << 23U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_06 (coord C12), BEEP_EN */
-#define RTE_BEEP_EN_GPIO                                                   GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_BEEP_EN_PORT                                                   GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_BEEP_EN_PIN                                                      22U   /*!< GPIO2 pin index: 22 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_BEEP_EN_GPIO                                                   GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_BEEP_EN_GPIO_PIN                                                 22U   /*!< GPIO pin number */
+#define RTE_BEEP_EN_GPIO_PIN_MASK                                    (1U << 22U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_05 (coord D12), SERVO_EN */
-#define RTE_SERVO_EN_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_SERVO_EN_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_SERVO_EN_PIN                                                     21U   /*!< GPIO2 pin index: 21 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_SERVO_EN_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_SERVO_EN_GPIO_PIN                                                21U   /*!< GPIO pin number */
+#define RTE_SERVO_EN_GPIO_PIN_MASK                                   (1U << 21U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_04 (coord E12), KEY_BTSE */
-#define RTE_KEY_BTSE_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_KEY_BTSE_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_KEY_BTSE_PIN                                                     20U   /*!< GPIO2 pin index: 20 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_KEY_BTSE_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_KEY_BTSE_GPIO_PIN                                                20U   /*!< GPIO pin number */
+#define RTE_KEY_BTSE_GPIO_PIN_MASK                                   (1U << 20U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_02 (coord C11), MOTOR_EN */
-#define RTE_MOTOR_EN_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_MOTOR_EN_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_MOTOR_EN_PIN                                                     18U   /*!< GPIO2 pin index: 18 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_MOTOR_EN_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_MOTOR_EN_GPIO_PIN                                                18U   /*!< GPIO pin number */
+#define RTE_MOTOR_EN_GPIO_PIN_MASK                                   (1U << 18U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_01 (coord B11), KEY_BTME */
-#define RTE_KEY_BTME_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_KEY_BTME_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_KEY_BTME_PIN                                                     17U   /*!< GPIO2 pin index: 17 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_KEY_BTME_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_KEY_BTME_GPIO_PIN                                                17U   /*!< GPIO pin number */
+#define RTE_KEY_BTME_GPIO_PIN_MASK                                   (1U << 17U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_15 (coord E11), TOF0_XHT */
-#define RTE_TOF0_XHT_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_TOF0_XHT_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_TOF0_XHT_PIN                                                     15U   /*!< GPIO2 pin index: 15 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_TOF0_XHT_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_TOF0_XHT_GPIO_PIN                                                15U   /*!< GPIO pin number */
+#define RTE_TOF0_XHT_GPIO_PIN_MASK                                   (1U << 15U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_14 (coord E10), TOF0_INT */
-#define RTE_TOF0_INT_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_TOF0_INT_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_TOF0_INT_PIN                                                     14U   /*!< GPIO2 pin index: 14 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_TOF0_INT_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_TOF0_INT_GPIO_PIN                                                14U   /*!< GPIO pin number */
+#define RTE_TOF0_INT_GPIO_PIN_MASK                                   (1U << 14U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_13 (coord D10), TOF1_XHT */
-#define RTE_TOF1_XHT_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_TOF1_XHT_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_TOF1_XHT_PIN                                                     13U   /*!< GPIO2 pin index: 13 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_TOF1_XHT_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_TOF1_XHT_GPIO_PIN                                                13U   /*!< GPIO pin number */
+#define RTE_TOF1_XHT_GPIO_PIN_MASK                                   (1U << 13U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_12 (coord C10), TOF1_INT */
-#define RTE_TOF1_INT_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_TOF1_INT_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_TOF1_INT_PIN                                                     12U   /*!< GPIO2 pin index: 12 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_TOF1_INT_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_TOF1_INT_GPIO_PIN                                                12U   /*!< GPIO pin number */
+#define RTE_TOF1_INT_GPIO_PIN_MASK                                   (1U << 12U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_11 (coord A10), PWM2_B2 */
-#define RTE_PWM2_B2_PERIPHERAL                                              PWM2   /*!< Device name: PWM2 */
-#define RTE_PWM2_B2_SIGNAL                                                     B   /*!< PWM2 signal: B */
-#define RTE_PWM2_B2_CHANNEL                                                   2U   /*!< PWM2 B channel: 2 */
 
 /* GPIO_B0_10 (coord D9), PWM2_A2 */
-#define RTE_PWM2_A2_PERIPHERAL                                              PWM2   /*!< Device name: PWM2 */
-#define RTE_PWM2_A2_SIGNAL                                                     A   /*!< PWM2 signal: A */
-#define RTE_PWM2_A2_CHANNEL                                                   2U   /*!< PWM2 A channel: 2 */
 
 /* GPIO_B0_09 (coord C9), PWM2_B1 */
-#define RTE_PWM2_B1_PERIPHERAL                                              PWM2   /*!< Device name: PWM2 */
-#define RTE_PWM2_B1_SIGNAL                                                     B   /*!< PWM2 signal: B */
-#define RTE_PWM2_B1_CHANNEL                                                   1U   /*!< PWM2 B channel: 1 */
 
 /* GPIO_B0_07 (coord A9), PWM2_B0 */
-#define RTE_PWM2_B0_PERIPHERAL                                              PWM2   /*!< Device name: PWM2 */
-#define RTE_PWM2_B0_SIGNAL                                                     B   /*!< PWM2 signal: B */
-#define RTE_PWM2_B0_CHANNEL                                                   0U   /*!< PWM2 B channel: 0 */
 
 /* GPIO_B0_06 (coord A8), PWM2_A0 */
-#define RTE_PWM2_A0_PERIPHERAL                                              PWM2   /*!< Device name: PWM2 */
-#define RTE_PWM2_A0_SIGNAL                                                     A   /*!< PWM2 signal: A */
-#define RTE_PWM2_A0_CHANNEL                                                   0U   /*!< PWM2 A channel: 0 */
 
 /* GPIO_B0_05 (coord B8), I2C2_SDA */
-#define RTE_I2C2_SDA_PERIPHERAL                                           LPI2C2   /*!< Device name: LPI2C2 */
-#define RTE_I2C2_SDA_SIGNAL                                                  SDA   /*!< LPI2C2 signal: SDA */
 
 /* GPIO_B0_04 (coord C8), I2C2_SCL */
-#define RTE_I2C2_SCL_PERIPHERAL                                           LPI2C2   /*!< Device name: LPI2C2 */
-#define RTE_I2C2_SCL_SIGNAL                                                  SCL   /*!< LPI2C2 signal: SCL */
 
 /* GPIO_B0_03 (coord D8), SPI4_SCK */
-#define RTE_SPI4_SCK_PERIPHERAL                                           LPSPI4   /*!< Device name: LPSPI4 */
-#define RTE_SPI4_SCK_SIGNAL                                                  SCK   /*!< LPSPI4 signal: SCK */
 
 /* GPIO_B0_02 (coord E8), SPI4_SDO */
-#define RTE_SPI4_SDO_PERIPHERAL                                           LPSPI4   /*!< Device name: LPSPI4 */
-#define RTE_SPI4_SDO_SIGNAL                                                  SDO   /*!< LPSPI4 signal: SDO */
 
 /* GPIO_B0_01 (coord E7), DISP_BKL */
-#define RTE_DISP_BKL_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_DISP_BKL_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_DISP_BKL_PIN                                                      1U   /*!< GPIO2 pin index: 1 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_DISP_BKL_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_DISP_BKL_GPIO_PIN                                                 1U   /*!< GPIO pin number */
+#define RTE_DISP_BKL_GPIO_PIN_MASK                                    (1U << 1U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_00 (coord D7), DISP_D_C */
-#define RTE_DISP_D_C_GPIO                                                  GPIO2   /*!< GPIO device name: GPIO2 */
-#define RTE_DISP_D_C_PORT                                                  GPIO2   /*!< PORT device name: GPIO2 */
-#define RTE_DISP_D_C_PIN                                                      0U   /*!< GPIO2 pin index: 0 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_DISP_D_C_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
+#define RTE_DISP_D_C_GPIO_PIN                                                 0U   /*!< GPIO pin number */
+#define RTE_DISP_D_C_GPIO_PIN_MASK                                    (1U << 0U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_12 (coord D13), UART5_TX */
-#define RTE_UART5_TX_PERIPHERAL                                          LPUART5   /*!< Device name: LPUART5 */
-#define RTE_UART5_TX_SIGNAL                                                   TX   /*!< LPUART5 signal: TX */
 
 /* GPIO_B1_13 (coord D14), UART5_RX */
-#define RTE_UART5_RX_PERIPHERAL                                          LPUART5   /*!< Device name: LPUART5 */
-#define RTE_UART5_RX_SIGNAL                                                   RX   /*!< LPUART5 signal: RX */
 
 /* GPIO_B1_15 (coord B14), PWM4_A3 */
-#define RTE_PWM4_A3_PERIPHERAL                                              PWM4   /*!< Device name: PWM4 */
-#define RTE_PWM4_A3_SIGNAL                                                     A   /*!< PWM4 signal: A */
-#define RTE_PWM4_A3_CHANNEL                                                   3U   /*!< PWM4 A channel: 3 */
 
 /* GPIO_B1_14 (coord C14), PWM4_B3 */
-#define RTE_PWM4_A2_PERIPHERAL                                              PWM4   /*!< Device name: PWM4 */
-#define RTE_PWM4_A2_SIGNAL                                                     A   /*!< PWM4 signal: A */
-#define RTE_PWM4_A2_CHANNEL                                                   2U   /*!< PWM4 A channel: 2 */
 
 /* GPIO_EMC_41 (coord C7), DISP_RST */
-#define RTE_DISP_RST_GPIO                                                  GPIO3   /*!< GPIO device name: GPIO3 */
-#define RTE_DISP_RST_PORT                                                  GPIO3   /*!< PORT device name: GPIO3 */
-#define RTE_DISP_RST_PIN                                                     27U   /*!< GPIO3 pin index: 27 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_DISP_RST_GPIO                                                  GPIO3   /*!< GPIO peripheral base pointer */
+#define RTE_DISP_RST_GPIO_PIN                                                27U   /*!< GPIO pin number */
+#define RTE_DISP_RST_GPIO_PIN_MASK                                   (1U << 27U)   /*!< GPIO pin mask */
 
 /* GPIO_SD_B0_00 (coord J4), SDHC_CMD */
-#define RTE_SDHC_CMD_PERIPHERAL                                           USDHC1   /*!< Device name: USDHC1 */
-#define RTE_SDHC_CMD_SIGNAL                                            usdhc_cmd   /*!< USDHC1 signal: usdhc_cmd */
 
 /* GPIO_SD_B0_01 (coord J3), SDHC_CLK */
-#define RTE_SDHC_CLK_PERIPHERAL                                           USDHC1   /*!< Device name: USDHC1 */
-#define RTE_SDHC_CLK_SIGNAL                                            usdhc_clk   /*!< USDHC1 signal: usdhc_clk */
 
 /* GPIO_SD_B0_02 (coord J1), SDHC_D0 */
-#define RTE_SDHC_D0_PERIPHERAL                                            USDHC1   /*!< Device name: USDHC1 */
-#define RTE_SDHC_D0_SIGNAL                                            usdhc_data   /*!< USDHC1 signal: usdhc_data */
-#define RTE_SDHC_D0_CHANNEL                                                   0U   /*!< USDHC1 usdhc_data channel: 0 */
 
 /* GPIO_SD_B0_03 (coord K1), SDHC_D1 */
-#define RTE_SDHC_D1_PERIPHERAL                                            USDHC1   /*!< Device name: USDHC1 */
-#define RTE_SDHC_D1_SIGNAL                                            usdhc_data   /*!< USDHC1 signal: usdhc_data */
-#define RTE_SDHC_D1_CHANNEL                                                   1U   /*!< USDHC1 usdhc_data channel: 1 */
 
 /* GPIO_SD_B0_04 (coord H2), SDHC_D2 */
-#define RTE_SDHC_D2_PERIPHERAL                                            USDHC1   /*!< Device name: USDHC1 */
-#define RTE_SDHC_D2_SIGNAL                                            usdhc_data   /*!< USDHC1 signal: usdhc_data */
-#define RTE_SDHC_D2_CHANNEL                                                   2U   /*!< USDHC1 usdhc_data channel: 2 */
 
 /* GPIO_SD_B0_05 (coord J2), SDHC_D3 */
-#define RTE_SDHC_D3_PERIPHERAL                                            USDHC1   /*!< Device name: USDHC1 */
-#define RTE_SDHC_D3_SIGNAL                                            usdhc_data   /*!< USDHC1 signal: usdhc_data */
-#define RTE_SDHC_D3_CHANNEL                                                   3U   /*!< USDHC1 usdhc_data channel: 3 */
 
 /* GPIO_SD_B1_00 (coord L5), UART4_TX */
-#define RTE_UART4_TX_PERIPHERAL                                          LPUART4   /*!< Device name: LPUART4 */
-#define RTE_UART4_TX_SIGNAL                                                   TX   /*!< LPUART4 signal: TX */
 
 /* GPIO_SD_B1_01 (coord M5), UART4_RX */
-#define RTE_UART4_RX_PERIPHERAL                                          LPUART4   /*!< Device name: LPUART4 */
-#define RTE_UART4_RX_SIGNAL                                                   RX   /*!< LPUART4 signal: RX */
 
 /* GPIO_SD_B1_02 (coord M3), TCS_INT */
-#define RTE_TCS_INT_GPIO                                                   GPIO3   /*!< GPIO device name: GPIO3 */
-#define RTE_TCS_INT_PORT                                                   GPIO3   /*!< PORT device name: GPIO3 */
-#define RTE_TCS_INT_PIN                                                       2U   /*!< GPIO3 pin index: 2 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_TCS_INT_GPIO                                                   GPIO3   /*!< GPIO peripheral base pointer */
+#define RTE_TCS_INT_GPIO_PIN                                                  2U   /*!< GPIO pin number */
+#define RTE_TCS_INT_GPIO_PIN_MASK                                     (1U << 2U)   /*!< GPIO pin mask */
 
 /* GPIO_SD_B1_03 (coord M4), IMU_INT */
-#define RTE_IMU_INT_GPIO                                                   GPIO3   /*!< GPIO device name: GPIO3 */
-#define RTE_IMU_INT_PORT                                                   GPIO3   /*!< PORT device name: GPIO3 */
-#define RTE_IMU_INT_PIN                                                       3U   /*!< GPIO3 pin index: 3 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_IMU_INT_GPIO                                                   GPIO3   /*!< GPIO peripheral base pointer */
+#define RTE_IMU_INT_GPIO_PIN                                                  3U   /*!< GPIO pin number */
+#define RTE_IMU_INT_GPIO_PIN_MASK                                     (1U << 3U)   /*!< GPIO pin mask */
 
 /* GPIO_SD_B1_04 (coord P2), I2C1_SCL */
-#define RTE_I2C1_SCL_PERIPHERAL                                           LPI2C1   /*!< Device name: LPI2C1 */
-#define RTE_I2C1_SCL_SIGNAL                                                  SCL   /*!< LPI2C1 signal: SCL */
 
 /* GPIO_SD_B1_05 (coord N3), I2C1_SDA */
-#define RTE_I2C1_SDA_PERIPHERAL                                           LPI2C1   /*!< Device name: LPI2C1 */
-#define RTE_I2C1_SDA_SIGNAL                                                  SDA   /*!< LPI2C1 signal: SDA */
 
 /* GPIO_AD_B1_15 (coord J14), CAM_D2 */
-#define RTE_CAM_D2_PERIPHERAL                                                CSI   /*!< Device name: CSI */
-#define RTE_CAM_D2_SIGNAL                                               csi_data   /*!< CSI signal: csi_data */
-#define RTE_CAM_D2_CHANNEL                                                    2U   /*!< CSI csi_data channel: 02 */
 
 /* GPIO_AD_B1_14 (coord G12), CAM_D3 */
-#define RTE_CAM_D3_PERIPHERAL                                                CSI   /*!< Device name: CSI */
-#define RTE_CAM_D3_SIGNAL                                               csi_data   /*!< CSI signal: csi_data */
-#define RTE_CAM_D3_CHANNEL                                                    3U   /*!< CSI csi_data channel: 03 */
 
 /* GPIO_AD_B1_13 (coord H11), CAM_D4 */
-#define RTE_CAM_D4_PERIPHERAL                                                CSI   /*!< Device name: CSI */
-#define RTE_CAM_D4_SIGNAL                                               csi_data   /*!< CSI signal: csi_data */
-#define RTE_CAM_D4_CHANNEL                                                    4U   /*!< CSI csi_data channel: 04 */
 
 /* GPIO_AD_B1_12 (coord H12), CAM_D5 */
-#define RTE_CAM_D5_PERIPHERAL                                                CSI   /*!< Device name: CSI */
-#define RTE_CAM_D5_SIGNAL                                               csi_data   /*!< CSI signal: csi_data */
-#define RTE_CAM_D5_CHANNEL                                                    5U   /*!< CSI csi_data channel: 05 */
 
 /* GPIO_AD_B1_11 (coord J13), CAM_D6 */
-#define RTE_CAM_D6_PERIPHERAL                                                CSI   /*!< Device name: CSI */
-#define RTE_CAM_D6_SIGNAL                                               csi_data   /*!< CSI signal: csi_data */
-#define RTE_CAM_D6_CHANNEL                                                    6U   /*!< CSI csi_data channel: 06 */
 
 /* GPIO_AD_B1_10 (coord L13), CAM_D7 */
-#define RTE_CAM_D7_PERIPHERAL                                                CSI   /*!< Device name: CSI */
-#define RTE_CAM_D7_SIGNAL                                               csi_data   /*!< CSI signal: csi_data */
-#define RTE_CAM_D7_CHANNEL                                                    7U   /*!< CSI csi_data channel: 07 */
 
 /* GPIO_AD_B1_09 (coord M13), CAM_D8 */
-#define RTE_CAM_D8_PERIPHERAL                                                CSI   /*!< Device name: CSI */
-#define RTE_CAM_D8_SIGNAL                                               csi_data   /*!< CSI signal: csi_data */
-#define RTE_CAM_D8_CHANNEL                                                    8U   /*!< CSI csi_data channel: 08 */
 
 /* GPIO_AD_B1_08 (coord H13), CAM_D9 */
-#define RTE_CAM_D9_PERIPHERAL                                                CSI   /*!< Device name: CSI */
-#define RTE_CAM_D9_SIGNAL                                               csi_data   /*!< CSI signal: csi_data */
-#define RTE_CAM_D9_CHANNEL                                                    9U   /*!< CSI csi_data channel: 09 */
 
 /* GPIO_AD_B1_07 (coord K10), CAM_HREF */
-#define RTE_CAM_HREF_PERIPHERAL                                              CSI   /*!< Device name: CSI */
-#define RTE_CAM_HREF_SIGNAL                                            csi_hsync   /*!< CSI signal: csi_hsync */
 
 /* GPIO_AD_B1_06 (coord J12), CAM_VSNC */
-#define RTE_CAM_VSNC_PERIPHERAL                                              CSI   /*!< Device name: CSI */
-#define RTE_CAM_VSNC_SIGNAL                                            csi_vsync   /*!< CSI signal: csi_vsync */
 
 /* GPIO_AD_B1_05 (coord K12), CAM_XCLK */
-#define RTE_CAM_XCLK_PERIPHERAL                                              CSI   /*!< Device name: CSI */
-#define RTE_CAM_XCLK_SIGNAL                                             csi_mclk   /*!< CSI signal: csi_mclk */
 
 /* GPIO_AD_B1_04 (coord L12), CAM_PCLK */
-#define RTE_CAM_PCLK_PERIPHERAL                                              CSI   /*!< Device name: CSI */
-#define RTE_CAM_PCLK_SIGNAL                                           csi_pixclk   /*!< CSI signal: csi_pixclk */
 
 /* GPIO_AD_B1_03 (coord M12), CAM_RST */
-#define RTE_CAM_RST_GPIO                                                   GPIO1   /*!< GPIO device name: GPIO1 */
-#define RTE_CAM_RST_PORT                                                   GPIO1   /*!< PORT device name: GPIO1 */
-#define RTE_CAM_RST_PIN                                                      19U   /*!< GPIO1 pin index: 19 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_CAM_RST_GPIO                                                   GPIO1   /*!< GPIO peripheral base pointer */
+#define RTE_CAM_RST_GPIO_PIN                                                 19U   /*!< GPIO pin number */
+#define RTE_CAM_RST_GPIO_PIN_MASK                                    (1U << 19U)   /*!< GPIO pin mask */
 
 /* GPIO_AD_B1_02 (coord L11), MOTOR_IR */
-#define RTE_MOTOR_IR_PERIPHERAL                                             ADC1   /*!< Device name: ADC1 */
-#define RTE_MOTOR_IR_SIGNAL                                                   IN   /*!< ADC1 signal: IN */
-#define RTE_MOTOR_IR_CHANNEL                                                  7U   /*!< ADC1 IN channel: 7 */
 
 /* GPIO_AD_B1_01 (coord K11), VOLT_BAT */
-#define RTE_VOLT_BATT_PERIPHERAL                                            ADC2   /*!< Device name: ADC2 */
-#define RTE_VOLT_BATT_SIGNAL                                                  IN   /*!< ADC2 signal: IN */
-#define RTE_VOLT_BATT_CHANNEL                                                 6U   /*!< ADC2 IN channel: 6 */
 
 /* GPIO_AD_B1_00 (coord J11), MOTOR_IL */
-#define RTE_MOTOR_IL_PERIPHERAL                                             ADC1   /*!< Device name: ADC1 */
-#define RTE_MOTOR_IL_SIGNAL                                                   IN   /*!< ADC1 signal: IN */
-#define RTE_MOTOR_IL_CHANNEL                                                  5U   /*!< ADC1 IN channel: 5 */
 
 /* GPIO_AD_B0_15 (coord L10), SERVO_IB */
-#define RTE_SERVO_IB_PERIPHERAL                                             ADC1   /*!< Device name: ADC1 */
-#define RTE_SERVO_IB_SIGNAL                                                   IN   /*!< ADC1 signal: IN */
-#define RTE_SERVO_IB_CHANNEL                                                  4U   /*!< ADC1 IN channel: 4 */
 
 /* GPIO_AD_B0_14 (coord H14), SERVO_IF */
-#define RTE_SERVO_IF_PERIPHERAL                                             ADC1   /*!< Device name: ADC1 */
-#define RTE_SERVO_IF_SIGNAL                                                   IN   /*!< ADC1 signal: IN */
-#define RTE_SERVO_IF_CHANNEL                                                  3U   /*!< ADC1 IN channel: 3 */
 
 /* GPIO_AD_B0_12 (coord K14), UART1_TX */
-#define RTE_UART1_TX_PERIPHERAL                                          LPUART1   /*!< Device name: LPUART1 */
-#define RTE_UART1_TX_SIGNAL                                                   TX   /*!< LPUART1 signal: TX */
 
 /* GPIO_AD_B0_13 (coord L14), UART1_RX */
-#define RTE_UART1_RX_PERIPHERAL                                          LPUART1   /*!< Device name: LPUART1 */
-#define RTE_UART1_RX_SIGNAL                                                   RX   /*!< LPUART1 signal: RX */
 
 /* GPIO_AD_B0_07 (coord F12), SWCLK */
-#define RTE_SWCLK_PERIPHERAL                                                JTAG   /*!< Device name: JTAG */
-#define RTE_SWCLK_SIGNAL                                                     TCK   /*!< JTAG signal: TCK */
 
 /* GPIO_AD_B0_06 (coord E14), SWDIO */
-#define RTE_SWDIO_PERIPHERAL                                                JTAG   /*!< Device name: JTAG */
-#define RTE_SWDIO_SIGNAL                                                     TMS   /*!< JTAG signal: TMS */
 
 /* GPIO_AD_B0_05 (coord G14), BOOT_SEL1 */
-#define RTE_BOOT_SEL1_PERIPHERAL                                             SRC   /*!< Device name: SRC */
-#define RTE_BOOT_SEL1_SIGNAL                                           BOOT_MODE   /*!< SRC signal: BOOT_MODE */
-#define RTE_BOOT_SEL1_CHANNEL                                                 1U   /*!< SRC BOOT_MODE channel: 1 */
 
 /* GPIO_AD_B0_04 (coord F11), BOOT_SEL0 */
-#define RTE_BOOT_SEL0_PERIPHERAL                                             SRC   /*!< Device name: SRC */
-#define RTE_BOOT_SEL0_SIGNAL                                           BOOT_MODE   /*!< SRC signal: BOOT_MODE */
-#define RTE_BOOT_SEL0_CHANNEL                                                 0U   /*!< SRC BOOT_MODE channel: 0 */
 
 /* GPIO_AD_B0_08 (coord F13), ENC_LA */
-#define RTE_ENC_LA_PERIPHERAL                                               ENC1   /*!< Device name: ENC1 */
-#define RTE_ENC_LA_SIGNAL                                                  PHASE   /*!< ENC1 signal: PHASE */
-#define RTE_ENC_LA_CHANNEL                                                     A   /*!< ENC1 PHASE channel: A */
 
 /* GPIO_AD_B0_09 (coord F14), ENC_LB */
-#define RTE_ENC_LB_PERIPHERAL                                               ENC1   /*!< Device name: ENC1 */
-#define RTE_ENC_LB_SIGNAL                                                  PHASE   /*!< ENC1 signal: PHASE */
-#define RTE_ENC_LB_CHANNEL                                                     B   /*!< ENC1 PHASE channel: B */
 
 /* GPIO_AD_B0_11 (coord G10), ENCO_RA */
-#define RTE_ENC_RA_PERIPHERAL                                               ENC2   /*!< Device name: ENC2 */
-#define RTE_ENC_RA_SIGNAL                                                  PHASE   /*!< ENC2 signal: PHASE */
-#define RTE_ENC_RA_CHANNEL                                                     A   /*!< ENC2 PHASE channel: A */
 
 /* GPIO_AD_B0_10 (coord G13), ENC_RB */
-#define RTE_ENC_RB_PERIPHERAL                                               ENC2   /*!< Device name: ENC2 */
-#define RTE_ENC_RB_SIGNAL                                                  PHASE   /*!< ENC2 signal: PHASE */
-#define RTE_ENC_RB_CHANNEL                                                     B   /*!< ENC2 PHASE channel: B */
 
 /* GPIO_AD_B0_03 (coord G11), LED_USR */
-#define RTE_LED_USR_GPIO                                                   GPIO1   /*!< GPIO device name: GPIO1 */
-#define RTE_LED_USR_PORT                                                   GPIO1   /*!< PORT device name: GPIO1 */
-#define RTE_LED_USR_PIN                                                       3U   /*!< GPIO1 pin index: 3 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_LED_USR_GPIO                                                   GPIO1   /*!< GPIO peripheral base pointer */
+#define RTE_LED_USR_GPIO_PIN                                                  3U   /*!< GPIO pin number */
+#define RTE_LED_USR_GPIO_PIN_MASK                                     (1U << 3U)   /*!< GPIO pin mask */
 
 /* GPIO_AD_B0_02 (coord M11), LED_BUSG */
-#define RTE_LED_BUSG_GPIO                                                  GPIO1   /*!< GPIO device name: GPIO1 */
-#define RTE_LED_BUSG_PORT                                                  GPIO1   /*!< PORT device name: GPIO1 */
-#define RTE_LED_BUSG_PIN                                                      2U   /*!< GPIO1 pin index: 2 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_LED_BUSG_GPIO                                                  GPIO1   /*!< GPIO peripheral base pointer */
+#define RTE_LED_BUSG_GPIO_PIN                                                 2U   /*!< GPIO pin number */
+#define RTE_LED_BUSG_GPIO_PIN_MASK                                    (1U << 2U)   /*!< GPIO pin mask */
 
 /* GPIO_AD_B0_01 (coord H10), KEY_BTUR */
-#define RTE_KEY_BTUS_GPIO                                                  GPIO1   /*!< GPIO device name: GPIO1 */
-#define RTE_KEY_BTUS_PORT                                                  GPIO1   /*!< PORT device name: GPIO1 */
-#define RTE_KEY_BTUS_PIN                                                      1U   /*!< GPIO1 pin index: 1 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_KEY_BTUS_GPIO                                                  GPIO1   /*!< GPIO peripheral base pointer */
+#define RTE_KEY_BTUS_GPIO_PIN                                                 1U   /*!< GPIO pin number */
+#define RTE_KEY_BTUS_GPIO_PIN_MASK                                    (1U << 1U)   /*!< GPIO pin mask */
 
 /* GPIO_AD_B0_00 (coord M14), LED_BUSR */
-#define RTE_LED_BUSR_GPIO                                                  GPIO1   /*!< GPIO device name: GPIO1 */
-#define RTE_LED_BUSR_PORT                                                  GPIO1   /*!< PORT device name: GPIO1 */
-#define RTE_LED_BUSR_PIN                                                      0U   /*!< GPIO1 pin index: 0 */
+
+/* Symbols to be used with GPIO driver */
+#define RTE_LED_BUSR_GPIO                                                  GPIO1   /*!< GPIO peripheral base pointer */
+#define RTE_LED_BUSR_GPIO_PIN                                                 0U   /*!< GPIO pin number */
+#define RTE_LED_BUSR_GPIO_PIN_MASK                                    (1U << 0U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_08 (coord B9), PWM2_A1 */
-#define RTE_PWM2_A1_PERIPHERAL                                              PWM2   /*!< Device name: PWM2 */
-#define RTE_PWM2_A1_SIGNAL                                                     A   /*!< PWM2 signal: A */
-#define RTE_PWM2_A1_CHANNEL                                                   1U   /*!< PWM2 A channel: 1 */
 
 /* GPIO_B1_00 (coord A11), MOTOR_FLT */
-#define RTE_MOTOR_FLT_PERIPHERAL                                            AOI1   /*!< Device name: AOI1 */
-#define RTE_MOTOR_FLT_SIGNAL                                                 OUT   /*!< AOI1 signal: OUT */
-#define RTE_MOTOR_FLT_CHANNEL                                                 0U   /*!< AOI1 OUT channel: 0 */
 
 /* GPIO_B1_03 (coord D11), SERVO_FLT */
-#define RTE_SERVO_FLT_PERIPHERAL                                            AOI1   /*!< Device name: AOI1 */
-#define RTE_SERVO_FLT_SIGNAL                                                 OUT   /*!< AOI1 signal: OUT */
-#define RTE_SERVO_FLT_CHANNEL                                                 1U   /*!< AOI1 OUT channel: 1 */
 
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
  *
  */
-void RTE(void);
+void RTEPIN_AllPin(void);
 
 
 /*!

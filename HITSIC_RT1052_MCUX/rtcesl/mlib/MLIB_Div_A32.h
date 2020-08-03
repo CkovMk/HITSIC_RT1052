@@ -1,9 +1,31 @@
 /*******************************************************************************
 *
  * Copyright (c) 2013 - 2016, Freescale Semiconductor, Inc.
- * Copyright 2016-2017 NXP
+ * Copyright 2016-2019 NXP
  *
- * SPDX-License-Identifier: BSD-3-Clause
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 * 
 *
 ****************************************************************************//*!
@@ -30,11 +52,16 @@ extern "C" {
 *******************************************************************************/  
 #define MLIB_Div_A32ss_Ci(f16Num, f16Denom)  MLIB_Div_A32ss_FCi(f16Num, f16Denom)
 #define MLIB_Div_A32ls_Ci(f32Num, f16Denom)  MLIB_Div_A32ls_FCi(f32Num, f16Denom)
+
 #define MLIB_Div_A32ll_Asm(f32Num, f32Denom) MLIB_Div_A32ll_FAsm(f32Num, f32Denom)
+#define MLIB_Div_A32ll_AsmRam(f32Num, f32Denom) MLIB_Div_A32ll_FAsmRam(f32Num, f32Denom)
 
 /*******************************************************************************
 * Exported function prototypes
 *******************************************************************************/
+RAM_FUNC_LIB 
+extern acc32_t MLIB_Div_A32ll_FAsmRam(frac32_t f32Num, frac32_t f32Denom);  
+
 extern acc32_t MLIB_Div_A32ll_FAsm(frac32_t f32Num, frac32_t f32Denom);  
 
 /***************************************************************************//*!
@@ -56,6 +83,7 @@ extern acc32_t MLIB_Div_A32ll_FAsm(frac32_t f32Num, frac32_t f32Denom);
 *           0x7FFF FFFF.
 *
 ****************************************************************************/  
+RAM_FUNC_LIB 
 static inline acc32_t MLIB_Div_A32ss_FCi(register frac16_t f16Num, register frac16_t f16Denom)
 {
     if (f16Denom == 0)
@@ -88,6 +116,7 @@ static inline acc32_t MLIB_Div_A32ss_FCi(register frac16_t f16Num, register frac
 *           0x7FFF FFFF.
 *
 ****************************************************************************/
+RAM_FUNC_LIB 
 static inline acc32_t MLIB_Div_A32ls_FCi(register frac32_t f32Num, register frac16_t f16Denom)
 {
     if (f16Denom == 0)

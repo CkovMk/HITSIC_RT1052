@@ -1,10 +1,31 @@
 /*******************************************************************************
 *
  * Copyright (c) 2013 - 2016, Freescale Semiconductor, Inc.
- * Copyright 2016-2017 NXP
+ * Copyright 2016-2019 NXP
  *
- * SPDX-License-Identifier: BSD-3-Clause
-* See the LICENSE file distributed for more details.
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 * 
 *
 ****************************************************************************//*!
@@ -28,9 +49,11 @@ extern "C" {
 /******************************************************************************
 * Macros 
 ******************************************************************************/
-#define AMCLIB_CtrlFluxWkng_FLT_C(fltIQErr, fltUQReq, fltUQLim, psCtrl)       \
-        AMCLIB_CtrlFluxWkng_FLT_FC(fltIQErr, fltUQReq, fltUQLim, psCtrl)                        
-#define AMCLIB_CtrlFluxWkngInit_FLT_Ci(fltInitVal, psCtrl)                    \
+#define AMCLIB_CtrlFluxWkng_FLT_C(fltIQErr, fltUQReq, fltUQLim, psCtrl)        \
+        AMCLIB_CtrlFluxWkng_FLT_FC(fltIQErr, fltUQReq, fltUQLim, psCtrl)                         
+#define AMCLIB_CtrlFluxWkng_FLT_CRam(fltIQErr, fltUQReq, fltUQLim, psCtrl)     \
+        AMCLIB_CtrlFluxWkng_FLT_FCRam(fltIQErr, fltUQReq, fltUQLim, psCtrl)       
+#define AMCLIB_CtrlFluxWkngInit_FLT_Ci(fltInitVal, psCtrl)                     \
         AMCLIB_CtrlFluxWkngInit_FLT_FCi(fltInitVal, psCtrl)   
 
 /******************************************************************************
@@ -47,7 +70,7 @@ typedef struct
     float_t fltUFWErr;        /* Required voltage error - calculated by algorithm */
     float_t fltFWErr;         /* Flux weakening error - calculated by algorithm */
     float_t fltIGainUgain;    /* Gain for proper float scaling: fltIGainUgain = IGain / Ugain, fltIGainUgain > 0 */
-    bool_t   *bStopIntegFlag; /* Flux weakening controller stop integration input flag 
+    bool_t  *pbStopIntegFlag; /* Flux weakening controller stop integration input flag 
                                  Set from application when saturation occurs */
 } AMCLIB_CTRL_FLUX_WKNG_T_FLT;
    
@@ -56,6 +79,9 @@ typedef struct
 ******************************************************************************/
 extern float_t AMCLIB_CtrlFluxWkng_FLT_FC(float_t fltIQErr, float_t fltUQReq, float_t fltUQLim,
                                           AMCLIB_CTRL_FLUX_WKNG_T_FLT *psCtrl);
+RAM_FUNC_LIB 
+extern float_t AMCLIB_CtrlFluxWkng_FLT_FCRam(float_t fltIQErr, float_t fltUQReq, float_t fltUQLim,
+                                             AMCLIB_CTRL_FLUX_WKNG_T_FLT *psCtrl);
 
 /***************************************************************************//*!
 *
@@ -70,15 +96,14 @@ extern float_t AMCLIB_CtrlFluxWkng_FLT_FC(float_t fltIQErr, float_t fltUQReq, fl
 *
 *  - PI controller with anti-wind-up protection initialization. 
 *  - Iq IIR filter initialization
-*  - bStopIntegFlag = FALSE
 *
 ****************************************************************************/
+RAM_FUNC_LIB 
 static inline void AMCLIB_CtrlFluxWkngInit_FLT_FCi(float_t fltInitVal,
                                                    AMCLIB_CTRL_FLUX_WKNG_T_FLT *psCtrl)
 {
     GFLIB_CtrlPIpAWInit_FLT(fltInitVal, &psCtrl->sFWPiParam);
-    GDFLIB_FilterIIR1Init_FLT (&psCtrl->sIqErrIIR1Param);           
-   
+    GDFLIB_FilterIIR1Init_FLT (&psCtrl->sIqErrIIR1Param);             
 }
 
 

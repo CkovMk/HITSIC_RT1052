@@ -1,9 +1,31 @@
 /*******************************************************************************
 *
  * Copyright (c) 2013 - 2016, Freescale Semiconductor, Inc.
- * Copyright 2016-2017 NXP
+ * Copyright 2016-2019 NXP
  *
- * SPDX-License-Identifier: BSD-3-Clause
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 * 
 *
 ****************************************************************************//*!
@@ -21,7 +43,6 @@ extern "C" {
 /*******************************************************************************
 * Includes
 *******************************************************************************/
-#include "gdflib_types.h"
 #include "mlib.h"
 
 /*******************************************************************************
@@ -38,7 +59,7 @@ extern "C" {
 typedef struct{
     frac32_t f32A;       /* is a filter constant <0; 1)assigned in form: 1-a */    
     frac32_t f32AccK_1;  /* filter accumulator value at step k-1 (last filter output)*/    
-}GDFLIB_FILTER_EXP_T_F32;
+} GDFLIB_FILTER_EXP_T_F32;
 
 /***************************************************************************//*!
 * @brief  The function initializes the actual values of FilterExp_F16.
@@ -47,10 +68,11 @@ typedef struct{
 *         ptr  GDFLIB_FILTER_EXP_T_F32 *psParam - pointer to filter structure 
 *
 *******************************************************************************/
+RAM_FUNC_LIB 
 static inline void GDFLIB_FilterExpInit_F16_FCi(frac16_t f16InitVal,
                                                 GDFLIB_FILTER_EXP_T_F32 *psParam)
 {
-    psParam->f32AccK_1 = ((frac32_t)f16InitVal) << 16; 
+    psParam->f32AccK_1 = MLIB_Conv_F32s(f16InitVal); 
 }
  
 /***************************************************************************//*!
@@ -83,6 +105,7 @@ static inline void GDFLIB_FilterExpInit_F16_FCi(frac16_t f16InitVal,
 * A    is the filter constant assign as 1-a from range (0; 1) (where a is exp. filter constant - smoothing constant).
 *
 ****************************************************************************/
+RAM_FUNC_LIB 
 static inline frac16_t GDFLIB_FilterExp_F16_FCi(frac16_t f16InX,
                                                 GDFLIB_FILTER_EXP_T_F32 *psParam)
 {
@@ -93,11 +116,11 @@ static inline frac16_t GDFLIB_FilterExp_F16_FCi(frac16_t f16InX,
     f32AccK_1 = psParam->f32AccK_1;
     
     /* Filter calculations  */ 
-    f32Temp = MLIB_SubSat_F32(((frac32_t)f16InX)<<16, f32AccK_1);  /* calculation x(k) - y(k-1) */
-    f32Temp = MLIB_MacSat_F32(f32AccK_1, psParam->f32A, f32Temp);  /* y(k-1) + A * (x(k) - y(k-1)) */
+    f32Temp = MLIB_SubSat_F32(MLIB_Conv_F32s(f16InX), f32AccK_1);  /* calculation x(k) - y(k-1) */
+    f32Temp = MLIB_MacRndSat_F32(f32AccK_1, psParam->f32A, f32Temp);  /* y(k-1) + A * (x(k) - y(k-1)) */
     psParam->f32AccK_1 = f32Temp;                                  /* store filter state value */
     
-    return((frac16_t)(f32Temp >> 16));
+    return(MLIB_RndSat_F16l(f32Temp));
 }
  
 #if defined(__cplusplus)
