@@ -398,7 +398,7 @@
                      <pin_features>
                         <pin_feature name="identifier" value="SPI4_SCK"/>
                         <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="drive_strength" value="R0_4"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="slew_rate" value="Fast"/>
                      </pin_features>
                   </pin>
@@ -406,21 +406,19 @@
                      <pin_features>
                         <pin_feature name="identifier" value="SPI4_SDO"/>
                         <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="drive_strength" value="R0_4"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="slew_rate" value="Fast"/>
                      </pin_features>
                   </pin>
                   <pin peripheral="GPIO2" signal="gpio_io, 01" pin_num="E7" pin_signal="GPIO_B0_01">
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="drive_strength" value="R0_4"/>
                         <pin_feature name="slew_rate" value="Fast"/>
                      </pin_features>
                   </pin>
                   <pin peripheral="GPIO2" signal="gpio_io, 00" pin_num="D7" pin_signal="GPIO_B0_00">
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="drive_strength" value="R0_4"/>
                         <pin_feature name="slew_rate" value="Fast"/>
                      </pin_features>
                   </pin>
@@ -1060,10 +1058,10 @@
                   <clock_output id="CKIL_SYNC_CLK_ROOT.outFreq" value="32.768 kHz" locked="false" accuracy=""/>
                   <clock_output id="CLK_1M.outFreq" value="1 MHz" locked="false" accuracy=""/>
                   <clock_output id="CLK_24M.outFreq" value="24 MHz" locked="false" accuracy=""/>
-                  <clock_output id="CSI_CLK_ROOT.outFreq" value="80 MHz" locked="false" accuracy=""/>
+                  <clock_output id="CSI_CLK_ROOT.outFreq" value="24 MHz" locked="false" accuracy=""/>
                   <clock_output id="FLEXIO1_CLK_ROOT.outFreq" value="120 MHz" locked="false" accuracy=""/>
                   <clock_output id="FLEXIO2_CLK_ROOT.outFreq" value="120 MHz" locked="false" accuracy=""/>
-                  <clock_output id="FLEXSPI_CLK_ROOT.outFreq" value="320 MHz" locked="false" accuracy=""/>
+                  <clock_output id="FLEXSPI_CLK_ROOT.outFreq" value="2160/17 MHz" locked="false" accuracy=""/>
                   <clock_output id="GPT1_ipg_clk_highfreq.outFreq" value="75 MHz" locked="false" accuracy=""/>
                   <clock_output id="GPT2_ipg_clk_highfreq.outFreq" value="75 MHz" locked="false" accuracy=""/>
                   <clock_output id="IPG_CLK_ROOT.outFreq" value="150 MHz" locked="false" accuracy=""/>
@@ -1085,13 +1083,13 @@
                   <setting id="CCM.ARM_PODF.scale" value="2" locked="true"/>
                   <setting id="CCM.CAN_CLK_PODF.scale" value="1" locked="true"/>
                   <setting id="CCM.CAN_CLK_SEL.sel" value="CCM.PLL3_SW_60M_CLK_DIV" locked="false"/>
-                  <setting id="CCM.CSI_CLK_SEL.sel" value="CCM_ANALOG.PLL3_PFD1_CLK" locked="false"/>
-                  <setting id="CCM.CSI_PODF.scale" value="6" locked="true"/>
+                  <setting id="CCM.CSI_CLK_SEL.sel" value="CCM.PLL3_SW_120M_CLK_DIV" locked="false"/>
+                  <setting id="CCM.CSI_PODF.scale" value="5" locked="true"/>
                   <setting id="CCM.FLEXIO1_CLK_PODF.scale" value="1" locked="true"/>
                   <setting id="CCM.FLEXIO1_CLK_PRED.scale" value="4" locked="true"/>
                   <setting id="CCM.FLEXIO2_CLK_PODF.scale" value="1" locked="true"/>
                   <setting id="CCM.FLEXIO2_CLK_PRED.scale" value="4" locked="true"/>
-                  <setting id="CCM.FLEXSPI_PODF.scale" value="1" locked="true"/>
+                  <setting id="CCM.FLEXSPI_PODF.scale" value="4" locked="true"/>
                   <setting id="CCM.FLEXSPI_SEL.sel" value="CCM_ANALOG.PLL3_PFD0_CLK" locked="false"/>
                   <setting id="CCM.IPG_PODF.scale" value="4" locked="true"/>
                   <setting id="CCM.LCDIF_PRED.scale" value="2" locked="true"/>
@@ -1123,15 +1121,20 @@
                   <setting id="CCM_ANALOG.PLL2_PFD3_BYPASS.sel" value="CCM_ANALOG.PLL2_PFD3" locked="false"/>
                   <setting id="CCM_ANALOG.PLL3_BYPASS.sel" value="CCM_ANALOG.PLL3" locked="false"/>
                   <setting id="CCM_ANALOG.PLL3_PFD0_BYPASS.sel" value="CCM_ANALOG.PLL3_PFD0" locked="false"/>
-                  <setting id="CCM_ANALOG.PLL3_PFD0_DIV.scale" value="27" locked="true"/>
+                  <setting id="CCM_ANALOG.PLL3_PFD0_DIV.scale" value="17" locked="true"/>
                   <setting id="CCM_ANALOG.PLL3_PFD0_MUL.scale" value="18" locked="true"/>
                   <setting id="CCM_ANALOG.PLL3_PFD1_BYPASS.sel" value="CCM_ANALOG.PLL3_PFD1" locked="false"/>
                   <setting id="CCM_ANALOG.PLL3_PFD1_DIV.scale" value="18" locked="true"/>
                   <setting id="CCM_ANALOG.PLL3_PFD1_MUL.scale" value="18" locked="true"/>
                   <setting id="CCM_ANALOG.PLL3_PFD2_BYPASS.sel" value="CCM_ANALOG.PLL3_PFD2" locked="false"/>
+                  <setting id="CCM_ANALOG.PLL3_PFD2_DIV.scale" value="18" locked="true"/>
+                  <setting id="CCM_ANALOG.PLL3_PFD2_MUL.scale" value="18" locked="true"/>
                   <setting id="CCM_ANALOG.PLL3_PFD3_BYPASS.sel" value="CCM_ANALOG.PLL3_PFD3" locked="false"/>
+                  <setting id="CCM_ANALOG.PLL3_PFD3_DIV.scale" value="18" locked="true"/>
+                  <setting id="CCM_ANALOG.PLL3_PFD3_MUL.scale" value="18" locked="true"/>
                   <setting id="CCM_ANALOG.PLL6_BYPASS_CLK_SRC.sel" value="CCM_ANALOG.CLK1" locked="false"/>
                   <setting id="CCM_ANALOG_PFD_480_PFD2_CLKGATE_CFG" value="Disabled" locked="false"/>
+                  <setting id="CCM_ANALOG_PFD_480_PFD3_CLKGATE_CFG" value="Disabled" locked="false"/>
                   <setting id="CCM_ANALOG_PLL_ENET_POWERDOWN_CFG" value="Yes" locked="false"/>
                   <setting id="CCM_ANALOG_PLL_USB1_EN_USB_CLKS_CFG" value="Enabled" locked="false"/>
                   <setting id="CCM_ANALOG_PLL_USB1_EN_USB_CLKS_OUT_CFG" value="Enabled" locked="false"/>
@@ -1435,10 +1438,21 @@
                   <data type="Version">2.2.4</data>
                </feature>
             </dependency>
+            <dependency resourceType="SWComponent" resourceId="middleware.fatfs" description="工具链/IDE工程中未找到FAT File System stack。工程不会被编译！" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="middleware.fatfs" description="工具链/IDE工程不支持FAT File System stack版本。所需值: ${required_value}, 实际值: ${actual_value}. 工程可能没有被正确编译。" problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="equivalent">
+                  <data type="Version">0.14.0</data>
+               </feature>
+            </dependency>
          </dependencies>
          <generated_project_files>
             <file path="board/peripherals.c" update_enabled="true"/>
             <file path="board/peripherals.h" update_enabled="true"/>
+            <file path="source/ffconf.h" update_enabled="true"/>
          </generated_project_files>
          <peripherals_profile>
             <processor_version>8.0.1</processor_version>
@@ -1625,6 +1639,11 @@
                   </dependency>
                   <dependency resourceType="PeripheralUnifiedSignal" resourceId="LPUART5.uart_rx" description="Signal RX of the peripheral LPUART5 is not routed." problem_level="1" source="Peripherals:RTEPIP_AllPip">
                      <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="middleware.fatfs.sd" description="The fsl_sd_disk driver is missing in the project (required for FATFS)." problem_level="1" source="Peripherals:RTEPIP_AllPip">
+                     <feature name="enabled" evaluation="equal">
                         <data type="Boolean">true</data>
                      </feature>
                   </dependency>
@@ -1932,9 +1951,9 @@
                      <config_set name="fsl_csi">
                         <struct name="clockConfig">
                            <setting name="clockSource" value="BusInterfaceClock"/>
-                           <setting name="clockSourceFreq" value="sysclk_run"/>
+                           <setting name="clockSourceFreq" value="RTECLK_Run600M"/>
                            <setting name="masterClockSource" value="CsiClock"/>
-                           <setting name="masterClockSourceFreq" value="sysclk_run"/>
+                           <setting name="masterClockSourceFreq" value="RTECLK_Run600M"/>
                         </struct>
                         <struct name="config">
                            <setting name="format" value="RGB888"/>
@@ -1987,7 +2006,7 @@
                         <struct name="config">
                            <struct name="clockConfig_t">
                               <setting name="clockSource" value="BusInterfaceClock"/>
-                              <setting name="clockSourceFreq" value="sysclk_run"/>
+                              <setting name="clockSourceFreq" value="RTECLK_Run600M"/>
                            </struct>
                            <setting name="decoderWorkMode" value="kENC_DecoderWorkAsNormalMode"/>
                            <setting name="enableReverseDirection" value="false"/>
@@ -2034,7 +2053,7 @@
                         <struct name="config">
                            <struct name="clockConfig_t">
                               <setting name="clockSource" value="BusInterfaceClock"/>
-                              <setting name="clockSourceFreq" value="sysclk_run"/>
+                              <setting name="clockSourceFreq" value="RTECLK_Run600M"/>
                            </struct>
                            <setting name="decoderWorkMode" value="kENC_DecoderWorkAsNormalMode"/>
                            <setting name="enableReverseDirection" value="false"/>
@@ -2209,7 +2228,7 @@
                   <instance name="I2C_1" uuid="6377f454-63f7-46f0-b5db-0b9885a57b89" type="lpi2c" type_id="lpi2c_db68d4f4f06a22e25ab51fe9bd6db4d2" mode="master" peripheral="LPI2C1" enabled="true" comment="" custom_name_enabled="true">
                      <config_set name="main" quick_selection="qs_interrupt">
                         <setting name="clockSource" value="Lpi2cClock"/>
-                        <setting name="clockSourceFreq" value="sysclk_run"/>
+                        <setting name="clockSourceFreq" value="RTECLK_Run600M"/>
                         <struct name="interrupt">
                            <setting name="IRQn" value="LPI2C1_IRQn"/>
                            <setting name="enable_interrrupt" value="enabled"/>
@@ -2245,7 +2264,7 @@
                   <instance name="I2C_2" uuid="da026bd7-2066-4857-be52-31c53f5a3066" type="lpi2c" type_id="lpi2c_db68d4f4f06a22e25ab51fe9bd6db4d2" mode="master" peripheral="LPI2C2" enabled="true" comment="" custom_name_enabled="true">
                      <config_set name="main" quick_selection="qs_interrupt">
                         <setting name="clockSource" value="Lpi2cClock"/>
-                        <setting name="clockSourceFreq" value="sysclk_run"/>
+                        <setting name="clockSourceFreq" value="RTECLK_Run600M"/>
                         <struct name="interrupt">
                            <setting name="IRQn" value="LPI2C2_IRQn"/>
                            <setting name="enable_interrrupt" value="enabled"/>
@@ -2292,7 +2311,7 @@
                         </struct>
                         <struct name="timingConfig">
                            <setting name="clockSource" value="BusInterfaceClock"/>
-                           <setting name="clockSourceFreq" value="sysclk_run"/>
+                           <setting name="clockSourceFreq" value="RTECLK_Run600M"/>
                         </struct>
                         <array name="channels">
                            <struct name="0">
@@ -2326,9 +2345,9 @@
                      <config_set name="main">
                         <setting name="mode" value="kLPSPI_Master"/>
                         <setting name="clockSource" value="LpspiClock"/>
-                        <setting name="clockSourceFreq" value="sysclk_run"/>
+                        <setting name="clockSourceFreq" value="RTECLK_Run600M"/>
                         <struct name="master">
-                           <setting name="baudRate" value="10000000"/>
+                           <setting name="baudRate" value="1000000"/>
                            <setting name="bitsPerFrame" value="8"/>
                            <setting name="cpol" value="kLPSPI_ClockPolarityActiveHigh"/>
                            <setting name="cpha" value="kLPSPI_ClockPhaseFirstEdge"/>
@@ -2352,7 +2371,7 @@
                      <config_set name="lpuartConfig_t" quick_selection="QuickSelection1">
                         <struct name="lpuartConfig">
                            <setting name="clockSource" value="LpuartClock"/>
-                           <setting name="lpuartSrcClkFreq" value="sysclk_run"/>
+                           <setting name="lpuartSrcClkFreq" value="RTECLK_Run600M"/>
                            <setting name="baudRate_Bps" value="115200"/>
                            <setting name="parityMode" value="kLPUART_ParityDisabled"/>
                            <setting name="dataBitsCount" value="kLPUART_EightDataBits"/>
@@ -2375,7 +2394,7 @@
                      <config_set name="lpuartConfig_t" quick_selection="QuickSelection1">
                         <struct name="lpuartConfig">
                            <setting name="clockSource" value="LpuartClock"/>
-                           <setting name="lpuartSrcClkFreq" value="sysclk_run"/>
+                           <setting name="lpuartSrcClkFreq" value="RTECLK_Run600M"/>
                            <setting name="baudRate_Bps" value="115200"/>
                            <setting name="parityMode" value="kLPUART_ParityDisabled"/>
                            <setting name="dataBitsCount" value="kLPUART_EightDataBits"/>
@@ -2398,7 +2417,7 @@
                      <config_set name="lpuartConfig_t" quick_selection="QuickSelection1">
                         <struct name="lpuartConfig">
                            <setting name="clockSource" value="LpuartClock"/>
-                           <setting name="lpuartSrcClkFreq" value="sysclk_run"/>
+                           <setting name="lpuartSrcClkFreq" value="RTECLK_Run600M"/>
                            <setting name="baudRate_Bps" value="115200"/>
                            <setting name="parityMode" value="kLPUART_ParityDisabled"/>
                            <setting name="dataBitsCount" value="kLPUART_EightDataBits"/>
@@ -2415,6 +2434,106 @@
                            <setting name="enableTx" value="true"/>
                            <setting name="enableRx" value="true"/>
                         </struct>
+                     </config_set>
+                  </instance>
+                  <instance name="FATFS" uuid="eddfc8c7-e95a-4d46-8916-e9d24d4cf548" type="fatfs" type_id="fatfs_2f85acf758668258920f70258052a088" mode="general" enabled="true" comment="" custom_name_enabled="false">
+                     <config_set name="init_config">
+                        <struct name="initConfig">
+                           <setting name="initPartitionsStr" value="false"/>
+                           <array name="multiplePartitions">
+                              <struct name="0">
+                                 <setting name="Volume" value="0"/>
+                                 <setting name="Partition" value="autoDetect"/>
+                              </struct>
+                              <struct name="1">
+                                 <setting name="Volume" value="0"/>
+                                 <setting name="Partition" value="autoDetect"/>
+                              </struct>
+                           </array>
+                           <setting name="enablePhysicalLayerInit" value="false"/>
+                           <struct name="diskConfig">
+                              <setting name="initFunctionID" value="FATFS_DiskInit"/>
+                           </struct>
+                           <setting name="initResultObject" value="false"/>
+                           <setting name="resultName" value="FATFS_Result"/>
+                           <array name="fatfsObjects">
+                              <struct name="0">
+                                 <setting name="objID" value="FATFS_System_0"/>
+                                 <setting name="diskMount" value="false"/>
+                                 <setting name="mountPath" value="0:"/>
+                                 <setting name="mountInitOpt" value="false"/>
+                              </struct>
+                           </array>
+                           <array name="filObjects"/>
+                           <array name="filInfoObjects"/>
+                           <array name="dirObjects">
+                              <struct name="0">
+                                 <setting name="objID" value="FATFS_SDCARD"/>
+                              </struct>
+                           </array>
+                        </struct>
+                     </config_set>
+                     <config_set name="ff_config">
+                        <setting name="revisionID" value="rev14_1"/>
+                        <setting name="MSDKadaptation" value="SD_DISK_ENABLE"/>
+                        <struct name="functionConfig">
+                           <setting name="FF_FS_READONLY" value="false"/>
+                           <setting name="FF_FS_MINIMIZE" value="level1"/>
+                           <setting name="FF_USE_STRFUNC" value="enableWithoutConversion"/>
+                           <setting name="FF_USE_FIND" value="disableDirRead"/>
+                           <setting name="FF_USE_MKFS" value="true"/>
+                           <setting name="FF_USE_FASTSEEK" value="true"/>
+                           <setting name="FF_USE_EXPAND" value="true"/>
+                           <setting name="FF_USE_CHMOD" value="true"/>
+                           <setting name="FF_USE_LABEL" value="true"/>
+                           <setting name="FF_USE_FORWARD" value="true"/>
+                        </struct>
+                        <struct name="namespaceConfig">
+                           <setting name="FF_USE_LFN" value="enableLfnHeap"/>
+                           <setting name="FF_MAX_LFN" value="255"/>
+                           <setting name="FF_LFN_BUF" value="LFNID"/>
+                           <setting name="FF_SFN_BUF" value="SFNID"/>
+                           <setting name="FF_LFN_UNICODE" value="UTF8"/>
+                           <setting name="FF_STRF_ENCODE" value="UTF8"/>
+                           <setting name="FF_CODE_PAGE" value="cpUS"/>
+                           <setting name="FF_FS_RPATH" value="enableRP2"/>
+                        </struct>
+                        <struct name="driveConfig">
+                           <setting name="FF_VOLUMES" value="1"/>
+                           <setting name="FF_STR_VOLUME_ID" value="stringIdWindows"/>
+                           <array name="volumes">
+                              <struct name="0">
+                                 <setting name="volumeStr" value="SDCARD"/>
+                              </struct>
+                           </array>
+                           <setting name="FF_MULTI_PARTITION" value="false"/>
+                           <setting name="FF_MIN_SS" value="value512"/>
+                           <setting name="FF_MAX_SS" value="value512"/>
+                           <setting name="FF_LBA64" value="false"/>
+                           <setting name="FF_MIN_GPT" value="0x100000000"/>
+                           <setting name="FF_USE_TRIM" value="false"/>
+                        </struct>
+                        <struct name="systemConfig">
+                           <setting name="FF_FS_TINY" value="false"/>
+                           <setting name="FF_FS_EXFAT" value="true"/>
+                           <setting name="FF_FS_NORTC" value="true"/>
+                           <setting name="FF_NORTC_MON" value="1"/>
+                           <setting name="FF_NORTC_MDAY" value="1"/>
+                           <setting name="FF_NORTC_YEAR" value="2020"/>
+                           <set name="FF_FS_NOFSINFO">
+                              <selected>
+                                 <id>bit0</id>
+                                 <id>bit1</id>
+                              </selected>
+                           </set>
+                           <setting name="FF_FS_LOCK" value="0"/>
+                           <setting name="FF_FS_REENTRANT" value="false"/>
+                           <setting name="FF_FS_TIMEOUT" value="1000"/>
+                           <setting name="FF_SYNC_t" value="HANDLE"/>
+                           <setting name="includeOS" value="false"/>
+                           <setting name="headerFileName" value="somertos.h"/>
+                        </struct>
+                        <struct name="fatfs_codegenerator"/>
                      </config_set>
                   </instance>
                </instances>

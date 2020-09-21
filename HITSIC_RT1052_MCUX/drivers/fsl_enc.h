@@ -25,13 +25,12 @@
  */
 enum _enc_interrupt_enable
 {
-    kENC_HOMETransitionInterruptEnable  = (1U << 0U), /*!< HOME interrupt enable. */
-    kENC_INDEXPulseInterruptEnable      = (1U << 1U), /*!< INDEX pulse interrupt enable. */
+    kENC_HOMETransitionInterruptEnable = (1U << 0U), /*!< HOME interrupt enable. */
+    kENC_INDEXPulseInterruptEnable = (1U << 1U), /*!< INDEX pulse interrupt enable. */
     kENC_WatchdogTimeoutInterruptEnable = (1U << 2U), /*!< Watchdog timeout interrupt enable. */
-    kENC_PositionCompareInerruptEnable  = (1U << 3U), /*!< Position compare interrupt enable. */
-    kENC_SimultBothPhaseChangeInterruptEnable =
-        (1U << 4U),                                     /*!< Simultaneous PHASEA and PHASEB change interrupt enable. */
-    kENC_PositionRollOverInterruptEnable  = (1U << 5U), /*!< Roll-over interrupt enable. */
+    kENC_PositionCompareInerruptEnable = (1U << 3U), /*!< Position compare interrupt enable. */
+    kENC_SimultBothPhaseChangeInterruptEnable = (1U << 4U), /*!< Simultaneous PHASEA and PHASEB change interrupt enable. */
+    kENC_PositionRollOverInterruptEnable = (1U << 5U), /*!< Roll-over interrupt enable. */
     kENC_PositionRollUnderInterruptEnable = (1U << 6U), /*!< Roll-under interrupt enable. */
 };
 
@@ -42,14 +41,14 @@ enum _enc_interrupt_enable
  */
 enum _enc_status_flags
 {
-    kENC_HOMETransitionFlag        = (1U << 0U), /*!< HOME signal transition interrupt request. */
-    kENC_INDEXPulseFlag            = (1U << 1U), /*!< INDEX Pulse Interrupt Request. */
-    kENC_WatchdogTimeoutFlag       = (1U << 2U), /*!< Watchdog timeout interrupt request. */
-    kENC_PositionCompareFlag       = (1U << 3U), /*!< Position compare interrupt request. */
+    kENC_HOMETransitionFlag = (1U << 0U), /*!< HOME signal transition interrupt request. */
+    kENC_INDEXPulseFlag = (1U << 1U), /*!< INDEX Pulse Interrupt Request. */
+    kENC_WatchdogTimeoutFlag = (1U << 2U), /*!< Watchdog timeout interrupt request. */
+    kENC_PositionCompareFlag = (1U << 3U), /*!< Position compare interrupt request. */
     kENC_SimultBothPhaseChangeFlag = (1U << 4U), /*!< Simultaneous PHASEA and PHASEB change interrupt request. */
-    kENC_PositionRollOverFlag      = (1U << 5U), /*!< Roll-over interrupt request. */
-    kENC_PositionRollUnderFlag     = (1U << 6U), /*!< Roll-under interrupt request. */
-    kENC_LastCountDirectionFlag    = (1U << 7U), /*!< Last count was in the up direction, or the down direction. */
+    kENC_PositionRollOverFlag = (1U << 5U), /*!< Roll-over interrupt request. */
+    kENC_PositionRollUnderFlag = (1U << 6U), /*!< Roll-under interrupt request. */
+    kENC_LastCountDirectionFlag = (1U << 7U), /*!< Last count was in the up direction, or the down direction. */
 };
 
 /*!
@@ -59,14 +58,14 @@ enum _enc_status_flags
  */
 enum _enc_signal_status_flags
 {
-    kENC_RawHOMEStatusFlag       = ENC_IMR_HOME_MASK,  /*!< Raw HOME input. */
-    kENC_RawINDEXStatusFlag      = ENC_IMR_INDEX_MASK, /*!< Raw INDEX input. */
-    kENC_RawPHBStatusFlag        = ENC_IMR_PHB_MASK,   /*!< Raw PHASEB input. */
-    kENC_RawPHAEXStatusFlag      = ENC_IMR_PHA_MASK,   /*!< Raw PHASEA input. */
-    kENC_FilteredHOMEStatusFlag  = ENC_IMR_FHOM_MASK,  /*!< The filtered version of HOME input. */
-    kENC_FilteredINDEXStatusFlag = ENC_IMR_FIND_MASK,  /*!< The filtered version of INDEX input. */
-    kENC_FilteredPHBStatusFlag   = ENC_IMR_FPHB_MASK,  /*!< The filtered version of PHASEB input. */
-    kENC_FilteredPHAStatusFlag   = ENC_IMR_FPHA_MASK,  /*!< The filtered version of PHASEA input. */
+    kENC_RawHOMEStatusFlag = ENC_IMR_HOME_MASK, /*!< Raw HOME input. */
+    kENC_RawINDEXStatusFlag = ENC_IMR_INDEX_MASK, /*!< Raw INDEX input. */
+    kENC_RawPHBStatusFlag = ENC_IMR_PHB_MASK, /*!< Raw PHASEB input. */
+    kENC_RawPHAEXStatusFlag = ENC_IMR_PHA_MASK, /*!< Raw PHASEA input. */
+    kENC_FilteredHOMEStatusFlag = ENC_IMR_FHOM_MASK, /*!< The filtered version of HOME input. */
+    kENC_FilteredINDEXStatusFlag = ENC_IMR_FIND_MASK, /*!< The filtered version of INDEX input. */
+    kENC_FilteredPHBStatusFlag = ENC_IMR_FPHB_MASK, /*!< The filtered version of PHASEB input. */
+    kENC_FilteredPHAStatusFlag = ENC_IMR_FPHA_MASK, /*!< The filtered version of PHASEA input. */
 };
 
 /*!
@@ -77,7 +76,7 @@ enum _enc_signal_status_flags
 typedef enum _enc_home_trigger_mode
 {
     kENC_HOMETriggerDisabled = 0U, /*!< HOME signal's trigger is disabled. */
-    kENC_HOMETriggerOnRisingEdge,  /*!< Use positive going edge-to-trigger initialization of position counters. */
+    kENC_HOMETriggerOnRisingEdge, /*!< Use positive going edge-to-trigger initialization of position counters. */
     kENC_HOMETriggerOnFallingEdge, /*!< Use negative going edge-to-trigger initialization of position counters. */
 } enc_home_trigger_mode_t;
 
@@ -89,7 +88,7 @@ typedef enum _enc_home_trigger_mode
 typedef enum _enc_index_trigger_mode
 {
     kENC_INDEXTriggerDisabled = 0U, /*!< INDEX signal's trigger is disabled. */
-    kENC_INDEXTriggerOnRisingEdge,  /*!< Use positive going edge-to-trigger initialization of position counters. */
+    kENC_INDEXTriggerOnRisingEdge, /*!< Use positive going edge-to-trigger initialization of position counters. */
     kENC_INDEXTriggerOnFallingEdge, /*!< Use negative going edge-to-trigger initialization of position counters. */
 } enc_index_trigger_mode_t;
 
@@ -103,9 +102,9 @@ typedef enum _enc_index_trigger_mode
  */
 typedef enum _enc_decoder_work_mode
 {
-    kENC_DecoderWorkAsNormalMode = 0U,      /*!< Use standard quadrature decoder with PHASEA and PHASEB. */
+    kENC_DecoderWorkAsNormalMode = 0U, /*!< Use standard quadrature decoder with PHASEA and PHASEB. */
     kENC_DecoderWorkAsSignalPhaseCountMode, /*!< PHASEA input generates a count signal while PHASEB input control the
-                                               direction. */
+     direction. */
 } enc_decoder_work_mode_t;
 
 /*!
@@ -114,7 +113,7 @@ typedef enum _enc_decoder_work_mode
 typedef enum _enc_position_match_mode
 {
     kENC_POSMATCHOnPositionCounterEqualToComapreValue = 0U, /*!< POSMATCH pulses when a match occurs between the
-                                                               position counters (POS) and the compare value (COMP). */
+     position counters (POS) and the compare value (COMP). */
     kENC_POSMATCHOnReadingAnyPositionCounter, /*!< POSMATCH pulses when any position counter register is read. */
 } enc_position_match_mode_t;
 
@@ -125,7 +124,7 @@ typedef enum _enc_revolution_count_condition
 {
     kENC_RevolutionCountOnINDEXPulse = 0U, /*!< Use INDEX pulse to increment/decrement revolution counter. */
     kENC_RevolutionCountOnRollOverModulus, /*!< Use modulus counting roll-over/under to increment/decrement revolution
-                                              counter. */
+     counter. */
 } enc_revolution_count_condition_t;
 
 /*!
@@ -134,7 +133,7 @@ typedef enum _enc_revolution_count_condition
 typedef enum _enc_self_test_direction
 {
     kENC_SelfTestDirectionPositive = 0U, /*!< Self test generates the signal in positive direction. */
-    kENC_SelfTestDirectionNegative,      /*!< Self test generates the signal in negative direction. */
+    kENC_SelfTestDirectionNegative, /*!< Self test generates the signal in negative direction. */
 } enc_self_test_direction_t;
 
 /*!
@@ -142,44 +141,36 @@ typedef enum _enc_self_test_direction
  */
 typedef struct _enc_config
 {
-    /* Basic counter. */
-    bool enableReverseDirection;             /*!< Enable reverse direction counting. */
     enc_decoder_work_mode_t decoderWorkMode; /*!< Enable signal phase count mode. */
-
-    /* Signal detection. */
-    enc_home_trigger_mode_t HOMETriggerMode;   /*!< Enable HOME to initialize position counters. */
+    bool enableReverseDirection; /*!< Enable reverse direction counting. */
+    enc_home_trigger_mode_t HOMETriggerMode; /*!< Enable HOME to initialize position counters. */
     enc_index_trigger_mode_t INDEXTriggerMode; /*!< Enable INDEX to initialize position counters. */
-    bool enableTRIGGERClearPositionCounter;    /*!< Clear POSD, REV, UPOS and LPOS on rising edge of TRIGGER, or not. */
+    uint32_t positionInitialValue; /*!< Position initial value. The available value is a 32-bit number. */
+
+    bool enableTRIGGERClearPositionCounter; /*!< Clear POSD, REV, UPOS and LPOS on rising edge of TRIGGER, or not. */
     bool enableTRIGGERClearHoldPositionCounter; /*!< Enable update of hold registers on rising edge of TRIGGER, or not.
-                                                 */
-
+     */
+    enc_position_match_mode_t positionMatchMode; /*!< The condition of POSMATCH pulses. */
+    uint32_t positionCompareValue; /*!< Position compare value. The available value is a 32-bit number.*/
+    enc_revolution_count_condition_t revolutionCountCondition; /*!< Revolution Counter Modulus Enable. */
+    bool enableModuloCountMode; /*!< Enable Modulo Counting. */
+    uint32_t positionModulusValue; /*!< Position modulus value. This value would be available only when
+     "enableModuloCountMode" = true. The available value is a 32-bit number. */
     /* Watchdog. */
-    bool enableWatchdog;           /*!< Enable the watchdog to detect if the target is moving or not. */
+    bool enableWatchdog; /*!< Enable the watchdog to detect if the target is moving or not. */
     uint16_t watchdogTimeoutValue; /*!< Watchdog timeout count value. It stores the timeout count for the quadrature
-                                        decoder module watchdog timer. This field is only available when
-                                        "enableWatchdog" = true. The available value is a 16-bit unsigned number.*/
-
+     decoder module watchdog timer. This field is only available when
+     "enableWatchdog" = true. The available value is a 16-bit unsigned number.*/
     /* Filter for PHASEA, PHASEB, INDEX and HOME. */
     uint16_t filterCount; /*!< Input Filter Sample Count. This value should be chosen to reduce the probability of
-                               noisy samples causing an incorrect transition to be recognized. The value represent the
-                               number of consecutive samples that must agree prior to the input filter accepting an
-                               input transition. A value of 0x0 represents 3 samples. A value of 0x7 represents 10
-                               samples. The Available range is 0 - 7.*/
+     noisy samples causing an incorrect transition to be recognized. The value represent the
+     number of consecutive samples that must agree prior to the input filter accepting an
+     input transition. A value of 0x0 represents 3 samples. A value of 0x7 represents 10
+     samples. The Available range is 0 - 7.*/
     uint16_t filterSamplePeriod; /*!< Input Filter Sample Period. This value should be set such that the sampling period
-                                      is larger than the period of the expected noise. This value represents the
-                                      sampling period (in IPBus clock cycles) of the decoder input signals.
-                                      The available range is 0 - 255. */
-
-    /* Position compare. */
-    enc_position_match_mode_t positionMatchMode; /*!< The condition of POSMATCH pulses. */
-    uint32_t positionCompareValue;               /*!< Position compare value. The available value is a 32-bit number.*/
-
-    /* Modulus counting. */
-    enc_revolution_count_condition_t revolutionCountCondition; /*!< Revolution Counter Modulus Enable. */
-    bool enableModuloCountMode;                                /*!< Enable Modulo Counting. */
-    uint32_t positionModulusValue; /*!< Position modulus value. This value would be available only when
-                                        "enableModuloCountMode" = true. The available value is a 32-bit number. */
-    uint32_t positionInitialValue; /*!< Position initial value. The available value is a 32-bit number. */
+     is larger than the period of the expected noise. This value represents the
+     sampling period (in IPBus clock cycles) of the decoder input signals.
+     The available range is 0 - 255. */
 } enc_config_t;
 
 /*!
@@ -191,13 +182,14 @@ typedef struct _enc_config
 typedef struct _enc_self_test_config
 {
     enc_self_test_direction_t signalDirection; /*!< Direction of self test generated signal. */
-    uint16_t signalCount;  /*!< Hold the number of quadrature advances to generate. The available range is 0 - 255.*/
+    uint16_t signalCount; /*!< Hold the number of quadrature advances to generate. The available range is 0 - 255.*/
     uint16_t signalPeriod; /*!< Hold the period of quadrature phase in IPBus clock cycles.
-                                The available range is 0 - 31. */
+     The available range is 0 - 31. */
 } enc_self_test_config_t;
 
 #if defined(__cplusplus)
-extern "C" {
+extern "C"
+{
 #endif
 
 /*******************************************************************************
@@ -279,7 +271,8 @@ void ENC_DoSoftwareLoadInitialPositionValue(ENC_Type *base);
  * @param base   ENC peripheral base address.
  * @param config Pointer to configuration structure. See to "enc_self_test_config_t". Pass "NULL" to disable.
  */
-void ENC_SetSelfTestConfig(ENC_Type *base, const enc_self_test_config_t *config);
+void ENC_SetSelfTestConfig(ENC_Type *base,
+        const enc_self_test_config_t *config);
 
 /*!
  * @brief Enable watchdog for ENC module.

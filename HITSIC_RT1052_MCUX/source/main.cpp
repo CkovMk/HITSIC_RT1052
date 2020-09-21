@@ -32,53 +32,102 @@
  * @file    HITSIC_RT1052_MCUX.cpp
  * @brief   Application entry point.
  */
-#include <stdio.h>
-#include "board.h"
-#include "peripherals.h"
-#include "pin_mux.h"
-#include "clock_config.h"
-#include "MIMXRT1052.h"
+#include "hitsic_common.h"
 #include "fsl_debug_console.h"
 /* TODO: insert other include files here. */
+#include "ff.h"
+#include "cm_backtrace.h"
+#include "sys_extint.hpp"
+#include "sys_pitmgr.hpp"
+
+#include "drv_disp_st7789.hpp"
+
+#include "rt1052_romapi.h"
+
+uint32_t flash_test_data[0x1000] = {1,2,3,4};
+
+
+extern const flexspi_nor_config_t spiflash_config;
+
+
+void flash_test()
+{
+    uint32_t instance = 0;
+    flexspi_nor_config_t ram_flash_config;
+    memcpy(&ram_flash_config, &spiflash_config, sizeof(flexspi_nor_config_t));
+
+    PRINTF("Flash Begin!\n");
+
+    if(kStatus_Success != romapi_entry->flexSpiNorDriver->init(instance, &ram_flash_config))
+    {
+        PRINTF("Init Failed!\n");
+    }
+    //BOARD_PrintClockConfig();
+
+    //if(kStatus_Success != romapi_entry->flexSpiNorDriver->erase(instance, &ram_flash_config, 0x40000, 0x1000))
+    {
+        //PRINTF("Erase Failed!\n");
+    }
+
+    if(kStatus_Success != romapi_entry->flexSpiNorDriver->program(instance, &ram_flash_config, 0x40000, flash_test_data))
+    {
+        PRINTF("Program Failed!\n");
+    }
+    romapi_entry->flexSpiNorDriver->clear_cache(instance);
+    uint32_t recv[4] = {9,9,9,9};
+    if(kStatus_Success != romapi_entry->flexSpiNorDriver->read(instance, &ram_flash_config, recv, 0x40000, 16))
+    {
+        PRINTF("Read Failed!\n");
+    }
+    PRINTF("data recv: %d %d %d %d\n", recv[0], recv[1], recv[2], recv[3]);
+}
+
 
 /* TODO: insert other definitions and declarations here. */
+
+void blink(void)
+{
+    static bool b = false;
+    GPIO_PinWrite(RTEPIN_ALLPIN_LED_USR_GPIO, RTEPIN_ALLPIN_LED_USR_GPIO_PIN, b);
+    b = !b;
+}
 
 /*
  * @brief   Application entry point.
  */
 int main(void)
 {
+    HAL_EnterCritical();
     /* Init board hardware. */
     RTEPIN_AllPin();
     RTECLK_Run600M();
     RTEPIP_AllPip();
+    //BOARD_ConfigMPU();
+    DbgConsole_Init(1U, 921600, kSerialPort_Uart, 80000000U);
+    cm_backtrace_init("HITSIC-RT1052", "v1.1", "v0.1-beta1");
 
-    PRINTF("Hello World\n");
+    extInt_t::init();
+    pitMgr_t::init();
 
-    GPIO_PinWrite(RTE_DISP_BKL_GPIO, RTE_DISP_BKL_GPIO_PIN, 1);
+    PRINTF("Hello World form HITSIC-RT1052\n");
 
-    printf("Hello World\n");
-    printf("CPU:             %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_CpuClk));
-    printf("AHB:             %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_AhbClk));
-    printf("SEMC:            %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_SemcClk));
-    printf("SYSPLL:          %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllClk));
-    printf("SYSPLLPFD0:      %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd0Clk));
-    printf("SYSPLLPFD1:      %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd1Clk));
-    printf("SYSPLLPFD2:      %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd2Clk));
-    printf("SYSPLLPFD3:      %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd3Clk));
-    printf("IPG:             %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_IpgClk));
-    printf("PER:             %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_PerClk));
-    printf("OSC:             %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_OscClk));
-    printf("RTC:             %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_RtcClk));
-    printf("ARMPLL:          %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_ArmPllClk));
-    printf("USB1PLL:         %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_Usb1PllClk));
-    printf("USB1PLLPFD0:     %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_Usb1PllPfd0Clk));
-    printf("USB1PLLPFD1:     %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_Usb1PllPfd1Clk));
-    printf("USB1PLLPFD2:     %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_Usb1PllPfd2Clk));
-    printf("USB1PLLPFD3:     %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_Usb1PllPfd3Clk));
-    printf("USB2PLL:         %ld Hz\r\n", CLOCK_GetFreq(kCLOCK_Usb2PllClk));
+    BOARD_PrintClockConfig();
 
-    //pitMgr_t &blinkTask = pitMgr_t::insert(250, 0, blink, pitMgr_t::enable);
+    GPIO_PinWrite(RTEPIN_ALLPIN_DISP_BKL_GPIO, RTEPIN_ALLPIN_DISP_BKL_GPIO_PIN, 1);
+    GPIO_PinWrite(RTEPIN_ALLPIN_MOTOR_EN_GPIO, RTEPIN_ALLPIN_MOTOR_EN_GPIO_PIN, 0);
+    GPIO_PinWrite(RTEPIN_ALLPIN_SERVO_EN_GPIO, RTEPIN_ALLPIN_SERVO_EN_GPIO_PIN, 0);
+
+    pitMgr_t *blinkTask = pitMgr_t::insert(250, 0, blink, pitMgr_t::enable);
+
+    HAL_ExitCritical();
+
+//    st7789_t::getInst().setup();
+//    st7789_t::getInst().setBKL(1);
+//    st7789_t::getInst().fill(0xffff);
+
+    flash_test();
+
+
 
     /* Force the counter to be placed into memory. */
     volatile static int i = 0;

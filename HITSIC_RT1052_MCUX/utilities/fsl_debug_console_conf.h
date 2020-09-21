@@ -77,7 +77,7 @@
  * the buffer is too big and current task stack size not big enough.
  */
 #ifndef DEBUG_CONSOLE_PRINTF_MAX_LOG_LEN
-#define DEBUG_CONSOLE_PRINTF_MAX_LOG_LEN (128U)
+#define DEBUG_CONSOLE_PRINTF_MAX_LOG_LEN (1024U)
 #endif /* DEBUG_CONSOLE_PRINTF_MAX_LOG_LEN */
 
 /*!@ brief define the buffer support buffer scanf log length, that is when you call scanf("log", &x);, the log
@@ -85,7 +85,7 @@
  * As same as the DEBUG_CONSOLE_BUFFER_PRINTF_MAX_LOG_LEN.
  */
 #ifndef DEBUG_CONSOLE_SCANF_MAX_LOG_LEN
-#define DEBUG_CONSOLE_SCANF_MAX_LOG_LEN (20U)
+#define DEBUG_CONSOLE_SCANF_MAX_LOG_LEN (1024U)
 #endif /* DEBUG_CONSOLE_SCANF_MAX_LOG_LEN */
 
 /*! @brief Debug console synchronization
@@ -133,22 +133,22 @@
 /***************Debug console other configuration*********************/
 /*! @brief Definition to printf the float number. */
 #ifndef PRINTF_FLOAT_ENABLE
-#define PRINTF_FLOAT_ENABLE 0U
+#define PRINTF_FLOAT_ENABLE 1U
 #endif /* PRINTF_FLOAT_ENABLE */
 
 /*! @brief Definition to scanf the float number. */
 #ifndef SCANF_FLOAT_ENABLE
-#define SCANF_FLOAT_ENABLE 0U
+#define SCANF_FLOAT_ENABLE 1U
 #endif /* SCANF_FLOAT_ENABLE */
 
 /*! @brief Definition to support advanced format specifier for printf. */
 #ifndef PRINTF_ADVANCED_ENABLE
-#define PRINTF_ADVANCED_ENABLE 0U
+#define PRINTF_ADVANCED_ENABLE 1U
 #endif /* PRINTF_ADVANCED_ENABLE */
 
 /*! @brief Definition to support advanced format specifier for scanf. */
 #ifndef SCANF_ADVANCED_ENABLE
-#define SCANF_ADVANCED_ENABLE 0U
+#define SCANF_ADVANCED_ENABLE 1U
 #endif /* SCANF_ADVANCED_ENABLE */
 
 /*! @brief Definition to select virtual com(USB CDC) as the debug console. */

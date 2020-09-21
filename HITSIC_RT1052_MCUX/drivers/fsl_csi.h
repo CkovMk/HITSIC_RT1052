@@ -123,16 +123,16 @@ typedef struct _csi_config
 {
     uint16_t width;           /*!< Pixels of the input frame. */
     uint16_t height;          /*!< Lines of the input frame.  */
-    uint32_t polarityFlags;   /*!< Timing signal polarity flags, OR'ed value of @ref _csi_polarity_flags. */
     uint8_t bytesPerPixel;    /*!< Bytes per pixel, valid values are:
                                 - 2: Used for RGB565, YUV422, and so on.
                                 - 4: Used for XRGB8888, XYUV444, and so on.
                                 */
     uint16_t linePitch_Bytes; /*!< Frame buffer line pitch, must be 8-byte aligned. */
-    csi_work_mode_t workMode; /*!< CSI work mode. */
     csi_data_bus_t dataBus;   /*!< Data bus width. */
+    csi_work_mode_t workMode; /*!< CSI work mode. */
     bool useExtVsync;         /*!< In CCIR656 progressive mode, set true to use external VSYNC signal, set false
                                 to use internal VSYNC signal decoded from SOF. */
+    uint32_t polarityFlags;   /*!< Timing signal polarity flags, OR'ed value of @ref _csi_polarity_flags. */
 } csi_config_t;
 
 /*! @brief The CSI FIFO, used for FIFO operation. */

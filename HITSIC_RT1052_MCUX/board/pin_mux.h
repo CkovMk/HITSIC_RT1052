@@ -40,100 +40,100 @@ void BOARD_InitBootPins(void);
 /* GPIO_B1_11 (coord C13), KEY_BTUP */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_KEY_BTUP_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_KEY_BTUP_GPIO_PIN                                                27U   /*!< GPIO pin number */
-#define RTE_KEY_BTUP_GPIO_PIN_MASK                                   (1U << 27U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_KEY_BTUP_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_KEY_BTUP_GPIO_PIN                                      27U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_KEY_BTUP_GPIO_PIN_MASK                         (1U << 27U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_09 (coord A13), KEY_BTLF */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_KEY_BTLF_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_KEY_BTLF_GPIO_PIN                                                25U   /*!< GPIO pin number */
-#define RTE_KEY_BTLF_GPIO_PIN_MASK                                   (1U << 25U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_KEY_BTLF_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_KEY_BTLF_GPIO_PIN                                      25U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_KEY_BTLF_GPIO_PIN_MASK                         (1U << 25U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_10 (coord B13), KEY_BTOK */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_KEY_BTOK_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_KEY_BTOK_GPIO_PIN                                                26U   /*!< GPIO pin number */
-#define RTE_KEY_BTOK_GPIO_PIN_MASK                                   (1U << 26U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_KEY_BTOK_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_KEY_BTOK_GPIO_PIN                                      26U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_KEY_BTOK_GPIO_PIN_MASK                         (1U << 26U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_08 (coord A12), KEY_BTRT */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_KEY_BTRT_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_KEY_BTRT_GPIO_PIN                                                24U   /*!< GPIO pin number */
-#define RTE_KEY_BTRT_GPIO_PIN_MASK                                   (1U << 24U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_KEY_BTRT_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_KEY_BTRT_GPIO_PIN                                      24U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_KEY_BTRT_GPIO_PIN_MASK                         (1U << 24U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_07 (coord B12), KEY_BTDN */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_KEY_BTDN_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_KEY_BTDN_GPIO_PIN                                                23U   /*!< GPIO pin number */
-#define RTE_KEY_BTDN_GPIO_PIN_MASK                                   (1U << 23U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_KEY_BTDN_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_KEY_BTDN_GPIO_PIN                                      23U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_KEY_BTDN_GPIO_PIN_MASK                         (1U << 23U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_06 (coord C12), BEEP_EN */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_BEEP_EN_GPIO                                                   GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_BEEP_EN_GPIO_PIN                                                 22U   /*!< GPIO pin number */
-#define RTE_BEEP_EN_GPIO_PIN_MASK                                    (1U << 22U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_BEEP_EN_GPIO                                         GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_BEEP_EN_GPIO_PIN                                       22U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_BEEP_EN_GPIO_PIN_MASK                          (1U << 22U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_05 (coord D12), SERVO_EN */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_SERVO_EN_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_SERVO_EN_GPIO_PIN                                                21U   /*!< GPIO pin number */
-#define RTE_SERVO_EN_GPIO_PIN_MASK                                   (1U << 21U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_SERVO_EN_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_SERVO_EN_GPIO_PIN                                      21U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_SERVO_EN_GPIO_PIN_MASK                         (1U << 21U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_04 (coord E12), KEY_BTSE */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_KEY_BTSE_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_KEY_BTSE_GPIO_PIN                                                20U   /*!< GPIO pin number */
-#define RTE_KEY_BTSE_GPIO_PIN_MASK                                   (1U << 20U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_KEY_BTSE_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_KEY_BTSE_GPIO_PIN                                      20U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_KEY_BTSE_GPIO_PIN_MASK                         (1U << 20U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_02 (coord C11), MOTOR_EN */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_MOTOR_EN_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_MOTOR_EN_GPIO_PIN                                                18U   /*!< GPIO pin number */
-#define RTE_MOTOR_EN_GPIO_PIN_MASK                                   (1U << 18U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_MOTOR_EN_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_MOTOR_EN_GPIO_PIN                                      18U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_MOTOR_EN_GPIO_PIN_MASK                         (1U << 18U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_01 (coord B11), KEY_BTME */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_KEY_BTME_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_KEY_BTME_GPIO_PIN                                                17U   /*!< GPIO pin number */
-#define RTE_KEY_BTME_GPIO_PIN_MASK                                   (1U << 17U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_KEY_BTME_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_KEY_BTME_GPIO_PIN                                      17U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_KEY_BTME_GPIO_PIN_MASK                         (1U << 17U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_15 (coord E11), TOF0_XHT */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_TOF0_XHT_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_TOF0_XHT_GPIO_PIN                                                15U   /*!< GPIO pin number */
-#define RTE_TOF0_XHT_GPIO_PIN_MASK                                   (1U << 15U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_TOF0_XHT_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_TOF0_XHT_GPIO_PIN                                      15U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_TOF0_XHT_GPIO_PIN_MASK                         (1U << 15U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_14 (coord E10), TOF0_INT */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_TOF0_INT_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_TOF0_INT_GPIO_PIN                                                14U   /*!< GPIO pin number */
-#define RTE_TOF0_INT_GPIO_PIN_MASK                                   (1U << 14U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_TOF0_INT_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_TOF0_INT_GPIO_PIN                                      14U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_TOF0_INT_GPIO_PIN_MASK                         (1U << 14U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_13 (coord D10), TOF1_XHT */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_TOF1_XHT_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_TOF1_XHT_GPIO_PIN                                                13U   /*!< GPIO pin number */
-#define RTE_TOF1_XHT_GPIO_PIN_MASK                                   (1U << 13U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_TOF1_XHT_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_TOF1_XHT_GPIO_PIN                                      13U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_TOF1_XHT_GPIO_PIN_MASK                         (1U << 13U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_12 (coord C10), TOF1_INT */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_TOF1_INT_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_TOF1_INT_GPIO_PIN                                                12U   /*!< GPIO pin number */
-#define RTE_TOF1_INT_GPIO_PIN_MASK                                   (1U << 12U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_TOF1_INT_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_TOF1_INT_GPIO_PIN                                      12U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_TOF1_INT_GPIO_PIN_MASK                         (1U << 12U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_11 (coord A10), PWM2_B2 */
 
@@ -156,16 +156,16 @@ void BOARD_InitBootPins(void);
 /* GPIO_B0_01 (coord E7), DISP_BKL */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_DISP_BKL_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_DISP_BKL_GPIO_PIN                                                 1U   /*!< GPIO pin number */
-#define RTE_DISP_BKL_GPIO_PIN_MASK                                    (1U << 1U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_DISP_BKL_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_DISP_BKL_GPIO_PIN                                       1U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_DISP_BKL_GPIO_PIN_MASK                          (1U << 1U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_00 (coord D7), DISP_D_C */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_DISP_D_C_GPIO                                                  GPIO2   /*!< GPIO peripheral base pointer */
-#define RTE_DISP_D_C_GPIO_PIN                                                 0U   /*!< GPIO pin number */
-#define RTE_DISP_D_C_GPIO_PIN_MASK                                    (1U << 0U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_DISP_D_C_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_DISP_D_C_GPIO_PIN                                       0U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_DISP_D_C_GPIO_PIN_MASK                          (1U << 0U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_12 (coord D13), UART5_TX */
 
@@ -178,9 +178,9 @@ void BOARD_InitBootPins(void);
 /* GPIO_EMC_41 (coord C7), DISP_RST */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_DISP_RST_GPIO                                                  GPIO3   /*!< GPIO peripheral base pointer */
-#define RTE_DISP_RST_GPIO_PIN                                                27U   /*!< GPIO pin number */
-#define RTE_DISP_RST_GPIO_PIN_MASK                                   (1U << 27U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_DISP_RST_GPIO                                        GPIO3   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_DISP_RST_GPIO_PIN                                      27U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_DISP_RST_GPIO_PIN_MASK                         (1U << 27U)   /*!< GPIO pin mask */
 
 /* GPIO_SD_B0_00 (coord J4), SDHC_CMD */
 
@@ -201,16 +201,16 @@ void BOARD_InitBootPins(void);
 /* GPIO_SD_B1_02 (coord M3), TCS_INT */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_TCS_INT_GPIO                                                   GPIO3   /*!< GPIO peripheral base pointer */
-#define RTE_TCS_INT_GPIO_PIN                                                  2U   /*!< GPIO pin number */
-#define RTE_TCS_INT_GPIO_PIN_MASK                                     (1U << 2U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_TCS_INT_GPIO                                         GPIO3   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_TCS_INT_GPIO_PIN                                        2U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_TCS_INT_GPIO_PIN_MASK                           (1U << 2U)   /*!< GPIO pin mask */
 
 /* GPIO_SD_B1_03 (coord M4), IMU_INT */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_IMU_INT_GPIO                                                   GPIO3   /*!< GPIO peripheral base pointer */
-#define RTE_IMU_INT_GPIO_PIN                                                  3U   /*!< GPIO pin number */
-#define RTE_IMU_INT_GPIO_PIN_MASK                                     (1U << 3U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_IMU_INT_GPIO                                         GPIO3   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_IMU_INT_GPIO_PIN                                        3U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_IMU_INT_GPIO_PIN_MASK                           (1U << 3U)   /*!< GPIO pin mask */
 
 /* GPIO_SD_B1_04 (coord P2), I2C1_SCL */
 
@@ -243,9 +243,9 @@ void BOARD_InitBootPins(void);
 /* GPIO_AD_B1_03 (coord M12), CAM_RST */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_CAM_RST_GPIO                                                   GPIO1   /*!< GPIO peripheral base pointer */
-#define RTE_CAM_RST_GPIO_PIN                                                 19U   /*!< GPIO pin number */
-#define RTE_CAM_RST_GPIO_PIN_MASK                                    (1U << 19U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_CAM_RST_GPIO                                         GPIO1   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_CAM_RST_GPIO_PIN                                       19U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_CAM_RST_GPIO_PIN_MASK                          (1U << 19U)   /*!< GPIO pin mask */
 
 /* GPIO_AD_B1_02 (coord L11), MOTOR_IR */
 
@@ -280,30 +280,30 @@ void BOARD_InitBootPins(void);
 /* GPIO_AD_B0_03 (coord G11), LED_USR */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_LED_USR_GPIO                                                   GPIO1   /*!< GPIO peripheral base pointer */
-#define RTE_LED_USR_GPIO_PIN                                                  3U   /*!< GPIO pin number */
-#define RTE_LED_USR_GPIO_PIN_MASK                                     (1U << 3U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_LED_USR_GPIO                                         GPIO1   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_LED_USR_GPIO_PIN                                        3U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_LED_USR_GPIO_PIN_MASK                           (1U << 3U)   /*!< GPIO pin mask */
 
 /* GPIO_AD_B0_02 (coord M11), LED_BUSG */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_LED_BUSG_GPIO                                                  GPIO1   /*!< GPIO peripheral base pointer */
-#define RTE_LED_BUSG_GPIO_PIN                                                 2U   /*!< GPIO pin number */
-#define RTE_LED_BUSG_GPIO_PIN_MASK                                    (1U << 2U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_LED_BUSG_GPIO                                        GPIO1   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_LED_BUSG_GPIO_PIN                                       2U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_LED_BUSG_GPIO_PIN_MASK                          (1U << 2U)   /*!< GPIO pin mask */
 
 /* GPIO_AD_B0_01 (coord H10), KEY_BTUR */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_KEY_BTUS_GPIO                                                  GPIO1   /*!< GPIO peripheral base pointer */
-#define RTE_KEY_BTUS_GPIO_PIN                                                 1U   /*!< GPIO pin number */
-#define RTE_KEY_BTUS_GPIO_PIN_MASK                                    (1U << 1U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_KEY_BTUS_GPIO                                        GPIO1   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_KEY_BTUS_GPIO_PIN                                       1U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_KEY_BTUS_GPIO_PIN_MASK                          (1U << 1U)   /*!< GPIO pin mask */
 
 /* GPIO_AD_B0_00 (coord M14), LED_BUSR */
 
 /* Symbols to be used with GPIO driver */
-#define RTE_LED_BUSR_GPIO                                                  GPIO1   /*!< GPIO peripheral base pointer */
-#define RTE_LED_BUSR_GPIO_PIN                                                 0U   /*!< GPIO pin number */
-#define RTE_LED_BUSR_GPIO_PIN_MASK                                    (1U << 0U)   /*!< GPIO pin mask */
+#define RTEPIN_ALLPIN_LED_BUSR_GPIO                                        GPIO1   /*!< GPIO peripheral base pointer */
+#define RTEPIN_ALLPIN_LED_BUSR_GPIO_PIN                                       0U   /*!< GPIO pin number */
+#define RTEPIN_ALLPIN_LED_BUSR_GPIO_PIN_MASK                          (1U << 0U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_08 (coord B9), PWM2_A1 */
 
@@ -323,14 +323,14 @@ void RTEPIN_AllPin(void);
  * @brief Configures pin routing and optionally pin electrical features.
  *
  */
-void SDRAM(void);
+void RTEPIN_Sdram(void);
 
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
  *
  */
-void FLASH(void);
+void RTEPIN_QspiFlash(void);
 
 #if defined(__cplusplus)
 }

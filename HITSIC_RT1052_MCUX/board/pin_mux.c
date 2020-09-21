@@ -106,13 +106,12 @@ pin_labels:
  * 
  * END ****************************************************************************************************************/
 void BOARD_InitBootPins(void) {
-     RTEPIN_AllPin();
 }
 
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-RTE:
-- options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
+RTEPIN_AllPin:
+- options: {callFromInitBoot: 'false', coreID: core0, enableClock: 'true'}
 - pin_list:
   - {pin_num: C13, peripheral: GPIO2, signal: 'gpio_io, 27', pin_signal: GPIO_B1_11, direction: INPUT, hysteresis_enable: Enable, pull_up_down_config: Pull_Up_22K_Ohm,
     pull_keeper_select: Pull}
@@ -142,10 +141,10 @@ RTE:
   - {pin_num: A8, peripheral: PWM2, signal: 'A, 0', pin_signal: GPIO_B0_06, identifier: PWM2_A0, direction: OUTPUT}
   - {pin_num: B8, peripheral: LPI2C2, signal: SDA, pin_signal: GPIO_B0_05, identifier: I2C2_SDA}
   - {pin_num: C8, peripheral: LPI2C2, signal: SCL, pin_signal: GPIO_B0_04, identifier: I2C2_SCL}
-  - {pin_num: D8, peripheral: LPSPI4, signal: SCK, pin_signal: GPIO_B0_03, identifier: SPI4_SCK, direction: OUTPUT, drive_strength: R0_4, slew_rate: Fast}
-  - {pin_num: E8, peripheral: LPSPI4, signal: SDO, pin_signal: GPIO_B0_02, identifier: SPI4_SDO, direction: OUTPUT, drive_strength: R0_4, slew_rate: Fast}
-  - {pin_num: E7, peripheral: GPIO2, signal: 'gpio_io, 01', pin_signal: GPIO_B0_01, direction: OUTPUT, drive_strength: R0_4, slew_rate: Fast}
-  - {pin_num: D7, peripheral: GPIO2, signal: 'gpio_io, 00', pin_signal: GPIO_B0_00, direction: OUTPUT, drive_strength: R0_4, slew_rate: Fast}
+  - {pin_num: D8, peripheral: LPSPI4, signal: SCK, pin_signal: GPIO_B0_03, identifier: SPI4_SCK, direction: OUTPUT, speed: MHZ_200, slew_rate: Fast}
+  - {pin_num: E8, peripheral: LPSPI4, signal: SDO, pin_signal: GPIO_B0_02, identifier: SPI4_SDO, direction: OUTPUT, speed: MHZ_200, slew_rate: Fast}
+  - {pin_num: E7, peripheral: GPIO2, signal: 'gpio_io, 01', pin_signal: GPIO_B0_01, direction: OUTPUT, slew_rate: Fast}
+  - {pin_num: D7, peripheral: GPIO2, signal: 'gpio_io, 00', pin_signal: GPIO_B0_00, direction: OUTPUT, slew_rate: Fast}
   - {pin_num: D13, peripheral: LPUART5, signal: TX, pin_signal: GPIO_B1_12, identifier: UART5_TX, slew_rate: Fast}
   - {pin_num: D14, peripheral: LPUART5, signal: RX, pin_signal: GPIO_B1_13, identifier: UART5_RX, slew_rate: Fast}
   - {pin_num: B14, peripheral: PWM4, signal: 'A, 3', pin_signal: GPIO_B1_15, direction: OUTPUT}
@@ -218,7 +217,7 @@ RTE:
 
 /* FUNCTION ************************************************************************************************************
  *
- * Function Name : RTE
+ * Function Name : RTEPIN_AllPin
  * Description   : Configures pin routing and optionally pin electrical features.
  *
  * END ****************************************************************************************************************/
@@ -768,8 +767,8 @@ void RTEPIN_AllPin(void) {
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_B0_00_GPIO2_IO00,           /* GPIO_B0_00 PAD functional properties : */
-      0x10A1U);                               /* Slew Rate Field: Fast Slew Rate
-                                                 Drive Strength Field: R0/4
+      0x10B1U);                               /* Slew Rate Field: Fast Slew Rate
+                                                 Drive Strength Field: R0/6
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
                                                  Pull / Keep Enable Field: Pull/Keeper Enabled
@@ -778,8 +777,8 @@ void RTEPIN_AllPin(void) {
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_B0_01_GPIO2_IO01,           /* GPIO_B0_01 PAD functional properties : */
-      0x10A1U);                               /* Slew Rate Field: Fast Slew Rate
-                                                 Drive Strength Field: R0/4
+      0x10B1U);                               /* Slew Rate Field: Fast Slew Rate
+                                                 Drive Strength Field: R0/6
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
                                                  Pull / Keep Enable Field: Pull/Keeper Enabled
@@ -788,9 +787,9 @@ void RTEPIN_AllPin(void) {
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_B0_02_LPSPI4_SDO,           /* GPIO_B0_02 PAD functional properties : */
-      0x10A1U);                               /* Slew Rate Field: Fast Slew Rate
-                                                 Drive Strength Field: R0/4
-                                                 Speed Field: medium(100MHz)
+      0x10F1U);                               /* Slew Rate Field: Fast Slew Rate
+                                                 Drive Strength Field: R0/6
+                                                 Speed Field: max(200MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
                                                  Pull / Keep Enable Field: Pull/Keeper Enabled
                                                  Pull / Keep Select Field: Keeper
@@ -798,9 +797,9 @@ void RTEPIN_AllPin(void) {
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_B0_03_LPSPI4_SCK,           /* GPIO_B0_03 PAD functional properties : */
-      0x10A1U);                               /* Slew Rate Field: Fast Slew Rate
-                                                 Drive Strength Field: R0/4
-                                                 Speed Field: medium(100MHz)
+      0x10F1U);                               /* Slew Rate Field: Fast Slew Rate
+                                                 Drive Strength Field: R0/6
+                                                 Speed Field: max(200MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
                                                  Pull / Keep Enable Field: Pull/Keeper Enabled
                                                  Pull / Keep Select Field: Keeper
@@ -1031,7 +1030,7 @@ void RTEPIN_AllPin(void) {
 
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-SDRAM:
+RTEPIN_Sdram:
 - options: {callFromInitBoot: 'false', coreID: core0, enableClock: 'true'}
 - pin_list:
   - {pin_num: B7, peripheral: SEMC, signal: semc_dqs, pin_signal: GPIO_EMC_39, hysteresis_enable: Enable, speed: MHZ_200, slew_rate: Fast}
@@ -1079,11 +1078,11 @@ SDRAM:
 
 /* FUNCTION ************************************************************************************************************
  *
- * Function Name : SDRAM
+ * Function Name : RTEPIN_Sdram
  * Description   : Configures pin routing and optionally pin electrical features.
  *
  * END ****************************************************************************************************************/
-void SDRAM(void) {
+void RTEPIN_Sdram(void) {
   CLOCK_EnableClock(kCLOCK_Iomuxc);           /* iomuxc clock (iomuxc_clk_enable): 0x03U */
 
   IOMUXC_SetPinMux(
@@ -1611,7 +1610,7 @@ void SDRAM(void) {
 
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-FLASH:
+RTEPIN_QspiFlash:
 - options: {callFromInitBoot: 'false', coreID: core0, enableClock: 'true'}
 - pin_list:
   - {pin_num: L3, peripheral: FLEXSPI, signal: FLEXSPI_A_SS0_B, pin_signal: GPIO_SD_B1_06}
@@ -1625,11 +1624,11 @@ FLASH:
 
 /* FUNCTION ************************************************************************************************************
  *
- * Function Name : FLASH
+ * Function Name : RTEPIN_QspiFlash
  * Description   : Configures pin routing and optionally pin electrical features.
  *
  * END ****************************************************************************************************************/
-void FLASH(void) {
+void RTEPIN_QspiFlash(void) {
   CLOCK_EnableClock(kCLOCK_Iomuxc);           /* iomuxc clock (iomuxc_clk_enable): 0x03U */
 
   IOMUXC_SetPinMux(

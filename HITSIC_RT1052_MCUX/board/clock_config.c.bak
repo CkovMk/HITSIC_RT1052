@@ -54,10 +54,10 @@ outputs:
 - {id: CKIL_SYNC_CLK_ROOT.outFreq, value: 32.768 kHz}
 - {id: CLK_1M.outFreq, value: 1 MHz}
 - {id: CLK_24M.outFreq, value: 24 MHz}
-- {id: CSI_CLK_ROOT.outFreq, value: 24 MHz}
+- {id: CSI_CLK_ROOT.outFreq, value: 80 MHz}
 - {id: FLEXIO1_CLK_ROOT.outFreq, value: 120 MHz}
 - {id: FLEXIO2_CLK_ROOT.outFreq, value: 120 MHz}
-- {id: FLEXSPI_CLK_ROOT.outFreq, value: 2160/17 MHz}
+- {id: FLEXSPI_CLK_ROOT.outFreq, value: 320 MHz}
 - {id: GPT1_ipg_clk_highfreq.outFreq, value: 75 MHz}
 - {id: GPT2_ipg_clk_highfreq.outFreq, value: 75 MHz}
 - {id: IPG_CLK_ROOT.outFreq, value: 150 MHz}
@@ -78,13 +78,13 @@ settings:
 - {id: CCM.ARM_PODF.scale, value: '2', locked: true}
 - {id: CCM.CAN_CLK_PODF.scale, value: '1', locked: true}
 - {id: CCM.CAN_CLK_SEL.sel, value: CCM.PLL3_SW_60M_CLK_DIV}
-- {id: CCM.CSI_CLK_SEL.sel, value: CCM.PLL3_SW_120M_CLK_DIV}
-- {id: CCM.CSI_PODF.scale, value: '5', locked: true}
+- {id: CCM.CSI_CLK_SEL.sel, value: CCM_ANALOG.PLL3_PFD1_CLK}
+- {id: CCM.CSI_PODF.scale, value: '6', locked: true}
 - {id: CCM.FLEXIO1_CLK_PODF.scale, value: '1', locked: true}
 - {id: CCM.FLEXIO1_CLK_PRED.scale, value: '4', locked: true}
 - {id: CCM.FLEXIO2_CLK_PODF.scale, value: '1', locked: true}
 - {id: CCM.FLEXIO2_CLK_PRED.scale, value: '4', locked: true}
-- {id: CCM.FLEXSPI_PODF.scale, value: '4', locked: true}
+- {id: CCM.FLEXSPI_PODF.scale, value: '1', locked: true}
 - {id: CCM.FLEXSPI_SEL.sel, value: CCM_ANALOG.PLL3_PFD0_CLK}
 - {id: CCM.IPG_PODF.scale, value: '4', locked: true}
 - {id: CCM.LCDIF_PRED.scale, value: '2', locked: true}
@@ -116,20 +116,15 @@ settings:
 - {id: CCM_ANALOG.PLL2_PFD3_BYPASS.sel, value: CCM_ANALOG.PLL2_PFD3}
 - {id: CCM_ANALOG.PLL3_BYPASS.sel, value: CCM_ANALOG.PLL3}
 - {id: CCM_ANALOG.PLL3_PFD0_BYPASS.sel, value: CCM_ANALOG.PLL3_PFD0}
-- {id: CCM_ANALOG.PLL3_PFD0_DIV.scale, value: '17', locked: true}
+- {id: CCM_ANALOG.PLL3_PFD0_DIV.scale, value: '27', locked: true}
 - {id: CCM_ANALOG.PLL3_PFD0_MUL.scale, value: '18', locked: true}
 - {id: CCM_ANALOG.PLL3_PFD1_BYPASS.sel, value: CCM_ANALOG.PLL3_PFD1}
 - {id: CCM_ANALOG.PLL3_PFD1_DIV.scale, value: '18', locked: true}
 - {id: CCM_ANALOG.PLL3_PFD1_MUL.scale, value: '18', locked: true}
 - {id: CCM_ANALOG.PLL3_PFD2_BYPASS.sel, value: CCM_ANALOG.PLL3_PFD2}
-- {id: CCM_ANALOG.PLL3_PFD2_DIV.scale, value: '18', locked: true}
-- {id: CCM_ANALOG.PLL3_PFD2_MUL.scale, value: '18', locked: true}
 - {id: CCM_ANALOG.PLL3_PFD3_BYPASS.sel, value: CCM_ANALOG.PLL3_PFD3}
-- {id: CCM_ANALOG.PLL3_PFD3_DIV.scale, value: '18', locked: true}
-- {id: CCM_ANALOG.PLL3_PFD3_MUL.scale, value: '18', locked: true}
 - {id: CCM_ANALOG.PLL6_BYPASS_CLK_SRC.sel, value: CCM_ANALOG.CLK1}
 - {id: CCM_ANALOG_PFD_480_PFD2_CLKGATE_CFG, value: Disabled}
-- {id: CCM_ANALOG_PFD_480_PFD3_CLKGATE_CFG, value: Disabled}
 - {id: CCM_ANALOG_PLL_ENET_POWERDOWN_CFG, value: 'Yes'}
 - {id: CCM_ANALOG_PLL_USB1_EN_USB_CLKS_CFG, value: Enabled}
 - {id: CCM_ANALOG_PLL_USB1_EN_USB_CLKS_OUT_CFG, value: Enabled}
@@ -243,16 +238,16 @@ void RTECLK_Run600M(void)
     /* Disable Flexspi clock gate. */
     CLOCK_DisableClock(kCLOCK_FlexSpi);
     /* Set FLEXSPI_PODF. */
-    CLOCK_SetDiv(kCLOCK_FlexspiDiv, 3);
+    CLOCK_SetDiv(kCLOCK_FlexspiDiv, 0);
     /* Set Flexspi clock source. */
     CLOCK_SetMux(kCLOCK_FlexspiMux, 3);
 #endif
     /* Disable CSI clock gate. */
     CLOCK_DisableClock(kCLOCK_Csi);
     /* Set CSI_PODF. */
-    CLOCK_SetDiv(kCLOCK_CsiDiv, 4);
+    CLOCK_SetDiv(kCLOCK_CsiDiv, 5);
     /* Set Csi clock source. */
-    CLOCK_SetMux(kCLOCK_CsiMux, 2);
+    CLOCK_SetMux(kCLOCK_CsiMux, 3);
     /* Disable LPSPI clock gate. */
     CLOCK_DisableClock(kCLOCK_Lpspi1);
     CLOCK_DisableClock(kCLOCK_Lpspi2);
@@ -381,17 +376,17 @@ void RTECLK_Run600M(void)
     /* In SDK projects, external flash (configured by FLEXSPI) will be initialized by dcd.
      * With this macro XIP_EXTERNAL_FLASH, usb1 pll (selected to be FLEXSPI clock source in SDK projects) will be left unchanged.
      * Note: If another clock source is selected for FLEXSPI, user may want to avoid changing that clock as well.*/
-#if !(defined(XIP_EXTERNAL_FLASH) && (XIP_EXTERNAL_FLASH == 1))
+#if 1//!(defined(XIP_EXTERNAL_FLASH) && (XIP_EXTERNAL_FLASH == 1))
     /* Init Usb1 PLL. */
     CLOCK_InitUsb1Pll(&usb1PllConfig_RTECLK_Run600M);
     /* Init Usb1 pfd0. */
-    CLOCK_InitUsb1Pfd(kCLOCK_Pfd0, 17);
+    CLOCK_InitUsb1Pfd(kCLOCK_Pfd0, 27);
     /* Init Usb1 pfd1. */
     CLOCK_InitUsb1Pfd(kCLOCK_Pfd1, 18);
     /* Disable Usb1 pfd2. */
     CLOCK_DeinitUsb1Pfd(kCLOCK_Pfd2);
-    /* Disable Usb1 pfd3. */
-    CLOCK_DeinitUsb1Pfd(kCLOCK_Pfd3);
+    /* Init Usb1 pfd3. */
+    CLOCK_InitUsb1Pfd(kCLOCK_Pfd3, 19);
 #endif
     /* DeInit Audio PLL. */
     CLOCK_DeinitAudioPll();

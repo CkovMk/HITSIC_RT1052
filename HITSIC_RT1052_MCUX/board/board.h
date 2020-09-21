@@ -38,6 +38,9 @@
 #ifndef _BOARD_H_
 #define _BOARD_H_
 
+#include "inc_stdlib.h"
+#include "fsl_debug_console.h"
+
 /**
  * @brief	The board name 
  */
@@ -53,6 +56,10 @@ extern "C" {
  * @brief 	Initialize board specific settings.
  */
 void BOARD_InitDebugConsole(void);
+
+void BOARD_ConfigMPU(void);
+
+void BOARD_PrintClockConfig(void);
 
 #if defined(__cplusplus)
 }
