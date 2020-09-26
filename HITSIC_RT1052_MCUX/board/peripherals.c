@@ -10,7 +10,7 @@ product: Peripherals v8.0
 processor: MIMXRT1052xxxxB
 package_id: MIMXRT1052DVL6B
 mcu_data: ksdk2_0
-processor_version: 8.0.1
+processor_version: 8.0.2
 functionalGroups:
 - name: RTEPIP_AllPip
   UUID: 2044a05e-031b-4d67-ac4b-e5d523c13eda
@@ -1449,38 +1449,47 @@ instance:
           - mountInitOpt: 'false'
       - filObjects: []
       - filInfoObjects: []
-      - dirObjects:
-        - 0:
-          - objID: 'FATFS_SDCARD'
+      - dirObjects: []
+    - quick_selection: 'default'
   - ff_config:
     - revisionID: 'rev14_1'
-    - MSDKadaptation: 'SD_DISK_ENABLE'
+    - MSDKadaptation: 'RAM_DISK_ENABLE'
     - functionConfig:
       - FF_FS_READONLY: 'false'
       - FF_FS_MINIMIZE: 'level1'
       - FF_USE_STRFUNC: 'enableWithoutConversion'
       - FF_USE_FIND: 'disableDirRead'
       - FF_USE_MKFS: 'true'
-      - FF_USE_FASTSEEK: 'true'
-      - FF_USE_EXPAND: 'true'
-      - FF_USE_CHMOD: 'true'
-      - FF_USE_LABEL: 'true'
-      - FF_USE_FORWARD: 'true'
+      - FF_USE_FASTSEEK: 'false'
+      - FF_USE_EXPAND: 'false'
+      - FF_USE_CHMOD: 'false'
+      - FF_USE_LABEL: 'false'
+      - FF_USE_FORWARD: 'false'
     - namespaceConfig:
-      - FF_USE_LFN: 'enableLfnHeap'
+      - FF_USE_LFN: 'disableLfn'
       - FF_MAX_LFN: '255'
       - FF_LFN_BUF: 'LFNID'
       - FF_SFN_BUF: 'SFNID'
-      - FF_LFN_UNICODE: 'UTF8'
-      - FF_STRF_ENCODE: 'UTF8'
+      - FF_LFN_UNICODE: 'UTF16'
+      - FF_STRF_ENCODE: 'UTF16LE'
       - FF_CODE_PAGE: 'cpUS'
       - FF_FS_RPATH: 'enableRP2'
     - driveConfig:
-      - FF_VOLUMES: '1'
-      - FF_STR_VOLUME_ID: 'stringIdWindows'
+      - FF_VOLUMES: '6'
+      - FF_STR_VOLUME_ID: 'numericId'
       - volumes:
         - 0:
-          - volumeStr: 'SDCARD'
+          - volumeStr: 'RAM'
+        - 1:
+          - volumeStr: 'NAND'
+        - 2:
+          - volumeStr: 'CF'
+        - 3:
+          - volumeStr: 'SD'
+        - 4:
+          - volumeStr: 'SD2'
+        - 5:
+          - volumeStr: 'USB'
       - FF_MULTI_PARTITION: 'false'
       - FF_MIN_SS: 'value512'
       - FF_MAX_SS: 'value512'
@@ -1489,12 +1498,12 @@ instance:
       - FF_USE_TRIM: 'false'
     - systemConfig:
       - FF_FS_TINY: 'false'
-      - FF_FS_EXFAT: 'true'
-      - FF_FS_NORTC: 'true'
+      - FF_FS_EXFAT: 'false'
+      - FF_FS_NORTC: 'false'
       - FF_NORTC_MON: '1'
       - FF_NORTC_MDAY: '1'
       - FF_NORTC_YEAR: '2020'
-      - FF_FS_NOFSINFO: 'bit0 bit1'
+      - FF_FS_NOFSINFO: ''
       - FF_FS_LOCK: '0'
       - FF_FS_REENTRANT: 'false'
       - FF_FS_TIMEOUT: '1000'
@@ -1502,12 +1511,11 @@ instance:
       - includeOS: 'false'
       - headerFileName: 'somertos.h'
     - fatfs_codegenerator: []
+    - quick_selection: 'default'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 /* FATFS System object */
 FATFS FATFS_System_0;
-/* FATFS Directory object */
-DIR FATFS_SDCARD;
 
 static void FATFS_init(void) {
 }

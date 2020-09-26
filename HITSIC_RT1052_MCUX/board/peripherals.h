@@ -212,8 +212,6 @@ extern const lpuart_config_t UART_4_config;
 extern const lpuart_config_t UART_5_config;
 /* FATFS System object */
 extern FATFS FATFS_System_0;
-/* FATFS Directory object */
-extern DIR FATFS_SDCARD;
 
 /***********************************************************************************************************************
  * Initialization functions

@@ -7,8 +7,8 @@
 
 #ifndef PLATFORM_RT1052_ROMAPI_H_
 #define PLATFORM_RT1052_ROMAPI_H_
-
-#include "flexspi_nor_flash.h"
+#include "fsl_flexspi.h"
+#include "fire_imxrt1052_spiflash_config.h"
 
 #define romapi_entry (*(bootloader_api_entry_t **)0x0020001c)
 

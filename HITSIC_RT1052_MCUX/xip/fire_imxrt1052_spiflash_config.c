@@ -53,14 +53,14 @@ extern const flexspi_nor_config_t spiflash_config = {
             .readSampleClkSrc = kFlexSPIReadSampleClk_LoopbackInternally,/*内部环回*/
             .csHoldTime = 3u, /*保持时间*/
             .csSetupTime = 3u,/*建立时间*/
-						.columnAddressWidth = 0u,/*列地址宽度*/
-						.deviceModeCfgEnable = 1u,/*设备模式配置使能*/
-						.deviceModeType = 1u,/*Quad 使能命令*/
-						.deviceModeSeq =
-						{
-						    .seqNum = 1u,/*LUT序列号*/
-						    .seqId = 4u, /*LUT序列索引*/
-						},
+			.columnAddressWidth = 0u,/*列地址宽度*/
+			.deviceModeCfgEnable = 1u,/*设备模式配置使能*/
+			.deviceModeType = 1u,/*Quad 使能命令*/
+			.deviceModeSeq =
+			{
+			    .seqNum = 1u,/*LUT序列号*/
+				.seqId = 4u, /*LUT序列索引*/
+			},
 						.deviceModeArg = 0x000200,/*设置 QE=1（S9）*/
 						.deviceType = kFlexSpiDeviceType_SerialNOR,/*设备类型为nor flash*/
 						.sflashPadType = kSerialFlash_4Pads,/*设备数据总线为4*/

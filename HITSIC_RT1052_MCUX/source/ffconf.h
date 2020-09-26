@@ -8,8 +8,6 @@
 #ifndef _FFCONF_H_
 #define _FFCONF_H_
 
-#include "cstdlib"
-
 /*---------------------------------------------------------------------------/
 /  FatFs Functional Configurations
 /---------------------------------------------------------------------------*/
@@ -19,7 +17,7 @@
 /*---------------------------------------------------------------------------/
 / MSDK adaptation configuration
 /---------------------------------------------------------------------------*/
-#define SD_DISK_ENABLE
+#define RAM_DISK_ENABLE
 /* Available options are:
 /      RAM_DISK_ENABLE
 /      USB_DISK_ENABLE
@@ -66,25 +64,25 @@
 /* This option switches f_mkfs() function. (0:Disable or 1:Enable) */
 
 
-#define FF_USE_FASTSEEK  1
+#define FF_USE_FASTSEEK  0
 /* This option switches fast seek function. (0:Disable or 1:Enable) */
 
 
-#define FF_USE_EXPAND  1
+#define FF_USE_EXPAND  0
 /* This option switches f_expand function. (0:Disable or 1:Enable) */
 
 
-#define FF_USE_CHMOD  1
+#define FF_USE_CHMOD  0
 /* This option switches attribute manipulation functions, f_chmod() and f_utime().
 /  (0:Disable or 1:Enable) Also FF_FS_READONLY needs to be 0 to enable this option. */
 
 
-#define FF_USE_LABEL  1
+#define FF_USE_LABEL  0
 /* This option switches volume label functions, f_getlabel() and f_setlabel().
 /  (0:Disable or 1:Enable) */
 
 
-#define FF_USE_FORWARD  1
+#define FF_USE_FORWARD  0
 /* This option switches f_forward() function. (0:Disable or 1:Enable) */
 
 
@@ -121,8 +119,8 @@
 */
 
 
-#define FF_USE_LFN  3
-#define FF_MAX_LFN  255
+#define FF_USE_LFN  0
+#define FF_MAX_LFN  0
 /* The FF_USE_LFN switches the support for LFN (long file name).
 /
 /   0: Disable LFN. FF_MAX_LFN has no effect.
@@ -141,7 +139,7 @@
 /  ff_memfree() exemplified in ffsystem.c, need to be added to the project. */
 
 
-#define FF_LFN_UNICODE  2
+#define FF_LFN_UNICODE  0
 /* This option switches the character encoding on the API when LFN is enabled.
 /
 /   0: ANSI/OEM in current CP (TCHAR = char)
@@ -153,15 +151,15 @@
 /  When LFN is not enabled, this option has no effect. */
 
 
-#define FF_LFN_BUF  756
-#define FF_SFN_BUF  34
+#define FF_LFN_BUF  0
+#define FF_SFN_BUF  0
 /* This set of options defines size of file name members in the FILINFO structure
 /  which is used to read out directory items. These values should be suffcient for
 /  the file names to read. The maximum possible length of the read file name depends
 /  on character encoding. When LFN is not enabled, these options have no effect. */
 
 
-#define FF_STRF_ENCODE  3
+#define FF_STRF_ENCODE  0
 /* When FF_LFN_UNICODE >= 1 with LFN enabled, string I/O functions, f_gets(),
 /  f_putc(), f_puts and f_printf() convert the character encoding in it.
 /  This option selects assumption of character encoding ON THE FILE to be
@@ -187,12 +185,12 @@
 / Drive/Volume Configurations
 /---------------------------------------------------------------------------*/
 
-#define FF_VOLUMES  1
+#define FF_VOLUMES  6
 /* Number of volumes (logical drives) to be used. (1-10) */
 
 
-#define FF_STR_VOLUME_ID  1
-#define FF_VOLUME_STRS  "SDCARD"
+#define FF_STR_VOLUME_ID  0
+#define FF_VOLUME_STRS  "RAM", "NAND", "CF", "SD", "SD2", "USB"
 /* FF_STR_VOLUME_ID switches support for volume ID in arbitrary strings.
 /  When FF_STR_VOLUME_ID is set to 1 or 2, arbitrary strings can be used as drive
 /  number in the path name. FF_VOLUME_STRS defines the volume ID strings for each
@@ -252,13 +250,13 @@
 /  buffer in the filesystem object (FATFS) is used for the file data transfer. */
 
 
-#define FF_FS_EXFAT  1
+#define FF_FS_EXFAT  0
 /* This option switches support for exFAT filesystem. (0:Disable or 1:Enable)
 /  To enable exFAT, also LFN needs to be enabled. (FF_USE_LFN >= 1)
 /  Note that enabling exFAT discards ANSI C (C89) compatibility. */
 
 
-#define FF_FS_NORTC  1
+#define FF_FS_NORTC  0
 #define FF_NORTC_MON  1
 #define FF_NORTC_MDAY  1
 #define FF_NORTC_YEAR  2020
@@ -272,7 +270,7 @@
 /  These options have no effect in read-only configuration (FF_FS_READONLY = 1). */
 
 
-#define FF_FS_NOFSINFO  3
+#define FF_FS_NOFSINFO  0
 /* If you need to know correct free space on the FAT32 volume, set bit 0 of this
 /  option, and f_getfree() function at first time after volume mount will force
 /  a full FAT scan. Bit 1 controls the use of last allocated cluster number.

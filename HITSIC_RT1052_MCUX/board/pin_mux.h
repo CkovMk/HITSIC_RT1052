@@ -38,6 +38,10 @@ extern "C" {
 void BOARD_InitBootPins(void);
 
 /* GPIO_B1_11 (coord C13), KEY_BTUP */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_KEY_BTUP_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_KEY_BTUP_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_KEY_BTUP_CHANNEL                                       27U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_KEY_BTUP_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -45,6 +49,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_KEY_BTUP_GPIO_PIN_MASK                         (1U << 27U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_09 (coord A13), KEY_BTLF */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_KEY_BTLF_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_KEY_BTLF_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_KEY_BTLF_CHANNEL                                       25U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_KEY_BTLF_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -52,6 +60,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_KEY_BTLF_GPIO_PIN_MASK                         (1U << 25U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_10 (coord B13), KEY_BTOK */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_KEY_BTOK_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_KEY_BTOK_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_KEY_BTOK_CHANNEL                                       26U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_KEY_BTOK_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -59,6 +71,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_KEY_BTOK_GPIO_PIN_MASK                         (1U << 26U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_08 (coord A12), KEY_BTRT */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_KEY_BTRT_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_KEY_BTRT_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_KEY_BTRT_CHANNEL                                       24U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_KEY_BTRT_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -66,6 +82,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_KEY_BTRT_GPIO_PIN_MASK                         (1U << 24U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_07 (coord B12), KEY_BTDN */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_KEY_BTDN_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_KEY_BTDN_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_KEY_BTDN_CHANNEL                                       23U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_KEY_BTDN_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -73,6 +93,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_KEY_BTDN_GPIO_PIN_MASK                         (1U << 23U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_06 (coord C12), BEEP_EN */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_BEEP_EN_PERIPHERAL                                   GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_BEEP_EN_SIGNAL                                     gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_BEEP_EN_CHANNEL                                        22U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_BEEP_EN_GPIO                                         GPIO2   /*!< GPIO peripheral base pointer */
@@ -80,6 +104,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_BEEP_EN_GPIO_PIN_MASK                          (1U << 22U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_05 (coord D12), SERVO_EN */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SERVO_EN_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SERVO_EN_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_SERVO_EN_CHANNEL                                       21U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_SERVO_EN_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -87,6 +115,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_SERVO_EN_GPIO_PIN_MASK                         (1U << 21U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_04 (coord E12), KEY_BTSE */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_KEY_BTSE_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_KEY_BTSE_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_KEY_BTSE_CHANNEL                                       20U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_KEY_BTSE_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -94,6 +126,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_KEY_BTSE_GPIO_PIN_MASK                         (1U << 20U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_02 (coord C11), MOTOR_EN */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_MOTOR_EN_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_MOTOR_EN_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_MOTOR_EN_CHANNEL                                       18U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_MOTOR_EN_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -101,6 +137,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_MOTOR_EN_GPIO_PIN_MASK                         (1U << 18U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_01 (coord B11), KEY_BTME */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_KEY_BTME_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_KEY_BTME_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_KEY_BTME_CHANNEL                                       17U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_KEY_BTME_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -108,6 +148,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_KEY_BTME_GPIO_PIN_MASK                         (1U << 17U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_15 (coord E11), TOF0_XHT */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_TOF0_XHT_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_TOF0_XHT_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_TOF0_XHT_CHANNEL                                       15U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_TOF0_XHT_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -115,6 +159,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_TOF0_XHT_GPIO_PIN_MASK                         (1U << 15U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_14 (coord E10), TOF0_INT */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_TOF0_INT_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_TOF0_INT_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_TOF0_INT_CHANNEL                                       14U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_TOF0_INT_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -122,6 +170,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_TOF0_INT_GPIO_PIN_MASK                         (1U << 14U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_13 (coord D10), TOF1_XHT */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_TOF1_XHT_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_TOF1_XHT_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_TOF1_XHT_CHANNEL                                       13U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_TOF1_XHT_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -129,6 +181,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_TOF1_XHT_GPIO_PIN_MASK                         (1U << 13U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_12 (coord C10), TOF1_INT */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_TOF1_INT_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_TOF1_INT_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_TOF1_INT_CHANNEL                                       12U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_TOF1_INT_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -136,24 +192,60 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_TOF1_INT_GPIO_PIN_MASK                         (1U << 12U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_11 (coord A10), PWM2_B2 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_PWM2_B2_PERIPHERAL                                    PWM2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_PWM2_B2_SIGNAL                                           B   /*!< Signal name */
+#define RTEPIN_ALLPIN_PWM2_B2_CHANNEL                                         2U   /*!< Signal channel */
 
 /* GPIO_B0_10 (coord D9), PWM2_A2 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_PWM2_A2_PERIPHERAL                                    PWM2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_PWM2_A2_SIGNAL                                           A   /*!< Signal name */
+#define RTEPIN_ALLPIN_PWM2_A2_CHANNEL                                         2U   /*!< Signal channel */
 
 /* GPIO_B0_09 (coord C9), PWM2_B1 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_PWM2_B1_PERIPHERAL                                    PWM2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_PWM2_B1_SIGNAL                                           B   /*!< Signal name */
+#define RTEPIN_ALLPIN_PWM2_B1_CHANNEL                                         1U   /*!< Signal channel */
 
 /* GPIO_B0_07 (coord A9), PWM2_B0 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_PWM2_B0_PERIPHERAL                                    PWM2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_PWM2_B0_SIGNAL                                           B   /*!< Signal name */
+#define RTEPIN_ALLPIN_PWM2_B0_CHANNEL                                         0U   /*!< Signal channel */
 
 /* GPIO_B0_06 (coord A8), PWM2_A0 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_PWM2_A0_PERIPHERAL                                    PWM2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_PWM2_A0_SIGNAL                                           A   /*!< Signal name */
+#define RTEPIN_ALLPIN_PWM2_A0_CHANNEL                                         0U   /*!< Signal channel */
 
 /* GPIO_B0_05 (coord B8), I2C2_SDA */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_I2C2_SDA_PERIPHERAL                                 LPI2C2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_I2C2_SDA_SIGNAL                                        SDA   /*!< Signal name */
 
 /* GPIO_B0_04 (coord C8), I2C2_SCL */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_I2C2_SCL_PERIPHERAL                                 LPI2C2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_I2C2_SCL_SIGNAL                                        SCL   /*!< Signal name */
 
 /* GPIO_B0_03 (coord D8), SPI4_SCK */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SPI4_SCK_PERIPHERAL                                 LPSPI4   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SPI4_SCK_SIGNAL                                        SCK   /*!< Signal name */
 
 /* GPIO_B0_02 (coord E8), SPI4_SDO */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SPI4_SDO_PERIPHERAL                                 LPSPI4   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SPI4_SDO_SIGNAL                                        SDO   /*!< Signal name */
 
 /* GPIO_B0_01 (coord E7), DISP_BKL */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_DISP_BKL_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_DISP_BKL_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_DISP_BKL_CHANNEL                                        1U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_DISP_BKL_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -161,6 +253,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_DISP_BKL_GPIO_PIN_MASK                          (1U << 1U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_00 (coord D7), DISP_D_C */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_DISP_D_C_PERIPHERAL                                  GPIO2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_DISP_D_C_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_DISP_D_C_CHANNEL                                        0U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_DISP_D_C_GPIO                                        GPIO2   /*!< GPIO peripheral base pointer */
@@ -168,14 +264,32 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_DISP_D_C_GPIO_PIN_MASK                          (1U << 0U)   /*!< GPIO pin mask */
 
 /* GPIO_B1_12 (coord D13), UART5_TX */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_UART5_TX_PERIPHERAL                                LPUART5   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_UART5_TX_SIGNAL                                         TX   /*!< Signal name */
 
 /* GPIO_B1_13 (coord D14), UART5_RX */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_UART5_RX_PERIPHERAL                                LPUART5   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_UART5_RX_SIGNAL                                         RX   /*!< Signal name */
 
 /* GPIO_B1_15 (coord B14), PWM4_A3 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_PWM4_A3_PERIPHERAL                                    PWM4   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_PWM4_A3_SIGNAL                                           A   /*!< Signal name */
+#define RTEPIN_ALLPIN_PWM4_A3_CHANNEL                                         3U   /*!< Signal channel */
 
 /* GPIO_B1_14 (coord C14), PWM4_B3 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_PWM4_A2_PERIPHERAL                                    PWM4   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_PWM4_A2_SIGNAL                                           A   /*!< Signal name */
+#define RTEPIN_ALLPIN_PWM4_A2_CHANNEL                                         2U   /*!< Signal channel */
 
 /* GPIO_EMC_41 (coord C7), DISP_RST */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_DISP_RST_PERIPHERAL                                  GPIO3   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_DISP_RST_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_DISP_RST_CHANNEL                                       27U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_DISP_RST_GPIO                                        GPIO3   /*!< GPIO peripheral base pointer */
@@ -183,22 +297,54 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_DISP_RST_GPIO_PIN_MASK                         (1U << 27U)   /*!< GPIO pin mask */
 
 /* GPIO_SD_B0_00 (coord J4), SDHC_CMD */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SDHC_CMD_PERIPHERAL                                 USDHC1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SDHC_CMD_SIGNAL                                  usdhc_cmd   /*!< Signal name */
 
 /* GPIO_SD_B0_01 (coord J3), SDHC_CLK */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SDHC_CLK_PERIPHERAL                                 USDHC1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SDHC_CLK_SIGNAL                                  usdhc_clk   /*!< Signal name */
 
 /* GPIO_SD_B0_02 (coord J1), SDHC_D0 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SDHC_D0_PERIPHERAL                                  USDHC1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SDHC_D0_SIGNAL                                  usdhc_data   /*!< Signal name */
+#define RTEPIN_ALLPIN_SDHC_D0_CHANNEL                                         0U   /*!< Signal channel */
 
 /* GPIO_SD_B0_03 (coord K1), SDHC_D1 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SDHC_D1_PERIPHERAL                                  USDHC1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SDHC_D1_SIGNAL                                  usdhc_data   /*!< Signal name */
+#define RTEPIN_ALLPIN_SDHC_D1_CHANNEL                                         1U   /*!< Signal channel */
 
 /* GPIO_SD_B0_04 (coord H2), SDHC_D2 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SDHC_D2_PERIPHERAL                                  USDHC1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SDHC_D2_SIGNAL                                  usdhc_data   /*!< Signal name */
+#define RTEPIN_ALLPIN_SDHC_D2_CHANNEL                                         2U   /*!< Signal channel */
 
 /* GPIO_SD_B0_05 (coord J2), SDHC_D3 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SDHC_D3_PERIPHERAL                                  USDHC1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SDHC_D3_SIGNAL                                  usdhc_data   /*!< Signal name */
+#define RTEPIN_ALLPIN_SDHC_D3_CHANNEL                                         3U   /*!< Signal channel */
 
 /* GPIO_SD_B1_00 (coord L5), UART4_TX */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_UART4_TX_PERIPHERAL                                LPUART4   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_UART4_TX_SIGNAL                                         TX   /*!< Signal name */
 
 /* GPIO_SD_B1_01 (coord M5), UART4_RX */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_UART4_RX_PERIPHERAL                                LPUART4   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_UART4_RX_SIGNAL                                         RX   /*!< Signal name */
 
 /* GPIO_SD_B1_02 (coord M3), TCS_INT */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_TCS_INT_PERIPHERAL                                   GPIO3   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_TCS_INT_SIGNAL                                     gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_TCS_INT_CHANNEL                                         2U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_TCS_INT_GPIO                                         GPIO3   /*!< GPIO peripheral base pointer */
@@ -206,6 +352,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_TCS_INT_GPIO_PIN_MASK                           (1U << 2U)   /*!< GPIO pin mask */
 
 /* GPIO_SD_B1_03 (coord M4), IMU_INT */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_IMU_INT_PERIPHERAL                                   GPIO3   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_IMU_INT_SIGNAL                                     gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_IMU_INT_CHANNEL                                         3U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_IMU_INT_GPIO                                         GPIO3   /*!< GPIO peripheral base pointer */
@@ -213,34 +363,88 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_IMU_INT_GPIO_PIN_MASK                           (1U << 3U)   /*!< GPIO pin mask */
 
 /* GPIO_SD_B1_04 (coord P2), I2C1_SCL */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_I2C1_SCL_PERIPHERAL                                 LPI2C1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_I2C1_SCL_SIGNAL                                        SCL   /*!< Signal name */
 
 /* GPIO_SD_B1_05 (coord N3), I2C1_SDA */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_I2C1_SDA_PERIPHERAL                                 LPI2C1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_I2C1_SDA_SIGNAL                                        SDA   /*!< Signal name */
 
 /* GPIO_AD_B1_15 (coord J14), CAM_D2 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_D2_PERIPHERAL                                      CSI   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_D2_SIGNAL                                     csi_data   /*!< Signal name */
+#define RTEPIN_ALLPIN_CAM_D2_CHANNEL                                          2U   /*!< Signal channel */
 
 /* GPIO_AD_B1_14 (coord G12), CAM_D3 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_D3_PERIPHERAL                                      CSI   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_D3_SIGNAL                                     csi_data   /*!< Signal name */
+#define RTEPIN_ALLPIN_CAM_D3_CHANNEL                                          3U   /*!< Signal channel */
 
 /* GPIO_AD_B1_13 (coord H11), CAM_D4 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_D4_PERIPHERAL                                      CSI   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_D4_SIGNAL                                     csi_data   /*!< Signal name */
+#define RTEPIN_ALLPIN_CAM_D4_CHANNEL                                          4U   /*!< Signal channel */
 
 /* GPIO_AD_B1_12 (coord H12), CAM_D5 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_D5_PERIPHERAL                                      CSI   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_D5_SIGNAL                                     csi_data   /*!< Signal name */
+#define RTEPIN_ALLPIN_CAM_D5_CHANNEL                                          5U   /*!< Signal channel */
 
 /* GPIO_AD_B1_11 (coord J13), CAM_D6 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_D6_PERIPHERAL                                      CSI   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_D6_SIGNAL                                     csi_data   /*!< Signal name */
+#define RTEPIN_ALLPIN_CAM_D6_CHANNEL                                          6U   /*!< Signal channel */
 
 /* GPIO_AD_B1_10 (coord L13), CAM_D7 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_D7_PERIPHERAL                                      CSI   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_D7_SIGNAL                                     csi_data   /*!< Signal name */
+#define RTEPIN_ALLPIN_CAM_D7_CHANNEL                                          7U   /*!< Signal channel */
 
 /* GPIO_AD_B1_09 (coord M13), CAM_D8 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_D8_PERIPHERAL                                      CSI   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_D8_SIGNAL                                     csi_data   /*!< Signal name */
+#define RTEPIN_ALLPIN_CAM_D8_CHANNEL                                          8U   /*!< Signal channel */
 
 /* GPIO_AD_B1_08 (coord H13), CAM_D9 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_D9_PERIPHERAL                                      CSI   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_D9_SIGNAL                                     csi_data   /*!< Signal name */
+#define RTEPIN_ALLPIN_CAM_D9_CHANNEL                                          9U   /*!< Signal channel */
 
 /* GPIO_AD_B1_07 (coord K10), CAM_HREF */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_HREF_PERIPHERAL                                    CSI   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_HREF_SIGNAL                                  csi_hsync   /*!< Signal name */
 
 /* GPIO_AD_B1_06 (coord J12), CAM_VSNC */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_VSNC_PERIPHERAL                                    CSI   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_VSNC_SIGNAL                                  csi_vsync   /*!< Signal name */
 
 /* GPIO_AD_B1_05 (coord K12), CAM_XCLK */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_XCLK_PERIPHERAL                                    CSI   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_XCLK_SIGNAL                                   csi_mclk   /*!< Signal name */
 
 /* GPIO_AD_B1_04 (coord L12), CAM_PCLK */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_PCLK_PERIPHERAL                                    CSI   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_PCLK_SIGNAL                                 csi_pixclk   /*!< Signal name */
 
 /* GPIO_AD_B1_03 (coord M12), CAM_RST */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_CAM_RST_PERIPHERAL                                   GPIO1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_CAM_RST_SIGNAL                                     gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_CAM_RST_CHANNEL                                        19U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_CAM_RST_GPIO                                         GPIO1   /*!< GPIO peripheral base pointer */
@@ -248,36 +452,96 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_CAM_RST_GPIO_PIN_MASK                          (1U << 19U)   /*!< GPIO pin mask */
 
 /* GPIO_AD_B1_02 (coord L11), MOTOR_IR */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_MOTOR_IR_PERIPHERAL                                   ADC1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_MOTOR_IR_SIGNAL                                         IN   /*!< Signal name */
+#define RTEPIN_ALLPIN_MOTOR_IR_CHANNEL                                        7U   /*!< Signal channel */
 
 /* GPIO_AD_B1_01 (coord K11), VOLT_BAT */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_VOLT_BATT_PERIPHERAL                                  ADC2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_VOLT_BATT_SIGNAL                                        IN   /*!< Signal name */
+#define RTEPIN_ALLPIN_VOLT_BATT_CHANNEL                                       6U   /*!< Signal channel */
 
 /* GPIO_AD_B1_00 (coord J11), MOTOR_IL */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_MOTOR_IL_PERIPHERAL                                   ADC1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_MOTOR_IL_SIGNAL                                         IN   /*!< Signal name */
+#define RTEPIN_ALLPIN_MOTOR_IL_CHANNEL                                        5U   /*!< Signal channel */
 
 /* GPIO_AD_B0_15 (coord L10), SERVO_IB */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SERVO_IB_PERIPHERAL                                   ADC1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SERVO_IB_SIGNAL                                         IN   /*!< Signal name */
+#define RTEPIN_ALLPIN_SERVO_IB_CHANNEL                                        4U   /*!< Signal channel */
 
 /* GPIO_AD_B0_14 (coord H14), SERVO_IF */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SERVO_IF_PERIPHERAL                                   ADC1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SERVO_IF_SIGNAL                                         IN   /*!< Signal name */
+#define RTEPIN_ALLPIN_SERVO_IF_CHANNEL                                        3U   /*!< Signal channel */
 
 /* GPIO_AD_B0_12 (coord K14), UART1_TX */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_UART1_TX_PERIPHERAL                                LPUART1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_UART1_TX_SIGNAL                                         TX   /*!< Signal name */
 
 /* GPIO_AD_B0_13 (coord L14), UART1_RX */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_UART1_RX_PERIPHERAL                                LPUART1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_UART1_RX_SIGNAL                                         RX   /*!< Signal name */
 
 /* GPIO_AD_B0_07 (coord F12), SWCLK */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SWCLK_PERIPHERAL                                      JTAG   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SWCLK_SIGNAL                                           TCK   /*!< Signal name */
 
 /* GPIO_AD_B0_06 (coord E14), SWDIO */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SWDIO_PERIPHERAL                                      JTAG   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SWDIO_SIGNAL                                           TMS   /*!< Signal name */
 
 /* GPIO_AD_B0_05 (coord G14), BOOT_SEL1 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_BOOT_SEL1_PERIPHERAL                                   SRC   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_BOOT_SEL1_SIGNAL                                 BOOT_MODE   /*!< Signal name */
+#define RTEPIN_ALLPIN_BOOT_SEL1_CHANNEL                                       1U   /*!< Signal channel */
 
 /* GPIO_AD_B0_04 (coord F11), BOOT_SEL0 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_BOOT_SEL0_PERIPHERAL                                   SRC   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_BOOT_SEL0_SIGNAL                                 BOOT_MODE   /*!< Signal name */
+#define RTEPIN_ALLPIN_BOOT_SEL0_CHANNEL                                       0U   /*!< Signal channel */
 
 /* GPIO_AD_B0_08 (coord F13), ENC_LA */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_ENC_LA_PERIPHERAL                                     ENC1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_ENC_LA_SIGNAL                                        PHASE   /*!< Signal name */
+#define RTEPIN_ALLPIN_ENC_LA_CHANNEL                                           A   /*!< Signal channel */
 
 /* GPIO_AD_B0_09 (coord F14), ENC_LB */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_ENC_LB_PERIPHERAL                                     ENC1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_ENC_LB_SIGNAL                                        PHASE   /*!< Signal name */
+#define RTEPIN_ALLPIN_ENC_LB_CHANNEL                                           B   /*!< Signal channel */
 
 /* GPIO_AD_B0_11 (coord G10), ENCO_RA */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_ENC_RA_PERIPHERAL                                     ENC2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_ENC_RA_SIGNAL                                        PHASE   /*!< Signal name */
+#define RTEPIN_ALLPIN_ENC_RA_CHANNEL                                           A   /*!< Signal channel */
 
 /* GPIO_AD_B0_10 (coord G13), ENC_RB */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_ENC_RB_PERIPHERAL                                     ENC2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_ENC_RB_SIGNAL                                        PHASE   /*!< Signal name */
+#define RTEPIN_ALLPIN_ENC_RB_CHANNEL                                           B   /*!< Signal channel */
 
 /* GPIO_AD_B0_03 (coord G11), LED_USR */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_LED_USR_PERIPHERAL                                   GPIO1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_LED_USR_SIGNAL                                     gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_LED_USR_CHANNEL                                         3U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_LED_USR_GPIO                                         GPIO1   /*!< GPIO peripheral base pointer */
@@ -285,6 +549,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_LED_USR_GPIO_PIN_MASK                           (1U << 3U)   /*!< GPIO pin mask */
 
 /* GPIO_AD_B0_02 (coord M11), LED_BUSG */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_LED_BUSG_PERIPHERAL                                  GPIO1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_LED_BUSG_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_LED_BUSG_CHANNEL                                        2U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_LED_BUSG_GPIO                                        GPIO1   /*!< GPIO peripheral base pointer */
@@ -292,6 +560,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_LED_BUSG_GPIO_PIN_MASK                          (1U << 2U)   /*!< GPIO pin mask */
 
 /* GPIO_AD_B0_01 (coord H10), KEY_BTUR */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_KEY_BTUS_PERIPHERAL                                  GPIO1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_KEY_BTUS_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_KEY_BTUS_CHANNEL                                        1U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_KEY_BTUS_GPIO                                        GPIO1   /*!< GPIO peripheral base pointer */
@@ -299,6 +571,10 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_KEY_BTUS_GPIO_PIN_MASK                          (1U << 1U)   /*!< GPIO pin mask */
 
 /* GPIO_AD_B0_00 (coord M14), LED_BUSR */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_LED_BUSR_PERIPHERAL                                  GPIO1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_LED_BUSR_SIGNAL                                    gpio_io   /*!< Signal name */
+#define RTEPIN_ALLPIN_LED_BUSR_CHANNEL                                        0U   /*!< Signal channel */
 
 /* Symbols to be used with GPIO driver */
 #define RTEPIN_ALLPIN_LED_BUSR_GPIO                                        GPIO1   /*!< GPIO peripheral base pointer */
@@ -306,10 +582,22 @@ void BOARD_InitBootPins(void);
 #define RTEPIN_ALLPIN_LED_BUSR_GPIO_PIN_MASK                          (1U << 0U)   /*!< GPIO pin mask */
 
 /* GPIO_B0_08 (coord B9), PWM2_A1 */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_PWM2_A1_PERIPHERAL                                    PWM2   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_PWM2_A1_SIGNAL                                           A   /*!< Signal name */
+#define RTEPIN_ALLPIN_PWM2_A1_CHANNEL                                         1U   /*!< Signal channel */
 
 /* GPIO_B1_00 (coord A11), MOTOR_FLT */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_MOTOR_FLT_PERIPHERAL                                  AOI1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_MOTOR_FLT_SIGNAL                                       OUT   /*!< Signal name */
+#define RTEPIN_ALLPIN_MOTOR_FLT_CHANNEL                                       0U   /*!< Signal channel */
 
 /* GPIO_B1_03 (coord D11), SERVO_FLT */
+/* Routed pin properties */
+#define RTEPIN_ALLPIN_SERVO_FLT_PERIPHERAL                                  AOI1   /*!< Peripheral name */
+#define RTEPIN_ALLPIN_SERVO_FLT_SIGNAL                                       OUT   /*!< Signal name */
+#define RTEPIN_ALLPIN_SERVO_FLT_CHANNEL                                       1U   /*!< Signal channel */
 
 
 /*!

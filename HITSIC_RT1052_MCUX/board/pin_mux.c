@@ -10,7 +10,7 @@ product: Pins v8.0
 processor: MIMXRT1052xxxxB
 package_id: MIMXRT1052DVL6B
 mcu_data: ksdk2_0
-processor_version: 8.0.1
+processor_version: 8.0.2
 pin_labels:
 - {pin_num: J1, pin_signal: GPIO_SD_B0_02, label: SDHC_D0, identifier: SDHC_D0}
 - {pin_num: K1, pin_signal: GPIO_SD_B0_03, label: SDHC_D1, identifier: SDHC_D1}

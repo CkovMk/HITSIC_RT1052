@@ -42,45 +42,45 @@
 
 #include "drv_disp_st7789.hpp"
 
-#include "rt1052_romapi.h"
+//#include "rt1052_romapi.h"
 
 uint32_t flash_test_data[0x1000] = {1,2,3,4};
 
 
-extern const flexspi_nor_config_t spiflash_config;
+//extern const flexspi_nor_config_t spiflash_config;
 
 
-void flash_test()
-{
-    uint32_t instance = 0;
-    flexspi_nor_config_t ram_flash_config;
-    memcpy(&ram_flash_config, &spiflash_config, sizeof(flexspi_nor_config_t));
-
-    PRINTF("Flash Begin!\n");
-
-    if(kStatus_Success != romapi_entry->flexSpiNorDriver->init(instance, &ram_flash_config))
-    {
-        PRINTF("Init Failed!\n");
-    }
-    //BOARD_PrintClockConfig();
-
-    //if(kStatus_Success != romapi_entry->flexSpiNorDriver->erase(instance, &ram_flash_config, 0x40000, 0x1000))
-    {
-        //PRINTF("Erase Failed!\n");
-    }
-
-    if(kStatus_Success != romapi_entry->flexSpiNorDriver->program(instance, &ram_flash_config, 0x40000, flash_test_data))
-    {
-        PRINTF("Program Failed!\n");
-    }
-    romapi_entry->flexSpiNorDriver->clear_cache(instance);
-    uint32_t recv[4] = {9,9,9,9};
-    if(kStatus_Success != romapi_entry->flexSpiNorDriver->read(instance, &ram_flash_config, recv, 0x40000, 16))
-    {
-        PRINTF("Read Failed!\n");
-    }
-    PRINTF("data recv: %d %d %d %d\n", recv[0], recv[1], recv[2], recv[3]);
-}
+//void flash_test()
+//{
+//    uint32_t instance = 0;
+//    flexspi_nor_config_t ram_flash_config;
+//    memcpy(&ram_flash_config, &spiflash_config, sizeof(flexspi_nor_config_t));
+//
+//    PRINTF("Flash Begin!\n");
+//
+//    if(kStatus_Success != romapi_entry->flexSpiNorDriver->init(instance, &ram_flash_config))
+//    {
+//        PRINTF("Init Failed!\n");
+//    }
+//    //BOARD_PrintClockConfig();
+//
+//    //if(kStatus_Success != romapi_entry->flexSpiNorDriver->erase(instance, &ram_flash_config, 0x40000, 0x1000))
+//    {
+//        //PRINTF("Erase Failed!\n");
+//    }
+//
+//    if(kStatus_Success != romapi_entry->flexSpiNorDriver->program(instance, &ram_flash_config, 0x40000, flash_test_data))
+//    {
+//        PRINTF("Program Failed!\n");
+//    }
+//    romapi_entry->flexSpiNorDriver->clear_cache(instance);
+//    uint32_t recv[4] = {9,9,9,9};
+//    if(kStatus_Success != romapi_entry->flexSpiNorDriver->read(instance, &ram_flash_config, recv, 0x40000, 16))
+//    {
+//        PRINTF("Read Failed!\n");
+//    }
+//    PRINTF("data recv: %d %d %d %d\n", recv[0], recv[1], recv[2], recv[3]);
+//}
 
 
 /* TODO: insert other definitions and declarations here. */
@@ -125,7 +125,7 @@ int main(void)
 //    st7789_t::getInst().setBKL(1);
 //    st7789_t::getInst().fill(0xffff);
 
-    flash_test();
+//    flash_test();
 
 
 

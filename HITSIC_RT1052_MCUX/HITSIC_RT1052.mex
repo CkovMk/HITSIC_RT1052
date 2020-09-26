@@ -21,7 +21,7 @@
             <file path="board/pin_mux.h" update_enabled="true"/>
          </generated_project_files>
          <pins_profile>
-            <processor_version>8.0.1</processor_version>
+            <processor_version>8.0.2</processor_version>
             <power_domains/>
             <pin_labels>
                <pin_label pin_num="J1" pin_signal="GPIO_SD_B0_02" label="SDHC_D0" identifier="SDHC_D0"/>
@@ -985,13 +985,13 @@
             </function>
          </functions_list>
       </pins>
-      <clocks name="Clocks" version="7.0" enabled="true" update_project_code="true">
+      <clocks name="Clocks" version="7.0" enabled="true" update_project_code="false">
          <generated_project_files>
             <file path="board/clock_config.c" update_enabled="true"/>
             <file path="board/clock_config.h" update_enabled="true"/>
          </generated_project_files>
          <clocks_profile>
-            <processor_version>8.0.1</processor_version>
+            <processor_version>8.0.2</processor_version>
          </clocks_profile>
          <clock_configurations>
             <clock_configuration name="RTECLK_Run600M">
@@ -1151,7 +1151,7 @@
             <file path="board/dcd.h" update_enabled="true"/>
          </generated_project_files>
          <dcdx_profile>
-            <processor_version>8.0.1</processor_version>
+            <processor_version>8.0.2</processor_version>
             <output_format>c_array</output_format>
          </dcdx_profile>
          <dcdx_configurations>
@@ -1455,7 +1455,7 @@
             <file path="source/ffconf.h" update_enabled="true"/>
          </generated_project_files>
          <peripherals_profile>
-            <processor_version>8.0.1</processor_version>
+            <processor_version>8.0.2</processor_version>
          </peripherals_profile>
          <functional_groups>
             <functional_group name="RTEPIP_AllPip" uuid="2044a05e-031b-4d67-ac4b-e5d523c13eda" called_from_default_init="true" id_prefix="" core="core0">
@@ -1642,7 +1642,7 @@
                         <data type="Boolean">true</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="SWComponent" resourceId="middleware.fatfs.sd" description="The fsl_sd_disk driver is missing in the project (required for FATFS)." problem_level="1" source="Peripherals:RTEPIP_AllPip">
+                  <dependency resourceType="SWComponent" resourceId="middleware.fatfs.ram" description="The fsl_ram_disk driver is missing in the project (required for FATFS)." problem_level="1" source="Peripherals:RTEPIP_AllPip">
                      <feature name="enabled" evaluation="equal">
                         <data type="Boolean">true</data>
                      </feature>
@@ -2436,8 +2436,8 @@
                         </struct>
                      </config_set>
                   </instance>
-                  <instance name="FATFS" uuid="eddfc8c7-e95a-4d46-8916-e9d24d4cf548" type="fatfs" type_id="fatfs_2f85acf758668258920f70258052a088" mode="general" enabled="true" comment="" custom_name_enabled="false">
-                     <config_set name="init_config">
+                  <instance name="FATFS" uuid="f3ec9e2e-9791-4aa3-8f6f-c71ffbb104de" type="fatfs" type_id="fatfs_2f85acf758668258920f70258052a088" mode="general" enabled="true" comment="" custom_name_enabled="false">
+                     <config_set name="init_config" quick_selection="default">
                         <struct name="initConfig">
                            <setting name="initPartitionsStr" value="false"/>
                            <array name="multiplePartitions">
@@ -2466,44 +2466,55 @@
                            </array>
                            <array name="filObjects"/>
                            <array name="filInfoObjects"/>
-                           <array name="dirObjects">
-                              <struct name="0">
-                                 <setting name="objID" value="FATFS_SDCARD"/>
-                              </struct>
-                           </array>
+                           <array name="dirObjects"/>
                         </struct>
                      </config_set>
-                     <config_set name="ff_config">
+                     <config_set name="ff_config" quick_selection="default">
                         <setting name="revisionID" value="rev14_1"/>
-                        <setting name="MSDKadaptation" value="SD_DISK_ENABLE"/>
+                        <setting name="MSDKadaptation" value="RAM_DISK_ENABLE"/>
                         <struct name="functionConfig">
                            <setting name="FF_FS_READONLY" value="false"/>
                            <setting name="FF_FS_MINIMIZE" value="level1"/>
                            <setting name="FF_USE_STRFUNC" value="enableWithoutConversion"/>
                            <setting name="FF_USE_FIND" value="disableDirRead"/>
                            <setting name="FF_USE_MKFS" value="true"/>
-                           <setting name="FF_USE_FASTSEEK" value="true"/>
-                           <setting name="FF_USE_EXPAND" value="true"/>
-                           <setting name="FF_USE_CHMOD" value="true"/>
-                           <setting name="FF_USE_LABEL" value="true"/>
-                           <setting name="FF_USE_FORWARD" value="true"/>
+                           <setting name="FF_USE_FASTSEEK" value="false"/>
+                           <setting name="FF_USE_EXPAND" value="false"/>
+                           <setting name="FF_USE_CHMOD" value="false"/>
+                           <setting name="FF_USE_LABEL" value="false"/>
+                           <setting name="FF_USE_FORWARD" value="false"/>
                         </struct>
                         <struct name="namespaceConfig">
-                           <setting name="FF_USE_LFN" value="enableLfnHeap"/>
+                           <setting name="FF_USE_LFN" value="disableLfn"/>
                            <setting name="FF_MAX_LFN" value="255"/>
                            <setting name="FF_LFN_BUF" value="LFNID"/>
                            <setting name="FF_SFN_BUF" value="SFNID"/>
-                           <setting name="FF_LFN_UNICODE" value="UTF8"/>
-                           <setting name="FF_STRF_ENCODE" value="UTF8"/>
+                           <setting name="FF_LFN_UNICODE" value="UTF16"/>
+                           <setting name="FF_STRF_ENCODE" value="UTF16LE"/>
                            <setting name="FF_CODE_PAGE" value="cpUS"/>
                            <setting name="FF_FS_RPATH" value="enableRP2"/>
                         </struct>
                         <struct name="driveConfig">
-                           <setting name="FF_VOLUMES" value="1"/>
-                           <setting name="FF_STR_VOLUME_ID" value="stringIdWindows"/>
+                           <setting name="FF_VOLUMES" value="6"/>
+                           <setting name="FF_STR_VOLUME_ID" value="numericId"/>
                            <array name="volumes">
                               <struct name="0">
-                                 <setting name="volumeStr" value="SDCARD"/>
+                                 <setting name="volumeStr" value="RAM"/>
+                              </struct>
+                              <struct name="1">
+                                 <setting name="volumeStr" value="NAND"/>
+                              </struct>
+                              <struct name="2">
+                                 <setting name="volumeStr" value="CF"/>
+                              </struct>
+                              <struct name="3">
+                                 <setting name="volumeStr" value="SD"/>
+                              </struct>
+                              <struct name="4">
+                                 <setting name="volumeStr" value="SD2"/>
+                              </struct>
+                              <struct name="5">
+                                 <setting name="volumeStr" value="USB"/>
                               </struct>
                            </array>
                            <setting name="FF_MULTI_PARTITION" value="false"/>
@@ -2515,16 +2526,13 @@
                         </struct>
                         <struct name="systemConfig">
                            <setting name="FF_FS_TINY" value="false"/>
-                           <setting name="FF_FS_EXFAT" value="true"/>
-                           <setting name="FF_FS_NORTC" value="true"/>
+                           <setting name="FF_FS_EXFAT" value="false"/>
+                           <setting name="FF_FS_NORTC" value="false"/>
                            <setting name="FF_NORTC_MON" value="1"/>
                            <setting name="FF_NORTC_MDAY" value="1"/>
                            <setting name="FF_NORTC_YEAR" value="2020"/>
                            <set name="FF_FS_NOFSINFO">
-                              <selected>
-                                 <id>bit0</id>
-                                 <id>bit1</id>
-                              </selected>
+                              <selected/>
                            </set>
                            <setting name="FF_FS_LOCK" value="0"/>
                            <setting name="FF_FS_REENTRANT" value="false"/>
