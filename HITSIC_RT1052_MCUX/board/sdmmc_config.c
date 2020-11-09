@@ -38,7 +38,7 @@ static sdio_card_int_t s_sdioInt;
  ******************************************************************************/
 uint32_t BOARD_USDHC1ClockConfiguration(void)
 {
-    CLOCK_InitSysPll(&sysPllConfig_BOARD_BootClockRUN);
+    CLOCK_InitSysPll(&sysPllConfig_RTECLK_Run600M);
     /*configure system pll PFD0 fractional divider to 24, output clock is 528MHZ * 18 / 24 = 396 MHZ*/
     CLOCK_InitSysPfd(kCLOCK_Pfd0, 24U);
     /* Configure USDHC clock source and divider */

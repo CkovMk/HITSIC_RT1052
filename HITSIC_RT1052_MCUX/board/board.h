@@ -38,7 +38,7 @@
 #ifndef _BOARD_H_
 #define _BOARD_H_
 
-#include "inc_stdlib.h"
+#include "inc_stdlib.hpp"
 #include "fsl_debug_console.h"
 
 /**
