@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup Label="ProjectConfigurations">
+        <ProjectConfiguration Include="Debug|Win32">
+            <Configuration>Debug</Configuration>
+            <Platform>Win32</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|Win32">
+            <Configuration>Release</Configuration>
+            <Platform>Win32</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Debug|x64">
+            <Configuration>Debug</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|x64">
+            <Configuration>Release</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+    </ItemGroup>
+    <PropertyGroup Label="Globals">
+        <VCProjectVersion>16.0</VCProjectVersion>
+        <ProjectGuid>{CD76E24F-33BD-4318-A223-052BE1D0E730}</ProjectGuid>
+        <Keyword>Win32Proj</Keyword>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+        <ConfigurationType>Makefile</ConfigurationType>
+        <UseDebugLibraries>true</UseDebugLibraries>
+        <PlatformToolset>v142</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+        <ConfigurationType>Makefile</ConfigurationType>
+        <UseDebugLibraries>false</UseDebugLibraries>
+        <PlatformToolset>v142</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Label="Configuration">
+        <ConfigurationType>Makefile</ConfigurationType>
+        <UseDebugLibraries>true</UseDebugLibraries>
+        <PlatformToolset>v142</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="Configuration">
+        <ConfigurationType>Makefile</ConfigurationType>
+        <UseDebugLibraries>false</UseDebugLibraries>
+        <PlatformToolset>v142</PlatformToolset>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+    <ImportGroup Label="ExtensionSettings"/>
+    <ImportGroup Label="Shared"/>
+    <ImportGroup Label="PropertySheets" Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+        <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" Label="LocalAppDataPlatform"/>
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+        <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" Label="LocalAppDataPlatform"/>
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">
+        <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" Label="LocalAppDataPlatform"/>
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">
+        <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" Label="LocalAppDataPlatform"/>
+    </ImportGroup>
+    <PropertyGroup Label="UserMacros"/>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+        <NMakeOutput>HITSIC_RT1052_MCUX.exe</NMakeOutput>
+        <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions);CPU_MIMXRT1052DVL6B;CPU_MIMXRT1052DVL6B_cm7;DEBUG;DEBUG_CONSOLE_RX_ENABLE=1;FSL_RTOS_BM;SDK_DEBUGCONSOLE=1;SDK_DEBUGCONSOLE_UART;SDK_OS_BAREMETAL;SERIAL_PORT_TYPE_SWO=0;SERIAL_PORT_TYPE_UART=1;SKIP_SYSCLK_INIT;XIP_BOOT_HEADER_DCD_ENABLE=1;XIP_BOOT_HEADER_ENABLE=1;XIP_EXTERNAL_FLASH=1;__ARMVFP__;__GNUC__;__MCUXPRESSO;__NEWLIB__;__USE_CMSIS</NMakePreprocessorDefinitions>
+        <IncludePath>$(MSBuildProjectDirectory)/;$(MSBuildProjectDirectory)/CMSIS;$(MSBuildProjectDirectory)/CMSIS/NN/Include;$(MSBuildProjectDirectory)/HITSIC_Module/d_rt1052;$(MSBuildProjectDirectory)/HITSIC_Module/d_rt1052/extlib_port/CmBacktrace-1.4.0/cm_backtrace;$(MSBuildProjectDirectory)/HITSIC_Module/utilities;$(MSBuildProjectDirectory)/HITSIC_Module/utilities/extlib/CmBacktrace-1.4.0/cm_backtrace;$(MSBuildProjectDirectory)/board;$(MSBuildProjectDirectory)/component/crc;$(MSBuildProjectDirectory)/component/gpio;$(MSBuildProjectDirectory)/component/lists;$(MSBuildProjectDirectory)/component/mem_manager;$(MSBuildProjectDirectory)/component/osa;$(MSBuildProjectDirectory)/component/rng;$(MSBuildProjectDirectory)/component/serial_manager;$(MSBuildProjectDirectory)/component/uart;$(MSBuildProjectDirectory)/device;$(MSBuildProjectDirectory)/drivers;$(MSBuildProjectDirectory)/fatfs/source;$(MSBuildProjectDirectory)/fatfs/source/fsl_ram_disk;$(MSBuildProjectDirectory)/fatfs/source/fsl_sd_disk;$(MSBuildProjectDirectory)/freemaster;$(MSBuildProjectDirectory)/glow;$(MSBuildProjectDirectory)/rtcesl/amclib;$(MSBuildProjectDirectory)/rtcesl/gdflib;$(MSBuildProjectDirectory)/rtcesl/gflib;$(MSBuildProjectDirectory)/rtcesl/gmclib;$(MSBuildProjectDirectory)/rtcesl/mlib;$(MSBuildProjectDirectory)/sdmmc/host;$(MSBuildProjectDirectory)/sdmmc/inc;$(MSBuildProjectDirectory)/sdmmc/osa;$(MSBuildProjectDirectory)/source;$(MSBuildProjectDirectory)/source/platform;$(MSBuildProjectDirectory)/source/platform/flexspi;$(MSBuildProjectDirectory)/source/platform/flexspi_nand;$(MSBuildProjectDirectory)/source/platform/flexspi_nor;$(MSBuildProjectDirectory)/tensorflow-lite;$(MSBuildProjectDirectory)/tensorflow-lite/third_party;$(MSBuildProjectDirectory)/tensorflow-lite/third_party/flatbuffers/include;$(MSBuildProjectDirectory)/utilities;$(MSBuildProjectDirectory)/utilities/utilities;$(MSBuildProjectDirectory)/xip;$(IncludePath)</IncludePath>
+    </PropertyGroup>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">
+        <NMakeOutput>HITSIC_RT1052_MCUX.exe</NMakeOutput>
+        <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions);CPU_MIMXRT1052DVL6B;CPU_MIMXRT1052DVL6B_cm7;DEBUG;DEBUG_CONSOLE_RX_ENABLE=1;FSL_RTOS_BM;SDK_DEBUGCONSOLE=1;SDK_DEBUGCONSOLE_UART;SDK_OS_BAREMETAL;SERIAL_PORT_TYPE_SWO=0;SERIAL_PORT_TYPE_UART=1;SKIP_SYSCLK_INIT;XIP_BOOT_HEADER_DCD_ENABLE=1;XIP_BOOT_HEADER_ENABLE=1;XIP_EXTERNAL_FLASH=1;__ARMVFP__;__GNUC__;__MCUXPRESSO;__NEWLIB__;__USE_CMSIS</NMakePreprocessorDefinitions>
+        <IncludePath>$(MSBuildProjectDirectory)/;$(MSBuildProjectDirectory)/CMSIS;$(MSBuildProjectDirectory)/CMSIS/NN/Include;$(MSBuildProjectDirectory)/HITSIC_Module/d_rt1052;$(MSBuildProjectDirectory)/HITSIC_Module/d_rt1052/extlib_port/CmBacktrace-1.4.0/cm_backtrace;$(MSBuildProjectDirectory)/HITSIC_Module/utilities;$(MSBuildProjectDirectory)/HITSIC_Module/utilities/extlib/CmBacktrace-1.4.0/cm_backtrace;$(MSBuildProjectDirectory)/board;$(MSBuildProjectDirectory)/component/crc;$(MSBuildProjectDirectory)/component/gpio;$(MSBuildProjectDirectory)/component/lists;$(MSBuildProjectDirectory)/component/mem_manager;$(MSBuildProjectDirectory)/component/osa;$(MSBuildProjectDirectory)/component/rng;$(MSBuildProjectDirectory)/component/serial_manager;$(MSBuildProjectDirectory)/component/uart;$(MSBuildProjectDirectory)/device;$(MSBuildProjectDirectory)/drivers;$(MSBuildProjectDirectory)/fatfs/source;$(MSBuildProjectDirectory)/fatfs/source/fsl_ram_disk;$(MSBuildProjectDirectory)/fatfs/source/fsl_sd_disk;$(MSBuildProjectDirectory)/freemaster;$(MSBuildProjectDirectory)/glow;$(MSBuildProjectDirectory)/rtcesl/amclib;$(MSBuildProjectDirectory)/rtcesl/gdflib;$(MSBuildProjectDirectory)/rtcesl/gflib;$(MSBuildProjectDirectory)/rtcesl/gmclib;$(MSBuildProjectDirectory)/rtcesl/mlib;$(MSBuildProjectDirectory)/sdmmc/host;$(MSBuildProjectDirectory)/sdmmc/inc;$(MSBuildProjectDirectory)/sdmmc/osa;$(MSBuildProjectDirectory)/source;$(MSBuildProjectDirectory)/source/platform;$(MSBuildProjectDirectory)/source/platform/flexspi;$(MSBuildProjectDirectory)/source/platform/flexspi_nand;$(MSBuildProjectDirectory)/source/platform/flexspi_nor;$(MSBuildProjectDirectory)/tensorflow-lite;$(MSBuildProjectDirectory)/tensorflow-lite/third_party;$(MSBuildProjectDirectory)/tensorflow-lite/third_party/flatbuffers/include;$(MSBuildProjectDirectory)/utilities;$(MSBuildProjectDirectory)/utilities/utilities;$(MSBuildProjectDirectory)/xip;$(IncludePath)</IncludePath>
+    </PropertyGroup>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+        <NMakeOutput>HITSIC_RT1052_MCUX.exe</NMakeOutput>
+        <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions);CPU_MIMXRT1052DVL6B;CPU_MIMXRT1052DVL6B_cm7;DEBUG;DEBUG_CONSOLE_RX_ENABLE=1;FSL_RTOS_BM;SDK_DEBUGCONSOLE=1;SDK_DEBUGCONSOLE_UART;SDK_OS_BAREMETAL;SERIAL_PORT_TYPE_SWO=0;SERIAL_PORT_TYPE_UART=1;SKIP_SYSCLK_INIT;XIP_BOOT_HEADER_DCD_ENABLE=1;XIP_BOOT_HEADER_ENABLE=1;XIP_EXTERNAL_FLASH=1;__ARMVFP__;__GNUC__;__MCUXPRESSO;__NEWLIB__;__USE_CMSIS</NMakePreprocessorDefinitions>
+        <IncludePath>$(MSBuildProjectDirectory)/;$(MSBuildProjectDirectory)/CMSIS;$(MSBuildProjectDirectory)/CMSIS/NN/Include;$(MSBuildProjectDirectory)/HITSIC_Module/d_rt1052;$(MSBuildProjectDirectory)/HITSIC_Module/d_rt1052/extlib_port/CmBacktrace-1.4.0/cm_backtrace;$(MSBuildProjectDirectory)/HITSIC_Module/utilities;$(MSBuildProjectDirectory)/HITSIC_Module/utilities/extlib/CmBacktrace-1.4.0/cm_backtrace;$(MSBuildProjectDirectory)/board;$(MSBuildProjectDirectory)/component/crc;$(MSBuildProjectDirectory)/component/gpio;$(MSBuildProjectDirectory)/component/lists;$(MSBuildProjectDirectory)/component/mem_manager;$(MSBuildProjectDirectory)/component/osa;$(MSBuildProjectDirectory)/component/rng;$(MSBuildProjectDirectory)/component/serial_manager;$(MSBuildProjectDirectory)/component/uart;$(MSBuildProjectDirectory)/device;$(MSBuildProjectDirectory)/drivers;$(MSBuildProjectDirectory)/fatfs/source;$(MSBuildProjectDirectory)/fatfs/source/fsl_ram_disk;$(MSBuildProjectDirectory)/fatfs/source/fsl_sd_disk;$(MSBuildProjectDirectory)/freemaster;$(MSBuildProjectDirectory)/glow;$(MSBuildProjectDirectory)/rtcesl/amclib;$(MSBuildProjectDirectory)/rtcesl/gdflib;$(MSBuildProjectDirectory)/rtcesl/gflib;$(MSBuildProjectDirectory)/rtcesl/gmclib;$(MSBuildProjectDirectory)/rtcesl/mlib;$(MSBuildProjectDirectory)/sdmmc/host;$(MSBuildProjectDirectory)/sdmmc/inc;$(MSBuildProjectDirectory)/sdmmc/osa;$(MSBuildProjectDirectory)/source;$(MSBuildProjectDirectory)/source/platform;$(MSBuildProjectDirectory)/source/platform/flexspi;$(MSBuildProjectDirectory)/source/platform/flexspi_nand;$(MSBuildProjectDirectory)/source/platform/flexspi_nor;$(MSBuildProjectDirectory)/tensorflow-lite;$(MSBuildProjectDirectory)/tensorflow-lite/third_party;$(MSBuildProjectDirectory)/tensorflow-lite/third_party/flatbuffers/include;$(MSBuildProjectDirectory)/utilities;$(MSBuildProjectDirectory)/utilities/utilities;$(MSBuildProjectDirectory)/xip;$(IncludePath)</IncludePath>
+    </PropertyGroup>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">
+        <NMakeOutput>HITSIC_RT1052_MCUX.exe</NMakeOutput>
+        <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions);CPU_MIMXRT1052DVL6B;CPU_MIMXRT1052DVL6B_cm7;DEBUG;DEBUG_CONSOLE_RX_ENABLE=1;FSL_RTOS_BM;SDK_DEBUGCONSOLE=1;SDK_DEBUGCONSOLE_UART;SDK_OS_BAREMETAL;SERIAL_PORT_TYPE_SWO=0;SERIAL_PORT_TYPE_UART=1;SKIP_SYSCLK_INIT;XIP_BOOT_HEADER_DCD_ENABLE=1;XIP_BOOT_HEADER_ENABLE=1;XIP_EXTERNAL_FLASH=1;__ARMVFP__;__GNUC__;__MCUXPRESSO;__NEWLIB__;__USE_CMSIS</NMakePreprocessorDefinitions>
+        <IncludePath>$(MSBuildProjectDirectory)/;$(MSBuildProjectDirectory)/CMSIS;$(MSBuildProjectDirectory)/CMSIS/NN/Include;$(MSBuildProjectDirectory)/HITSIC_Module/d_rt1052;$(MSBuildProjectDirectory)/HITSIC_Module/d_rt1052/extlib_port/CmBacktrace-1.4.0/cm_backtrace;$(MSBuildProjectDirectory)/HITSIC_Module/utilities;$(MSBuildProjectDirectory)/HITSIC_Module/utilities/extlib/CmBacktrace-1.4.0/cm_backtrace;$(MSBuildProjectDirectory)/board;$(MSBuildProjectDirectory)/component/crc;$(MSBuildProjectDirectory)/component/gpio;$(MSBuildProjectDirectory)/component/lists;$(MSBuildProjectDirectory)/component/mem_manager;$(MSBuildProjectDirectory)/component/osa;$(MSBuildProjectDirectory)/component/rng;$(MSBuildProjectDirectory)/component/serial_manager;$(MSBuildProjectDirectory)/component/uart;$(MSBuildProjectDirectory)/device;$(MSBuildProjectDirectory)/drivers;$(MSBuildProjectDirectory)/fatfs/source;$(MSBuildProjectDirectory)/fatfs/source/fsl_ram_disk;$(MSBuildProjectDirectory)/fatfs/source/fsl_sd_disk;$(MSBuildProjectDirectory)/freemaster;$(MSBuildProjectDirectory)/glow;$(MSBuildProjectDirectory)/rtcesl/amclib;$(MSBuildProjectDirectory)/rtcesl/gdflib;$(MSBuildProjectDirectory)/rtcesl/gflib;$(MSBuildProjectDirectory)/rtcesl/gmclib;$(MSBuildProjectDirectory)/rtcesl/mlib;$(MSBuildProjectDirectory)/sdmmc/host;$(MSBuildProjectDirectory)/sdmmc/inc;$(MSBuildProjectDirectory)/sdmmc/osa;$(MSBuildProjectDirectory)/source;$(MSBuildProjectDirectory)/source/platform;$(MSBuildProjectDirectory)/source/platform/flexspi;$(MSBuildProjectDirectory)/source/platform/flexspi_nand;$(MSBuildProjectDirectory)/source/platform/flexspi_nor;$(MSBuildProjectDirectory)/tensorflow-lite;$(MSBuildProjectDirectory)/tensorflow-lite/third_party;$(MSBuildProjectDirectory)/tensorflow-lite/third_party/flatbuffers/include;$(MSBuildProjectDirectory)/utilities;$(MSBuildProjectDirectory)/utilities/utilities;$(MSBuildProjectDirectory)/xip;$(IncludePath)</IncludePath>
+    </PropertyGroup>
+    <ItemDefinitionGroup/>
+    <ItemGroup>
+        <ClCompile Include="CMSIS\NN\ActivationFunctions\arm_nn_activations_q15.c"/>
+        <ClCompile Include="CMSIS\NN\ActivationFunctions\arm_nn_activations_q7.c"/>
+        <ClCompile Include="CMSIS\NN\ActivationFunctions\arm_relu_q15.c"/>
+        <ClCompile Include="CMSIS\NN\ActivationFunctions\arm_relu_q7.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_1x1_HWC_q7_fast_nonsquare.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q15_basic.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q15_fast.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q15_fast_nonsquare.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q7_RGB.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q7_basic.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q7_basic_nonsquare.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q7_fast.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q7_fast_nonsquare.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_depthwise_conv_u8_basic_ver1.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_depthwise_separable_conv_HWC_q7.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_depthwise_separable_conv_HWC_q7_nonsquare.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_nn_mat_mult_kernel_q7_q15.c"/>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_nn_mat_mult_kernel_q7_q15_reordered.c"/>
+        <ClCompile Include="CMSIS\NN\FullyConnectedFunctions\arm_fully_connected_mat_q7_vec_q15.c"/>
+        <ClCompile Include="CMSIS\NN\FullyConnectedFunctions\arm_fully_connected_mat_q7_vec_q15_opt.c"/>
+        <ClCompile Include="CMSIS\NN\FullyConnectedFunctions\arm_fully_connected_q15.c"/>
+        <ClCompile Include="CMSIS\NN\FullyConnectedFunctions\arm_fully_connected_q15_opt.c"/>
+        <ClCompile Include="CMSIS\NN\FullyConnectedFunctions\arm_fully_connected_q7.c"/>
+        <ClCompile Include="CMSIS\NN\FullyConnectedFunctions\arm_fully_connected_q7_opt.c"/>
+        <ClCompile Include="CMSIS\NN\NNSupportFunctions\arm_nn_mult_q15.c"/>
+        <ClCompile Include="CMSIS\NN\NNSupportFunctions\arm_nn_mult_q7.c"/>
+        <ClCompile Include="CMSIS\NN\NNSupportFunctions\arm_nntables.c"/>
+        <ClCompile Include="CMSIS\NN\NNSupportFunctions\arm_q7_to_q15_no_shift.c"/>
+        <ClCompile Include="CMSIS\NN\NNSupportFunctions\arm_q7_to_q15_reordered_no_shift.c"/>
+        <ClCompile Include="CMSIS\NN\PoolingFunctions\arm_pool_q7_HWC.c"/>
+        <ClCompile Include="CMSIS\NN\SoftmaxFunctions\arm_softmax_q15.c"/>
+        <ClCompile Include="CMSIS\NN\SoftmaxFunctions\arm_softmax_q7.c"/>
+        <ClCompile Include="HITSIC_Module\d_rt1052\drv_imu_port.c"/>
+        <ClCompile Include="HITSIC_Module\d_rt1052\extlib_port\EasyFlash-4.0.0\easyflash\port\ef_port.c"/>
+        <ClCompile Include="HITSIC_Module\d_rt1052\hitsic_common.c"/>
+        <ClCompile Include="HITSIC_Module\d_rt1052\sys_extint_port.cpp"/>
+        <ClCompile Include="HITSIC_Module\d_rt1052\sys_pitmgr_port.cpp"/>
+        <ClCompile Include="HITSIC_Module\d_rt1052\sys_uartmgr_port.cpp"/>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\cm_backtrace.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\app_menu.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\app_menu_button.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\app_menu_nvm.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\app_menu_type.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\drv_button.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\drv_disp_font.cpp"/>
+        <ClCompile Include="HITSIC_Module\utilities\drv_disp_ssd1306.cpp"/>
+        <ClCompile Include="HITSIC_Module\utilities\drv_disp_st7789.cpp"/>
+        <ClCompile Include="HITSIC_Module\utilities\drv_ftfx_flash.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\drv_imu_invensense.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\cm_backtrace.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\ef_types.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\src\cJSON.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\src\s2j.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\easyflash.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\ef_env.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\ef_env_legacy.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\ef_env_legacy_wl.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\ef_iap.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\ef_log.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\ef_utils.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\lib_adrcctrl.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\lib_list.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\lib_pidctrl.c"/>
+        <ClCompile Include="HITSIC_Module\utilities\sys_extint.cpp"/>
+        <ClCompile Include="HITSIC_Module\utilities\sys_pitmgr.cpp"/>
+        <ClCompile Include="HITSIC_Module\utilities\sys_rmcall.cpp"/>
+        <ClCompile Include="HITSIC_Module\utilities\sys_uartmgr.cpp"/>
+        <ClCompile Include="board\board.c"/>
+        <ClCompile Include="board\clock_config.c"/>
+        <ClCompile Include="board\clock_config.c.bak"/>
+        <ClCompile Include="board\dcd.c"/>
+        <ClCompile Include="board\peripherals.c"/>
+        <ClCompile Include="board\peripherals.c.bak"/>
+        <ClCompile Include="board\pin_mux.c"/>
+        <ClCompile Include="board\sdmmc_config.c"/>
+        <ClCompile Include="component\crc\software_crc_adapter.c"/>
+        <ClCompile Include="component\gpio\igpio_adapter.c"/>
+        <ClCompile Include="component\lists\generic_list.c"/>
+        <ClCompile Include="component\mem_manager\mem_manager.c"/>
+        <ClCompile Include="component\osa\fsl_os_abstraction_bm.c"/>
+        <ClCompile Include="component\rng\trng_adapter.c"/>
+        <ClCompile Include="component\serial_manager\serial_manager.c"/>
+        <ClCompile Include="component\serial_manager\serial_port_swo.c"/>
+        <ClCompile Include="component\serial_manager\serial_port_uart.c"/>
+        <ClCompile Include="component\uart\lpuart_adapter.c"/>
+        <ClCompile Include="device\system_MIMXRT1052.c"/>
+        <ClCompile Include="drivers\fsl_adc.c"/>
+        <ClCompile Include="drivers\fsl_adc_etc.c"/>
+        <ClCompile Include="drivers\fsl_aipstz.c"/>
+        <ClCompile Include="drivers\fsl_aoi.c"/>
+        <ClCompile Include="drivers\fsl_bee.c"/>
+        <ClCompile Include="drivers\fsl_cache.c"/>
+        <ClCompile Include="drivers\fsl_clock.c"/>
+        <ClCompile Include="drivers\fsl_cmp.c"/>
+        <ClCompile Include="drivers\fsl_common.c"/>
+        <ClCompile Include="drivers\fsl_csi.c"/>
+        <ClCompile Include="drivers\fsl_dcdc.c"/>
+        <ClCompile Include="drivers\fsl_dcp.c"/>
+        <ClCompile Include="drivers\fsl_dmamux.c"/>
+        <ClCompile Include="drivers\fsl_edma.c"/>
+        <ClCompile Include="drivers\fsl_elcdif.c"/>
+        <ClCompile Include="drivers\fsl_enc.c"/>
+        <ClCompile Include="drivers\fsl_enet.c"/>
+        <ClCompile Include="drivers\fsl_ewm.c"/>
+        <ClCompile Include="drivers\fsl_flexcan.c"/>
+        <ClCompile Include="drivers\fsl_flexio.c"/>
+        <ClCompile Include="drivers\fsl_flexio_camera.c"/>
+        <ClCompile Include="drivers\fsl_flexio_camera_edma.c"/>
+        <ClCompile Include="drivers\fsl_flexio_i2c_master.c"/>
+        <ClCompile Include="drivers\fsl_flexio_i2s.c"/>
+        <ClCompile Include="drivers\fsl_flexio_i2s_edma.c"/>
+        <ClCompile Include="drivers\fsl_flexio_mculcd.c"/>
+        <ClCompile Include="drivers\fsl_flexio_mculcd_edma.c"/>
+        <ClCompile Include="drivers\fsl_flexio_spi.c"/>
+        <ClCompile Include="drivers\fsl_flexio_spi_edma.c"/>
+        <ClCompile Include="drivers\fsl_flexio_uart.c"/>
+        <ClCompile Include="drivers\fsl_flexio_uart_edma.c"/>
+        <ClCompile Include="drivers\fsl_flexram.c"/>
+        <ClCompile Include="drivers\fsl_flexram_allocate.c"/>
+        <ClCompile Include="drivers\fsl_flexspi.c"/>
+        <ClCompile Include="drivers\fsl_gpc.c"/>
+        <ClCompile Include="drivers\fsl_gpio.c"/>
+        <ClCompile Include="drivers\fsl_gpt.c"/>
+        <ClCompile Include="drivers\fsl_kpp.c"/>
+        <ClCompile Include="drivers\fsl_lpi2c.c"/>
+        <ClCompile Include="drivers\fsl_lpi2c_edma.c"/>
+        <ClCompile Include="drivers\fsl_lpspi.c"/>
+        <ClCompile Include="drivers\fsl_lpspi_edma.c"/>
+        <ClCompile Include="drivers\fsl_lpuart.c"/>
+        <ClCompile Include="drivers\fsl_lpuart_edma.c"/>
+        <ClCompile Include="drivers\fsl_ocotp.c"/>
+        <ClCompile Include="drivers\fsl_pit.c"/>
+        <ClCompile Include="drivers\fsl_pmu.c"/>
+        <ClCompile Include="drivers\fsl_pwm.c"/>
+        <ClCompile Include="drivers\fsl_pxp.c"/>
+        <ClCompile Include="drivers\fsl_qtmr.c"/>
+        <ClCompile Include="drivers\fsl_rtwdog.c"/>
+        <ClCompile Include="drivers\fsl_sai.c"/>
+        <ClCompile Include="drivers\fsl_sai_edma.c"/>
+        <ClCompile Include="drivers\fsl_semc.c"/>
+        <ClCompile Include="drivers\fsl_snvs_hp.c"/>
+        <ClCompile Include="drivers\fsl_snvs_lp.c"/>
+        <ClCompile Include="drivers\fsl_spdif.c"/>
+        <ClCompile Include="drivers\fsl_spdif_edma.c"/>
+        <ClCompile Include="drivers\fsl_src.c"/>
+        <ClCompile Include="drivers\fsl_tempmon.c"/>
+        <ClCompile Include="drivers\fsl_trng.c"/>
+        <ClCompile Include="drivers\fsl_tsc.c"/>
+        <ClCompile Include="drivers\fsl_usdhc.c"/>
+        <ClCompile Include="drivers\fsl_wdog.c"/>
+        <ClCompile Include="drivers\fsl_xbara.c"/>
+        <ClCompile Include="drivers\fsl_xbarb.c"/>
+        <ClCompile Include="fatfs\source\diskio.c"/>
+        <ClCompile Include="fatfs\source\ff.c"/>
+        <ClCompile Include="fatfs\source\ffsystem.c"/>
+        <ClCompile Include="fatfs\source\ffunicode.c"/>
+        <ClCompile Include="fatfs\source\fsl_ram_disk\fsl_ram_disk.c"/>
+        <ClCompile Include="fatfs\source\fsl_sd_disk\fsl_sd_disk.c"/>
+        <ClCompile Include="glow\glow_bundle_utils.c"/>
+        <ClCompile Include="sdmmc\host\fsl_sdmmc_host.c"/>
+        <ClCompile Include="sdmmc\osa\fsl_sdmmc_osa.c"/>
+        <ClCompile Include="sdmmc\src\fsl_sd.c"/>
+        <ClCompile Include="sdmmc\src\fsl_sdmmc_common.c"/>
+        <ClCompile Include="source\isr.cpp"/>
+        <ClCompile Include="source\main.cpp"/>
+        <ClCompile Include="source\platform\rt1052_romapi.c"/>
+        <ClCompile Include="startup\startup_mimxrt1052.cpp"/>
+        <ClCompile Include="utilities\fsl_assert.c"/>
+        <ClCompile Include="utilities\fsl_debug_console.c"/>
+        <ClCompile Include="utilities\fsl_shell.c"/>
+        <ClCompile Include="utilities\fsl_str.c"/>
+        <ClCompile Include="utilities\utilities\fsl_notifier.c"/>
+        <ClCompile Include="xip\fire_imxrt1052_spiflash_config.c"/>
+        <ClCompile Include="xip\fsl_flexspi_nor_boot.c"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ClInclude Include="CMSIS\NN\Include\arm_nn_tables.h"/>
+        <ClInclude Include="CMSIS\NN\Include\arm_nnfunctions.h"/>
+        <ClInclude Include="CMSIS\NN\Include\arm_nnsupportfunctions.h"/>
+        <ClInclude Include="CMSIS\arm_common_tables.h"/>
+        <ClInclude Include="CMSIS\arm_const_structs.h"/>
+        <ClInclude Include="CMSIS\arm_helium_utils.h"/>
+        <ClInclude Include="CMSIS\arm_math.h"/>
+        <ClInclude Include="CMSIS\arm_mve_tables.h"/>
+        <ClInclude Include="CMSIS\arm_vec_math.h"/>
+        <ClInclude Include="CMSIS\cachel1_armv7.h"/>
+        <ClInclude Include="CMSIS\cmsis_armcc.h"/>
+        <ClInclude Include="CMSIS\cmsis_armclang.h"/>
+        <ClInclude Include="CMSIS\cmsis_armclang_ltm.h"/>
+        <ClInclude Include="CMSIS\cmsis_compiler.h"/>
+        <ClInclude Include="CMSIS\cmsis_gcc.h"/>
+        <ClInclude Include="CMSIS\cmsis_iccarm.h"/>
+        <ClInclude Include="CMSIS\cmsis_version.h"/>
+        <ClInclude Include="CMSIS\core_armv81mml.h"/>
+        <ClInclude Include="CMSIS\core_armv8mbl.h"/>
+        <ClInclude Include="CMSIS\core_armv8mml.h"/>
+        <ClInclude Include="CMSIS\core_cm0.h"/>
+        <ClInclude Include="CMSIS\core_cm0plus.h"/>
+        <ClInclude Include="CMSIS\core_cm1.h"/>
+        <ClInclude Include="CMSIS\core_cm23.h"/>
+        <ClInclude Include="CMSIS\core_cm3.h"/>
+        <ClInclude Include="CMSIS\core_cm33.h"/>
+        <ClInclude Include="CMSIS\core_cm35p.h"/>
+        <ClInclude Include="CMSIS\core_cm4.h"/>
+        <ClInclude Include="CMSIS\core_cm55.h"/>
+        <ClInclude Include="CMSIS\core_cm7.h"/>
+        <ClInclude Include="CMSIS\core_sc000.h"/>
+        <ClInclude Include="CMSIS\core_sc300.h"/>
+        <ClInclude Include="CMSIS\mpu_armv7.h"/>
+        <ClInclude Include="CMSIS\mpu_armv8.h"/>
+        <ClInclude Include="CMSIS\pmu_armv8.h"/>
+        <ClInclude Include="CMSIS\tz_context.h"/>
+        <ClInclude Include="HITSIC_Module\d_rt1052\drv_imu_port.h"/>
+        <ClInclude Include="HITSIC_Module\d_rt1052\extlib_port\CmBacktrace-1.4.0\cm_backtrace\cmb_cfg.h"/>
+        <ClInclude Include="HITSIC_Module\d_rt1052\extlib_port\CmBacktrace-1.4.0\cm_backtrace\cmb_def.h"/>
+        <ClInclude Include="HITSIC_Module\d_rt1052\extlib_port\EasyFlash-4.0.0\easyflash\port\ef_cfg.h"/>
+        <ClInclude Include="HITSIC_Module\d_rt1052\hitsic_common.h"/>
+        <ClInclude Include="HITSIC_Module\d_rt1052\inc_fsl_rt1052.h"/>
+        <ClInclude Include="HITSIC_Module\d_rt1052\sys_extint_port.hpp"/>
+        <ClInclude Include="HITSIC_Module\d_rt1052\sys_pitmgr_port.hpp"/>
+        <ClInclude Include="HITSIC_Module\d_rt1052\sys_uartmgr_port.hpp"/>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\cm_backtrace.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\app_menu.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\app_menu_button.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\app_menu_def.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\app_menu_nvm.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\app_menu_type.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\drv_button.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\drv_disp_ssd1306.hpp"/>
+        <ClInclude Include="HITSIC_Module\utilities\drv_disp_st7789.hpp"/>
+        <ClInclude Include="HITSIC_Module\utilities\drv_ftfx_flash.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\drv_imu_invensense.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\cm_backtrace.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\inc\easyflash.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\ef_types.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\inc\cJSON.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\inc\s2j.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\inc\s2jdef.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\inc_stdlib.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\lib_adrcctrl.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\lib_list.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\lib_pidctrl.h"/>
+        <ClInclude Include="HITSIC_Module\utilities\sys_extint.hpp"/>
+        <ClInclude Include="HITSIC_Module\utilities\sys_pitmgr.hpp"/>
+        <ClInclude Include="HITSIC_Module\utilities\sys_rmcall.hpp"/>
+        <ClInclude Include="HITSIC_Module\utilities\sys_uartmgr.hpp"/>
+        <ClInclude Include="board\board.h"/>
+        <ClInclude Include="board\clock_config.h"/>
+        <ClInclude Include="board\clock_config.h.bak"/>
+        <ClInclude Include="board\dcd.h"/>
+        <ClInclude Include="board\peripherals.h"/>
+        <ClInclude Include="board\peripherals.h.bak"/>
+        <ClInclude Include="board\pin_mux.h"/>
+        <ClInclude Include="board\sdmmc_config.h"/>
+        <ClInclude Include="component\crc\crc.h"/>
+        <ClInclude Include="component\gpio\gpio.h"/>
+        <ClInclude Include="component\lists\generic_list.h"/>
+        <ClInclude Include="component\mem_manager\mem_manager.h"/>
+        <ClInclude Include="component\osa\fsl_os_abstraction.h"/>
+        <ClInclude Include="component\osa\fsl_os_abstraction_bm.h"/>
+        <ClInclude Include="component\osa\fsl_os_abstraction_config.h"/>
+        <ClInclude Include="component\rng\rng.h"/>
+        <ClInclude Include="component\serial_manager\serial_manager.h"/>
+        <ClInclude Include="component\serial_manager\serial_port_internal.h"/>
+        <ClInclude Include="component\serial_manager\serial_port_swo.h"/>
+        <ClInclude Include="component\serial_manager\serial_port_uart.h"/>
+        <ClInclude Include="component\uart\uart.h"/>
+        <ClInclude Include="device\MIMXRT1052.h"/>
+        <ClInclude Include="device\MIMXRT1052_features.h"/>
+        <ClInclude Include="device\fsl_device_registers.h"/>
+        <ClInclude Include="device\system_MIMXRT1052.h"/>
+        <ClInclude Include="drivers\fsl_adc.h"/>
+        <ClInclude Include="drivers\fsl_adc_etc.h"/>
+        <ClInclude Include="drivers\fsl_aipstz.h"/>
+        <ClInclude Include="drivers\fsl_aoi.h"/>
+        <ClInclude Include="drivers\fsl_bee.h"/>
+        <ClInclude Include="drivers\fsl_cache.h"/>
+        <ClInclude Include="drivers\fsl_clock.h"/>
+        <ClInclude Include="drivers\fsl_cmp.h"/>
+        <ClInclude Include="drivers\fsl_common.h"/>
+        <ClInclude Include="drivers\fsl_csi.h"/>
+        <ClInclude Include="drivers\fsl_dcdc.h"/>
+        <ClInclude Include="drivers\fsl_dcp.h"/>
+        <ClInclude Include="drivers\fsl_dmamux.h"/>
+        <ClInclude Include="drivers\fsl_edma.h"/>
+        <ClInclude Include="drivers\fsl_elcdif.h"/>
+        <ClInclude Include="drivers\fsl_enc.h"/>
+        <ClInclude Include="drivers\fsl_enet.h"/>
+        <ClInclude Include="drivers\fsl_ewm.h"/>
+        <ClInclude Include="drivers\fsl_flexcan.h"/>
+        <ClInclude Include="drivers\fsl_flexio.h"/>
+        <ClInclude Include="drivers\fsl_flexio_camera.h"/>
+        <ClInclude Include="drivers\fsl_flexio_camera_edma.h"/>
+        <ClInclude Include="drivers\fsl_flexio_i2c_master.h"/>
+        <ClInclude Include="drivers\fsl_flexio_i2s.h"/>
+        <ClInclude Include="drivers\fsl_flexio_i2s_edma.h"/>
+        <ClInclude Include="drivers\fsl_flexio_mculcd.h"/>
+        <ClInclude Include="drivers\fsl_flexio_mculcd_edma.h"/>
+        <ClInclude Include="drivers\fsl_flexio_spi.h"/>
+        <ClInclude Include="drivers\fsl_flexio_spi_edma.h"/>
+        <ClInclude Include="drivers\fsl_flexio_uart.h"/>
+        <ClInclude Include="drivers\fsl_flexio_uart_edma.h"/>
+        <ClInclude Include="drivers\fsl_flexram.h"/>
+        <ClInclude Include="drivers\fsl_flexram_allocate.h"/>
+        <ClInclude Include="drivers\fsl_flexspi.h"/>
+        <ClInclude Include="drivers\fsl_gpc.h"/>
+        <ClInclude Include="drivers\fsl_gpio.h"/>
+        <ClInclude Include="drivers\fsl_gpt.h"/>
+        <ClInclude Include="drivers\fsl_iomuxc.h"/>
+        <ClInclude Include="drivers\fsl_kpp.h"/>
+        <ClInclude Include="drivers\fsl_lpi2c.h"/>
+        <ClInclude Include="drivers\fsl_lpi2c_edma.h"/>
+        <ClInclude Include="drivers\fsl_lpspi.h"/>
+        <ClInclude Include="drivers\fsl_lpspi_edma.h"/>
+        <ClInclude Include="drivers\fsl_lpuart.h"/>
+        <ClInclude Include="drivers\fsl_lpuart_edma.h"/>
+        <ClInclude Include="drivers\fsl_ocotp.h"/>
+        <ClInclude Include="drivers\fsl_pit.h"/>
+        <ClInclude Include="drivers\fsl_pmu.h"/>
+        <ClInclude Include="drivers\fsl_pwm.h"/>
+        <ClInclude Include="drivers\fsl_pxp.h"/>
+        <ClInclude Include="drivers\fsl_qtmr.h"/>
+        <ClInclude Include="drivers\fsl_rtwdog.h"/>
+        <ClInclude Include="drivers\fsl_sai.h"/>
+        <ClInclude Include="drivers\fsl_sai_edma.h"/>
+        <ClInclude Include="drivers\fsl_semc.h"/>
+        <ClInclude Include="drivers\fsl_snvs_hp.h"/>
+        <ClInclude Include="drivers\fsl_snvs_lp.h"/>
+        <ClInclude Include="drivers\fsl_spdif.h"/>
+        <ClInclude Include="drivers\fsl_spdif_edma.h"/>
+        <ClInclude Include="drivers\fsl_src.h"/>
+        <ClInclude Include="drivers\fsl_tempmon.h"/>
+        <ClInclude Include="drivers\fsl_trng.h"/>
+        <ClInclude Include="drivers\fsl_tsc.h"/>
+        <ClInclude Include="drivers\fsl_usdhc.h"/>
+        <ClInclude Include="drivers\fsl_wdog.h"/>
+        <ClInclude Include="drivers\fsl_xbara.h"/>
+        <ClInclude Include="drivers\fsl_xbarb.h"/>
+        <ClInclude Include="fatfs\source\diskio.h"/>
+        <ClInclude Include="fatfs\source\ff.h"/>
+        <ClInclude Include="fatfs\source\fsl_ram_disk\fsl_ram_disk.h"/>
+        <ClInclude Include="fatfs\source\fsl_sd_disk\fsl_sd_disk.h"/>
+        <ClInclude Include="glow\glow_bundle_utils.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_ACIMCtrlMTPA_FLT.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_ACIMRotFluxObsrv_FLT.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_ACIMSpeedMRAS_FLT.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_AngleTrackObsrv_F32.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_AngleTrackObsrv_FLT.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_CtrlFluxWkng_A32.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_CtrlFluxWkng_FLT.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_PMSMBemfObsrvAB_A32.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_PMSMBemfObsrvAB_FLT.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_PMSMBemfObsrvDQ_A32.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_PMSMBemfObsrvDQ_FLT.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_TrackObsrv_F32.h"/>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_TrackObsrv_FLT.h"/>
+        <ClInclude Include="rtcesl\amclib\amclib.h"/>
+        <ClInclude Include="rtcesl\amclib\amclib_FP.h"/>
+        <ClInclude Include="rtcesl\amclib\amclib_types.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterExp_F32.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterExp_FLT.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR1_F32.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR1_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR1_FLT.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR2_F32.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR2_FLT.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR3_F32.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR3_FLT.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR4_F32.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR4_FLT.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterMA_A32.h"/>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterMA_FLT.h"/>
+        <ClInclude Include="rtcesl\gdflib\gdflib.h"/>
+        <ClInclude Include="rtcesl\gdflib\gdflib_FP.h"/>
+        <ClInclude Include="rtcesl\gdflib\gdflib_types.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Acos_F16.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Acos_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Asin_F16.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Asin_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_AtanYX_F16.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_AtanYX_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Atan_F32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Atan_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlBetaIPDp_A32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlBetaIPDp_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlBetaIPp_A32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlBetaIPp_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlPIDp_A32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlPIDp_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlPIp_A32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlPIp_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DFlexRamp_A32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DFlexRamp_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DRamp_F16.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DRamp_F32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DRamp_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_FlexRamp_A32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_FlexRamp_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_FlexSRamp_A32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_FlexSRamp_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Hyst_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Hyst_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Integrator_A32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Integrator_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Limit_F16.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Limit_F32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Limit_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LowerLimit_F16.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LowerLimit_F32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LowerLimit_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LutPer_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LutPer_F32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LutPer_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Lut_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Lut_F32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Lut_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Ramp_F16.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Ramp_F32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Ramp_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_SinCos_F32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_SinCos_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Sqrt_F16.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Sqrt_F32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Sqrt_FLT_Asmi.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Tan_F32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Tan_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_UpperLimit_F16.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_UpperLimit_F32.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_UpperLimit_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_VectorLimit_F16.h"/>
+        <ClInclude Include="rtcesl\gflib\GFLIB_VectorLimit_FLT.h"/>
+        <ClInclude Include="rtcesl\gflib\gflib.h"/>
+        <ClInclude Include="rtcesl\gflib\gflib_FP.h"/>
+        <ClInclude Include="rtcesl\gflib\gflib_types.h"/>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Clark_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Clark_FLT.h"/>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Decoupling_A32.h"/>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Decoupling_FLT.h"/>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_ElimDcBusRip_A32_Asmi.h"/>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_ElimDcBusRip_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_ElimDcBusRip_FLT.h"/>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Park_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Park_FLT.h"/>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Svm_F16.h"/>
+        <ClInclude Include="rtcesl\gmclib\gmclib.h"/>
+        <ClInclude Include="rtcesl\gmclib\gmclib_FP.h"/>
+        <ClInclude Include="rtcesl\gmclib\gmclib_types.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_F16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_FLT_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add4_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add4_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add4_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_F16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_BiShift_F16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_BiShift_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Clb_F16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Clb_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_ConvSc_FLT_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Conv_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Conv_FLT_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div1Q_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div1Q_F16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div1Q_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div_F16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Log2_U16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4Rnd_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4Rnd_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4Rnd_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MacRnd_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MacRnd_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MacRnd_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MacRnd_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MnacRnd_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MnacRnd_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MnacRnd_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MnacRnd_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4Rnd_F16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4Rnd_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4Rnd_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4Rnd_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MsuRnd_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MsuRnd_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MsuRnd_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MsuRnd_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_A32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_F16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_A32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_F16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_F16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Rcp1Q_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Rcp_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Rnd_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Rnd_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sat_A32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Shift_F16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Shift_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Shift_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Shift_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sign_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sign_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sign_FLT_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub4_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub4_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub4_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_A32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F16.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F16_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F32.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F32_Asmi.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F64.h"/>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_FLT.h"/>
+        <ClInclude Include="rtcesl\mlib\RTCESL_cfg.h"/>
+        <ClInclude Include="rtcesl\mlib\asm_mac.h"/>
+        <ClInclude Include="rtcesl\mlib\mlib.h"/>
+        <ClInclude Include="rtcesl\mlib\mlib_FP.h"/>
+        <ClInclude Include="rtcesl\mlib\mlib_types.h"/>
+        <ClInclude Include="sdmmc\host\fsl_sdmmc_host.h"/>
+        <ClInclude Include="sdmmc\inc\fsl_sd.h"/>
+        <ClInclude Include="sdmmc\inc\fsl_sdmmc_common.h"/>
+        <ClInclude Include="sdmmc\inc\fsl_sdmmc_spec.h"/>
+        <ClInclude Include="sdmmc\osa\fsl_sdmmc_osa.h"/>
+        <ClInclude Include="source\ffconf.h"/>
+        <ClInclude Include="source\ffconf.h.bak"/>
+        <ClInclude Include="source\platform\rt1052_romapi.h"/>
+        <ClInclude Include="utilities\fsl_debug_console.h"/>
+        <ClInclude Include="utilities\fsl_debug_console_conf.h"/>
+        <ClInclude Include="utilities\fsl_shell.h"/>
+        <ClInclude Include="utilities\fsl_str.h"/>
+        <ClInclude Include="utilities\utilities\fsl_notifier.h"/>
+        <ClInclude Include="xip\fire_imxrt1052_spiflash_config.h"/>
+        <ClInclude Include="xip\fsl_flexspi_nor_boot.h"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\.gitattributes"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\LICENSE"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\README.md"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\gcc\cmb_fault.S"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\iar\cmb_fault.S"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\keil\cmb_fault.S"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\README.md"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\enable_c99_for_keil_iar_gcc.md"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\how_to_use_addr2line_for_call_stack.md"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\cm_backtrace_demo.gif"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\CmBacktrace.uga"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\call_stack_basic_info.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\call_stack_details.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\cd_exe_dir.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\demo_code.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\fault_diagnosis.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\paste_cmd.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\iar_enable_c99.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\keil4_enable_c99.jpg"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\keil5_enable_c99.jpg"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\.gitattributes"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\LICENSE"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\README.md"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\gcc\cmb_fault.S"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\iar\cmb_fault.S"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\keil\cmb_fault.S"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\README.md"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\enable_c99_for_keil_iar_gcc.md"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\how_to_use_addr2line_for_call_stack.md"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\cm_backtrace_demo.gif"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\CmBacktrace.uga"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\call_stack_basic_info.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\call_stack_details.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\cd_exe_dir.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\demo_code.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\fault_diagnosis.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\paste_cmd.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\iar_enable_c99.png"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\keil4_enable_c99.jpg"/>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\keil5_enable_c99.jpg"/>
+        <None Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\README.md"/>
+        <None Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\readme.md"/>
+        <None Include="libs\libAMCLIB.a"/>
+        <None Include="libs\libGDFLIB.a"/>
+        <None Include="libs\libGFLIB.a"/>
+        <None Include="libs\libGMCLIB.a"/>
+        <None Include="libs\libMLIB.a"/>
+        <None Include="libs\libarm_cortexM7lfdp_math.a"/>
+        <None Include="libs\libarm_cortexM7lfsp_math.a"/>
+        <None Include="libs\libtensorflow-lite.a"/>
+        <None Include="scripts\glow_process_image.py"/>
+    </ItemGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+    <ImportGroup Label="ExtensionTargets"/>
+</Project>

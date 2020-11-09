@@ -1,0 +1,2108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <Filter Include="CMSIS">
+            <UniqueIdentifier>{feb4ee2c-af6c-8d20-2c0d-9795b9d8205d}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="CMSIS\NN">
+            <UniqueIdentifier>{ee624290-67a2-5be7-4286-fcd2c46e0b62}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="CMSIS\NN\ActivationFunctions">
+            <UniqueIdentifier>{55dfb2c0-dfa1-5e74-23f2-910fa5015092}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="CMSIS\NN\ConvolutionFunctions">
+            <UniqueIdentifier>{db64b634-61f2-1f50-58c9-1ec5f22aa764}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="CMSIS\NN\FullyConnectedFunctions">
+            <UniqueIdentifier>{d7a8c655-941d-0623-4794-eb7b34605941}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="CMSIS\NN\Include">
+            <UniqueIdentifier>{d3147acb-e089-ac54-79cb-90bac42c0cd0}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="CMSIS\NN\NNSupportFunctions">
+            <UniqueIdentifier>{563f3aed-edce-875b-77e5-85e948f5397a}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="CMSIS\NN\PoolingFunctions">
+            <UniqueIdentifier>{e8729e44-0345-10b1-b77b-62813a5449b7}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="CMSIS\NN\SoftmaxFunctions">
+            <UniqueIdentifier>{f1750e57-da96-d0fe-b3f4-8f3af0b1d21e}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module">
+            <UniqueIdentifier>{199f03bf-ca48-5e99-02d9-855b24b36e07}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\d_rt1052">
+            <UniqueIdentifier>{a96913c4-5ba4-010b-1bb2-da8d4db2542b}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\d_rt1052\extlib_port">
+            <UniqueIdentifier>{575ac71d-0562-63ec-68f6-f827b2474cd2}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\d_rt1052\extlib_port\CmBacktrace-1.4.0">
+            <UniqueIdentifier>{7c0b8822-61f9-0b93-802e-75c21deaada3}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\d_rt1052\extlib_port\CmBacktrace-1.4.0\cm_backtrace">
+            <UniqueIdentifier>{a1d3dd7c-e5c1-50a8-ebb1-cbd6d5130117}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\d_rt1052\extlib_port\EasyFlash-4.0.0">
+            <UniqueIdentifier>{5c5b4d83-0b63-dc94-0147-60fa8248dfa5}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\d_rt1052\extlib_port\EasyFlash-4.0.0\easyflash">
+            <UniqueIdentifier>{060b42ce-5957-06df-6a3a-ee869c149fc6}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\d_rt1052\extlib_port\EasyFlash-4.0.0\easyflash\port">
+            <UniqueIdentifier>{486a53c6-4914-7600-9e20-ac138bedc902}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities">
+            <UniqueIdentifier>{89f0f703-5113-9480-0571-5229d84bf5f0}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib">
+            <UniqueIdentifier>{4027b80c-1bfb-f9e6-47b6-483f19b89bf9}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0">
+            <UniqueIdentifier>{07940d49-fe15-0bab-bd57-16ceb7a93484}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace">
+            <UniqueIdentifier>{55a27e33-7209-4337-fdfb-344d3ab8364a}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler">
+            <UniqueIdentifier>{b2d77372-1f4e-3931-80fa-3a452b4d4a92}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\gcc">
+            <UniqueIdentifier>{86cb846d-6d4c-6602-cfee-704ef0e0b915}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\iar">
+            <UniqueIdentifier>{69e72a9d-d4ac-4031-504c-9ecf2318292a}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\keil">
+            <UniqueIdentifier>{c3a3eb79-fcc6-5146-bd9f-1d414b5d044a}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs">
+            <UniqueIdentifier>{3c9630aa-3d31-2fbb-4d4d-633bcf18d01d}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh">
+            <UniqueIdentifier>{1c399288-1f76-2406-a7ee-092529e117fa}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images">
+            <UniqueIdentifier>{0b0397aa-1a0d-d7af-550b-7899f04f508a}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo">
+            <UniqueIdentifier>{827da988-c75d-c02f-be0c-460dacbb1324}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0">
+            <UniqueIdentifier>{f72e4eab-9c0e-560e-6a68-edf9b5bcb861}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash">
+            <UniqueIdentifier>{f37f008b-0279-33c3-d1c8-d4d6a3cbd7b8}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\inc">
+            <UniqueIdentifier>{0ff8569f-a236-bed6-9b83-924c0e5fe8b2}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins">
+            <UniqueIdentifier>{8220b760-e2bc-7fd1-0042-b1a24ef173c7}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types">
+            <UniqueIdentifier>{137fbd76-4c94-ee29-d86c-b880fb29e07e}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json">
+            <UniqueIdentifier>{3c8ecf48-5735-9459-5b6a-ff507d6ee74f}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\inc">
+            <UniqueIdentifier>{44b5655e-8b38-e7e7-22e4-1eb86c29c0b4}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\src">
+            <UniqueIdentifier>{e29c1711-5ff5-705b-b351-8d0041012342}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src">
+            <UniqueIdentifier>{80a96d29-4df3-c71e-872a-d4e1826f7964}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="board">
+            <UniqueIdentifier>{b557cfed-ecda-35b8-27e6-6bb2a9da38a0}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component">
+            <UniqueIdentifier>{e94cc5e6-a4f4-60c0-091e-dafc2cdbfa8e}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component\crc">
+            <UniqueIdentifier>{94d1c89b-1df6-d29f-a729-aa4795ea2587}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component\gpio">
+            <UniqueIdentifier>{4e9d7e95-a03b-e1dc-98b0-410a5b7e4323}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component\lists">
+            <UniqueIdentifier>{8008204c-d348-37f0-432b-39de151febd9}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component\mem_manager">
+            <UniqueIdentifier>{c0ac7737-2f98-4b62-3211-f81a2d577421}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component\osa">
+            <UniqueIdentifier>{97fed9ee-2cc1-74bb-ecda-18572a8b78a5}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component\rng">
+            <UniqueIdentifier>{5e69c0da-433b-6c63-e91f-0f0d84566eaa}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component\serial_manager">
+            <UniqueIdentifier>{ab83d283-0a7f-8af1-a148-47c3d33ededb}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="component\uart">
+            <UniqueIdentifier>{08d46960-fb05-66ee-bcdc-57f18f9b30ae}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="device">
+            <UniqueIdentifier>{dbd52c0a-8c64-78a1-8254-c62010061c8b}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="drivers">
+            <UniqueIdentifier>{be0e63e9-3715-38c3-9b48-1ed80e07ea0b}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="fatfs">
+            <UniqueIdentifier>{27d6c684-938f-2ecb-6f2f-a680e11522a6}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="fatfs\source">
+            <UniqueIdentifier>{80d6bd63-174b-d322-8771-16b122b85de3}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="fatfs\source\fsl_ram_disk">
+            <UniqueIdentifier>{7085c0ff-3dd1-bd6f-69a7-d6d2475a013b}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="fatfs\source\fsl_sd_disk">
+            <UniqueIdentifier>{6f6c67d0-7cb8-45fb-8e59-7e7cd981a735}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="glow">
+            <UniqueIdentifier>{e5f31a6d-6c69-147e-7fee-561741c5b84a}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="libs">
+            <UniqueIdentifier>{6aa1513f-855b-904f-a2ef-173a169fcaf2}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="rtcesl">
+            <UniqueIdentifier>{661eb4bd-3f16-53f7-91c4-375edf7647c4}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="rtcesl\amclib">
+            <UniqueIdentifier>{61a4ac80-1224-b3fd-d323-2feaf6d3b538}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="rtcesl\gdflib">
+            <UniqueIdentifier>{f3e8af00-970b-5aea-df67-6876f25eaeb7}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="rtcesl\gflib">
+            <UniqueIdentifier>{844546c4-3433-af25-1f16-788c6a5e89d9}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="rtcesl\gmclib">
+            <UniqueIdentifier>{9d60fa44-8235-3957-2ab9-e992b86cde15}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="rtcesl\mlib">
+            <UniqueIdentifier>{b4a43209-fa78-72d8-78c7-112063ff24f4}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="scripts">
+            <UniqueIdentifier>{53a7958b-0286-e12f-81c9-baaff3a0d5fe}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="sdmmc">
+            <UniqueIdentifier>{f0c18d31-43e4-1ee5-dd26-1bb7f0d7988a}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="sdmmc\host">
+            <UniqueIdentifier>{258b81a4-261c-6171-f477-dcbfd21bb540}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="sdmmc\inc">
+            <UniqueIdentifier>{588d285c-2286-727c-5e33-643f21e4d599}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="sdmmc\osa">
+            <UniqueIdentifier>{032edccf-deda-c94d-83e3-5db156cb6e0d}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="sdmmc\src">
+            <UniqueIdentifier>{cd071478-a46e-cf7d-ec0f-1eabe738e913}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="source">
+            <UniqueIdentifier>{0e8f68dd-1bcd-fa74-1f0e-2f955da2ee34}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="source\platform">
+            <UniqueIdentifier>{4d3f5087-bb7d-d3e9-9588-081831a2d607}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="startup">
+            <UniqueIdentifier>{148f54ed-ece7-f324-c7e7-428bf9bf37e5}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="utilities">
+            <UniqueIdentifier>{da16fd88-56b2-c0ce-4bb0-53671f529b65}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="utilities\utilities">
+            <UniqueIdentifier>{374c91df-5146-c44f-9b6e-c45429036800}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="xip">
+            <UniqueIdentifier>{84aad97b-852d-852e-1e97-fdc99139283e}</UniqueIdentifier>
+        </Filter>
+    </ItemGroup>
+    <ItemGroup>
+        <ClCompile Include="CMSIS\NN\ActivationFunctions\arm_nn_activations_q15.c">
+            <Filter>CMSIS\NN\ActivationFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ActivationFunctions\arm_nn_activations_q7.c">
+            <Filter>CMSIS\NN\ActivationFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ActivationFunctions\arm_relu_q15.c">
+            <Filter>CMSIS\NN\ActivationFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ActivationFunctions\arm_relu_q7.c">
+            <Filter>CMSIS\NN\ActivationFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_1x1_HWC_q7_fast_nonsquare.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q15_basic.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q15_fast.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q15_fast_nonsquare.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q7_RGB.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q7_basic.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q7_basic_nonsquare.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q7_fast.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_convolve_HWC_q7_fast_nonsquare.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_depthwise_conv_u8_basic_ver1.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_depthwise_separable_conv_HWC_q7.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_depthwise_separable_conv_HWC_q7_nonsquare.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_nn_mat_mult_kernel_q7_q15.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\ConvolutionFunctions\arm_nn_mat_mult_kernel_q7_q15_reordered.c">
+            <Filter>CMSIS\NN\ConvolutionFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\FullyConnectedFunctions\arm_fully_connected_mat_q7_vec_q15.c">
+            <Filter>CMSIS\NN\FullyConnectedFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\FullyConnectedFunctions\arm_fully_connected_mat_q7_vec_q15_opt.c">
+            <Filter>CMSIS\NN\FullyConnectedFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\FullyConnectedFunctions\arm_fully_connected_q15.c">
+            <Filter>CMSIS\NN\FullyConnectedFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\FullyConnectedFunctions\arm_fully_connected_q15_opt.c">
+            <Filter>CMSIS\NN\FullyConnectedFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\FullyConnectedFunctions\arm_fully_connected_q7.c">
+            <Filter>CMSIS\NN\FullyConnectedFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\FullyConnectedFunctions\arm_fully_connected_q7_opt.c">
+            <Filter>CMSIS\NN\FullyConnectedFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\NNSupportFunctions\arm_nn_mult_q15.c">
+            <Filter>CMSIS\NN\NNSupportFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\NNSupportFunctions\arm_nn_mult_q7.c">
+            <Filter>CMSIS\NN\NNSupportFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\NNSupportFunctions\arm_nntables.c">
+            <Filter>CMSIS\NN\NNSupportFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\NNSupportFunctions\arm_q7_to_q15_no_shift.c">
+            <Filter>CMSIS\NN\NNSupportFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\NNSupportFunctions\arm_q7_to_q15_reordered_no_shift.c">
+            <Filter>CMSIS\NN\NNSupportFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\PoolingFunctions\arm_pool_q7_HWC.c">
+            <Filter>CMSIS\NN\PoolingFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\SoftmaxFunctions\arm_softmax_q15.c">
+            <Filter>CMSIS\NN\SoftmaxFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="CMSIS\NN\SoftmaxFunctions\arm_softmax_q7.c">
+            <Filter>CMSIS\NN\SoftmaxFunctions</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\d_rt1052\drv_imu_port.c">
+            <Filter>HITSIC_Module\d_rt1052</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\d_rt1052\extlib_port\EasyFlash-4.0.0\easyflash\port\ef_port.c">
+            <Filter>HITSIC_Module\d_rt1052\extlib_port\EasyFlash-4.0.0\easyflash\port</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\d_rt1052\hitsic_common.c">
+            <Filter>HITSIC_Module\d_rt1052</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\d_rt1052\sys_extint_port.cpp">
+            <Filter>HITSIC_Module\d_rt1052</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\d_rt1052\sys_pitmgr_port.cpp">
+            <Filter>HITSIC_Module\d_rt1052</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\d_rt1052\sys_uartmgr_port.cpp">
+            <Filter>HITSIC_Module\d_rt1052</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\cm_backtrace.c">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\app_menu.c">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\app_menu_button.c">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\app_menu_nvm.c">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\app_menu_type.c">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\drv_button.c">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\drv_disp_font.cpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\drv_disp_ssd1306.cpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\drv_disp_st7789.cpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\drv_ftfx_flash.c">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\drv_imu_invensense.c">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\cm_backtrace.c">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\ef_types.c">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\src\cJSON.c">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\src</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\src\s2j.c">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\src</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\easyflash.c">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\ef_env.c">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\ef_env_legacy.c">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\ef_env_legacy_wl.c">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\ef_iap.c">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\ef_log.c">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src\ef_utils.c">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\src</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\lib_adrcctrl.c">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\lib_list.c">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\lib_pidctrl.c">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\sys_extint.cpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\sys_pitmgr.cpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\sys_rmcall.cpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="HITSIC_Module\utilities\sys_uartmgr.cpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="board\board.c">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="board\clock_config.c">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="board\clock_config.c.bak">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="board\dcd.c">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="board\peripherals.c">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="board\peripherals.c.bak">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="board\pin_mux.c">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="board\sdmmc_config.c">
+            <Filter>board</Filter>
+        </ClCompile>
+        <ClCompile Include="component\crc\software_crc_adapter.c">
+            <Filter>component\crc</Filter>
+        </ClCompile>
+        <ClCompile Include="component\gpio\igpio_adapter.c">
+            <Filter>component\gpio</Filter>
+        </ClCompile>
+        <ClCompile Include="component\lists\generic_list.c">
+            <Filter>component\lists</Filter>
+        </ClCompile>
+        <ClCompile Include="component\mem_manager\mem_manager.c">
+            <Filter>component\mem_manager</Filter>
+        </ClCompile>
+        <ClCompile Include="component\osa\fsl_os_abstraction_bm.c">
+            <Filter>component\osa</Filter>
+        </ClCompile>
+        <ClCompile Include="component\rng\trng_adapter.c">
+            <Filter>component\rng</Filter>
+        </ClCompile>
+        <ClCompile Include="component\serial_manager\serial_manager.c">
+            <Filter>component\serial_manager</Filter>
+        </ClCompile>
+        <ClCompile Include="component\serial_manager\serial_port_swo.c">
+            <Filter>component\serial_manager</Filter>
+        </ClCompile>
+        <ClCompile Include="component\serial_manager\serial_port_uart.c">
+            <Filter>component\serial_manager</Filter>
+        </ClCompile>
+        <ClCompile Include="component\uart\lpuart_adapter.c">
+            <Filter>component\uart</Filter>
+        </ClCompile>
+        <ClCompile Include="device\system_MIMXRT1052.c">
+            <Filter>device</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_adc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_adc_etc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_aipstz.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_aoi.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_bee.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_cache.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_clock.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_cmp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_common.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_csi.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_dcdc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_dcp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_dmamux.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_elcdif.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_enc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_enet.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_ewm.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexcan.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_camera.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_camera_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_i2c_master.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_i2s.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_i2s_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_mculcd.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_mculcd_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_spi.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_spi_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_uart.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexio_uart_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexram.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexram_allocate.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_flexspi.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_gpc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_gpio.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_gpt.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_kpp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_lpi2c.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_lpi2c_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_lpspi.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_lpspi_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_lpuart.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_lpuart_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_ocotp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_pit.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_pmu.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_pwm.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_pxp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_qtmr.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_rtwdog.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_sai.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_sai_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_semc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_snvs_hp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_snvs_lp.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_spdif.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_spdif_edma.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_src.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_tempmon.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_trng.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_tsc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_usdhc.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_wdog.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_xbara.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="drivers\fsl_xbarb.c">
+            <Filter>drivers</Filter>
+        </ClCompile>
+        <ClCompile Include="fatfs\source\diskio.c">
+            <Filter>fatfs\source</Filter>
+        </ClCompile>
+        <ClCompile Include="fatfs\source\ff.c">
+            <Filter>fatfs\source</Filter>
+        </ClCompile>
+        <ClCompile Include="fatfs\source\ffsystem.c">
+            <Filter>fatfs\source</Filter>
+        </ClCompile>
+        <ClCompile Include="fatfs\source\ffunicode.c">
+            <Filter>fatfs\source</Filter>
+        </ClCompile>
+        <ClCompile Include="fatfs\source\fsl_ram_disk\fsl_ram_disk.c">
+            <Filter>fatfs\source\fsl_ram_disk</Filter>
+        </ClCompile>
+        <ClCompile Include="fatfs\source\fsl_sd_disk\fsl_sd_disk.c">
+            <Filter>fatfs\source\fsl_sd_disk</Filter>
+        </ClCompile>
+        <ClCompile Include="glow\glow_bundle_utils.c">
+            <Filter>glow</Filter>
+        </ClCompile>
+        <ClCompile Include="sdmmc\host\fsl_sdmmc_host.c">
+            <Filter>sdmmc\host</Filter>
+        </ClCompile>
+        <ClCompile Include="sdmmc\osa\fsl_sdmmc_osa.c">
+            <Filter>sdmmc\osa</Filter>
+        </ClCompile>
+        <ClCompile Include="sdmmc\src\fsl_sd.c">
+            <Filter>sdmmc\src</Filter>
+        </ClCompile>
+        <ClCompile Include="sdmmc\src\fsl_sdmmc_common.c">
+            <Filter>sdmmc\src</Filter>
+        </ClCompile>
+        <ClCompile Include="source\isr.cpp">
+            <Filter>source</Filter>
+        </ClCompile>
+        <ClCompile Include="source\main.cpp">
+            <Filter>source</Filter>
+        </ClCompile>
+        <ClCompile Include="source\platform\rt1052_romapi.c">
+            <Filter>source\platform</Filter>
+        </ClCompile>
+        <ClCompile Include="startup\startup_mimxrt1052.cpp">
+            <Filter>startup</Filter>
+        </ClCompile>
+        <ClCompile Include="utilities\fsl_assert.c">
+            <Filter>utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="utilities\fsl_debug_console.c">
+            <Filter>utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="utilities\fsl_shell.c">
+            <Filter>utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="utilities\fsl_str.c">
+            <Filter>utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="utilities\utilities\fsl_notifier.c">
+            <Filter>utilities\utilities</Filter>
+        </ClCompile>
+        <ClCompile Include="xip\fire_imxrt1052_spiflash_config.c">
+            <Filter>xip</Filter>
+        </ClCompile>
+        <ClCompile Include="xip\fsl_flexspi_nor_boot.c">
+            <Filter>xip</Filter>
+        </ClCompile>
+    </ItemGroup>
+    <ItemGroup>
+        <ClInclude Include="CMSIS\NN\Include\arm_nn_tables.h">
+            <Filter>CMSIS\NN\Include</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\NN\Include\arm_nnfunctions.h">
+            <Filter>CMSIS\NN\Include</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\NN\Include\arm_nnsupportfunctions.h">
+            <Filter>CMSIS\NN\Include</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\arm_common_tables.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\arm_const_structs.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\arm_helium_utils.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\arm_math.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\arm_mve_tables.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\arm_vec_math.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cachel1_armv7.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_armcc.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_armclang.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_armclang_ltm.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_compiler.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_gcc.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_iccarm.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\cmsis_version.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_armv81mml.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_armv8mbl.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_armv8mml.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm0.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm0plus.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm1.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm23.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm3.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm33.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm35p.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm4.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm55.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_cm7.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_sc000.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\core_sc300.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\mpu_armv7.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\mpu_armv8.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\pmu_armv8.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="CMSIS\tz_context.h">
+            <Filter>CMSIS</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\d_rt1052\drv_imu_port.h">
+            <Filter>HITSIC_Module\d_rt1052</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\d_rt1052\extlib_port\CmBacktrace-1.4.0\cm_backtrace\cmb_cfg.h">
+            <Filter>HITSIC_Module\d_rt1052\extlib_port\CmBacktrace-1.4.0\cm_backtrace</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\d_rt1052\extlib_port\CmBacktrace-1.4.0\cm_backtrace\cmb_def.h">
+            <Filter>HITSIC_Module\d_rt1052\extlib_port\CmBacktrace-1.4.0\cm_backtrace</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\d_rt1052\extlib_port\EasyFlash-4.0.0\easyflash\port\ef_cfg.h">
+            <Filter>HITSIC_Module\d_rt1052\extlib_port\EasyFlash-4.0.0\easyflash\port</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\d_rt1052\hitsic_common.h">
+            <Filter>HITSIC_Module\d_rt1052</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\d_rt1052\inc_fsl_rt1052.h">
+            <Filter>HITSIC_Module\d_rt1052</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\d_rt1052\sys_extint_port.hpp">
+            <Filter>HITSIC_Module\d_rt1052</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\d_rt1052\sys_pitmgr_port.hpp">
+            <Filter>HITSIC_Module\d_rt1052</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\d_rt1052\sys_uartmgr_port.hpp">
+            <Filter>HITSIC_Module\d_rt1052</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\cm_backtrace.h">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\app_menu.h">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\app_menu_button.h">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\app_menu_def.h">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\app_menu_nvm.h">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\app_menu_type.h">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\drv_button.h">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\drv_disp_ssd1306.hpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\drv_disp_st7789.hpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\drv_ftfx_flash.h">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\drv_imu_invensense.h">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\cm_backtrace.h">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\inc\easyflash.h">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\inc</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\ef_types.h">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\inc\cJSON.h">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\inc</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\inc\s2j.h">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\inc</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\inc\s2jdef.h">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\inc</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\inc_stdlib.h">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\lib_adrcctrl.h">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\lib_list.h">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\lib_pidctrl.h">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\sys_extint.hpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\sys_pitmgr.hpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\sys_rmcall.hpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="HITSIC_Module\utilities\sys_uartmgr.hpp">
+            <Filter>HITSIC_Module\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="board\board.h">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="board\clock_config.h">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="board\clock_config.h.bak">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="board\dcd.h">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="board\peripherals.h">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="board\peripherals.h.bak">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="board\pin_mux.h">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="board\sdmmc_config.h">
+            <Filter>board</Filter>
+        </ClInclude>
+        <ClInclude Include="component\crc\crc.h">
+            <Filter>component\crc</Filter>
+        </ClInclude>
+        <ClInclude Include="component\gpio\gpio.h">
+            <Filter>component\gpio</Filter>
+        </ClInclude>
+        <ClInclude Include="component\lists\generic_list.h">
+            <Filter>component\lists</Filter>
+        </ClInclude>
+        <ClInclude Include="component\mem_manager\mem_manager.h">
+            <Filter>component\mem_manager</Filter>
+        </ClInclude>
+        <ClInclude Include="component\osa\fsl_os_abstraction.h">
+            <Filter>component\osa</Filter>
+        </ClInclude>
+        <ClInclude Include="component\osa\fsl_os_abstraction_bm.h">
+            <Filter>component\osa</Filter>
+        </ClInclude>
+        <ClInclude Include="component\osa\fsl_os_abstraction_config.h">
+            <Filter>component\osa</Filter>
+        </ClInclude>
+        <ClInclude Include="component\rng\rng.h">
+            <Filter>component\rng</Filter>
+        </ClInclude>
+        <ClInclude Include="component\serial_manager\serial_manager.h">
+            <Filter>component\serial_manager</Filter>
+        </ClInclude>
+        <ClInclude Include="component\serial_manager\serial_port_internal.h">
+            <Filter>component\serial_manager</Filter>
+        </ClInclude>
+        <ClInclude Include="component\serial_manager\serial_port_swo.h">
+            <Filter>component\serial_manager</Filter>
+        </ClInclude>
+        <ClInclude Include="component\serial_manager\serial_port_uart.h">
+            <Filter>component\serial_manager</Filter>
+        </ClInclude>
+        <ClInclude Include="component\uart\uart.h">
+            <Filter>component\uart</Filter>
+        </ClInclude>
+        <ClInclude Include="device\MIMXRT1052.h">
+            <Filter>device</Filter>
+        </ClInclude>
+        <ClInclude Include="device\MIMXRT1052_features.h">
+            <Filter>device</Filter>
+        </ClInclude>
+        <ClInclude Include="device\fsl_device_registers.h">
+            <Filter>device</Filter>
+        </ClInclude>
+        <ClInclude Include="device\system_MIMXRT1052.h">
+            <Filter>device</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_adc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_adc_etc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_aipstz.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_aoi.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_bee.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_cache.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_clock.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_cmp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_common.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_csi.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_dcdc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_dcp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_dmamux.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_elcdif.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_enc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_enet.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_ewm.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexcan.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_camera.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_camera_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_i2c_master.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_i2s.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_i2s_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_mculcd.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_mculcd_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_spi.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_spi_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_uart.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexio_uart_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexram.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexram_allocate.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_flexspi.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_gpc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_gpio.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_gpt.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_iomuxc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_kpp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_lpi2c.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_lpi2c_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_lpspi.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_lpspi_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_lpuart.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_lpuart_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_ocotp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_pit.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_pmu.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_pwm.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_pxp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_qtmr.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_rtwdog.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_sai.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_sai_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_semc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_snvs_hp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_snvs_lp.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_spdif.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_spdif_edma.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_src.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_tempmon.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_trng.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_tsc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_usdhc.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_wdog.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_xbara.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="drivers\fsl_xbarb.h">
+            <Filter>drivers</Filter>
+        </ClInclude>
+        <ClInclude Include="fatfs\source\diskio.h">
+            <Filter>fatfs\source</Filter>
+        </ClInclude>
+        <ClInclude Include="fatfs\source\ff.h">
+            <Filter>fatfs\source</Filter>
+        </ClInclude>
+        <ClInclude Include="fatfs\source\fsl_ram_disk\fsl_ram_disk.h">
+            <Filter>fatfs\source\fsl_ram_disk</Filter>
+        </ClInclude>
+        <ClInclude Include="fatfs\source\fsl_sd_disk\fsl_sd_disk.h">
+            <Filter>fatfs\source\fsl_sd_disk</Filter>
+        </ClInclude>
+        <ClInclude Include="glow\glow_bundle_utils.h">
+            <Filter>glow</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_ACIMCtrlMTPA_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_ACIMRotFluxObsrv_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_ACIMSpeedMRAS_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_AngleTrackObsrv_F32.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_AngleTrackObsrv_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_CtrlFluxWkng_A32.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_CtrlFluxWkng_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_PMSMBemfObsrvAB_A32.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_PMSMBemfObsrvAB_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_PMSMBemfObsrvDQ_A32.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_PMSMBemfObsrvDQ_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_TrackObsrv_F32.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\AMCLIB_TrackObsrv_FLT.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\amclib.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\amclib_FP.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\amclib\amclib_types.h">
+            <Filter>rtcesl\amclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterExp_F32.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterExp_FLT.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR1_F32.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR1_F32_Asmi.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR1_FLT.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR2_F32.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR2_FLT.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR3_F32.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR3_FLT.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR4_F32.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterIIR4_FLT.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterMA_A32.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\GDFLIB_FilterMA_FLT.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\gdflib.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\gdflib_FP.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gdflib\gdflib_types.h">
+            <Filter>rtcesl\gdflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Acos_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Acos_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Asin_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Asin_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_AtanYX_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_AtanYX_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Atan_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Atan_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlBetaIPDp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlBetaIPDp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlBetaIPp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlBetaIPp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlPIDp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlPIDp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlPIp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_CtrlPIp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DFlexRamp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DFlexRamp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DRamp_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DRamp_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_DRamp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_FlexRamp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_FlexRamp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_FlexSRamp_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_FlexSRamp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Hyst_F16_Asmi.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Hyst_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Integrator_A32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Integrator_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Limit_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Limit_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Limit_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LowerLimit_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LowerLimit_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LowerLimit_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LutPer_F16_Asmi.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LutPer_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_LutPer_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Lut_F16_Asmi.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Lut_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Lut_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Ramp_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Ramp_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Ramp_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_SinCos_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_SinCos_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Sqrt_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Sqrt_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Sqrt_FLT_Asmi.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Tan_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_Tan_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_UpperLimit_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_UpperLimit_F32.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_UpperLimit_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_VectorLimit_F16.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\GFLIB_VectorLimit_FLT.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\gflib.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\gflib_FP.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gflib\gflib_types.h">
+            <Filter>rtcesl\gflib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Clark_F16_Asmi.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Clark_FLT.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Decoupling_A32.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Decoupling_FLT.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_ElimDcBusRip_A32_Asmi.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_ElimDcBusRip_F16_Asmi.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_ElimDcBusRip_FLT.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Park_F16_Asmi.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Park_FLT.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\GMCLIB_Svm_F16.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\gmclib.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\gmclib_FP.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\gmclib\gmclib_types.h">
+            <Filter>rtcesl\gmclib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Abs_FLT_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add4_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add4_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add4_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Add_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_BiShift_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_BiShift_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Clb_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Clb_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_ConvSc_FLT_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Conv_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Conv_FLT_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div1Q_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div1Q_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div1Q_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Div_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Log2_U16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4Rnd_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4Rnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4Rnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac4_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MacRnd_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MacRnd_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MacRnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MacRnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mac_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MnacRnd_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MnacRnd_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MnacRnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MnacRnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mnac_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4Rnd_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4Rnd_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4Rnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4Rnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu4_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MsuRnd_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MsuRnd_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MsuRnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MsuRnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Msu_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_A32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_MulRnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_A32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Mul_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Neg_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Rcp1Q_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Rcp_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Rnd_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Rnd_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sat_A32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Shift_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Shift_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Shift_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Shift_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sign_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sign_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sign_FLT_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub4_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub4_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub4_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_A32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F16.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F16_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F32.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F32_Asmi.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_F64.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\MLIB_Sub_FLT.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\RTCESL_cfg.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\asm_mac.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\mlib.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\mlib_FP.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="rtcesl\mlib\mlib_types.h">
+            <Filter>rtcesl\mlib</Filter>
+        </ClInclude>
+        <ClInclude Include="sdmmc\host\fsl_sdmmc_host.h">
+            <Filter>sdmmc\host</Filter>
+        </ClInclude>
+        <ClInclude Include="sdmmc\inc\fsl_sd.h">
+            <Filter>sdmmc\inc</Filter>
+        </ClInclude>
+        <ClInclude Include="sdmmc\inc\fsl_sdmmc_common.h">
+            <Filter>sdmmc\inc</Filter>
+        </ClInclude>
+        <ClInclude Include="sdmmc\inc\fsl_sdmmc_spec.h">
+            <Filter>sdmmc\inc</Filter>
+        </ClInclude>
+        <ClInclude Include="sdmmc\osa\fsl_sdmmc_osa.h">
+            <Filter>sdmmc\osa</Filter>
+        </ClInclude>
+        <ClInclude Include="source\ffconf.h">
+            <Filter>source</Filter>
+        </ClInclude>
+        <ClInclude Include="source\ffconf.h.bak">
+            <Filter>source</Filter>
+        </ClInclude>
+        <ClInclude Include="source\platform\rt1052_romapi.h">
+            <Filter>source\platform</Filter>
+        </ClInclude>
+        <ClInclude Include="utilities\fsl_debug_console.h">
+            <Filter>utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="utilities\fsl_debug_console_conf.h">
+            <Filter>utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="utilities\fsl_shell.h">
+            <Filter>utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="utilities\fsl_str.h">
+            <Filter>utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="utilities\utilities\fsl_notifier.h">
+            <Filter>utilities\utilities</Filter>
+        </ClInclude>
+        <ClInclude Include="xip\fire_imxrt1052_spiflash_config.h">
+            <Filter>xip</Filter>
+        </ClInclude>
+        <ClInclude Include="xip\fsl_flexspi_nor_boot.h">
+            <Filter>xip</Filter>
+        </ClInclude>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\.gitattributes">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\LICENSE">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\README.md">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\gcc\cmb_fault.S">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\gcc</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\iar\cmb_fault.S">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\iar</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\keil\cmb_fault.S">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\keil</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\README.md">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\enable_c99_for_keil_iar_gcc.md">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\how_to_use_addr2line_for_call_stack.md">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\cm_backtrace_demo.gif">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\CmBacktrace.uga">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\call_stack_basic_info.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\call_stack_details.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\cd_exe_dir.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\demo_code.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\fault_diagnosis.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\paste_cmd.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\iar_enable_c99.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\keil4_enable_c99.jpg">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\keil5_enable_c99.jpg">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\.gitattributes">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\LICENSE">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\README.md">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\gcc\cmb_fault.S">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\gcc</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\iar\cmb_fault.S">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\iar</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\keil\cmb_fault.S">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\cm_backtrace\fault_handler\keil</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\README.md">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\enable_c99_for_keil_iar_gcc.md">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\how_to_use_addr2line_for_call_stack.md">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\cm_backtrace_demo.gif">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\CmBacktrace.uga">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\call_stack_basic_info.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\call_stack_details.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\cd_exe_dir.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\demo_code.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\fault_diagnosis.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo\paste_cmd.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\demo</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\iar_enable_c99.png">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\keil4_enable_c99.jpg">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images\keil5_enable_c99.jpg">
+            <Filter>HITSIC_Module\utilities\extlib\CmBacktrace-1.4.0\docs\zh\images</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\README.md">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types</Filter>
+        </None>
+        <None Include="HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json\readme.md">
+            <Filter>HITSIC_Module\utilities\extlib\EasyFlash-4.0.0\easyflash\plugins\types\struct2json</Filter>
+        </None>
+        <None Include="libs\libAMCLIB.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libGDFLIB.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libGFLIB.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libGMCLIB.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libMLIB.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libarm_cortexM7lfdp_math.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libarm_cortexM7lfsp_math.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="libs\libtensorflow-lite.a">
+            <Filter>libs</Filter>
+        </None>
+        <None Include="scripts\glow_process_image.py">
+            <Filter>scripts</Filter>
+        </None>
+    </ItemGroup>
+</Project>
